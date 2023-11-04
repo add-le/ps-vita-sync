@@ -57,6 +57,10 @@ add_executable(${PROJECT_NAME}
   src/jwt64.c
   src/pkey.c
   src/appconfig.c
+  src/httpnet.c
+  src/driveapi.c
+  src/savefile.c
+  src/timehandler.c
   ./common/debugScreen.c
 )
 
@@ -75,6 +79,8 @@ target_link_libraries(${PROJECT_NAME}
   SceVshBridge_stub
   SceSysmodule_stub
   SceSysmem_stub
+  SceLibJson_stub
+  SceKernelUtilsForDriver_stub 
   crypto
 )
 

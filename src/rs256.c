@@ -29,5 +29,5 @@ char *signRs256(const char *private_key, unsigned char *hash_to_sign,
   RSA_sign(NID_sha256, hash_to_sign, hash_to_sign_length, sigret, sign_length,
            rsa);
 
-  return sigret;
+  return (char *)sigret;
 }

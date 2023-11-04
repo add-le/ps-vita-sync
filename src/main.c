@@ -11,57 +11,48 @@
 #include <openssl/rsa.h>
 #include <openssl/x509.h>
 
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 
-#include "appconfig.h"
-#include "base64.h"
 #include "debugScreen.h"
-#include "jwt64.h"
-#include "pkey.h"
-#include "rs256.h"
-#include "sha256.h"
+#include "driveapi.h"
+#include "httpnet.h"
+#include "savefile.h"
 
 #define printf psvDebugScreenPrintf
 #define wait3s sceKernelDelayThread(3 * 1000000)
-
-#define EXPIRATION_TIME 3600
 
 int main(int argc, char *argv[]) {
   // Inits
   psvDebugScreenInit();
   OpenSSL_add_all_algorithms();
+  httpNetInit();
 
-  // Load user defined files
-  AppConfig_t *config = loadConfig();
-  char *private_key = loadPkey();
+  char *access_token = getOAuth2Token();
+  char *mhf2ndgId = "18LgbwEbFMuC_VIYZ6bL1wYnGXPaSzqSj";
+  char *json = getFile(mhf2ndgId, "?fields=modifiedTime", false, access_token);
 
-  char *header = (char *)malloc(36 + 1 + strlen(config->kid));
-  sprintf(header, "{\"alg\":\"RS256\",\"typ\":\"JWT\",\"kid\":\"%s\"}",
-          config->kid);
+  // unsigned long long int lmt_driveFile = getModifiedTime(json);
 
-  time_t now;
-  time(&now);
-  char iat[20];
-  sprintf(iat, "%ld", now);
-  char exp[20];
-  sprintf(exp, "%ld", now + EXPIRATION_TIME);
+  // unsigned long long int lmt_localFile =
+  //     getLastModificationTime("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN");
 
-  char *payload =
-      (char *)malloc(116 + 1 + strlen(config->iss) + strlen(iat) + strlen(exp));
-  sprintf(payload,
-          "{\"iss\":\"%s\",\"iat\":%s,\"exp\":%s,\"scope\":\"https://"
-          "www.googleapis.com/auth/drive\",\"aud\":\"https://"
-          "oauth2.googleapis.com/token\"}",
-          config->iss, iat, exp);
+  char *res = downloadSavefile(mhf2ndgId, access_token);
+  int len = strlen(res);
+  int find = 0;
+  for (int i = 0; i < len; i++) {
+    if (res[i] == '0') {
+      find = 1;
+    }
+    if (find == 0) {
+      continue;
+    }
+    printf("%x ", res[i]);
+  }
 
-  char *jwt = newJwt(header, payload, private_key);
-
-  printf("jwt %s\n", jwt);
-
-  freeConfig(config);
   wait3s;
   exit(0);
 }
