@@ -115,5 +115,8 @@ unsigned long long int getModifiedTime(char *json) {
   char *date_string = (char *)malloc(strlen(iso_string));
   strcpy(date_string, iso_string);
 
-  return ISOStringToMs(date_string);
+  unsigned long long int ms = ISOStringToMs(date_string);
+  free(date_string);
+
+  return ms;
 }

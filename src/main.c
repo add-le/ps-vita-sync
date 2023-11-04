@@ -45,6 +45,9 @@ int main(int argc, char *argv[]) {
   int len = strlen(res);
   printf("size %d", len);
 
+  free(res);
+  free(access_token);
+
   wait3s;
   exit(0);
 }
