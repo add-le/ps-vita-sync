@@ -14,40 +14,15 @@
 #define printf psvDebugScreenPrintf
 
 void httpNetInit() {
-  int res;
-  SceUInt32 paf_init_param[6];
-  SceSysmoduleOpt sysmodule_opt;
-
-  paf_init_param[0] = 0x4000000;
-  paf_init_param[1] = 0;
-  paf_init_param[2] = 0;
-  paf_init_param[3] = 0;
-  paf_init_param[4] = 0x400;
-  paf_init_param[5] = 1;
-
-  res = ~0;
-  sysmodule_opt.flags = 0;
-  sysmodule_opt.result = &res;
-
-  sceSysmoduleLoadModuleInternalWithArg(SCE_SYSMODULE_INTERNAL_PAF,
-                                        sizeof(paf_init_param), &paf_init_param,
-                                        &sysmodule_opt);
   sceSysmoduleLoadModule(SCE_SYSMODULE_HTTPS);
 
   SceNetInitParam net_init_param;
-  net_init_param.size = 0x800000;
+  int size = 16 * 1024;
+  net_init_param.memory = malloc(size);
+  net_init_param.size = size;
   net_init_param.flags = 0;
 
-  SceUID memid = sceKernelAllocMemBlock("SceNetMemory", 0x0C20D060,
-                                        net_init_param.size, NULL);
-  if (memid < 0) {
-    printf("sceKernelAllocMemBlock failed (0x%X)\n", memid);
-    exit(1);
-  }
-
-  sceKernelGetMemBlockBase(memid, &net_init_param.memory);
-
-  res = sceNetInit(&net_init_param);
+  int res = sceNetInit(&net_init_param);
   if (res < 0) {
     printf("sceNetInit failed (0x%X)\n", res);
     exit(1);
@@ -59,24 +34,24 @@ void httpNetInit() {
     exit(1);
   }
 
-  res = sceHttpInit(0x800000);
-  if (res < 0) {
-    printf("sceHttpInit failed (0x%X)\n", res);
-    exit(1);
-  }
-
-  res = sceSslInit(0x800000);
+  res = sceSslInit(512 * 1024);
   if (res < 0) {
     printf("sceSslInit failed (0x%X)\n", res);
     exit(1);
   }
+
+  res = sceHttpInit(64 * 1024);
+  if (res < 0) {
+    printf("sceHttpInit failed (0x%X)\n", res);
+    exit(1);
+  }
 }
 
-char *_httpSend(char *url, SceHttpMethods method, HttpHeader_t *headers,
-                size_t headers_length) {
+HttpResponse_t _httpSend(char *url, SceHttpMethods method,
+                         HttpHeader_t *headers, size_t headers_length) {
   int res;
 
-  int tpl = sceHttpCreateTemplate("PS Vita Sync", 2, 1);
+  int tpl = sceHttpCreateTemplate("PS Vita Sync", SCE_HTTP_VERSION_1_1, 1);
   if (tpl < 0) {
     printf("sceHttpCreateTemplate failed (0x%X)\n", tpl);
     exit(1);
@@ -108,16 +83,55 @@ char *_httpSend(char *url, SceHttpMethods method, HttpHeader_t *headers,
     exit(1);
   }
 
-  char *recv_buffer = (char *)malloc(0x400000);
-  sceHttpReadData(req, recv_buffer, 0x400000);
+  int statusCode;
+  res = sceHttpGetStatusCode(req, &statusCode);
+  if (res < 0) {
+    printf("sceHttpGetStatusCode failed (0x%X)\n", res);
+    exit(1);
+  }
 
-  return recv_buffer;
+  char *recv_buffer = NULL;
+  unsigned long long int contentLength = 0L;
+
+  if (statusCode == 200) {
+    res = sceHttpGetResponseContentLength(req, &contentLength);
+    printf("content length (0x%x) %d\n\n", res, contentLength);
+    if (res >= 0 || contentLength > 0) {
+      // Content length set
+      recv_buffer = (char *)malloc(contentLength);
+      sceHttpReadData(req, recv_buffer, contentLength);
+    } else if (res == SCE_HTTP_ERROR_NO_CONTENT_LENGTH ||
+               res == SCE_HTTP_ERROR_CHUNK_ENC) {
+      // Assuming no content length means chunk mode
+      unsigned char data[16 * 1024];
+      int read;
+      int prev_read = 0;
+
+      while ((read = sceHttpReadData(req, &data, sizeof(data))) > 0) {
+        recv_buffer = (char *)realloc(recv_buffer, read);
+        memcpy(recv_buffer + prev_read, data, read);
+        prev_read = read;
+      }
+    } else {
+      printf("sceHttpGetStatusCode failed (0x%X)\n", res);
+      exit(1);
+    }
+  } else {
+    printf("request failed HTTP %d\n", statusCode);
+    exit(1);
+  }
+
+  HttpResponse_t response = {.buffer = recv_buffer, .length = contentLength};
+  return response;
 }
 
-char *httpGet(char *url, HttpHeader_t *headers, size_t headers_length) {
+HttpResponse_t httpGet(char *url, HttpHeader_t *headers,
+                       size_t headers_length) {
   return _httpSend(url, SCE_HTTP_METHOD_GET, headers, headers_length);
 }
 
-char *httpPost(char *url) {
+HttpResponse_t httpPost(char *url) {
   return _httpSend(url, SCE_HTTP_METHOD_POST, NULL, 0);
 }
+
+void freeHttpResponse(HttpResponse_t response) { free(response.buffer); }

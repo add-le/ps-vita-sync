@@ -1,6 +1,8 @@
 #ifndef _DRIVE_API_H_
 #define _DRIVE_API_H_
 
+#include "httpnet.h"
+
 /**
  * Get the access token from OAuth2 Google API.
  * @return The access token from OAuth2. Result must be freed when not used
@@ -17,7 +19,8 @@ char *getOAuth2Token();
  * @return Information about the file fetch. Result must be freed when not used
  * anymore.
  */
-char *getFile(char *fileId, char *fields, bool download, char *access_token);
+HttpResponse_t getFile(char *fileId, char *fields, bool download,
+                       char *access_token);
 
 /**
  * Get the modified time from the gFile (Google Drive File).

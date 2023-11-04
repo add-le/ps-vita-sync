@@ -33,21 +33,23 @@ int main(int argc, char *argv[]) {
 
   char *access_token = getOAuth2Token();
   char *mhf2ndgId = "18LgbwEbFMuC_VIYZ6bL1wYnGXPaSzqSj";
-  char *json = getFile(mhf2ndgId, "?fields=modifiedTime", false, access_token);
+  // // char *json = getFile(mhf2ndgId, "?fields=modifiedTime", false,
+  // // access_token);
 
-  // unsigned long long int lmt_driveFile = getModifiedTime(json);
-  free(json);
+  // // unsigned long long int lmt_driveFile = getModifiedTime(json->buffer);
+  // // free(json);
 
-  // unsigned long long int lmt_localFile =
-  //     getLastModificationTime("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN");
+  // // unsigned long long int lmt_localFile =
+  // //
+  // getLastModificationTime("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN");
 
-  char *res = downloadSavefile(mhf2ndgId, access_token);
-  int len = strlen(res);
-  printf("size %d", len);
+  HttpResponse_t res = downloadSavefile(mhf2ndgId, access_token);
 
-  free(res);
+  printf("res : %llu", res.length);
+
   free(access_token);
+  freeHttpResponse(res);
 
   wait3s;
-  exit(0);
+  sceKernelExitProcess(0);
 }

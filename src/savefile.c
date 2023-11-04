@@ -6,6 +6,7 @@
 #include <stdlib.h>
 
 #include "driveapi.h"
+#include "httpnet.h"
 #include "savefile.h"
 #include "timehandler.h"
 
@@ -26,8 +27,10 @@ unsigned long long int getLastModificationTime(char *path) {
   return psp2DateTimeToMs(lastModificationTime);
 }
 
-char *downloadSavefile(char *fileId, char *access_token) {
-  char *gzipped = getFile(fileId, NULL, true, access_token);
+HttpResponse_t downloadSavefile(char *fileId, char *access_token) {
+  HttpResponse_t gzipped = getFile(fileId, NULL, true, access_token);
+
+  // free(gzipped);
 
   return gzipped;
 }

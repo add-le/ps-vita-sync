@@ -50,12 +50,12 @@ char *getOAuth2Token() {
   strcpy(oauth2_url, oauth2_token);
   strcat(oauth2_url, jwt);
 
-  char *token = httpPost(oauth2_url);
+  HttpResponse_t token = httpPost(oauth2_url);
 
   char acc_token[4 * 1024];
   char void_buffer[4 * 1024];
 
-  sscanf(token,
+  sscanf(token.buffer,
          "{\"access_token\":\"%[^\"]\",\"expires_in\":%s,\"token_type\":"
          "\"Bearer\"}",
          acc_token, void_buffer);
@@ -63,25 +63,27 @@ char *getOAuth2Token() {
   char *access_token = (char *)malloc(strlen(acc_token));
   strcpy(access_token, acc_token);
 
-  free(token);
   free(header);
   free(payload);
   free(oauth2_url);
   free(private_key);
   freeConfig(config);
+  freeHttpResponse(token);
 
   return access_token;
 }
 
-char *getFile(char *fileId, char *fields, bool download, char *access_token) {
-  char *base_url = "https://www.googleapis.com/drive/v3/files/";
+HttpResponse_t getFile(char *fileId, char *fields, bool download,
+                       char *access_token) {
+  const char *base_url = "https://www.googleapis.com/drive/v3/files/";
+  const char *base_download = "?alt=media";
 
   int url_length = 0;
   if (fields != NULL) {
     url_length += strlen(fields);
   }
   if (download) {
-    url_length += 10;
+    url_length += strlen(base_download);
   }
 
   char *url =
@@ -89,18 +91,18 @@ char *getFile(char *fileId, char *fields, bool download, char *access_token) {
   strcpy(url, base_url);
   strcat(url, fileId);
 
-  if (fields == NULL) {
+  if (fields != NULL) {
     strcat(url, fields);
   }
   if (download) {
-    strcat(url, "?alt=media");
+    strcat(url, base_download);
   }
 
   char *bearer = (char *)malloc(7 + strlen(access_token) + 1);
   sprintf(bearer, "Bearer %s", access_token);
 
   HttpHeader_t header = {.key = "Authorization", .value = bearer};
-  char *gFile = httpGet(url, &header, 1);
+  HttpResponse_t gFile = httpGet(url, &header, 1);
 
   free(bearer);
   free(url);

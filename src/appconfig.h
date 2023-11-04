@@ -21,6 +21,7 @@ typedef struct AppConfig AppConfig_t;
 AppConfig_t *loadConfig();
 
 /**
+ * Free the allocated config object.
  * @param config The config object to free.
  */
 void freeConfig(AppConfig_t *config);

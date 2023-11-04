@@ -14,6 +14,6 @@ unsigned long long int getLastModificationTime(char *path);
  * @param access_token The access token to fetch Google Drive API.
  * @return Return 1 on success, error otherwise.
  */
-char *downloadSavefile(char *fileId, char *access_token);
+HttpResponse_t downloadSavefile(char *fileId, char *access_token);
 
 #endif

@@ -14,6 +14,17 @@ struct HttpHeader {
  */
 typedef struct HttpHeader HttpHeader_t;
 
+struct HttpResponse {
+  char *buffer;
+  unsigned long long int length;
+};
+
+/**
+ * @param buffer Byte-stream from the response.
+ * @param length Size of the response.
+ */
+typedef struct HttpResponse HttpResponse_t;
+
 /** Init the HTTP NET Module.*/
 void httpNetInit();
 
@@ -25,7 +36,7 @@ void httpNetInit();
  * @return Result of the GET Request. Result must be freed when not used
  * anymore.
  */
-char *httpGet(char *url, HttpHeader_t *headers, size_t headers_length);
+HttpResponse_t httpGet(char *url, HttpHeader_t *headers, size_t headers_length);
 
 /**
  * Send HTTP POST Request.
@@ -33,6 +44,12 @@ char *httpGet(char *url, HttpHeader_t *headers, size_t headers_length);
  * @return Result of the POST Request. Result must be freed when not used
  * anymore.
  */
-char *httpPost(char *url);
+HttpResponse_t httpPost(char *url);
+
+/**
+ * Free the allocated HTTP Response.
+ * @param response The response object.
+ */
+void freeHttpResponse(HttpResponse_t response);
 
 #endif
