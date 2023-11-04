@@ -3,7 +3,8 @@
 
 /**
  * Get the access token from OAuth2 Google API.
- * @return The access token from OAuth2.
+ * @return The access token from OAuth2. Result must be freed when not used
+ * anymore.
  */
 char *getOAuth2Token();
 
@@ -13,7 +14,8 @@ char *getOAuth2Token();
  * @param fields Information to fetch from the file.
  * @param download Set download mode, to get raw data of the file.
  * @param access_token Access token used to connect to the Google Drive API.
- * @return Information about the file fetch.
+ * @return Information about the file fetch. Result must be freed when not used
+ * anymore.
  */
 char *getFile(char *fileId, char *fields, bool download, char *access_token);
 

@@ -22,14 +22,16 @@ void httpNetInit();
  * @param url The url to fetch.
  * @param headers Array of headers.
  * @param headers_length Size of the array of headers.
- * @return Result of the GET Request.
+ * @return Result of the GET Request. Result must be freed when not used
+ * anymore.
  */
 char *httpGet(char *url, HttpHeader_t *headers, size_t headers_length);
 
 /**
  * Send HTTP POST Request.
  * @param url The url to fetch.
- * @return Result of the POST Request.
+ * @return Result of the POST Request. Result must be freed when not used
+ * anymore.
  */
 char *httpPost(char *url);
 

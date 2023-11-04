@@ -36,22 +36,14 @@ int main(int argc, char *argv[]) {
   char *json = getFile(mhf2ndgId, "?fields=modifiedTime", false, access_token);
 
   // unsigned long long int lmt_driveFile = getModifiedTime(json);
+  free(json);
 
   // unsigned long long int lmt_localFile =
   //     getLastModificationTime("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN");
 
   char *res = downloadSavefile(mhf2ndgId, access_token);
   int len = strlen(res);
-  int find = 0;
-  for (int i = 0; i < len; i++) {
-    if (res[i] == '0') {
-      find = 1;
-    }
-    if (find == 0) {
-      continue;
-    }
-    printf("%x ", res[i]);
-  }
+  printf("size %d", len);
 
   wait3s;
   exit(0);

@@ -29,11 +29,5 @@ unsigned long long int getLastModificationTime(char *path) {
 char *downloadSavefile(char *fileId, char *access_token) {
   char *gzipped = getFile(fileId, NULL, true, access_token);
 
-  // char *buffer = (char *)malloc(0x40000);
-  // int res = ksceGzipDecompress(buffer, 0x40000, gzipped, NULL);
-  // if (res < 0) {
-  //   return res;
-  // }
-
   return gzipped;
 }

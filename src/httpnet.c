@@ -108,8 +108,8 @@ char *_httpSend(char *url, SceHttpMethods method, HttpHeader_t *headers,
     exit(1);
   }
 
-  char *recv_buffer = sce_paf_memalign(0x40, 0x40000);
-  sceHttpReadData(req, recv_buffer, 0x40000);
+  char *recv_buffer = (char *)malloc(0x400000);
+  sceHttpReadData(req, recv_buffer, 0x400000);
 
   return recv_buffer;
 }
