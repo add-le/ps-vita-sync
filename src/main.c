@@ -43,12 +43,10 @@ int main(int argc, char *argv[]) {
   // //
   // getLastModificationTime("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN");
 
-  HttpResponse_t res = downloadSavefile(mhf2ndgId, access_token);
-
-  printf("res : %llu", res.length);
+  int res = downloadSavefile(mhf2ndgId, access_token);
+  printf("res : %d", res);
 
   free(access_token);
-  freeHttpResponse(res);
 
   wait3s;
   sceKernelExitProcess(0);

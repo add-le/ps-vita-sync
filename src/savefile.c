@@ -1,4 +1,5 @@
 #include <psp2/io/dirent.h>
+#include <psp2/io/fcntl.h>
 #include <psp2/paf.h>
 #include <psp2kern/kernel/utils.h>
 
@@ -27,10 +28,31 @@ unsigned long long int getLastModificationTime(char *path) {
   return psp2DateTimeToMs(lastModificationTime);
 }
 
-HttpResponse_t downloadSavefile(char *fileId, char *access_token) {
-  HttpResponse_t gzipped = getFile(fileId, NULL, true, access_token);
+int downloadSavefile(char *fileId, char *access_token) {
+  HttpResponse_t drive_file = getFile(fileId, NULL, true, access_token);
 
-  // free(gzipped);
+  // Backup the local_file
+  int res = sceIoRename("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN",
+                        "ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN.old");
+  if (res < 0) {
+    return res;
+  }
 
-  return gzipped;
+  int fd;
+  if ((fd = sceIoOpen("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN",
+                      SCE_O_WRONLY | SCE_O_CREAT, 0777)) < 0) {
+    return fd;
+  }
+
+  int bw = sceIoWrite(fd, drive_file.buffer, drive_file.length);
+  if (bw != drive_file.length) {
+    return -1;
+  }
+
+  sceIoClose(fd);
+
+  freeHttpResponse(drive_file);
+  return 1;
 }
+
+int uploadSavefile(char *path, char *access_token) {}
