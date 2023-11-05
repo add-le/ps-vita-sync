@@ -15,19 +15,28 @@
 
 #include <curl/curl.h>
 
-unsigned long long int getLastModificationTime(char *path) {
+long long getLastModificationTime(char *path) {
   int fd = sceIoDopen(path);
   if (fd < 0) {
-    return -1;
+    return fd;
   }
 
+  int res;
   SceIoDirent *dir = (SceIoDirent *)malloc(sizeof(SceIoDirent));
-  int res = sceIoDread(fd, dir);
-  if (res != 0) {
-    return -1;
+  SceDateTime lastModificationTime;
+
+  while ((res = sceIoDread(fd, dir)) > 0) {
+    if (res < 0) {
+      return res;
+    }
+    if (strcmp(dir->d_name, "MHP2NDG.BIN") == 0) {
+      lastModificationTime = dir->d_stat.st_mtime;
+    }
   }
 
-  SceDateTime lastModificationTime = dir->d_stat.st_mtime;
+  if (sceIoDclose(fd) < 0) {
+    return -1;
+  }
 
   return psp2DateTimeToMs(lastModificationTime);
 }

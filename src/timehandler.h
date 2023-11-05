@@ -8,7 +8,7 @@
  * @param date_time DateTime from PSP2.
  * @return The time converted into ms.
  */
-unsigned long long int psp2DateTimeToMs(SceDateTime date_time);
+long long psp2DateTimeToMs(SceDateTime date_time);
 
 /**
  * Convert ISO String date (JS Format) into ms.

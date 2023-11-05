@@ -6,7 +6,7 @@
  * @param path Path to the file.
  * @return Last modification time in ms.
  */
-unsigned long long int getLastModificationTime(char *path);
+long long getLastModificationTime(char *path);
 
 /**
  * Download the file from the Google Drive and replace the current savefile.

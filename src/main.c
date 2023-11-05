@@ -47,8 +47,11 @@ int main(int argc, char *argv[]) {
   unsigned long long int lmt_driveFile = getModifiedTime(json.buffer);
   freeHttpResponse(json);
 
-  unsigned long long int lmt_localFile =
-      getLastModificationTime("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN");
+  long long lmt_localFile =
+      getLastModificationTime("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/");
+
+  printf("cloud: %llu\n", lmt_driveFile);
+  printf("local: %lld\n", lmt_localFile);
 
   // Upload the local version or download the cloud version
   if (lmt_driveFile >= lmt_localFile) {
@@ -71,6 +74,7 @@ int main(int argc, char *argv[]) {
     }
   }
 
+  httpNetClose();
   free(access_token);
 
   printf("Sync correctly done, app will close in 3s\n");
