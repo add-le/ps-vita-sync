@@ -41,19 +41,22 @@ long long getLastModificationTime(char *path) {
   return psp2DateTimeToMs(lastModificationTime);
 }
 
-int downloadSavefile(char *fileId, char *access_token) {
+int downloadSavefile(char *fileId, char *path, char *access_token) {
   HttpResponse_t drive_file = getFile(fileId, NULL, true, access_token);
 
   // Backup the local_file
-  int res = sceIoRename("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN",
-                        "ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN.old");
+
+  char *old_location = (char *)malloc(strlen(path) + 4 + 1);
+  strcpy(old_location, path);
+  strcat(old_location, ".old");
+
+  int res = sceIoRename(path, old_location);
   if (res < 0) {
     return res;
   }
 
   int fd;
-  if ((fd = sceIoOpen("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN",
-                      SCE_O_WRONLY | SCE_O_CREAT, 0777)) < 0) {
+  if ((fd = sceIoOpen(path, SCE_O_WRONLY | SCE_O_CREAT, 0777)) < 0) {
     return fd;
   }
 
@@ -63,7 +66,7 @@ int downloadSavefile(char *fileId, char *access_token) {
   }
 
   sceIoClose(fd);
-
+  free(old_location);
   freeHttpResponse(drive_file);
   return 1;
 }

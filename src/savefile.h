@@ -11,10 +11,11 @@ long long getLastModificationTime(char *path);
 /**
  * Download the file from the Google Drive and replace the current savefile.
  * @param fileId File to download.
+ * @param path Location where to save the downloaded file.
  * @param access_token The access token to fetch Google Drive API.
  * @return Return 1 on success, error otherwise.
  */
-int downloadSavefile(char *fileId, char *access_token);
+int downloadSavefile(char *fileId, char *path, char *access_token);
 
 /**
  * Upload the current local file to the Google Drive.

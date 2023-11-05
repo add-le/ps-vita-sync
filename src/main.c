@@ -40,6 +40,7 @@ int main(int argc, char *argv[]) {
   printf("access_token granted\n");
 
   char *mhf2ndgId = "18YLl-vKzWdKYC-2FGSNN949Ddt7-i5C0";
+  char *sfo_file = "18NKESueoRL1hszPCS1-Frrwr9x8qEpKO";
   HttpResponse_t json =
       getFile(mhf2ndgId, "?fields=modifiedTime", false, access_token);
   printf("mhf2ndgId modifiedTime find\n");
@@ -55,9 +56,19 @@ int main(int argc, char *argv[]) {
 
   // Upload the local version or download the cloud version
   if (lmt_driveFile >= lmt_localFile) {
-    int res = downloadSavefile(mhf2ndgId, access_token);
+    int res = downloadSavefile(mhf2ndgId,
+                               "ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN",
+                               access_token);
     if (res == 1) {
       printf("MHP2NDG savefile correctly downloaded\n");
+      res = downloadSavefile(sfo_file,
+                             "ux0:/pspemu/PSP/SAVEDATA/ULUS10391/PARAM.SFO",
+                             access_token);
+      if (res == 1) {
+        printf("param sfo savefile correctly downloaded\n");
+      } else {
+        printf("error on download savefile %d\n", res);
+      }
     } else {
       printf("error on download savefile %d\n", res);
     }
