@@ -45,15 +45,15 @@ int downloadSavefile(char *fileId, char *path, char *access_token) {
   HttpResponse_t drive_file = getFile(fileId, NULL, true, access_token);
 
   // Backup the local_file
+  // Need to delete old backup if exists before
+  // char *old_location = (char *)malloc(strlen(path) + 4 + 1);
+  // strcpy(old_location, path);
+  // strcat(old_location, ".old");
 
-  char *old_location = (char *)malloc(strlen(path) + 4 + 1);
-  strcpy(old_location, path);
-  strcat(old_location, ".old");
-
-  int res = sceIoRename(path, old_location);
-  if (res < 0) {
-    return res;
-  }
+  // int res = sceIoRename(path, old_location);
+  // if (res < 0) {
+  //   return res;
+  // }
 
   int fd;
   if ((fd = sceIoOpen(path, SCE_O_WRONLY | SCE_O_CREAT, 0777)) < 0) {

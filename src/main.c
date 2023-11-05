@@ -67,10 +67,10 @@ int main(int argc, char *argv[]) {
       if (res == 1) {
         printf("param sfo savefile correctly downloaded\n");
       } else {
-        printf("error on download savefile %d\n", res);
+        printf("error on download savefile %x\n", res);
       }
     } else {
-      printf("error on download savefile %d\n", res);
+      printf("error on download savefile %x\n", res);
     }
   } else {
     httpNetClose();
