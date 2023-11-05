@@ -28,10 +28,10 @@
 #define wait3s sceKernelDelayThread(3 * 1000000)
 
 int main(int argc, char *argv[]) {
+  psvDebugScreenInit();
   printf("PS Vita Sync v0.01\n");
 
   // Inits
-  psvDebugScreenInit();
   OpenSSL_add_all_algorithms();
   httpNetInit();
   printf("Inits done\n");
