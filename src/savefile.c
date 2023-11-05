@@ -66,7 +66,7 @@ int downloadSavefile(char *fileId, char *path, char *access_token) {
   }
 
   sceIoClose(fd);
-  free(old_location);
+  // free(old_location);
   freeHttpResponse(drive_file);
   return 1;
 }
