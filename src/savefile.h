@@ -16,4 +16,13 @@ unsigned long long int getLastModificationTime(char *path);
  */
 int downloadSavefile(char *fileId, char *access_token);
 
+/**
+ * Upload the current local file to the Google Drive.
+ * @param path Path to the savefile.
+ * @param fileId File to replace with the upload.
+ * @param access_token The access token to fetch Google Drive API.
+ * @return Return 1 on success, error otherwise.
+ */
+int uploadSavefile(char *path, char *fileId, char *access_token);
+
 #endif

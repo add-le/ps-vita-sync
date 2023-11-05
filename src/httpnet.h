@@ -28,6 +28,9 @@ typedef struct HttpResponse HttpResponse_t;
 /** Init the HTTP NET Module.*/
 void httpNetInit();
 
+/** Close the HTTP NET Module. */
+void httpNetClose();
+
 /**
  * Send HTTP GET Request.
  * @param url The url to fetch.
@@ -45,6 +48,18 @@ HttpResponse_t httpGet(char *url, HttpHeader_t *headers, size_t headers_length);
  * anymore.
  */
 HttpResponse_t httpPost(char *url);
+
+/**
+ * Send HTTP PATCH Request.
+ * @param url The url to fetch.
+ * @param body The body content of the request.
+ * @param headers Array of headers.
+ * @param headers_length Size of the array of headers.
+ * @return Result of the PATCH Request. Result must be freed when not used
+ * anymore.
+ */
+HttpResponse_t httpPatch(char *url, char *body, HttpHeader_t *headers,
+                         size_t headers_length);
 
 /**
  * Free the allocated HTTP Response.

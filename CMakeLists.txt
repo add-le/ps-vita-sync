@@ -31,10 +31,13 @@ set(VITA_VERSION  "00.01")
 
 ## Flags and includes for building
 # Note that we make sure not to overwrite previous flags
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu11 -Wall")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 # Optional. You can specify more param.sfo flags this way.
 set(VITA_MKSFOEX_FLAGS "${VITA_MKSFOEX_FLAGS} -d PARENTAL_LEVEL=1")
+
+find_package(CURL REQUIRED)
+find_package(OpenSSL REQUIRED)
 
 # Add any additional include paths here
 include_directories(
@@ -74,6 +77,8 @@ target_link_libraries(${PROJECT_NAME}
   SceNetCtl_stub
   SceHttp_stub
   SceSsl_stub
+  ${CURL_LIBRARIES}
+  ${OPENSSL_LIBRARIES}
   SceKernelThreadMgr_stub
   SceIofilemgr_stub
   SceVshBridge_stub
@@ -82,6 +87,9 @@ target_link_libraries(${PROJECT_NAME}
   SceLibJson_stub
   SceKernelUtilsForDriver_stub 
   crypto
+  c
+  m
+  z
 )
 
 ## Create Vita files

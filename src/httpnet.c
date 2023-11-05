@@ -14,6 +14,7 @@
 #define printf psvDebugScreenPrintf
 
 void httpNetInit() {
+  sceSysmoduleLoadModule(SCE_SYSMODULE_NET);
   sceSysmoduleLoadModule(SCE_SYSMODULE_HTTPS);
 
   SceNetInitParam net_init_param;
@@ -47,8 +48,18 @@ void httpNetInit() {
   }
 }
 
+void httpNetClose() {
+  sceHttpTerm();
+  sceSslTerm();
+  sceNetCtlTerm();
+  sceNetTerm();
+  sceSysmoduleUnloadModule(SCE_SYSMODULE_HTTPS);
+  sceSysmoduleUnloadModule(SCE_SYSMODULE_NET);
+}
+
 HttpResponse_t _httpSend(char *url, SceHttpMethods method,
-                         HttpHeader_t *headers, size_t headers_length) {
+                         HttpHeader_t *headers, size_t headers_length,
+                         char *body) {
   int res;
 
   int tpl = sceHttpCreateTemplate("PS Vita Sync", SCE_HTTP_VERSION_1_1, 1);
@@ -77,7 +88,11 @@ HttpResponse_t _httpSend(char *url, SceHttpMethods method,
     exit(1);
   }
 
-  res = sceHttpSendRequest(req, NULL, 0);
+  if (body != NULL) {
+    res = sceHttpSendRequest(req, body, strlen(body));
+  } else {
+    res = sceHttpSendRequest(req, NULL, 0);
+  }
   if (res < 0) {
     printf("sceHttpSendRequest failed (0x%X)\n", res);
     exit(1);
@@ -95,7 +110,6 @@ HttpResponse_t _httpSend(char *url, SceHttpMethods method,
 
   if (statusCode == 200) {
     res = sceHttpGetResponseContentLength(req, &contentLength);
-    printf("content length (0x%x) %d\n\n", res, contentLength);
     if (res >= 0 || contentLength > 0) {
       // Content length set
       recv_buffer = (char *)malloc(contentLength);
@@ -127,11 +141,16 @@ HttpResponse_t _httpSend(char *url, SceHttpMethods method,
 
 HttpResponse_t httpGet(char *url, HttpHeader_t *headers,
                        size_t headers_length) {
-  return _httpSend(url, SCE_HTTP_METHOD_GET, headers, headers_length);
+  return _httpSend(url, SCE_HTTP_METHOD_GET, headers, headers_length, NULL);
 }
 
 HttpResponse_t httpPost(char *url) {
-  return _httpSend(url, SCE_HTTP_METHOD_POST, NULL, 0);
+  return _httpSend(url, SCE_HTTP_METHOD_POST, NULL, 0, NULL);
+}
+
+HttpResponse_t httpPatch(char *url, char *body, HttpHeader_t *headers,
+                         size_t headers_length) {
+  return _httpSend(url, SCE_HTTP_METHOD_PUT, headers, headers_length, body);
 }
 
 void freeHttpResponse(HttpResponse_t response) { free(response.buffer); }
