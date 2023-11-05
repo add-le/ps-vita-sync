@@ -21,7 +21,7 @@ long long psp2DateTimeToMs(SceDateTime date_time) {
   timeinfo.tm_min = date_time.minute;
   timeinfo.tm_sec = date_time.second;
 
-  printf("year %hu month %hu day %hu hour %hu minute %hu second %hu",
+  printf("year %hu month %hu day %hu hour %hu minute %hu second %hu\n",
          date_time.year, date_time.month, date_time.day, date_time.hour,
          date_time.minute, date_time.second);
 
