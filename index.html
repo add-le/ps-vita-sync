@@ -166,7 +166,7 @@
 
           var display_timer = document.getElementById("display-timer");
           var timerInterval = setInterval(function () {
-            if (timer.getTime() === 0) {
+            if (timer.getTime() <= 0) {
               clearInterval(timerInterval);
               display_timer.parentElement.innerHTML =
                 '<span class="expire-code">The code has expired, make a new request in the application.</span>';
