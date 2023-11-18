@@ -3,6 +3,8 @@
 #include <psp2/paf.h>
 #include <psp2kern/kernel/utils.h>
 
+#include <curl/curl.h>
+
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,10 +12,9 @@
 
 #include "driveapi.h"
 #include "httpnet.h"
+#include "logger.h"
 #include "savefile.h"
 #include "timehandler.h"
-
-#include <curl/curl.h>
 
 long long getLastModificationTime(char *path) {
   int fd = sceIoDopen(path);
@@ -44,6 +45,9 @@ long long getLastModificationTime(char *path) {
 int downloadSavefile(char *fileId, char *path, char *access_token) {
   HttpResponse_t drive_file = getFile(fileId, NULL, true, access_token);
 
+  /**
+   * FIXME: Why not used anymore?
+   */
   // Backup the local_file
   // Need to delete old backup if exists before
   // char *old_location = (char *)malloc(strlen(path) + 4 + 1);

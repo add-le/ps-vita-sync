@@ -22,22 +22,21 @@
 
 #include <curl/curl.h>
 
-#include "debugScreen.h"
+#include "appconfig.h"
 #include "driveapi.h"
 #include "httpnet.h"
 #include "logger.h"
 #include "savedata.h"
 #include "savefile.h"
 
-#define printf psvDebugScreenPrintf
 #define wait3s sceKernelDelayThread(3 * 1000000)
 
 int main(int argc, char *argv[]) {
   psvDebugScreenInit();
   logger_init();
-  printf("PS Vita Sync v0.01\n");
+  printf("PS Vita Sync v%s\n", APP_VERSION);
 
-  // displaySavedataFolder("ux0:/user/00/savedata/");
+  displaySavedataFolder("ux0:/user/00/savedata/");
 
   // // Inits
   // OpenSSL_add_all_algorithms();

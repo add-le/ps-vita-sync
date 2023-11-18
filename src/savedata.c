@@ -1,12 +1,15 @@
-#include "logger.h"
-#include <inttypes.h>
 #include <psp2/io/dirent.h>
 #include <psp2/io/fcntl.h>
 #include <psp2/kernel/processmgr.h>
+
 #include <stdio.h>
 #include <string.h>
 
+#include "logger.h"
+
 void displaySavedataFolder(char *path) {
+  int res;
+
   int fd = sceIoDopen(path);
   if (fd < 0) {
     logger_printf("Failed to open the PSP2 savedata folder (0x%x)\n", fd);
@@ -14,9 +17,12 @@ void displaySavedataFolder(char *path) {
     logger_exit(1);
   }
 
+  printf("\n==== Content of savedata folder ====\n");
+
   SceIoDirent dir;
   while (sceIoDread(fd, &dir) > 0) {
-    logger_printf("file %s %" PRId64 "\n", dir.d_name, dir.d_stat.st_size);
+    // Display game save folder
+    printf("%s/\n", dir.d_name);
 
     char file_path[1024];
     sprintf(file_path, "%s%s", path, dir.d_name);
@@ -29,19 +35,19 @@ void displaySavedataFolder(char *path) {
     }
 
     SceIoDirent file_dir;
-    short savedata_files = 0;
     while (sceIoDread(file, &file_dir) > 0) {
-      savedata_files++;
-      logger_printf("TODO 2 %s %" PRId64 "\n", file_dir.d_name,
-                    file_dir.d_stat.st_size);
+      printf("|-%s\n", file_dir.d_name);
     }
 
-    if (savedata_files != 0) {
-      logger_printf("TODO 3 %d\n", savedata_files);
+    res = sceIoDclose(file);
+    if (res < 0) {
+      logger_printf("TODO 4\n");
+      logger_panic(res);
+      logger_exit(1);
     }
   }
 
-  int res = sceIoDclose(fd);
+  res = sceIoDclose(fd);
   if (res < 0) {
     logger_printf("Failed to close PSP2 savedata folder (0x%x)\n", fd);
     logger_panic(res);
