@@ -1,9 +1,9 @@
-<!-- PlaySatation Vita WebKit JavaScriptCore Engine 2009 -->
+<!-- PlayStation Vita WebKit JavaScriptCore Engine 2009 -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-    
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+
     <meta
       name="viewport"
       content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"
@@ -15,17 +15,13 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
 
-    <style>
-      .error-page {
-        text-align: center;
-      }
+    <link type="text/css" rel="stylesheet" href="style.css" />
 
-      .expire-code {
-        color: lightcoral;
-      }
-    </style>
-
-    <link rel="shortcut icon" type="image/x-icon" href="ps_vita_sync_logo_icon.ico" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="ps_vita_sync_logo_raster_circle.png"
+    />
     <title>PS Vita Sync Verification Page</title>
   </head>
 
@@ -47,6 +43,7 @@
           Copy the following code, you will be asked to authorize the
           application to connect to your
           <img
+            alt="google drive logo"
             class="drive-icon"
             src="https://camo.githubusercontent.com/78970772c54aad16d3d5ec6f8ba3ba5e2f5c238ca1940345b44a78b97e6235df/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f676f6f676c655f64726976652e737667"
           />
@@ -80,7 +77,11 @@
         <p class="mt-2 link-instructor">
           Once the code has been copied, follow the link:
           <br />
-          <a class="verification-link" id="verification_url" target="_blank"
+          <a
+            href="#"
+            class="verification-link"
+            id="verification_url"
+            target="_blank"
             >wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</a
           >
         </p>
@@ -90,6 +91,8 @@
     <footer>
       Copyleft
       <img
+        alt="copyleft"
+        title="copyleft"
         class="copyleft"
         src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Copyleft.svg"
       />
@@ -99,216 +102,6 @@
       >. Free of use.
     </footer>
 
-    <script>
-      function trailingZero(string) {
-        return string.length === 1 ? "0" + string.toString() : string;
-      }
-
-      function init() {
-        try {
-          var user_code = "XXXX-XXXX";
-          var verification_url = "https://www.google.com/device";
-          var expires_in = 0;
-
-          // Block non ps vita browser
-          // 960x544 + User Agent...
-          var isPSP2 = navigator.userAgent.indexOf("PlayStation Vita") !== -1;
-          var PSP2_Width = 960;
-          var PSP2_Height = 544;
-          var rightDimensions =
-            (window.innerWidth === PSP2_Width &&
-              window.innerHeight === PSP2_Height) ||
-            (window.screen.width === PSP2_Width &&
-              window.screen.height === PSP2_Height);
-
-          if (!isPSP2 || !rightDimensions) {
-            document.body.innerHTML =
-              '<div class="error-page">❌ This page is only accessible using a PlayStation Vita device.</div>';
-            return;
-          }
-
-          var search = location.search.replace("?", "").split("&");
-          search.forEach(function (param) {
-            switch (param.split("=")[0]) {
-              case "user_code":
-                user_code = param.split("=")[1];
-                break;
-              case "expires_in":
-                expires_in = param.split("=")[1];
-                break;
-              case "verification_url":
-                verification_url = param.split("=")[1];
-                break;
-            }
-          });
-
-          // Handle reload to not reset expires time
-          var reloader = localStorage.getItem(user_code);
-          var timer;
-          if (reloader) {
-            var ts = JSON.parse(reloader).ts;
-            var expire = JSON.parse(reloader).expires_in;
-            var elps =
-              expire * 1000 - (new Date().getTime() - new Date(ts).getTime());
-            timer = new Date(elps < 0 ? 0 : elps);
-          } else {
-            localStorage.setItem(
-              user_code,
-              JSON.stringify({ ts: new Date(), expires_in: expires_in })
-            );
-            timer = new Date(expires_in * 1000);
-          }
-
-          var entry = document.getElementById("user_code");
-          entry.innerHTML = user_code;
-
-          var device_page = document.getElementById("verification_url");
-          device_page.innerHTML = verification_url;
-          device_page.href = verification_url;
-
-          var display_timer = document.getElementById("display-timer");
-          var timerInterval = setInterval(function () {
-            if (timer.getTime() <= 0) {
-              clearInterval(timerInterval);
-              display_timer.parentElement.innerHTML =
-                '<span class="expire-code">The code has expired, make a new request in the application.</span>';
-              return;
-            }
-
-            timer.setTime(timer.getTime() - 1000);
-            display_timer.innerHTML =
-              trailingZero(timer.getUTCMinutes().toString()) +
-              ":" +
-              trailingZero(timer.getUTCSeconds().toString());
-          }, 1000);
-        } catch (error) {
-          document.body.innerHTML = error;
-        }
-      }
-    </script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
-
-<style>
-  html,
-  body {
-    margin: 0px;
-    padding: 0px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    width: 960px;
-    height: 544px;
-    overflow: hidden;
-  }
-
-  code {
-    font-family: "Times New Roman", Times, serif;
-  }
-
-  footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 6px;
-    font-size: 11px;
-  }
-
-  main {
-    border: 1px solid #dadce0;
-    border-radius: 7px;
-    width: 550px;
-    height: 85%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-
-  .banner {
-    height: 150px;
-    overflow: hidden;
-    border-bottom: 1px solid #dadce0;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    background-image: url("./verification_page.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0px -60px;
-  }
-
-  .bubble {
-    height: 70px;
-    width: 70px;
-    z-index: 1;
-    position: relative;
-    top: 25px;
-    left: 25px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.8);
-  }
-
-  .bubble > img {
-    width: 100%;
-    border-radius: 100%;
-  }
-
-  .subject {
-    text-align: center;
-  }
-
-  .code-instructor {
-    text-align: justify;
-  }
-
-  .link-instructor {
-    text-align: center;
-  }
-
-  .verification-link {
-    text-align: center;
-  }
-
-  .code-content {
-    width: 100%;
-    text-align: center;
-  }
-
-  .access-code {
-    display: inline;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .drive-icon {
-    width: 16px;
-    display: inline;
-    vertical-align: middle;
-  }
-
-  .copyleft {
-    height: 11px;
-    vertical-align: middle;
-  }
-
-  .timer-icon {
-    vertical-align: middle;
-    font-size: 12px;
-  }
-
-  .expire-time {
-    font-size: 12px;
-    text-align: center;
-    margin-top: 8px;
-    color: gray;
-  }
-
-  .expire-time > svg {
-    width: 14px;
-    height: 14px;
-    vertical-align: text-bottom;
-  }
-</style>
