@@ -1,0 +1,36 @@
+{
+  "name": "psvita-sync",
+  "version": "0.2.0",
+  "description": "Homebrew to sync savefiles with your drive.",
+  "scripts": {
+    "release": "npx ts-node tools/release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/add-le/ps-vita-sync.git"
+  },
+  "keywords": [
+    "sync",
+    "cloud",
+    "google-drive",
+    "google-cloud",
+    "drive",
+    "vita",
+    "psvita",
+    "saves",
+    "henkaku",
+    "savefiles",
+    "psvita-homebrew"
+  ],
+  "author": "add-le",
+  "license": "copyleft-next-0.3.1",
+  "bugs": {
+    "url": "https://github.com/add-le/ps-vita-sync/issues"
+  },
+  "homepage": "https://github.com/add-le/ps-vita-sync#readme",
+  "devDependencies": {
+    "@types/node": "20.9.2",
+    "ts-node": "10.9.1",
+    "typescript": "5.2.2"
+  }
+}

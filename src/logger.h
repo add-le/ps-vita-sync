@@ -2,11 +2,24 @@
 #define _LOGGER_H_
 
 #include <stdarg.h>
+#include <stdio.h>
+
+#include "debugScreen.h"
+
+#define printf psvDebugScreenPrintf
 
 /**
  * TODO: DOC
  */
 int logger_printf(const char *format, ...);
+
+/**
+ * TODO: Implementations
+ */
+int logger_trace(const char *format, ...); // White
+int logger_info(const char *format, ...);  // Green
+int logger_warn(const char *format, ...);  // Yellowish
+int logger_err(const char *format, ...);   // Red
 
 /**
  * Display panic error human readable log to user.

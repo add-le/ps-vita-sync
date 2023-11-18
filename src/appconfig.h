@@ -2,6 +2,11 @@
 #define _APP_CONFIG_H_
 
 #define APP_ID "SYNC00055"
+/**
+ * WARNING: This define name must be unique!
+ * @see package.json.
+ */
+#define APP_VERSION "0.2.0"
 
 struct AppConfig {
   char *iss;
