@@ -98,32 +98,35 @@ int main(int argc, char *argv[]) {
   // httpNetClose();
   // free(access_token);
 
-  sceSysmoduleLoadModule(SCE_SYSMODULE_APPUTIL);
+  // sceSysmoduleLoadModule(SCE_SYSMODULE_APPUTIL);
 
-  const char *url = "https://www.google.com";
+  // const char *url = "https://add-le.github.io/ps-vita-sync/"
+  //                   "?user_code=XXXX-XXXX&expires_in=1800&verification_url="
+  //                   "https://www.google.com/device";
 
-  SceAppUtilInitParam *init_param =
-      (SceAppUtilInitParam *)calloc(1, sizeof(SceAppUtilInitParam));
-  SceAppUtilBootParam *boot_param =
-      (SceAppUtilBootParam *)calloc(1, sizeof(SceAppUtilBootParam));
+  // SceAppUtilInitParam *init_param =
+  //     (SceAppUtilInitParam *)calloc(1, sizeof(SceAppUtilInitParam));
+  // SceAppUtilBootParam *boot_param =
+  //     (SceAppUtilBootParam *)calloc(1, sizeof(SceAppUtilBootParam));
 
-  SceAppUtilWebBrowserParam *browser_param =
-      (SceAppUtilWebBrowserParam *)calloc(1, sizeof(SceAppUtilWebBrowserParam));
-  browser_param->str = url;
-  browser_param->strlen = strlen(url);
+  // SceAppUtilWebBrowserParam *browser_param =
+  //     (SceAppUtilWebBrowserParam *)calloc(1,
+  //     sizeof(SceAppUtilWebBrowserParam));
+  // browser_param->str = url;
+  // browser_param->strlen = strlen(url);
 
-  int res = sceAppUtilInit(init_param, boot_param);
-  if (res < 0) {
-    logger_printf("Error %d (0x%x)", res, res);
-  }
+  // int res = sceAppUtilInit(init_param, boot_param);
+  // if (res < 0) {
+  //   logger_printf("Error %d (0x%x)", res, res);
+  // }
 
-  sceAppUtilLaunchWebBrowser(browser_param);
+  // sceAppUtilLaunchWebBrowser(browser_param);
 
   // sceSysmoduleUnloadModule(SCE_SYSMODULE_APPUTIL);
 
-  free(init_param);
-  free(boot_param);
-  free(browser_param);
+  // free(init_param);
+  // free(boot_param);
+  // free(browser_param);
 
   printf("Sync correctly done, app will close in 3s\n");
   wait3s;
