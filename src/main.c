@@ -1,7 +1,10 @@
+#include <psp2/appmgr.h>
+#include <psp2/apputil.h>
 #include <psp2/io/fcntl.h>
 #include <psp2/kernel/processmgr.h>
 #include <psp2/kernel/threadmgr.h>
 #include <psp2/libssl.h>
+#include <psp2/sysmodule.h>
 
 #include <openssl/bio.h>
 #include <openssl/buffer.h>
@@ -22,6 +25,8 @@
 #include "debugScreen.h"
 #include "driveapi.h"
 #include "httpnet.h"
+#include "logger.h"
+#include "savedata.h"
 #include "savefile.h"
 
 #define printf psvDebugScreenPrintf
@@ -29,66 +34,98 @@
 
 int main(int argc, char *argv[]) {
   psvDebugScreenInit();
+  logger_init();
   printf("PS Vita Sync v0.01\n");
 
-  // Inits
-  OpenSSL_add_all_algorithms();
-  httpNetInit();
-  printf("Inits done\n");
+  // displaySavedataFolder("ux0:/user/00/savedata/");
 
-  char *access_token = getOAuth2Token();
-  printf("access_token granted\n");
+  // // Inits
+  // OpenSSL_add_all_algorithms();
+  // httpNetInit();
+  // printf("Inits done\n");
 
-  char *mhf2ndgId = "18YLl-vKzWdKYC-2FGSNN949Ddt7-i5C0";
-  char *sfo_file = "18NKESueoRL1hszPCS1-Frrwr9x8qEpKO";
-  HttpResponse_t json =
-      getFile(mhf2ndgId, "?fields=modifiedTime", false, access_token);
-  printf("mhf2ndgId modifiedTime find\n");
+  // char *access_token = getOAuth2Token();
+  // printf("access_token granted\n");
 
-  unsigned long long int lmt_driveFile = getModifiedTime(json.buffer);
-  freeHttpResponse(json);
+  // char *mhf2ndgId = "18YLl-vKzWdKYC-2FGSNN949Ddt7-i5C0";
+  // char *sfo_file = "18NKESueoRL1hszPCS1-Frrwr9x8qEpKO";
+  // HttpResponse_t json =
+  //     getFile(mhf2ndgId, "?fields=modifiedTime", false, access_token);
+  // printf("mhf2ndgId modifiedTime find\n");
 
-  long long lmt_localFile =
-      getLastModificationTime("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/");
+  // unsigned long long int lmt_driveFile = getModifiedTime(json.buffer);
+  // freeHttpResponse(json);
 
-  printf("cloud: %llu\n", lmt_driveFile);
-  printf("local: %lld\n", lmt_localFile);
+  // long long lmt_localFile =
+  //     getLastModificationTime("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/");
 
-  // Upload the local version or download the cloud version
-  if (lmt_driveFile >= lmt_localFile) {
-    int res = downloadSavefile(mhf2ndgId,
-                               "ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN",
-                               access_token);
-    if (res == 1) {
-      printf("MHP2NDG savefile correctly downloaded\n");
-      res = downloadSavefile(sfo_file,
-                             "ux0:/pspemu/PSP/SAVEDATA/ULUS10391/PARAM.SFO",
-                             access_token);
-      if (res == 1) {
-        printf("param sfo savefile correctly downloaded\n");
-      } else {
-        printf("error on download savefile %x\n", res);
-      }
-    } else {
-      printf("error on download savefile %x\n", res);
-    }
-  } else {
-    httpNetClose();
-    curl_global_init(CURL_GLOBAL_ALL);
-    int res = uploadSavefile("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN",
-                             mhf2ndgId, access_token);
-    if (res == 1) {
-      printf("MHP2NDG savefile correctly uploaded\n");
-    } else {
-      printf("error on upload savefile %d\n", res);
-      printf("curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
-    }
+  // printf("cloud: %llu\n", lmt_driveFile);
+  // printf("local: %lld\n", lmt_localFile);
+
+  // // Upload the local version or download the cloud version
+  // if (lmt_driveFile >= lmt_localFile) {
+  //   int res = downloadSavefile(mhf2ndgId,
+  //                              "ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN",
+  //                              access_token);
+  //   if (res == 1) {
+  //     printf("MHP2NDG savefile correctly downloaded\n");
+  //     res = downloadSavefile(sfo_file,
+  //                            "ux0:/pspemu/PSP/SAVEDATA/ULUS10391/PARAM.SFO",
+  //                            access_token);
+  //     if (res == 1) {
+  //       printf("param sfo savefile correctly downloaded\n");
+  //     } else {
+  //       printf("error on download savefile %x\n", res);
+  //     }
+  //   } else {
+  //     printf("error on download savefile %x\n", res);
+  //   }
+  // } else {
+  //   httpNetClose();
+  //   curl_global_init(CURL_GLOBAL_ALL);
+  //   int res =
+  //   uploadSavefile("ux0:/pspemu/PSP/SAVEDATA/ULUS10391/MHP2NDG.BIN",
+  //                            mhf2ndgId, access_token);
+  //   if (res == 1) {
+  //     printf("MHP2NDG savefile correctly uploaded\n");
+  //   } else {
+  //     printf("error on upload savefile %d\n", res);
+  //     printf("curl_easy_perform() failed: %s\n",
+  //     curl_easy_strerror(res));
+  //   }
+  // }
+
+  // httpNetClose();
+  // free(access_token);
+
+  sceSysmoduleLoadModule(SCE_SYSMODULE_APPUTIL);
+
+  const char *url = "https://www.google.com";
+
+  SceAppUtilInitParam *init_param =
+      (SceAppUtilInitParam *)calloc(1, sizeof(SceAppUtilInitParam));
+  SceAppUtilBootParam *boot_param =
+      (SceAppUtilBootParam *)calloc(1, sizeof(SceAppUtilBootParam));
+
+  SceAppUtilWebBrowserParam *browser_param =
+      (SceAppUtilWebBrowserParam *)calloc(1, sizeof(SceAppUtilWebBrowserParam));
+  browser_param->str = url;
+  browser_param->strlen = strlen(url);
+
+  int res = sceAppUtilInit(init_param, boot_param);
+  if (res < 0) {
+    logger_printf("Error %d (0x%x)", res, res);
   }
 
-  httpNetClose();
-  free(access_token);
+  sceAppUtilLaunchWebBrowser(browser_param);
+
+  // sceSysmoduleUnloadModule(SCE_SYSMODULE_APPUTIL);
+
+  free(init_param);
+  free(boot_param);
+  free(browser_param);
 
   printf("Sync correctly done, app will close in 3s\n");
   wait3s;
-  sceKernelExitProcess(0);
+  logger_exit(0);
 }

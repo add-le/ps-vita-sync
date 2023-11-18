@@ -1,5 +1,6 @@
 #include "pkey.h"
 #include "appconfig.h"
+#include "logger.h"
 #include <psp2/io/fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,7 +11,9 @@ char *loadPkey() {
 
   int fd = sceIoOpen(pkey_location, SCE_O_RDONLY, 0777);
   if (fd < 0) {
-    return NULL;
+    logger_printf("Failed to open file pkey.pem (0x%x)\n", fd);
+    logger_panic(fd);
+    logger_exit(1);
   }
 
   int fd_size = sceIoLseek(fd, 0, SCE_SEEK_END);
@@ -24,6 +27,5 @@ char *loadPkey() {
   pkey[fd_size] = '\0';
 
   sceIoClose(fd);
-
   return pkey;
 }
