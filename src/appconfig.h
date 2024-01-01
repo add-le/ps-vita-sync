@@ -6,7 +6,7 @@
  * WARNING: This define name must be unique!
  * @see package.json.
  */
-#define APP_VERSION "0.2.0"
+#define APP_VERSION "00.02"
 
 struct AppConfig {
   char *iss;
