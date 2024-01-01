@@ -1,6 +1,6 @@
 {
   "name": "psvita-sync",
-  "version": "0.2.0",
+  "version": "00.02",
   "description": "Homebrew to sync savefiles with your drive.",
   "scripts": {
     "release": "npx ts-node tools/release"

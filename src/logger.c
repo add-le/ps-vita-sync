@@ -37,6 +37,7 @@ int logger_panic(unsigned int errno) {
 }
 
 void logger_init() {
+  psvDebugScreenInit();
   /** TODO: Open log file */
   logger_fd = -1;
 }
