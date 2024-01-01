@@ -21,7 +21,7 @@ void setColor() { printf("\033[30m\033[47m"); }
 void resetColor() { printf("\033[0m"); }
 
 void printDisplay(unsigned short item, char **games,
-                  unsigned short games_length) {
+                  unsigned short games_length, int *selected_games) {
   // printf("\e[?25l");
   // printf("\033[H\033[J");
 
@@ -29,6 +29,13 @@ void printDisplay(unsigned short item, char **games,
     if (item == i) {
       setColor();
     }
+
+    if (selected_games[i] == 1) {
+      printf("%c ", 254);
+    } else {
+      printf("  ");
+    }
+
     printf("%s\n", games[i]);
     resetColor();
   }
@@ -49,12 +56,14 @@ void displaySavedataFolder(char *path) {
   printf("\e[0;33m");
   printf("\n x: add folder or file into ps vita sync cloud\n");
   printf(" o: remove folder or file from ps vita sync cloud\n");
+  printf(" /\\: confirm selected games to be sync with ps vita sync cloud\n");
   printf("^v: move between files or folders\n");
   printf("\e[0;37m");
 
   printf("\n[PS Vita Games]\n\n");
 
   char *games[256];
+  int selected_games[256];
   unsigned short i = 0;
   unsigned short item = 0;
 
@@ -73,18 +82,34 @@ void displaySavedataFolder(char *path) {
     }
   }
 
-  printDisplay(0, games, i);
+  // Init selected_games
+  for (int j = 0; j < i; j++) {
+    selected_games[j] = 0;
+  }
+
+  printDisplay(0, games, i, selected_games);
   SceCtrlData ctrl;
   while (1) {
     sceCtrlPeekBufferPositive(0, &ctrl, 1);
     if (ctrl.buttons == SCE_CTRL_DOWN && item < i - 1) {
       item++;
-      printDisplay(item, games, i);
+      printDisplay(item, games, i, selected_games);
       sceKernelDelayThread(0.2 * 1000000);
     } else if (ctrl.buttons == SCE_CTRL_UP && item > 0) {
       item--;
-      printDisplay(item, games, i);
+      printDisplay(item, games, i, selected_games);
       sceKernelDelayThread(0.2 * 1000000);
+    } else if (ctrl.buttons == SCE_CTRL_CROSS) {
+      selected_games[item] = 1;
+      printDisplay(item, games, i, selected_games);
+      sceKernelDelayThread(0.2 * 1000000);
+    } else if (ctrl.buttons == SCE_CTRL_CIRCLE) {
+      selected_games[item] = 0;
+      printDisplay(item, games, i, selected_games);
+      sceKernelDelayThread(0.2 * 1000000);
+    } else if (ctrl.buttons == SCE_CTRL_TRIANGLE) {
+      /** TODO: Returns selected games */
+      break;
     }
   }
 
