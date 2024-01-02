@@ -25,6 +25,8 @@ void printDisplay(unsigned short item, char **games,
   // printf("\e[?25l");
   // printf("\033[H\033[J");
 
+  printf("\033[%d;%dH", 10, 0);
+
   for (int i = 0; i < games_length; i++) {
     if (item == i) {
       setColor();
@@ -39,8 +41,6 @@ void printDisplay(unsigned short item, char **games,
     printf("%s\n", games[i]);
     resetColor();
   }
-
-  printf("\033[%d;%dH", 9, 0);
 }
 
 void displaySavedataFolder(char *path) {
@@ -60,7 +60,7 @@ void displaySavedataFolder(char *path) {
   printf("^v: move between files or folders\n");
   printf("\e[0;37m");
 
-  printf("\n[PS Vita Games]\n\n");
+  printf("\n[PS Vita Games]\n");
 
   char *games[256];
   int selected_games[256];

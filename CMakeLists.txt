@@ -67,6 +67,9 @@ add_executable(${PROJECT_NAME}
   src/logger.c
   src/savedata.c
   src/appgame.c
+  src/display.c
+  src/browser.c
+  src/gdrive.c
   ./common/debugScreen.c
 )
 
