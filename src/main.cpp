@@ -1,3 +1,4 @@
+extern "C" {
 #include <psp2/appmgr.h>
 #include <psp2/apputil.h>
 #include <psp2/io/fcntl.h>
@@ -30,6 +31,9 @@
 #include "savedata.h"
 #include "savefile.h"
 
+#include "gdrive.hpp"
+}
+
 #define wait3s sceKernelDelayThread(3 * 1000000)
 
 int main(int argc, char *argv[]) {
@@ -40,12 +44,16 @@ int main(int argc, char *argv[]) {
 
   // displaySavedataFolder("ux0:/user/00/savedata/");
 
-  displayMainMenu();
+  // displayMainMenu();
 
-  // // Inits
-  // OpenSSL_add_all_algorithms();
-  // httpNetInit();
-  // printf("Inits done\n");
+  // Inits
+  OpenSSL_add_all_algorithms();
+  httpNetInit();
+  printf("Inits done\n");
+
+  HttpResponse_t response = requestDeviceAndUserCodes();
+  handleTheAuthorizationServerResponse(response.buffer);
+  freeHttpResponse(response);
 
   // char *access_token = getOAuth2Token();
   // printf("access_token granted\n");
@@ -98,7 +106,7 @@ int main(int argc, char *argv[]) {
   //   }
   // }
 
-  // httpNetClose();
+  httpNetClose();
   // free(access_token);
 
   printf("\nSync correctly done, app will close in 3s\n");
