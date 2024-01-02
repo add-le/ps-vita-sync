@@ -30,7 +30,7 @@ void displayMainMenu() {
   unsigned short item = 0;
   char *item_list[ITEM_LIST_LENGTH] = {
       "1. Start the synchronization", "2. Manage sync games",
-      "3. Log in Google Drive Account", "4. Quit"};
+      "3. Sign in Google Drive Account", "4. Quit"};
 
   char *url = "https://add-le.github.io/ps-vita-sync/"
               "?user_code=XXXX-XXXX&expires_in=1800&verification_url="
@@ -56,7 +56,7 @@ void displayMainMenu() {
         logger_exit(0);
         break;
       case 2:
-        // 3. Open Google Drive Log In Module
+        // 3. Open Google Drive Sign In Module
         openUrl(url);
         break;
       default:

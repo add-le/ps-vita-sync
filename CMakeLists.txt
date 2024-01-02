@@ -32,7 +32,7 @@ set(VITA_VERSION "00.02")
 ## Flags and includes for building
 # Note that we make sure not to overwrite previous flags
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu11 -Wall")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-rtti")
 # Optional. You can specify more param.sfo flags this way.
 set(VITA_MKSFOEX_FLAGS "${VITA_MKSFOEX_FLAGS} -d PARENTAL_LEVEL=1")
 
@@ -53,7 +53,7 @@ link_directories(
 ## Build and link
 # Add all the files needed to compile here
 add_executable(${PROJECT_NAME}
-  src/main.c
+  src/main.cpp
   src/base64.c
   src/sha256.c
   src/rs256.c
@@ -69,7 +69,7 @@ add_executable(${PROJECT_NAME}
   src/appgame.c
   src/display.c
   src/browser.c
-  src/gdrive.c
+  src/gdrive.cpp
   ./common/debugScreen.c
 )
 
