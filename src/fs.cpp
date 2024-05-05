@@ -23,6 +23,12 @@ Path::Path(char *filename, std::vector<Path *> children) {
 
 Path::Path(char *filename) { this->filename = filename; };
 
+Path::~Path() {
+  for (int i = 0; i < this->children.size(); i++) {
+    delete this->children.at(i);
+  }
+}
+
 char *Path::getFilename() { return this->filename; }
 std::vector<Path *> Path::getChildren() { return this->children; }
 Path *Path::getParent() { return this->parent; }
@@ -44,6 +50,11 @@ std::vector<File_t *> ls(char *path) {
   SceIoDirent dir;
   while (sceIoDread(fd, &dir) > 0) {
     File_t *file = (File_t *)malloc(sizeof(File_t));
+    if (file == NULL) {
+      logger_printf("Failed to malloc file\n");
+      logger_exit(1);
+    }
+    memset(file, 0, sizeof(File_t));
     strcpy(file->filename, dir.d_name);
     file->isFolder = dir.d_stat.st_attr == SCE_SO_IFDIR;
     files.push_back(file);

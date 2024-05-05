@@ -7,6 +7,7 @@ class Path {
 public:
   Path(char *filename);
   Path(char *filename, std::vector<Path *> children);
+  ~Path();
 
   char *getFilename();
   std::vector<Path *> getChildren();
@@ -20,7 +21,7 @@ private:
   char *filename;
   std::vector<Path *> children;
   Path *parent;
-  bool _isFolder;
+  bool _isFolder = false;
 };
 
 struct FSFile {

@@ -37,8 +37,7 @@ body {
 }
 
 .material-symbols-outlined {
-  margin-right: 5px;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .cursor {
@@ -106,4 +105,9 @@ body {
 
 #path {
   display: flex;
+}
+
+.icon {
+  padding: 12px 16px;
+  color: #5f6368;
 }

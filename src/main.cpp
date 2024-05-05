@@ -45,10 +45,10 @@ extern "C" {
 #define wait3s sceKernelDelayThread(3 * 1000000)
 
 int main(int argc, char *argv[]) {
-  // logger_init();
-  // printf("\e[0;32m");
-  // printf("PS Vita Sync v%s\n", APP_VERSION);
-  // printf("\e[0;37m");
+  logger_init();
+  printf("\e[0;32m");
+  printf("PS Vita Sync v%s\n", APP_VERSION);
+  printf("\e[0;37m");
 
   // // displaySavedataFolder("ux0:/user/00/savedata/");
 
@@ -223,9 +223,7 @@ int main(int argc, char *argv[]) {
   // SDL2
   rectangle();
 
-  // printf("\nSync correctly done, app will close in 3s\n");
-  // wait3s;
-  // logger_exit(0);
-
-  return 0;
+  printf("\nSync correctly done, app will close in 3s\n");
+  wait3s;
+  logger_exit(0);
 }

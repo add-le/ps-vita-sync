@@ -22,8 +22,44 @@ function ls(path) {
   return path.children;
 }
 
-function getFolderIcon() {
-  return getMaterialSymbols("folder");
+function getIcon(filename, isFolder) {
+  if (isFolder) return getMaterialSymbols("folder");
+  if (
+    [
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".bmp",
+      ".gif",
+      ".webp",
+      ".svg",
+      ".apng",
+      ".avif",
+      ".ico",
+      ".tiff",
+      ".tif",
+    ].some((ext) => filename.toLowerCase().endsWith(ext))
+  )
+    return getMaterialSymbols("image");
+  if (
+    [".mp3", ".ogg", ".wav", ".flac", ".m4a", ".wma", ".webm"].some((ext) =>
+      filename.toLowerCase().endsWith(ext)
+    )
+  )
+    return getMaterialSymbols("headphones");
+  if ([".php"].some((ext) => filename.toLowerCase().endsWith(ext)))
+    return getMaterialSymbols("php");
+
+  if ([".css"].some((ext) => filename.toLowerCase().endsWith(ext)))
+    return getMaterialSymbols("css");
+
+  if ([".js"].some((ext) => filename.toLowerCase().endsWith(ext)))
+    return getMaterialSymbols("javascript");
+
+  if ([".html"].some((ext) => filename.toLowerCase().endsWith(ext)))
+    return getMaterialSymbols("html");
+
+  return getMaterialSymbols("note");
 }
 
 function getMaterialSymbols(name) {
@@ -100,12 +136,12 @@ function displayPath(_path) {
       info.innerText = `Files: ${root_path.length}`;
     };
 
-    const span = document.createElement("span");
-    span.classList.add("center");
+    const span = getIcon(path.filename, Array.isArray(path.children));
+    span.classList.add("icon");
+    div.appendChild(span);
 
     // Is folder
     if (Array.isArray(path.children)) {
-      span.appendChild(getFolderIcon());
       div.classList.add("cursor");
       div.onclick = () => {
         header.style.visibility = "hidden";
@@ -115,9 +151,7 @@ function displayPath(_path) {
       };
     }
 
-    span.appendChild(document.createTextNode(path.filename));
-
-    div.appendChild(span);
+    div.appendChild(document.createTextNode(path.filename));
     container.appendChild(div);
   });
 
@@ -137,11 +171,11 @@ function displayPath(_path) {
 
 function init() {
   const root = new Path("/", [
-    new Path("Audio", [new Path("horse.mp3")]),
-    new Path("Demo", []),
+    new Path("app", [new Path("horse.mp3")]),
+    new Path("data", []),
     new Path("Images", [
       new Path("Screenshots", [new Path("Diablo VI", []), new Path("pgm.jpg")]),
-      new Path("region.jpg"),
+      new Path("region.PNG"),
       new Path("france.jpg"),
     ]),
     new Path("Video", [new Path("journey.mp4")]),

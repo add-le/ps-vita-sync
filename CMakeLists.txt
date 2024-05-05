@@ -75,6 +75,7 @@ add_executable(${PROJECT_NAME}
   src/gui.cpp
   src/gdrive.cpp
   src/fs.cpp
+  src/draw.cpp
   ./common/debugScreen.c
 )
 
