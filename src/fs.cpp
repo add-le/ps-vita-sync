@@ -34,6 +34,10 @@ std::vector<Path *> Path::getChildren() { return this->children; }
 Path *Path::getParent() { return this->parent; }
 bool Path::isFolder() { return this->_isFolder; }
 
+void Path::setFilename(char *filename) { this->filename = filename; }
+void Path::setChildren(std::vector<Path *> children) {
+  this->children = children;
+}
 void Path::setParent(Path *parent) { this->parent = parent; }
 void Path::setFolder() { this->_isFolder = true; }
 

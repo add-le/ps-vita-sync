@@ -118,16 +118,18 @@ void openFolder(int id) {
   freeClickEvents();
 
   char *parent = root->getFilename();
-  char *child = root->getChildren().at(id)->getFilename();
+  Path *child = root->getChildren().at(id);
 
-  int path_length = strlen(parent) + strlen(child) + 2;
+  int path_length = strlen(parent) + strlen(child->getFilename()) + 2;
   char *path = (char *)malloc(path_length);
   strcpy(path, parent);
-  strcat(path, child);
+  strcat(path, child->getFilename());
   strcat(path, "/");
 
   std::vector<Path *> children = folder(path);
-  root = new Path(path, children);
+  child->setChildren(children);
+  child->setFilename(path);
+  root = child;
 }
 
 void handleClickEvent(SceTouchData *touch) {

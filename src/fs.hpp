@@ -14,6 +14,8 @@ public:
   Path *getParent();
   bool isFolder();
 
+  void setFilename(char *filename);
+  void setChildren(std::vector<Path *> children);
   void setParent(Path *parent);
   void setFolder();
 
