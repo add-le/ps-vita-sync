@@ -1,5 +1,5 @@
-#ifndef _G_DRIVE_H_
-#define _G_DRIVE_H_
+#ifndef _G_DRIVE_HPP_
+#define _G_DRIVE_HPP_
 
 #include <psp2/json.h>
 #include <psp2/sysmodule.h>

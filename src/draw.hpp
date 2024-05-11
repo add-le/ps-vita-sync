@@ -1,5 +1,5 @@
-#ifndef _DRAW_H_
-#define _DRAW_H_
+#ifndef _DRAW_HPP_
+#define _DRAW_HPP_
 
 typedef unsigned int uint;
 

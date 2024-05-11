@@ -1,5 +1,5 @@
-#ifndef _GUI_H_
-#define _GUI_H_
+#ifndef _GUI_HPP_
+#define _GUI_HPP_
 
 int rectangle();
 

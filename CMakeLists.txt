@@ -76,6 +76,7 @@ add_executable(${PROJECT_NAME}
   src/gdrive.cpp
   src/fs.cpp
   src/draw.cpp
+  src/utils.cpp
   ./common/debugScreen.c
 )
 

@@ -15,11 +15,13 @@ extern "C" {
 #include "symbols.h"
 }
 
+#include <string>
 #include <vector>
 
 #include "draw.hpp"
 #include "fs.hpp"
 #include "gui.hpp"
+#include "utils.hpp"
 
 #define TILE_WIDTH 231
 #define TILE_HEIGHT 48
@@ -31,8 +33,8 @@ extern "C" {
 #define FONT_SIZE 14
 #define SYMBOLS_SIZE 24
 
-#define FOLDER_PADDING_X 16
-#define FOLDER_PADDING_Y 12
+#define ICON_PADDING_X 16
+#define ICON_PADDING_Y 12
 
 #define BORDER_RADIUS 12
 
@@ -69,22 +71,31 @@ void freeClickEvents() {
   clickEvents.clear();
 }
 
-void guiPathTile(int x, int y, char *text, bool isFolder) {
+void guiPathTile(int x, int y, char *text, const char *icon) {
   draw_rounded_rectangle(x, y, TILE_WIDTH, TILE_HEIGHT, BORDER_RADIUS, ACCENT);
+  vita2d_font_draw_text(font,
+                        x + ICON_PADDING_X * 2 +
+                            vita2d_font_text_width(symbols, SYMBOLS_SIZE, icon),
+                        y + TILE_HEIGHT / 2 +
+                            vita2d_font_text_height(font, FONT_SIZE, text) / 2 -
+                            OFFSET_Y,
+                        LIGHT_BLACK, FONT_SIZE, text);
   vita2d_font_draw_text(
-      font,
-      x + FOLDER_PADDING_X * 2 +
-          vita2d_font_text_width(symbols, SYMBOLS_SIZE, FOLDER),
-      y + TILE_HEIGHT / 2 + vita2d_font_text_height(font, FONT_SIZE, text) / 2 -
-          OFFSET_Y,
-      LIGHT_BLACK, FONT_SIZE, text);
-  if (isFolder) {
-    vita2d_font_draw_text(
-        symbols, x + FOLDER_PADDING_X,
-        y + FOLDER_PADDING_Y +
-            vita2d_font_text_height(symbols, SYMBOLS_SIZE, FOLDER),
-        GRAY, SYMBOLS_SIZE, FOLDER);
+      symbols, x + ICON_PADDING_X,
+      y + ICON_PADDING_Y + vita2d_font_text_height(symbols, SYMBOLS_SIZE, icon),
+      GRAY, SYMBOLS_SIZE, icon);
+}
+
+const char *getIcon(char *filename) {
+  std::vector<std::string> code = {".xml"};
+  for (std::string ext : code) {
+    std::string s_filename = filename;
+    if (hasEnding(s_filename, ext)) {
+      return CODE;
+    }
   }
+
+  return NOTE;
 }
 
 void guiGrid(int nb) {
@@ -106,11 +117,13 @@ void guiGrid(int nb) {
     int y = GRID_MARGIN + TILE_HEIGHT * column + GRID_GAP * column;
 
     if (backButton && i == 0) {
-      guiPathTile(x, y, "test", false);
+      guiPathTile(x, y, "test", NOTE);
     } else {
       int j = backButton ? i - 1 : i;
       guiPathTile(x, y, root->getChildren().at(j)->getFilename(),
-                  root->getChildren().at(j)->isFolder());
+                  root->getChildren().at(j)->isFolder()
+                      ? FOLDER
+                      : getIcon(root->getChildren().at(j)->getFilename()));
       // Bind click event
       Id2DBox_t *event = (Id2DBox_t *)malloc(sizeof(Id2DBox_t));
       event->x = x;
