@@ -16,10 +16,11 @@ int logger_printf(const char *format, ...);
 /**
  * TODO: Implementations
  */
+int logger_debug(const char *format, ...); // Cyan
 int logger_trace(const char *format, ...); // White
 int logger_info(const char *format, ...);  // Green
 int logger_warn(const char *format, ...);  // Yellowish
-int logger_err(const char *format, ...);   // Red
+int logger_error(const char *format, ...); // Red
 
 /**
  * Display panic error human readable log to user.

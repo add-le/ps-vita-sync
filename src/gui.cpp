@@ -186,6 +186,14 @@ void guiGrid(int nb, bool backButton) {
 
     if (backButton && i == 0) {
       guiPathTile(x, y, nullptr, ARROW_BACK);
+      // Bind click event
+      Id2DBox_t *event = (Id2DBox_t *)malloc(sizeof(Id2DBox_t));
+      event->x = x;
+      event->y = y;
+      event->w = TILE_WIDTH;
+      event->h = TILE_HEIGHT;
+      event->id = -1;
+      clickEvents.push_back(event);
     } else {
       int j = backButton ? i - 1 : i;
       guiPathTile(x, y, root->getChildren().at(j)->getFilename(),
@@ -218,10 +226,17 @@ void openFolder(int id) {
   strcat(path, child->getFilename());
   strcat(path, "/");
 
-  std::vector<Path *> children = folder(path);
-  child->setChildren(children);
+  if (child->getChildren().empty()) {
+    std::vector<Path *> children = folder(path);
+    child->setChildren(children);
+  }
   child->setFilename(path);
   root = child;
+}
+
+void returnBack() {
+  freeClickEvents();
+  root = root->getParent();
 }
 
 void handleClickEvent(SceTouchData *touch) {
@@ -235,8 +250,11 @@ void handleClickEvent(SceTouchData *touch) {
             (clickEvents.at(i)->y * 2 + clickEvents.at(i)->h * 2) &&
         old_touch.x == 0 && old_touch.y == 0) {
       touched = true;
-      if (root->getChildren().at(clickEvents.at(i)->id)->isFolder()) {
+      if (clickEvents.at(i)->id != -1 &&
+          root->getChildren().at(clickEvents.at(i)->id)->isFolder()) {
         openFolder(clickEvents.at(i)->id);
+      } else if (clickEvents.at(i)->id == -1) {
+        returnBack();
       }
       break;
     }
