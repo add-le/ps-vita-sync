@@ -88,6 +88,12 @@ void guiPathTile(int x, int y, char *text, bool isFolder) {
 }
 
 void guiGrid(int nb) {
+
+  bool backButton = true;
+  if (backButton) {
+    nb++;
+  }
+
   int row = 0;
   int column = 0;
   for (int i = 0; i < nb; i++) {
@@ -98,17 +104,22 @@ void guiGrid(int nb) {
 
     int x = GRID_MARGIN + TILE_WIDTH * row + GRID_GAP * row;
     int y = GRID_MARGIN + TILE_HEIGHT * column + GRID_GAP * column;
-    guiPathTile(x, y, root->getChildren().at(i)->getFilename(),
-                root->getChildren().at(i)->isFolder());
 
-    // Bind click event
-    Id2DBox_t *event = (Id2DBox_t *)malloc(sizeof(Id2DBox_t));
-    event->x = x;
-    event->y = y;
-    event->w = TILE_WIDTH;
-    event->h = TILE_HEIGHT;
-    event->id = i;
-    clickEvents.push_back(event);
+    if (backButton && i == 0) {
+      guiPathTile(x, y, "test", false);
+    } else {
+      int j = backButton ? i - 1 : i;
+      guiPathTile(x, y, root->getChildren().at(j)->getFilename(),
+                  root->getChildren().at(j)->isFolder());
+      // Bind click event
+      Id2DBox_t *event = (Id2DBox_t *)malloc(sizeof(Id2DBox_t));
+      event->x = x;
+      event->y = y;
+      event->w = TILE_WIDTH;
+      event->h = TILE_HEIGHT;
+      event->id = j;
+      clickEvents.push_back(event);
+    }
 
     row++;
   }
