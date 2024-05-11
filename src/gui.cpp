@@ -168,9 +168,7 @@ const char *getIcon(char *filename) {
   return NOTE;
 }
 
-void guiGrid(int nb) {
-
-  bool backButton = true;
+void guiGrid(int nb, bool backButton) {
   if (backButton) {
     nb++;
   }
@@ -277,7 +275,7 @@ int rectangle() {
     sceTouchPeek(0, &touch, 1);
 
     if (root != nullptr) {
-      guiGrid(root->getChildren().size());
+      guiGrid(root->getChildren().size(), root->getParent() != nullptr);
     }
 
     // Handle touch event on the screen

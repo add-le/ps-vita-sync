@@ -14,10 +14,7 @@ extern "C" {
 Path::Path(char *filename, std::vector<Path *> children) {
   this->filename = filename;
   if (!children.empty()) {
-    this->children = children;
-    for (int i = 0; i < this->children.size(); i++) {
-      this->children.at(i)->setParent(this);
-    }
+    this->setChildren(children);
   }
 }
 
@@ -37,6 +34,9 @@ bool Path::isFolder() { return this->_isFolder; }
 void Path::setFilename(char *filename) { this->filename = filename; }
 void Path::setChildren(std::vector<Path *> children) {
   this->children = children;
+  for (int i = 0; i < this->children.size(); i++) {
+    this->children.at(i)->setParent(this);
+  }
 }
 void Path::setParent(Path *parent) { this->parent = parent; }
 void Path::setFolder() { this->_isFolder = true; }

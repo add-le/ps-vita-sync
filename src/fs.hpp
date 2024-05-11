@@ -22,7 +22,7 @@ public:
 private:
   char *filename;
   std::vector<Path *> children;
-  Path *parent;
+  Path *parent = nullptr;
   bool _isFolder = false;
 };
 
