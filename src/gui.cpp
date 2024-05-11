@@ -73,17 +73,28 @@ void freeClickEvents() {
 
 void guiPathTile(int x, int y, char *text, const char *icon) {
   draw_rounded_rectangle(x, y, TILE_WIDTH, TILE_HEIGHT, BORDER_RADIUS, ACCENT);
-  vita2d_font_draw_text(font,
-                        x + ICON_PADDING_X * 2 +
-                            vita2d_font_text_width(symbols, SYMBOLS_SIZE, icon),
-                        y + TILE_HEIGHT / 2 +
-                            vita2d_font_text_height(font, FONT_SIZE, text) / 2 -
-                            OFFSET_Y,
-                        LIGHT_BLACK, FONT_SIZE, text);
-  vita2d_font_draw_text(
-      symbols, x + ICON_PADDING_X,
-      y + ICON_PADDING_Y + vita2d_font_text_height(symbols, SYMBOLS_SIZE, icon),
-      GRAY, SYMBOLS_SIZE, icon);
+  if (text != nullptr) {
+    vita2d_font_draw_text(
+        font,
+        x + ICON_PADDING_X * 2 +
+            vita2d_font_text_width(symbols, SYMBOLS_SIZE, icon),
+        y + TILE_HEIGHT / 2 +
+            vita2d_font_text_height(font, FONT_SIZE, text) / 2 - OFFSET_Y,
+        LIGHT_BLACK, FONT_SIZE, text);
+    vita2d_font_draw_text(
+        symbols, x + ICON_PADDING_X,
+        y + ICON_PADDING_Y +
+            vita2d_font_text_height(symbols, SYMBOLS_SIZE, icon),
+        GRAY, SYMBOLS_SIZE, icon);
+  } else {
+    vita2d_font_draw_text(
+        symbols,
+        x + TILE_WIDTH / 2 -
+            vita2d_font_text_width(symbols, SYMBOLS_SIZE, icon) / 2,
+        y + ICON_PADDING_Y +
+            vita2d_font_text_height(symbols, SYMBOLS_SIZE, icon),
+        GRAY, SYMBOLS_SIZE, icon);
+  }
 }
 
 const char *getIcon(char *filename) {
@@ -92,6 +103,65 @@ const char *getIcon(char *filename) {
     std::string s_filename = filename;
     if (hasEnding(s_filename, ext)) {
       return CODE;
+    }
+  }
+
+  std::vector<std::string> php = {".php"};
+  for (std::string ext : php) {
+    std::string s_filename = filename;
+    if (hasEnding(s_filename, ext)) {
+      return PHP;
+    }
+  }
+
+  std::vector<std::string> css = {".css"};
+  for (std::string ext : css) {
+    std::string s_filename = filename;
+    if (hasEnding(s_filename, ext)) {
+      return CSS;
+    }
+  }
+
+  std::vector<std::string> html = {".html", ".htm"};
+  for (std::string ext : html) {
+    std::string s_filename = filename;
+    if (hasEnding(s_filename, ext)) {
+      return HTML;
+    }
+  }
+
+  std::vector<std::string> javascript = {".js", ".cjs", ".mjs"};
+  for (std::string ext : javascript) {
+    std::string s_filename = filename;
+    if (hasEnding(s_filename, ext)) {
+      return JAVASCRIPT;
+    }
+  }
+
+  std::vector<std::string> image = {".png",  ".jpg",  ".jpeg", ".bmp",
+                                    ".gif",  ".webp", ".svg",  ".apng",
+                                    ".avif", ".ico",  ".tiff", ".tif"};
+  for (std::string ext : image) {
+    std::string s_filename = filename;
+    if (hasEnding(s_filename, ext)) {
+      return IMAGE;
+    }
+  }
+
+  std::vector<std::string> headphones = {".mp3", ".ogg", ".wav", ".flac",
+                                         ".m4a", ".wma", ".webm"};
+  for (std::string ext : headphones) {
+    std::string s_filename = filename;
+    if (hasEnding(s_filename, ext)) {
+      return HEADPHONES;
+    }
+  }
+
+  std::vector<std::string> font_download = {".ttf", ".otf", ".woff", ".woff2"};
+  for (std::string ext : font_download) {
+    std::string s_filename = filename;
+    if (hasEnding(s_filename, ext)) {
+      return FONT_DOWNLOAD;
     }
   }
 
@@ -117,7 +187,7 @@ void guiGrid(int nb) {
     int y = GRID_MARGIN + TILE_HEIGHT * column + GRID_GAP * column;
 
     if (backButton && i == 0) {
-      guiPathTile(x, y, "test", NOTE);
+      guiPathTile(x, y, nullptr, ARROW_BACK);
     } else {
       int j = backButton ? i - 1 : i;
       guiPathTile(x, y, root->getChildren().at(j)->getFilename(),
