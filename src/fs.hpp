@@ -10,17 +10,20 @@ public:
   ~Path();
 
   char *getFilename();
+  char *getFilepath();
   std::vector<Path *> getChildren();
   Path *getParent();
   bool isFolder();
 
   void setFilename(char *filename);
+  void setFilepath(char *filepath);
   void setChildren(std::vector<Path *> children);
   void setParent(Path *parent);
   void setFolder();
 
 private:
   char *filename;
+  char *filepath = nullptr;
   std::vector<Path *> children;
   Path *parent = nullptr;
   bool _isFolder = false;

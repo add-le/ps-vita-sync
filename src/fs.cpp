@@ -24,18 +24,33 @@ Path::~Path() {
   for (int i = 0; i < this->children.size(); i++) {
     delete this->children.at(i);
   }
+  delete[] this->filepath;
 }
 
 char *Path::getFilename() { return this->filename; }
+char *Path::getFilepath() { return this->filepath; }
 std::vector<Path *> Path::getChildren() { return this->children; }
 Path *Path::getParent() { return this->parent; }
 bool Path::isFolder() { return this->_isFolder; }
 
 void Path::setFilename(char *filename) { this->filename = filename; }
+void Path::setFilepath(char *filepath) {
+  delete[] this->filepath;
+  this->filepath = new char[strlen(filepath) + 1];
+  strcpy(this->filepath, filepath);
+}
 void Path::setChildren(std::vector<Path *> children) {
   this->children = children;
   for (int i = 0; i < this->children.size(); i++) {
     this->children.at(i)->setParent(this);
+    if (!this->filepath)
+      this->setFilepath(this->filename);
+    char buf[1024];
+    strcpy(buf, this->filepath);
+    strcat(buf, "/");
+    strcat(buf, this->children.at(i)->getFilename());
+    strcat(buf, "/");
+    this->children.at(i)->setFilepath(buf);
   }
 }
 void Path::setParent(Path *parent) { this->parent = parent; }

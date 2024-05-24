@@ -165,6 +165,14 @@ const char *getIcon(char *filename) {
     }
   }
 
+  std::vector<std::string> description = {".txt"};
+  for (std::string ext : description) {
+    std::string s_filename = filename;
+    if (hasEnding(s_filename, ext)) {
+      return DESCRIPTION;
+    }
+  }
+
   return NOTE;
 }
 
@@ -217,20 +225,11 @@ void guiGrid(int nb, bool backButton) {
 void openFolder(int id) {
   freeClickEvents();
 
-  char *parent = root->getFilename();
   Path *child = root->getChildren().at(id);
-
-  int path_length = strlen(parent) + strlen(child->getFilename()) + 2;
-  char *path = (char *)malloc(path_length);
-  strcpy(path, parent);
-  strcat(path, child->getFilename());
-  strcat(path, "/");
-
   if (child->getChildren().empty()) {
-    std::vector<Path *> children = folder(path);
+    std::vector<Path *> children = folder(child->getFilepath());
     child->setChildren(children);
   }
-  child->setFilename(path);
   root = child;
 }
 
