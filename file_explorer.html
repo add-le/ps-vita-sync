@@ -17,14 +17,25 @@
     <title>File explorer</title>
   </head>
   <body onload="init()">
-    <header id="header" class="kanit-regular"></header>
+    <header id="header" class="kanit-regular">
+      <div class="header-selected">
+        <span onclick="deselectAll()" class="material-symbols-outlined"
+          >close</span
+        >
+        <div id="header-text">0 item</div>
+      </div>
+      <div class="header-actions">
+        <span onclick="cloudSync()" class="material-symbols-outlined"
+          >cloud_sync</span
+        >
+        <span onclick="selectAll()" class="material-symbols-outlined"
+          >select_all</span
+        >
+      </div>
+    </header>
 
     <div id="container" class="kanit-regular"></div>
 
-    <footer id="footer" class="kanit-regular">
-      <span id="info"></span>
-      <span id="path"></span>
-    </footer>
     <script type="text/javascript" src="./file_explorer.js"></script>
   </body>
 </html>

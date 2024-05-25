@@ -59,6 +59,9 @@ function getIcon(filename, isFolder) {
   if ([".html"].some((ext) => filename.toLowerCase().endsWith(ext)))
     return getMaterialSymbols("html");
 
+  if ([".json"].some((ext) => filename.toLowerCase().endsWith(ext)))
+    return getMaterialSymbols("data_object");
+
   return getMaterialSymbols("note");
 }
 
@@ -66,6 +69,7 @@ function getMaterialSymbols(name) {
   const span = document.createElement("span");
   span.classList.add("material-symbols-outlined");
   span.innerText = name;
+  span.dataset.old_icon = name;
   return span;
 }
 
@@ -84,32 +88,73 @@ function getBackButton(_path) {
   return div;
 }
 
-function getCheckbox() {
-  const checkbox = document.createElement("input");
-  checkbox.type = "checkbox";
-  checkbox.classList.add("checkbox");
-  return checkbox;
+function selectAll() {
+  executeSelect(true);
 }
 
-function getPathItem(name, isEmpty) {
-  const div = document.createElement("div");
-  div.classList.add("selected-item");
-  div.innerText = name;
-  if (isEmpty) div.id = "is-empty";
-  return div;
+function deselectAll() {
+  executeSelect(false);
+}
+
+function executeSelect(state) {
+  const tiles = document.querySelectorAll(".path-tile");
+  const header = document.getElementById("header");
+  const headerText = document.getElementById("header-text");
+
+  for (const tile of tiles) {
+    toggleSelected(
+      { stopPropagation: () => {} },
+      tile,
+      header,
+      {},
+      { length: "" },
+      headerText,
+      state
+    );
+  }
+}
+
+function cloudSync() {
+  const tiles = document.querySelectorAll(".path-tile.selected");
+  const names = [];
+  for (const tile of tiles) names.push(tile.innerText.split("\n")[1]);
+  console.log("selected item(s): ", names);
 }
 
 let selected = 0;
+let timer;
+
+function toggleSelected(ev, div, header, info, root_path, headerText, state) {
+  ev.stopPropagation();
+  const isAdded = div.classList.toggle("selected", state);
+  const span_icon = div.querySelector("span");
+  if (isAdded) {
+    if (!span_icon.dataset.old_icon) {
+      span_icon.dataset.old_icon = span_icon.innerText;
+    }
+    span_icon.innerText = "check_circle";
+  } else {
+    span_icon.innerText = span_icon.dataset.old_icon;
+  }
+
+  selected = document.querySelectorAll(".path-tile.selected").length;
+  if (selected > 0) {
+    header.style.visibility = "visible";
+    header.style.opacity = 1;
+    headerText.innerText = `${selected} item${selected > 1 ? "s" : ""}`;
+  } else {
+    header.style.visibility = "hidden";
+    header.style.opacity = 0;
+  }
+}
+
 function displayPath(_path) {
   const container = document.getElementById("container");
   container.innerHTML = null;
 
-  const info = document.getElementById("info");
-  const __path = document.getElementById("path");
   const header = document.getElementById("header");
-  header.innerText = `${selected} selected`;
-
-  console.log("logger", _path);
+  const headerText = document.getElementById("header-text");
+  headerText.innerText = `${selected} selected`;
 
   if (_path.parent) {
     container.appendChild(getBackButton(_path));
@@ -118,55 +163,42 @@ function displayPath(_path) {
   const root_path = ls(_path);
   root_path.forEach((path) => {
     const div = document.createElement("div");
-    const checkbox = getCheckbox();
-    div.appendChild(checkbox);
     div.classList.add("path-tile");
-    checkbox.onclick = (ev) => {
-      ev.stopPropagation();
-      const isAdded = div.classList.toggle("selected");
-      selected += isAdded ? 1 : -1;
-      if (selected > 0) {
-        header.style.visibility = "visible";
-        header.style.opacity = 1;
-        header.innerText = `${selected} selected`;
-      } else {
-        header.style.visibility = "hidden";
-        header.style.opacity = 0;
-      }
-      info.innerText = `Files: ${root_path.length}`;
-    };
-
     const span = getIcon(path.filename, Array.isArray(path.children));
     span.classList.add("icon");
     div.appendChild(span);
-
     // Is folder
-    if (Array.isArray(path.children)) {
-      div.classList.add("cursor");
-      div.onclick = () => {
+    div.classList.add("cursor");
+    div.onclick = (ev) => {
+      if (selected != 0) {
+        toggleSelected(ev, div, header, {}, root_path, headerText);
+      } else if (Array.isArray(path.children)) {
         header.style.visibility = "hidden";
         header.style.opacity = 0;
         selected = 0;
         displayPath(path);
-      };
-    }
+      }
+    };
+    div.addEventListener(
+      "touchstart",
+      (ev) => {
+        timer = setTimeout(() => {
+          toggleSelected(ev, div, header, {}, root_path, headerText);
+        }, 500);
+      },
+      { passive: true }
+    );
+    div.ontouchend = () => {
+      clearTimeout(timer);
+    };
 
-    div.appendChild(document.createTextNode(path.filename));
+    const spanText = document.createElement("span");
+    spanText.classList.add("path-tile-text");
+    spanText.innerText = path.filename;
+
+    div.appendChild(spanText);
     container.appendChild(div);
   });
-
-  __path.appendChild(getPathItem(_path.filename));
-  const selectedItems = document.getElementsByClassName("selected-item");
-  if (selectedItems.length % 2 == 0) {
-    __path.appendChild(getPathItem("", true));
-  } else {
-    const spacer = document.getElementById("is-empty");
-    if (spacer) {
-      spacer.remove();
-    }
-  }
-
-  info.innerText = `Files: ${root_path.length}`;
 }
 
 function init() {
@@ -184,6 +216,10 @@ function init() {
     new Path("index.php"),
     new Path("translation.json"),
     new Path("repos", [new Path("sqlite")]),
+    new Path(
+      "This is a name file very long very very long name file in fact it is too long name file.txt"
+    ),
+    new Path("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"),
   ]);
 
   displayPath(root);

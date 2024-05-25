@@ -15,6 +15,16 @@ body {
   justify-content: flex-start;
   align-items: center;
   border: 1px solid #f0f4f9;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.path-tile-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 16px;
 }
 
 .path-tile.selected {
@@ -67,7 +77,10 @@ body {
   opacity: 0;
   display: flex;
   align-items: center;
-  padding-left: 50px;
+  padding: 0px 15px;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #5f6368;
 }
 
 #footer {
@@ -110,4 +123,18 @@ body {
 .icon {
   padding: 12px 16px;
   color: #5f6368;
+}
+
+.header-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-selected {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
 }

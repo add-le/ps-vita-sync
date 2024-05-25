@@ -13,5 +13,6 @@
 #define FONT_DOWNLOAD "\ue167"
 #define ARROW_BACK "\ue5c4"
 #define DESCRIPTION "\ue873"
+#define DATA_OBJECT "\uead3"
 
 #endif
