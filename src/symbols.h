@@ -14,5 +14,8 @@
 #define ARROW_BACK "\ue5c4"
 #define DESCRIPTION "\ue873"
 #define DATA_OBJECT "\uead3"
+#define CLOSE "\ue5cd"
+#define CLOUD_SYNC "\ueb5a"
+#define SELECT_ALL "\ue162"
 
 #endif

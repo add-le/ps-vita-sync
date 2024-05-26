@@ -26,6 +26,9 @@ extern "C" {
 #define TILE_WIDTH 231
 #define TILE_HEIGHT 48
 
+#define HEADER_WIDTH 941
+#define HEADER_HEIGHT 42
+
 #define GRID_MARGIN 10
 #define GRID_GAP 6
 #define GRID_ROW 4
@@ -36,14 +39,19 @@ extern "C" {
 #define ICON_PADDING_X 16
 #define ICON_PADDING_Y 12
 
+#define HEADER_PADDING_X 15
+
 #define BORDER_RADIUS 12
+#define HEADER_BORDER_RADIUS 18
 
 #define OFFSET_Y 2
 
+/** cwd */
 Path *root = nullptr;
 vita2d_font *font = NULL;
 vita2d_font *symbols = NULL;
 bool running = true;
+uint selected = 0;
 
 struct Id2DBox {
   int x;
@@ -63,6 +71,16 @@ struct _vector2 {
 typedef struct _vector2 vector2;
 
 vector2 old_touch;
+
+void fetchSelected() {
+  std::vector<Path *> children = root->getChildren();
+  uint count = 0;
+  for (int i = 0; i < children.size(); i++) {
+    if (children.at(i)->isSelected())
+      count++;
+  }
+  selected = count;
+}
 
 void freeClickEvents() {
   for (int i = 0; i < clickEvents.size(); i++) {
@@ -97,6 +115,47 @@ void guiPathTile(int x, int y, char *text, const char *icon) {
   }
 }
 
+void guiHeader() {
+  draw_rounded_rectangle(GRID_MARGIN, GRID_MARGIN, HEADER_WIDTH, HEADER_HEIGHT,
+                         HEADER_BORDER_RADIUS, ACCENT);
+
+  // Close button (deselect all)
+  int closeButton_x = GRID_MARGIN + HEADER_PADDING_X;
+  int closeButton_y = GRID_MARGIN + HEADER_HEIGHT / 2 +
+                      vita2d_font_text_height(symbols, SYMBOLS_SIZE, CLOSE) / 2;
+  vita2d_font_draw_text(symbols, closeButton_x, closeButton_y, GRAY,
+                        SYMBOLS_SIZE, CLOSE);
+
+  char selectedCount[64];
+  sprintf(selectedCount, selected > 1 ? "%d items" : "%d item", selected);
+
+  // Selected count text
+  vita2d_font_draw_text(
+      font, GRID_MARGIN + HEADER_PADDING_X * 2 + closeButton_x,
+      GRID_MARGIN + HEADER_HEIGHT / 2 +
+          vita2d_font_text_height(font, FONT_SIZE, selectedCount) / 2 -
+          OFFSET_Y,
+      GRAY, FONT_SIZE, selectedCount);
+
+  // Select all button
+  int selectAllButton_x = HEADER_WIDTH - HEADER_PADDING_X - GRID_MARGIN;
+  int selectAllButton_y =
+      GRID_MARGIN + HEADER_HEIGHT / 2 +
+      vita2d_font_text_height(symbols, SYMBOLS_SIZE, SELECT_ALL) / 2;
+  vita2d_font_draw_text(symbols, selectAllButton_x, selectAllButton_y, GRAY,
+                        SYMBOLS_SIZE, SELECT_ALL);
+
+  // Sync to cloud button
+  int cloudSyncButton_x =
+      HEADER_WIDTH - HEADER_PADDING_X * 2 - GRID_MARGIN -
+      vita2d_font_text_width(symbols, SYMBOLS_SIZE, SELECT_ALL);
+  int cloudSyncButton_y =
+      GRID_MARGIN + HEADER_HEIGHT / 2 +
+      vita2d_font_text_height(symbols, SYMBOLS_SIZE, CLOUD_SYNC) / 2;
+  vita2d_font_draw_text(symbols, cloudSyncButton_x, cloudSyncButton_y, GRAY,
+                        SYMBOLS_SIZE, CLOUD_SYNC);
+}
+
 void guiGrid(int nb, bool backButton) {
   if (backButton) {
     nb++;
@@ -111,7 +170,8 @@ void guiGrid(int nb, bool backButton) {
     }
 
     int x = GRID_MARGIN + TILE_WIDTH * row + GRID_GAP * row;
-    int y = GRID_MARGIN + TILE_HEIGHT * column + GRID_GAP * column;
+    int y = HEADER_HEIGHT + GRID_MARGIN * 2 + TILE_HEIGHT * column +
+            GRID_GAP * column;
 
     if (backButton && i == 0) {
       guiPathTile(x, y, nullptr, ARROW_BACK);
@@ -213,6 +273,7 @@ int rectangle() {
     sceTouchPeek(0, &touch, 1);
 
     if (root != nullptr) {
+      guiHeader();
       guiGrid(root->getChildren().size(), root->getParent() != nullptr);
     }
 

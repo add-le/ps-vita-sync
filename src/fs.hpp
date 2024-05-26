@@ -14,12 +14,16 @@ public:
   std::vector<Path *> getChildren();
   Path *getParent();
   bool isFolder();
+  bool isSelected();
 
   void setFilename(char *filename);
   void setFilepath(char *filepath);
   void setChildren(std::vector<Path *> children);
   void setParent(Path *parent);
   void setFolder();
+  void select();
+  void deselect();
+  void toggleSelected();
 
 private:
   char *filename;
@@ -27,6 +31,7 @@ private:
   std::vector<Path *> children;
   Path *parent = nullptr;
   bool _isFolder = false;
+  bool _isSelected = false;
 };
 
 struct FSFile {

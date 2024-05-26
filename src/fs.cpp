@@ -32,6 +32,7 @@ char *Path::getFilepath() { return this->filepath; }
 std::vector<Path *> Path::getChildren() { return this->children; }
 Path *Path::getParent() { return this->parent; }
 bool Path::isFolder() { return this->_isFolder; }
+bool Path::isSelected() { return this->_isSelected; }
 
 void Path::setFilename(char *filename) { this->filename = filename; }
 void Path::setFilepath(char *filepath) {
@@ -55,6 +56,9 @@ void Path::setChildren(std::vector<Path *> children) {
 }
 void Path::setParent(Path *parent) { this->parent = parent; }
 void Path::setFolder() { this->_isFolder = true; }
+void Path::select() { this->_isSelected = true; }
+void Path::deselect() { this->_isSelected = false; }
+void Path::toggleSelected() { this->_isSelected = !this->_isSelected; }
 
 std::vector<File_t *> ls(char *path) {
 
