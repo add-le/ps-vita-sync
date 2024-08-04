@@ -46,6 +46,8 @@ extern "C" {
 
 #define OFFSET_Y 2
 
+#define TS_HOLD 500
+
 /** cwd */
 Path *root = nullptr;
 vita2d_font *font = NULL;
@@ -219,28 +221,60 @@ void returnBack() {
   root = root->getParent();
 }
 
+SceUInt64 previousTimeStamp = 0;
+SceInt16 touched_x = 0;
+SceInt16 touched_y = 0;
 void handleClickEvent(SceTouchData *touch) {
-  bool touched = false;
+  bool clicked = false;
+  bool holded = false;
+
+  SceInt16 x = touch->report[0].x;
+  SceInt16 y = touch->report[0].y;
+
+  // Touch detected
+  if ((x != 0 || y != 0) && previousTimeStamp == 0) {
+    // Save when touch is detected
+    previousTimeStamp = touch->timeStamp;
+    touched_x = x;
+    touched_y = y;
+  }
+
+  // Touch released
+  if (x == 0 && y == 0 && previousTimeStamp != 0) {
+    SceUInt64 newTimeStamp = touch->timeStamp;
+
+    // It's a hold touch
+    if ((newTimeStamp / 1000) - (previousTimeStamp / 1000) >= TS_HOLD) {
+      holded = true;
+      clicked = false;
+    } else {
+      // It's a click touch
+      holded = false;
+      clicked = true;
+    }
+
+    // Touch is released, reset the previousTimeStamp
+    previousTimeStamp = 0;
+  }
+
   for (int i = 0; i < clickEvents.size(); i++) {
-    if (touch->report[0].x >= clickEvents.at(i)->x * 2 &&
-        touch->report[0].x <=
-            (clickEvents.at(i)->x * 2 + clickEvents.at(i)->w * 2) &&
-        touch->report[0].y >= clickEvents.at(i)->y * 2 &&
-        touch->report[0].y <=
-            (clickEvents.at(i)->y * 2 + clickEvents.at(i)->h * 2) &&
-        old_touch.x == 0 && old_touch.y == 0) {
-      touched = true;
+    if (touched_x >= clickEvents.at(i)->x * 2 &&
+        touched_x <= (clickEvents.at(i)->x * 2 + clickEvents.at(i)->w * 2) &&
+        touched_y >= clickEvents.at(i)->y * 2 &&
+        touched_y <= (clickEvents.at(i)->y * 2 + clickEvents.at(i)->h * 2)) {
+
       if (clickEvents.at(i)->id != -1 &&
           root->getChildren().at(clickEvents.at(i)->id)->isFolder()) {
-        openFolder(clickEvents.at(i)->id);
+        if (clicked) {
+          openFolder(clickEvents.at(i)->id);
+        }
       } else if (clickEvents.at(i)->id == -1) {
-        returnBack();
+        if (clicked) {
+          returnBack();
+        }
       }
       break;
     }
-  }
-  if (!touched) {
-    // ####
   }
 }
 
@@ -250,9 +284,11 @@ int rectangle() {
                            SCE_TOUCH_SAMPLING_STATE_START);
   sceTouchEnableTouchForce(SCE_TOUCH_PORT_FRONT);
 
-  SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
-
   vita2d_init();
+
+  SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
+  SDL_SetHint(SDL_HINT_RENDER_VSYNC, "1");
+
   font = vita2d_load_font_file("app0:/Kanit-Regular.ttf");
   symbols = vita2d_load_font_file("app0:/MaterialSymbols-Regular.ttf");
 
@@ -270,16 +306,18 @@ int rectangle() {
 
     old_touch.x = touch.report[0].x;
     old_touch.y = touch.report[0].y;
-    sceTouchPeek(0, &touch, 1);
+    sceTouchRead(0, &touch, 1);
 
     if (root != nullptr) {
-      guiHeader();
+      if (selected > 0) {
+        guiHeader();
+      }
+
       guiGrid(root->getChildren().size(), root->getParent() != nullptr);
     }
 
     // Handle touch event on the screen
     handleClickEvent(&touch);
-
     vita2d_end_drawing();
     vita2d_swap_buffers();
   }
