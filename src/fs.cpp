@@ -60,6 +60,20 @@ void Path::select() { this->_isSelected = true; }
 void Path::deselect() { this->_isSelected = false; }
 void Path::toggleSelected() { this->_isSelected = !this->_isSelected; }
 
+void Path::selectAll() {
+  for (int i = 0; i < this->children.size(); i++) {
+    this->children.at(i)->select();
+    this->children.at(i)->deselectAll();
+  }
+}
+
+void Path::deselectAll() {
+  for (int i = 0; i < this->children.size(); i++) {
+    this->children.at(i)->deselect();
+    this->children.at(i)->deselectAll();
+  }
+}
+
 std::vector<File_t *> ls(char *path) {
 
   int fd = sceIoDopen(path);

@@ -17,5 +17,6 @@
 #define CLOSE "\ue5cd"
 #define CLOUD_SYNC "\ueb5a"
 #define SELECT_ALL "\ue162"
+#define CHECK_CIRCLE "\ue86c"
 
 #endif

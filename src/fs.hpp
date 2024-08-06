@@ -24,6 +24,8 @@ public:
   void select();
   void deselect();
   void toggleSelected();
+  void selectAll();
+  void deselectAll();
 
 private:
   char *filename;

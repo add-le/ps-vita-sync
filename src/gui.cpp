@@ -91,8 +91,8 @@ void freeClickEvents() {
   clickEvents.clear();
 }
 
-void guiPathTile(int x, int y, char *text, const char *icon) {
-  draw_rounded_rectangle(x, y, TILE_WIDTH, TILE_HEIGHT, BORDER_RADIUS, ACCENT);
+void guiPathTile(int x, int y, char *text, const char *icon, uint color) {
+  draw_rounded_rectangle(x, y, TILE_WIDTH, TILE_HEIGHT, BORDER_RADIUS, color);
   if (text != nullptr) {
     vita2d_font_draw_text(
         font,
@@ -159,6 +159,8 @@ void guiHeader() {
 }
 
 void guiGrid(int nb, bool backButton) {
+  freeClickEvents();
+
   if (backButton) {
     nb++;
   }
@@ -176,7 +178,7 @@ void guiGrid(int nb, bool backButton) {
             GRID_GAP * column;
 
     if (backButton && i == 0) {
-      guiPathTile(x, y, nullptr, ARROW_BACK);
+      guiPathTile(x, y, nullptr, ARROW_BACK, ACCENT);
       // Bind click event
       Id2DBox_t *event = (Id2DBox_t *)malloc(sizeof(Id2DBox_t));
       event->x = x;
@@ -187,10 +189,15 @@ void guiGrid(int nb, bool backButton) {
       clickEvents.push_back(event);
     } else {
       int j = backButton ? i - 1 : i;
-      guiPathTile(x, y, root->getChildren().at(j)->getFilename(),
-                  root->getChildren().at(j)->isFolder()
-                      ? FOLDER
-                      : getIcon(root->getChildren().at(j)->getFilename()));
+      bool itemSelected = root->getChildren().at(j)->isSelected();
+      guiPathTile(
+          x, y, root->getChildren().at(j)->getFilename(),
+          root->getChildren().at(j)->isFolder()
+              ? (itemSelected ? CHECK_CIRCLE : FOLDER)
+              : (itemSelected
+                     ? CHECK_CIRCLE
+                     : getIcon(root->getChildren().at(j)->getFilename())),
+          itemSelected ? SELECTED : ACCENT);
       // Bind click event
       Id2DBox_t *event = (Id2DBox_t *)malloc(sizeof(Id2DBox_t));
       event->x = x;
@@ -265,11 +272,24 @@ void handleClickEvent(SceTouchData *touch) {
 
       if (clickEvents.at(i)->id != -1 &&
           root->getChildren().at(clickEvents.at(i)->id)->isFolder()) {
-        if (clicked) {
+        if (clicked && selected == 0) {
           openFolder(clickEvents.at(i)->id);
         }
-      } else if (clickEvents.at(i)->id == -1) {
+        // First item to be holded and so selected
+        if ((holded && selected == 0) || (clicked && selected > 0)) {
+          if (selected == 0) {
+            root->getChildren().at(clickEvents.at(i)->id)->select();
+          } else if (selected > 0) {
+            root->getChildren().at(clickEvents.at(i)->id)->toggleSelected();
+          }
+          fetchSelected();
+        }
+      }
+      // Click on back button
+      else if (clickEvents.at(i)->id == -1) {
         if (clicked) {
+          root->deselectAll();
+          fetchSelected();
           returnBack();
         }
       }
@@ -300,7 +320,6 @@ int rectangle() {
 
   vita2d_set_clear_color(WHITE);
   while (running) {
-
     vita2d_start_drawing();
     vita2d_clear_screen();
 
