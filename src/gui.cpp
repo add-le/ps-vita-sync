@@ -53,6 +53,7 @@ Path *root = nullptr;
 vita2d_font *font = NULL;
 vita2d_font *symbols = NULL;
 bool running = true;
+/** Contains number of Path currenly selected. */
 uint selected = 0;
 
 struct Id2DBox {
@@ -65,6 +66,26 @@ struct Id2DBox {
 typedef struct Id2DBox Id2DBox_t;
 
 std::vector<Id2DBox_t *> clickEvents;
+/** Events with a static (immutable) position on the GUI. */
+std::vector<Id2DBox_t> staticEvents;
+
+// List of static elements
+enum StaticElements {
+  CLOSE_BUTTON,
+  SELECT_ALL_BUTTON,
+  CLOUD_SYNC_BUTTON,
+};
+
+// Static position of header elements
+// Close button (deselect all)
+int closeButton_x;
+int closeButton_y;
+// Select all button
+int selectAllButton_x;
+int selectAllButton_y;
+// Sync to cloud button
+int cloudSyncButton_x;
+int cloudSyncButton_y;
 
 struct _vector2 {
   int x;
@@ -74,6 +95,7 @@ typedef struct _vector2 vector2;
 
 vector2 old_touch;
 
+/** Update the view with the right number of selected Path. */
 void fetchSelected() {
   std::vector<Path *> children = root->getChildren();
   uint count = 0;
@@ -122,9 +144,6 @@ void guiHeader() {
                          HEADER_BORDER_RADIUS, ACCENT);
 
   // Close button (deselect all)
-  int closeButton_x = GRID_MARGIN + HEADER_PADDING_X;
-  int closeButton_y = GRID_MARGIN + HEADER_HEIGHT / 2 +
-                      vita2d_font_text_height(symbols, SYMBOLS_SIZE, CLOSE) / 2;
   vita2d_font_draw_text(symbols, closeButton_x, closeButton_y, GRAY,
                         SYMBOLS_SIZE, CLOSE);
 
@@ -140,20 +159,10 @@ void guiHeader() {
       GRAY, FONT_SIZE, selectedCount);
 
   // Select all button
-  int selectAllButton_x = HEADER_WIDTH - HEADER_PADDING_X - GRID_MARGIN;
-  int selectAllButton_y =
-      GRID_MARGIN + HEADER_HEIGHT / 2 +
-      vita2d_font_text_height(symbols, SYMBOLS_SIZE, SELECT_ALL) / 2;
   vita2d_font_draw_text(symbols, selectAllButton_x, selectAllButton_y, GRAY,
                         SYMBOLS_SIZE, SELECT_ALL);
 
   // Sync to cloud button
-  int cloudSyncButton_x =
-      HEADER_WIDTH - HEADER_PADDING_X * 2 - GRID_MARGIN -
-      vita2d_font_text_width(symbols, SYMBOLS_SIZE, SELECT_ALL);
-  int cloudSyncButton_y =
-      GRID_MARGIN + HEADER_HEIGHT / 2 +
-      vita2d_font_text_height(symbols, SYMBOLS_SIZE, CLOUD_SYNC) / 2;
   vita2d_font_draw_text(symbols, cloudSyncButton_x, cloudSyncButton_y, GRAY,
                         SYMBOLS_SIZE, CLOUD_SYNC);
 }
@@ -228,6 +237,67 @@ void returnBack() {
   root = root->getParent();
 }
 
+void selectAll() {
+  root->selectAll();
+  fetchSelected();
+}
+
+void deselectAll() {
+  root->deselectAll();
+  fetchSelected();
+}
+
+/** Init the position of the static elements and bind the click events. */
+void initStaticEvents() {
+  // First calculate the position of the static elements
+  // Second bind the click events
+
+  // Close button
+  closeButton_x = GRID_MARGIN + HEADER_PADDING_X;
+  closeButton_y = GRID_MARGIN + HEADER_HEIGHT / 2 +
+                  vita2d_font_text_height(symbols, SYMBOLS_SIZE, CLOSE) / 2;
+
+  Id2DBox closeButtonPosition = {
+      .x = closeButton_x,
+      .y =
+          closeButton_y - vita2d_font_text_height(symbols, SYMBOLS_SIZE, CLOSE),
+      .h = vita2d_font_text_height(symbols, SYMBOLS_SIZE, CLOSE),
+      .w = vita2d_font_text_width(symbols, SYMBOLS_SIZE, CLOSE),
+      .id = CLOSE_BUTTON};
+  staticEvents.push_back(closeButtonPosition);
+
+  // Select all button
+  selectAllButton_x = HEADER_WIDTH - HEADER_PADDING_X - GRID_MARGIN;
+  selectAllButton_y =
+      GRID_MARGIN + HEADER_HEIGHT / 2 +
+      vita2d_font_text_height(symbols, SYMBOLS_SIZE, SELECT_ALL) / 2;
+
+  Id2DBox selectAllButtonPosition = {
+      .x = selectAllButton_x,
+      .y = selectAllButton_y -
+           vita2d_font_text_height(symbols, SYMBOLS_SIZE, SELECT_ALL),
+      .h = vita2d_font_text_height(symbols, SYMBOLS_SIZE, SELECT_ALL),
+      .w = vita2d_font_text_width(symbols, SYMBOLS_SIZE, SELECT_ALL),
+      .id = SELECT_ALL_BUTTON};
+  staticEvents.push_back(selectAllButtonPosition);
+
+  // Sync to cloud button
+  cloudSyncButton_x = HEADER_WIDTH - HEADER_PADDING_X * 2 - GRID_MARGIN -
+                      vita2d_font_text_width(symbols, SYMBOLS_SIZE, SELECT_ALL);
+  cloudSyncButton_y =
+      GRID_MARGIN + HEADER_HEIGHT / 2 +
+      vita2d_font_text_height(symbols, SYMBOLS_SIZE, CLOUD_SYNC) / 2;
+
+  Id2DBox cloudSyncButtonPosition = {
+      .x = cloudSyncButton_x,
+      .y = cloudSyncButton_y -
+           vita2d_font_text_height(symbols, SYMBOLS_SIZE, CLOUD_SYNC),
+      .h = vita2d_font_text_height(symbols, SYMBOLS_SIZE, CLOUD_SYNC),
+      .w = vita2d_font_text_width(symbols, SYMBOLS_SIZE, CLOUD_SYNC),
+      .id = CLOUD_SYNC_BUTTON};
+  staticEvents.push_back(cloudSyncButtonPosition);
+}
+
 SceUInt64 previousTimeStamp = 0;
 SceInt16 touched_x = 0;
 SceInt16 touched_y = 0;
@@ -264,6 +334,32 @@ void handleClickEvent(SceTouchData *touch) {
     previousTimeStamp = 0;
   }
 
+  // Check if the touch is on a static element (header)
+  // Only when header is visible (ie: selected > 0)
+  if (selected > 0) {
+    for (int i = 0; i < staticEvents.size(); i++) {
+      if (touched_x >= staticEvents.at(i).x * 2 &&
+          touched_x <= (staticEvents.at(i).x * 2 + staticEvents.at(i).w * 2) &&
+          touched_y >= staticEvents.at(i).y * 2 &&
+          touched_y <= (staticEvents.at(i).y * 2 + staticEvents.at(i).h * 2)) {
+        if (staticEvents.at(i).id == CLOSE_BUTTON) {
+          if (clicked) {
+            deselectAll();
+          }
+        } else if (staticEvents.at(i).id == SELECT_ALL_BUTTON) {
+          if (clicked) {
+            selectAll();
+          }
+        } else if (staticEvents.at(i).id == CLOUD_SYNC_BUTTON) {
+          // TODO: Implement cloud sync
+        }
+
+        break;
+      }
+    }
+  }
+
+  // Check if the touch is on a gui tile element
   for (int i = 0; i < clickEvents.size(); i++) {
     if (touched_x >= clickEvents.at(i)->x * 2 &&
         touched_x <= (clickEvents.at(i)->x * 2 + clickEvents.at(i)->w * 2) &&
@@ -302,17 +398,17 @@ void handleClickEvent(SceTouchData *touch) {
       // Click on back button
       else if (clickEvents.at(i)->id == -1) {
         if (clicked) {
-          root->deselectAll();
-          fetchSelected();
+          deselectAll();
           returnBack();
         }
       }
+
       break;
     }
   }
 }
 
-int rectangle() {
+int guiFileExplorer() {
 
   sceTouchSetSamplingState(SCE_TOUCH_PORT_FRONT,
                            SCE_TOUCH_SAMPLING_STATE_START);
@@ -331,6 +427,9 @@ int rectangle() {
 
   SceTouchData touch;
   old_touch = {.x = 0, .y = 0};
+
+  // Init static events (header)
+  initStaticEvents();
 
   vita2d_set_clear_color(WHITE);
   while (running) {

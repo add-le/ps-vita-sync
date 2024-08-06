@@ -221,7 +221,7 @@ int main(int argc, char *argv[]) {
   // vita2d_fini();
 
   // SDL2
-  rectangle();
+  guiFileExplorer();
 
   printf("\nSync correctly done, app will close in 3s\n");
   wait3s;
