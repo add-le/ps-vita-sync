@@ -270,11 +270,25 @@ void handleClickEvent(SceTouchData *touch) {
         touched_y >= clickEvents.at(i)->y * 2 &&
         touched_y <= (clickEvents.at(i)->y * 2 + clickEvents.at(i)->h * 2)) {
 
+      // Click on folder
       if (clickEvents.at(i)->id != -1 &&
           root->getChildren().at(clickEvents.at(i)->id)->isFolder()) {
         if (clicked && selected == 0) {
           openFolder(clickEvents.at(i)->id);
         }
+        // First item to be holded and so selected
+        if ((holded && selected == 0) || (clicked && selected > 0)) {
+          if (selected == 0) {
+            root->getChildren().at(clickEvents.at(i)->id)->select();
+          } else if (selected > 0) {
+            root->getChildren().at(clickEvents.at(i)->id)->toggleSelected();
+          }
+          fetchSelected();
+        }
+      }
+      // Click on file
+      else if (clickEvents.at(i)->id != -1 &&
+               !root->getChildren().at(clickEvents.at(i)->id)->isFolder()) {
         // First item to be holded and so selected
         if ((holded && selected == 0) || (clicked && selected > 0)) {
           if (selected == 0) {
