@@ -2,11 +2,25 @@ class Path {
   filename;
   children;
   parent;
+  isSync;
 
-  constructor(filename, children) {
+  constructor(filename, children, isSync) {
     this.filename = filename;
     if (children) {
       this.appendChild(children);
+      children.forEach((child) => {
+        child.isSync = isSync || child.isSync;
+      });
+    }
+    this.setWholePathToSync(isSync);
+  }
+
+  setWholePathToSync(isSync) {
+    this.isSync = isSync || this.isSync;
+    if (this.children) {
+      this.children.forEach((child) => {
+        child.setWholePathToSync(isSync);
+      });
     }
   }
 
@@ -166,6 +180,14 @@ function displayPath(_path) {
     div.classList.add("path-tile");
     const span = getIcon(path.filename, Array.isArray(path.children));
     span.classList.add("icon");
+
+    // Is is sync add sync icon
+    if (path.isSync) {
+      const sync = getMaterialSymbols("download_done");
+      sync.classList.add("sync-bubble", "is-sync-icon");
+      span.appendChild(sync);
+    }
+
     div.appendChild(span);
     // Is folder
     div.classList.add("cursor");
@@ -203,19 +225,26 @@ function displayPath(_path) {
 
 function init() {
   const root = new Path("/", [
-    new Path("app", [new Path("horse.mp3")]),
+    new Path("app", [new Path("horse.mp3")], true),
     new Path("data", []),
-    new Path("Images", [
-      new Path("Screenshots", [new Path("Diablo VI", []), new Path("pgm.jpg")]),
-      new Path("region.PNG"),
-      new Path("france.jpg"),
-    ]),
-    new Path("Video", [new Path("journey.mp4")]),
+    new Path(
+      "Images",
+      [
+        new Path("Screenshots", [
+          new Path("Diablo VI", []),
+          new Path("pgm.jpg"),
+        ]),
+        new Path("region.PNG"),
+        new Path("france.jpg"),
+      ],
+      true
+    ),
+    new Path("Video", [new Path("journey.mp4")], false),
     new Path("config.php"),
     new Path("style.css"),
     new Path("index.php"),
     new Path("translation.json"),
-    new Path("repos", [new Path("sqlite")]),
+    new Path("repos", [new Path("sqlite", null, true)], false),
     new Path(
       "This is a name file very long very very long name file in fact it is too long name file.txt"
     ),
