@@ -1,0 +1,5 @@
+flowchart TD
+    GDrive -->|`changes` api request| B(download new/updated files)
+    PSP2 -->|checksum detection| D(upload new/updated files)
+    B --> PSP2
+    D --> GDrive
