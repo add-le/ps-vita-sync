@@ -78,6 +78,7 @@ add_executable(${PROJECT_NAME}
   src/draw.cpp
   src/utils.cpp
   src/icon.cpp
+  src/dialog.c
   ./common/debugScreen.c
 )
 
