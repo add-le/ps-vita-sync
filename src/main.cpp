@@ -44,6 +44,8 @@ extern "C" {
 #include "fs.hpp"
 #include "gui.hpp"
 
+#include "oauth.hpp"
+
 #define wait3s sceKernelDelayThread(3 * 1000000)
 
 int main(int argc, char *argv[]) {
@@ -56,14 +58,21 @@ int main(int argc, char *argv[]) {
 
   // // displayMainMenu();
 
-  // // Inits
-  // OpenSSL_add_all_algorithms();
-  // httpNetInit();
-  // printf("Inits done\n");
+  // Inits
+  OpenSSL_add_all_algorithms();
+  httpNetInit();
+  printf("Inits done\n");
 
   // HttpResponse_t response = requestDeviceAndUserCodes();
-  // handleTheAuthorizationServerResponse(response.buffer);
+  // OAuth2Response_t authResponse =
+  //     handleTheAuthorizationServerResponse(response.buffer);
+
+  // displayUserCode(authResponse);
+
+  // freeOAuth2Response(authResponse);
   // freeHttpResponse(response);
+
+  loadOAuthCredentials();
 
   // // char *access_token = getOAuth2Token();
   // // printf("access_token granted\n");
@@ -116,7 +125,7 @@ int main(int argc, char *argv[]) {
   // //   }
   // // }
 
-  // httpNetClose();
+  httpNetClose();
   // // free(access_token);
 
   // printf("\nSync correctly done, app will close in 3s\n");
@@ -225,7 +234,7 @@ int main(int argc, char *argv[]) {
   // SDL2
   // guiFileExplorer();
 
-  dialogMsg("Bonjour");
+  // dialogMsg("Bonjour");
 
   printf("\nSync correctly done, app will close in 3s\n");
   wait3s;

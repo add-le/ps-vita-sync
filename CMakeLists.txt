@@ -79,6 +79,8 @@ add_executable(${PROJECT_NAME}
   src/utils.cpp
   src/icon.cpp
   src/dialog.c
+  src/oauth.cpp
+  src/json.cpp
   ./common/debugScreen.c
 )
 

@@ -6,6 +6,18 @@
 
 #include "httpnet.h"
 
+struct OAuth2Response {
+  char *device_code;
+  char *user_code;
+  char *verification_url;
+  char *expires_in;
+  char *interval;
+};
+
+typedef struct OAuth2Response OAuth2Response_t;
+
+void freeOAuth2Response(OAuth2Response_t response);
+
 class Allocator : public sce::Json::MemAllocator {
 public:
   Allocator() {}
@@ -36,6 +48,18 @@ HttpResponse_t requestDeviceAndUserCodes();
  * In that case, use a backoff strategy to reduce the rate of requests.
  * @param json JSON Response from step 1 (requestDeviceAndUserCodes).
  */
-void handleTheAuthorizationServerResponse(char *json);
+OAuth2Response_t handleTheAuthorizationServerResponse(char *json);
+
+/**
+ * Display the `verification_url` and `user_code` obtained in step 2 to the
+ * user. Both values can contain any printable character from the US-ASCII
+ * character set. The content that you display to the user should instruct the
+ * user to navigate to the `verification_url` on a separate device and enter the
+ * `user_code`.
+ * @param oauth2Response The response from the Google OAuth Server (step 2).
+ */
+void displayUserCode(OAuth2Response_t oauth2Response);
+
+void pollAuthorizationServer();
 
 #endif

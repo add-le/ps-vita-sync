@@ -5,27 +5,13 @@ extern "C" {
 #include <stdlib.h>
 #include <string.h>
 
+#include "browser.h"
 #include "gdrive.hpp"
 #include "httpnet.h"
 #include "logger.h"
 }
 
-/**
- * Get the value for a key in JSON object.
- * @param json_root Root value of the JSON.
- * @param key Key to get the value.
- * @return The value associated to the key.
- * @warning Result must be freed when not used anymore.
- */
-char *jsonGet(sce::Json::Value &json_root, const char *key) {
-  sce::Json::String string = sce::Json::String();
-  const sce::Json::Value &value = json_root.getValue(key);
-  value.toString(string);
-  const char *c_string = string.c_str();
-  char *caser = (char *)malloc(strlen(c_string));
-  strcpy(caser, c_string);
-  return caser;
-}
+#include "json.hpp"
 
 HttpResponse_t requestDeviceAndUserCodes() {
   const char *scope = "https://www.googleapis.com/auth/drive.file";
@@ -44,7 +30,7 @@ HttpResponse_t requestDeviceAndUserCodes() {
   return response;
 }
 
-void handleTheAuthorizationServerResponse(char *json) {
+OAuth2Response_t handleTheAuthorizationServerResponse(char *json) {
   sceSysmoduleLoadModule(SCE_SYSMODULE_JSON);
 
   int res;
@@ -68,23 +54,32 @@ void handleTheAuthorizationServerResponse(char *json) {
     logger_exit(1);
   }
 
+  // Handle rate limit exceeded
+  char *error_code = jsonGet(val, "error_code");
+  if (strcmp(error_code, "rate_limit_exceeded") == 0) {
+    logger_printf("Rate limit exceeded, please wait a moment and retry");
+    free(error_code);
+
+    res = initializer.terminate();
+    if (res != 0) {
+      logger_printf("todo 2");
+      logger_panic(res);
+      logger_exit(1);
+    }
+    sceSysmoduleUnloadModule(SCE_SYSMODULE_JSON);
+  }
+
   char *device_code = jsonGet(val, "device_code");
   char *user_code = jsonGet(val, "user_code");
   char *expires_in = jsonGet(val, "expires_in"); // int
   char *interval = jsonGet(val, "interval");     // int
   char *verification_url = jsonGet(val, "verification_url");
 
-  printf("\n device_code %s\n", device_code);
-  printf("\n user_code %s\n", user_code);
-  printf("\n expires_in %s\n", expires_in);
-  printf("\n interval %s\n", interval);
-  printf("\n verification_url %s\n", verification_url);
-
-  free(device_code);
-  free(user_code);
-  free(expires_in);
-  free(interval);
-  free(verification_url);
+  OAuth2Response_t response = {.device_code = device_code,
+                               .user_code = user_code,
+                               .verification_url = verification_url,
+                               .expires_in = expires_in,
+                               .interval = interval};
 
   res = initializer.terminate();
   if (res != 0) {
@@ -94,4 +89,42 @@ void handleTheAuthorizationServerResponse(char *json) {
   }
 
   sceSysmoduleUnloadModule(SCE_SYSMODULE_JSON);
+
+  return response;
+}
+
+void freeOAuth2Response(OAuth2Response_t response) {
+  free(response.device_code);
+  free(response.user_code);
+  free(response.verification_url);
+  free(response.expires_in);
+  free(response.interval);
+}
+
+void displayUserCode(OAuth2Response_t oauth2Response) {
+  logger_printf("logger %s %s %s %s %s", oauth2Response.device_code,
+                oauth2Response.user_code, oauth2Response.verification_url,
+                oauth2Response.expires_in, oauth2Response.interval);
+
+  char buffer[2048];
+
+  sprintf(buffer,
+          "https://add-le.github.io/ps-vita-sync/"
+          "?user_code=%s&expires_in=%s&verification_url=%s",
+          oauth2Response.user_code, oauth2Response.expires_in,
+          oauth2Response.verification_url);
+
+  openUrl(buffer);
+}
+
+void pollAuthorizationServer() {
+
+  char buffer[2048];
+
+  sprintf(buffer,
+          "https://oauth2.googleapis.com/token?client_id=%s&client_secret"
+          "=%s&device_code=%s&grant_type=urn%3Aietf%3Aparams%3Aoauth%3A"
+          "grant-type%3Adevice_code");
+
+  httpPost(buffer);
 }
