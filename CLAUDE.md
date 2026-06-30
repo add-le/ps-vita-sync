@@ -17,8 +17,8 @@ Requires the `$VITASDK` environment variable (CMake errors out fatally otherwise
 # Build the VPK (from repo root)
 mkdir -p build && cd build && cmake .. && make    # -> build/ps_vita_sync.vpk
 
-# Build + launch in the Vita3K emulator (run from build/; path is hardcoded for the author)
-../run.sh
+# Launch in the Vita3K emulator: pass the built VPK to the Vita3K binary, e.g.
+#   /path/to/Vita3K *.vpk      # run from build/ after the make above
 
 # Bump version: copies package.json "version" into src/appconfig.h (APP_VERSION)
 # and CMakeLists.txt (VITA_VERSION) via sed. Keep all three in sync.
