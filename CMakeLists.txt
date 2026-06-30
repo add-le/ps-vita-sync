@@ -25,19 +25,22 @@ include("${VITASDK}/share/vita.cmake" REQUIRED)
 set(VITA_APP_NAME "PS Vita Sync")
 # Unique ID must be exactly 9 characters. Recommended: XXXXYYYYY where X =
 # unique string of developer and Y = a unique number for this app
-set(VITA_TITLEID  "SYNC00055")
+set(VITA_TITLEID "SYNC00055")
 # Optional version string to show in LiveArea's more info screen
-set(VITA_VERSION  "00.01")
+set(VITA_VERSION "00.02")
 
 ## Flags and includes for building
 # Note that we make sure not to overwrite previous flags
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu11 -Wall")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu11 -Wall -Wl,q -O2 -mtune=cortex-a9 -mfpu=neon")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-rtti -fno-exceptions")
 # Optional. You can specify more param.sfo flags this way.
 set(VITA_MKSFOEX_FLAGS "${VITA_MKSFOEX_FLAGS} -d PARENTAL_LEVEL=1")
 
 find_package(CURL REQUIRED)
 find_package(OpenSSL REQUIRED)
+find_package(freetype REQUIRED)
+find_package(SDL2 REQUIRED)
+find_package(SDL_ttf REQUIRED)
 
 # Add any additional include paths here
 include_directories(
@@ -53,7 +56,7 @@ link_directories(
 ## Build and link
 # Add all the files needed to compile here
 add_executable(${PROJECT_NAME}
-  src/main.c
+  src/main.cpp
   src/base64.c
   src/sha256.c
   src/rs256.c
@@ -64,14 +67,43 @@ add_executable(${PROJECT_NAME}
   src/driveapi.c
   src/savefile.c
   src/timehandler.c
+  src/logger.c
+  src/savedata.c
+  src/appgame.c
+  src/display.c
+  src/browser.c
+  src/gui.cpp
+  src/gdrive.cpp
+  src/fs.cpp
+  src/draw.cpp
+  src/utils.cpp
+  src/icon.cpp
+  src/dialog.c
+  src/oauth.cpp
+  src/json.cpp
   ./common/debugScreen.c
 )
 
 # Library to link to (drop the -l prefix). This will mostly be stubs.
 target_link_libraries(${PROJECT_NAME}
-  SceLibKernel_stub # this line is only for demonstration. It's not needed as
-                    # the most common stubs are automatically included.
-  SceDisplay_stub   # This used by debugScreenPrintf()
+  imgui_vita2d
+  vita2d
+  c
+  freetype
+  SceCommonDialog_stub
+  SceLibKernel_stub 
+  SceDisplay_stub
+  SceGxm_stub
+  SceSysmodule_stub
+  SceCtrl_stub
+  ScePvf_stub
+  SceTouch_stub
+  m
+  SceAppMgr_stub
+  SceAppUtil_stub
+  ScePgf_stub
+  mathneon
+  SceShaccCg_stub
   ScePaf_stub
   SceNet_stub
   SceNetCtl_stub
@@ -79,16 +111,21 @@ target_link_libraries(${PROJECT_NAME}
   SceSsl_stub
   ${CURL_LIBRARIES}
   ${OPENSSL_LIBRARIES}
+  ${FREETYPE_LIBRARIES}
+  ${SDL2_LIBRARIES}
+  ${SDL_TTF_LIBRARIES}
+  # SDL2_ttf dependencies
+  -lfreetype
+  -lpng
+  -ljpeg
+  -lz
   SceKernelThreadMgr_stub
   SceIofilemgr_stub
   SceVshBridge_stub
-  SceSysmodule_stub
   SceSysmem_stub
   SceLibJson_stub
-  SceKernelUtilsForDriver_stub 
+  SceKernelUtilsForDriver_stub
   crypto
-  c
-  m
   z
 )
 
@@ -103,4 +140,7 @@ vita_create_vpk(${PROJECT_NAME}.vpk ${VITA_TITLEID} ${PROJECT_NAME}.self
   FILE sce_sys/livearea/contents/bg.png sce_sys/livearea/contents/bg.png
   FILE sce_sys/livearea/contents/startup.png sce_sys/livearea/contents/startup.png
   FILE sce_sys/livearea/contents/template.xml sce_sys/livearea/contents/template.xml
+  FILE descript.ion descript.ion
+  FILE Kanit-Regular.ttf Kanit-Regular.ttf
+  FILE MaterialSymbols-Regular.ttf MaterialSymbols-Regular.ttf
 )

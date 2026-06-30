@@ -1,0 +1,4468 @@
+// author https://www.youtube.com/channel/UCReD7l1_rbx8nUh_LWS58sw/videos
+// homebrew from https://github.com/KuromeSan/cbps-db/blob/master/cbpsdb.csv
+// games from NPS_Browser
+// 2022.07.19
+
+PCSG90096 ^ h-encore
+
+SYNC00055 ^ PS Vita Sync
+OHCL00001 ^ Open Hydra Castle Labyrinth
+ISLD00000 ^ A Super Small SHMUP
+BARTENDER ^ Bartender
+SQUIDGAME ^ Squid Game
+DVLX00001 ^ devilutionX
+BIZZ21467 ^ ChinaIsSmall
+ROCK12345 ^ RCVita
+CUPH22106 ^ Cuphead
+GAMIDEF00 ^ Galactic Missile Defense
+ELICRY001 ^ Crystal PSM
+HANF64519 ^ Granny_psvita
+CSCC00001 ^ Socal Credit Checker
+330d2873SDKL39690 ^ SuDokuL
+CSDLICIUS ^ Cook Serve Delicious!
+BHBB00001 ^ Homebrew Browser
+FF5000000 ^ Final Fantasy V
+SONIC2SMS ^ Sonic 2 SMS Remake
+SONIC1SMS ^ Sonic 1 SMS Remake
+ABCD12345_1 ^ Henrystickmin PS Vita Port
+SORR00001 ^ SoRR
+6033543b ^ dunelegacy
+DUNE00002 ^ Dune Legacy
+JETSGLOOM ^ ZGloomVita
+SPACEPINB ^ Space Cadet Pinball
+FF4000000 ^ Final Fantasy IV
+FF3000000 ^ Final Fantasy III
+CRAZYTAXI ^ Crazy Taxi Classic
+GISH00001 ^ Gish
+RNPYDEMON ^ Contract Demon 
+RNPYDDLC1 ^ Doki Doki Literature Club Vita
+ab05de1d ^ vitaHexenII Data Files
+ARKSMEDIA ^ Media Center
+VITABROT1 ^ Mandelbrot Explorer
+XYZZ00002 ^ Moonlight
+ACTI00000 ^ Vita Activator
+ref00d ^ reF00D
+ESVPK0009 ^ EasyVPK
+MEIR00002 ^ VICEVita
+BGFTP0010 ^ BGFTP
+VSDK00014 ^ Vita Manager
+VITAVOLUM ^ VitaVolume
+CapUnlocker ^ CapUnlocker
+VITALBUM0 ^ VITAlbum
+Lightbar ^ VolLightbarCtrlWithDS4
+AUTOPLUG2 ^ AutoPlugin II
+FHOMM0002 ^ Free Heroes 2
+vmass ^ vmass
+NOBOR0001 ^ Noboru
+MARISAHIL ^ MARISA HighLow
+ADRBUBMAN ^ Adrenaline Bubbles Manager
+DEDALOX64 ^ DaedalusX64
+GTASA0000 ^ GTA: SA
+PKGJ00000 ^ PKGj
+YOUT00000 ^ YouTube
+GEMRB0001 ^ GemRB
+AKRK00005 ^ Sharpscale Config Menu
+AIOHBU365 ^ Easy Downgrader/Updater for PS Vita
+ELEVENMPV_01 ^ Eleven Music Player A
+CDRR00000 ^ Chip and Dale: Remastered
+MODORU000 ^ modoru 戻る
+MLCL00003 ^ ensō_ex
+PSPEMUCFW ^ Adrenaline
+MSWEEPER1 ^ MSweep
+1MENUVITA ^ Onemenu for Psvita
+HODEVITA1 ^ hode
+vita2d_sys ^ libvita2d_sys
+ds4touch ^ ds4Touch
+TrophyShotApp ^ TrophyShot
+hcstudio ^ hcstudio
+SMLA00001 ^ Launcher
+ADRLANCHR ^ Adrenaline Launcher
+BetterTrackPlug ^ BetterTrackPlug
+TPLG00001_01 ^ TrackPlug
+TrophyShotMain ^ TrophyShot
+LCDSAT000 ^ LCD Color Saturation
+ds4touch_01 ^ ds4Touch
+RETROVITA ^ RetroArch
+TFCARDPL0 ^ TF Card Plugin Tool
+JJH000002 ^ Snake
+SM6400001 ^ Super Mario 64 PC
+MLCL00001 ^ molecularShell fork
+FISHPOD01 ^ Fishpod the Platformer
+ABCD12345_06 ^ Ronister Adventure Demo
+SKGYAMT01_01 ^ YAMT installer
+CREEPER00 ^ CreeperDiver
+SHEPHARD0 ^ ShepHard
+FREEWAY00 ^ FREEWAY MUTANT
+EXTREME00 ^ Extreme Burger Defence
+HELLOGMSV ^ HELLO WORLD
+STREETRAC ^ Street Racing
+PTVT44218 ^ Vita Stacks
+EMUINST00 ^ PSP.Emulators.Installer
+HonRipper ^ HonRipper
+ShellAudio ^ libShellAudio
+PKGENABLE ^ PKG Enabler
+MLCL00003_03 ^ enso-dex
+KRKR00001 ^ Kirikiri for Playstation Vita
+JJH000001 ^ MemoryGame
+BALD14030 ^ Baldi's Basics Classic
+PLUTO0013 ^ Plutoboy
+SPLK00001 ^ Spelunky Classic HD
+vitabatteryplus ^ VITABatteryPlus
+WOTY00001 ^ Wheel of the Year
+d30e5351 ^ Alien vs Predator Gold Data Files
+AVPGOLD20 ^ Alien vs Predator Gold
+SHARKF00D ^ ShaRKF00D
+YAKZEE000 ^ Yakzee
+XEROX0000 ^ Xerox
+GMSV00009 ^ Temporary Space
+SYNCSIMPL ^ SYNC SIMPLE
+FDCE22385 ^ Super Mario Vita
+LAPY30015 ^ Super Console Wars
+SUDORKU00 ^ Sudorku
+SPIDERCARD ^ SpiderVita
+POOL00001 ^ POOL [of Doom!]
+NEDO12345 ^ The Great Adventure of Nedokun
+ABCD10030 ^ Global Game Jam 2017
+MADN00000 ^ Mensch ärgere Dich nicht
+SCXD00001 ^ Henkaku Haven High School Rumble
+HEXGEM001 ^ HEXGEM
+DLTR00000 ^ DELTARUNE: Chapter One
+CCCB00000 ^ Cocaine Cowboy
+CHESSPS3D ^ Chess 3D
+BVO000001 ^ BreakVeetOut
+BLACKOUT0 ^ Blackout
+AOTLMC001 ^ Caterpillars
+PSVITAEMU ^ PSVITA EMU INSTALLER
+PSNES0001 ^ pSNES
+PLAY00001 ^ Play!-
+SKOG10001 ^ CATSFC-libretro-vita
+VPRW00002 ^ VitaRW-min
+REBDB0001 ^ Rebuild_Database
+DUMP0900D ^ Dump Partials
+PSVVSHREC ^ PSV-VSH Recovery Menu
+YPID00001 ^ PSV IDPS Dumper v0.7
+ONELUA4R1 ^ ONEluaVita4R1
+SKGM1NCG0 ^ mincg
+QLINSTALL ^ QuickLaunch Installer
+GAMESAND0 ^ GamesandConsoles App
+ONELUAWLM ^ Wifi Level Meter
+VITATWEAK ^ VitaTweakBox
+VITASVMGR ^ Save Manager Plus
+VHBB00002 ^ Wiki Vita Homebrew Browser
+SKGVKAIO1 ^ VKAIO
+TTFTP0001 ^ Two Touch FTP
+TPLG00001 ^ TrackPlug
+HWCSOSAPP ^ S.O.S.
+RECOVERYR ^ Quick Recovery
+TROPHYFIX ^ Trophies Fixer
+DISABLE3G ^ 3G Disabler
+PLUGINBOX ^ Plugin Box
+PKGJTXT00 ^ PKGJTXT Injector
+ONETRANSL ^ ONEtranslate
+MPSVSECR0 ^ MyPSVITASecret
+MULTIDOWN ^ Multidownload Vita
+AKRK00003 ^ Monaural Config
+HMRC00001 ^ HomeRecovery
+ONELUAHSR ^ Home Screen Restore
+HYS000002 ^ History Deleter
+SKGHHBRWS ^ HentaiHaven
+GAMESD001 ^ TF卡插件工具
+FTPSZILLA ^ FTPzilla Vita
+FUCK44444 ^ FuckU
+XERP00002 ^ FTPVita
+DOWNLOAD0 ^ File Downloader
+FWUPDATER ^ Firmware Updater
+EASYDS3BT ^ Easy DS3
+DVDL00001 ^ DVDLogo
+CBSIC0000 ^ CustomBootSplash Image Changer
+CROSSCON0 ^ Cross Connection
+CBPSDIR00 ^ CBPS DIRECT STORE
+BITCOIN00 ^ Bitcoin BY xXx_KevBigBoss98_xXx
+ADRENUPD0 ^ Adrenaline Updater
+ADRSTAMGR ^ Adrenaline States Manager
+ACTMANGER ^ Account_Manager
+PATH00027 ^ Bookr MOD Vita
+oclockvita ^ oclockvita
+MEMEU4444 ^ MEMEU
+SAVEMGR00 ^ Save Manager
+MLCL00005 ^ usbmc
+VitaShellKernel ^ usbmc
+BADA00001_01 ^ Bad Apple Vita!!! System
+SHAREDFBT ^ SharedFb-sample
+LowMemMode ^ LowMemMode
+Quietshot ^ quietshot
+JAVSceShell ^ jav
+QuickPower ^ quick_power
+QuickVolume ^ quick_volume
+Staybright ^ StayBright
+PSOneScrotKernel ^ PSOneScrot
+NPSTHMFXR ^ NPS Themes Fixer
+CoreUnlocker80000H ^ CoreUnlocker80000H
+MLCL00003_02 ^ enso 3.65
+VDEC00001 ^ French American Games Decrypter
+FuckPSSE ^ FuckPSSE
+unity_debug ^ Unity Debug
+ioplus ^ ioPlus
+phys_dumper ^ physmem_dumper
+NoASLR ^ noASLR
+APPMANP01 ^ App Manager Plus
+BACKUP000 ^ Auto Backup License
+TUBEVITA0 ^ Tubevita
+VPKMIRROR ^ VPK Mirror
+VPRO00001 ^ VitaRO
+qaSpoof ^ Qa Flag Spoof
+noPsLock ^ NoPSLock
+iduSpoof ^ IduSpoof
+ROACTDATF ^ RoActDat
+tmro ^ RoActDat
+c305f3f5 ^ reF00D Data Files
+reSkype ^ ReSkype
+videoDebug ^ VideoDebug
+MakePsmGreatAgain ^ MakePsmGreatAgain
+LAPY30016 ^ NanoSpeed Gamer
+PS4LNKGUI ^ ps4linkcontrols-gui
+ESPL00009 ^ EasyPlugin
+PLYMARS01 ^ Terri-Fried
+AnalogsEnhancer ^ AnalogsEnhancer
+AUTOVPK00 ^ Auto Installer vpk
+KOGRESMOU ^ Kogre's Mountain
+custom_boot_splash ^ Custom Boot Splash BMP
+plugin ^ Cpu Affinity Changer
+cidSpoof ^ cidSpoofer
+AnalogStickDisable_03 ^ AnalogStickDisable Swap Left To Right
+AnalogStickDisable_04 ^ AnalogStickDisable Right To Left
+AnalogStickDisable_05 ^ AnalogStickDisable Right Only
+AnalogStickDisable_02 ^ AnalogStickDisable Left To Right
+AnalogStickDisable_01 ^ AnalogStickDisable Left Only
+AnalogStickDisable ^ AnalogStickDisable
+netcheck_bypass ^ netcheck_bypass
+noavls ^ NoAVLS
+batteryPercent ^ VITABattery
+MAFU ^ Input,MAFU-I
+WEED42069 ^ Super Stoner 420
+BOMB00001 ^ Bomberman
+GMSV00013 ^ Classic Car Crossing
+MusicPremium ^ music_premium
+bootsound ^ Vita-BootSound
+EmergencyMount ^ EmergencyMount
+CustomWarning ^ custom_warning
+NoTrophyMsg ^ NoTrophyMsg
+ScoreHax ^ ScoreHax
+DownloadEnabler ^ DownloadEnabler
+TropHax ^ TropHAX
+NoLockScreen ^ NoLockScreen
+JULIUS001 ^ julius
+APWRFRESH ^ Easy Power Refresh
+ds4vita ^ ds4vita
+vFlux ^ vFlux
+pngshot ^ pngshot
+bmpshot ^ bmpshot
+AKRK00001 ^ LOLIcon Fast Switch
+repatch ^ rePatch-reDux0
+LOLIcon_03 ^ LOLIcon
+reScreeny ^ rescreeny
+SysidentUser ^ sysident
+LOLIcon_01 ^ lolita500
+shellbat ^ vita-shellbat
+StorageMgrKernel ^ PSVita-StorageMgr
+noWhitelist ^ nopsmwhitelist
+0syscall6 ^ 0syscall6
+NoPowerLimits ^ NoPowerLimitsVita
+VGi ^ VGi
+LOLIcon_02 ^ DerInClocKS
+LOLIcon ^ lolita444
+ftpeverywhere ^ ftpeverywhere
+udcd_uvc ^ vita-udcd-uvc
+SHORTCUTS ^ ShortCuts Enhancer
+ARKFAST00 ^ ArkFast
+FreePSM ^ FreePSM
+NoNpDrm_01 ^ NoPsmDrm
+NoNpDrm ^ NoNpDrm
+DolcePolce ^ DolcePolce
+VITABREAK ^ VitOut
+TIMEMACHI ^ Time Machine
+BREWW0001 ^ BreakVeetOut
+VCID00001 ^ VitaCID
+PEND00000 ^ AccountSwitcher
+BSTONE012 ^ bstone
+ZXGQ00004 ^ GoHAN_Parallel
+VPRW00001 ^ VitaRW
+MYLEGNOOB ^ HappyLand
+SHDW00001 ^ advremap
+RCHT00001 ^ rinCheat SE
+BERM00001 ^ bermuda-vita
+SDLPAL001 ^ sdlpal
+TETR00001 ^ tetromino
+OPENJAZZ1 ^ OpenJazz
+METHANE01 ^ Methane
+HYDCASLAB ^ Hydra Castle Labyrinth
+MIRROR000 ^ mirrormagic
+ANGU00001 ^ OpenTTD
+VOYAGERQ3 ^ vitaVoyager
+SPOP00001 ^ SDLPoP-Vita
+MERITOUS1 ^ meritous
+PFBA00001 ^ pfba
+MGBA00001 ^ mGBA
+RTCW00001 ^ vitaRTCW
+LOLI00001 ^ Lolicopocalypse
+CONNECT04 ^ Connect Four
+OSPX00001 ^ OpenSupaplex
+SYSAPPS00 ^ System Apps Disabler
+ACCSWIT02 ^ Advanced Account Switcher
+FASTRESET ^ FastReset
+SHOWMODE0 ^ show-mode
+PSTO00001 ^ PlayStation®Store
+PKGE00002 ^ Change Package Installer
+PKGE00001 ^ Enable Package Installer
+FWREINSTA ^ Firmware Reinstall
+NNHR00001 ^ xsystem35
+PARENTAL0 ^ Parental Control Bypass
+FRDM00001 ^ Halt Restart PSV
+ANDRO0001 ^ Andromeda Tests
+COVIDDATA ^ covid19-data
+VITAZORK1 ^ Zork I: The Great Underground Empire
+REPOHUB01 ^ RepoHub
+NOSLEEP00 ^ NoSleep
+TROPTOOLS ^ TrophyDumper
+HIWORLD00 ^ Hello_World()
+ONETROPHY ^ Trophy Manager
+SKGHFW100 ^ HFW installer
+SUBPEWDS0 ^ SUBSCRIBE TO PEWDIEPIE
+ACCSWIT01 ^ Simple Account Switcher
+UPDATBLOC ^ UpdateBlocker
+HOLOCENE0 ^ HOLOCENE
+LOVEU4444 ^ LOVEU
+TLTL00001 ^ TailTale
+VECT00001 ^ vectoroids
+CEX2REX20 ^ CEX 2 REX 2.0
+204800001 ^ 2048-PSP
+CBPSVCOOL ^ CoolBoardPlaysSounds
+ACTIVATE0 ^ activate.vpk
+TROPHAXSE ^ TrophaxSE
+AUTOPLUG0 ^ Autoplugin
+RINNSIM44 ^ RinnSim
+28fb04cb ^ OpenJazz Data Files
+69ec5ff ^ Chocolate Doom Data Files
+23d4e6b0 ^ Methane Data Files
+33319e4b ^ DstroyVita Data Files
+f442191f ^ vitaWolfen Data Files
+925a0e06 ^ vitaXash3D Data Files
+29672496 ^ enigma Data Files
+c7b7e3ec ^ BasiliskII Data Files
+a27883ff ^ Wiiero Data Files
+77f8b1f7 ^ Postal Data Files
+bd3d35e ^ rocksndiamonds Data Files
+c47969cf ^ mirrormagic Data Files
+f22dba1 ^ SuperMarioWar Data Files
+3e8db578 ^ OpenTTD Data Files
+4ade44f3 ^ NumptyPhysics Data Files
+2a3e5712 ^ meritous Data Files
+d36180de ^ bstone Data Files
+3d7c217a ^ EDuke32 Data Files
+595c20fd ^ sdlpal Data Files
+f784515d ^ SDLPoP-Vita Data Files
+ec02344b ^ NRedneck Data Files
+689a2463 ^ vitaVoyager Data Files
+85ff504d ^ vitaQuake Data Files
+a92fe139 ^ vitaRTCW Data Files
+21bcaa01 ^ pfba Data Files
+7ac650de ^ psnes Data Files
+f3e3104d ^ vitaQuakeII Data Files
+e5b0d0fd ^ DaedalusX64 Data Files
+HYPRPITCH ^ Hyper Princess Pitch
+BBRM12345 ^ BitBot Runners
+SCRATEBOX ^ Super Crate Box
+ABCD12345_02 ^ Game 1
+FNPT00001 ^ Fingerprint
+SKG4V2SW1 ^ switch avls mode
+GMSV00001 ^ Asteroids: VH Beta
+ABCD12345_01 ^ Deadly Hallows
+SKGTLSE12 ^ iTLS-Enso
+VHBB00001 ^ Vita Homebrew Browser
+LAPY30014 ^ Lapy's River Raid
+PSNE00001 ^ psnes
+BLKY00001 ^ RocketTanks
+RAND00001 ^ Random Hentai
+HELL66645 ^ To Pieces
+MLCL00003_01 ^ ensō
+EZSV00001 ^ EasySwitchVita
+CTMANAGER ^ Custom Themes Manager
+VFRS12346 ^ VitaFighters
+MODALVOLM ^ ModalVolumeControl
+BLTG49694 ^ Vita Timer
+PCEXHUMED ^ vitaExhumed
+NREDNECK1 ^ NRedneck
+VITASHELL ^ VitaShell
+CPUAFFCTR ^ AffinityChanger
+ABCD12345 ^ V-cube
+QUAK00003 ^ vitaQuakeIII
+VGCF00001 ^ VitaGrafix Configurator
+UAE4ALL00 ^ uae4all2
+ENIGMA000 ^ enigma
+OPENBOR01 ^ OpenBOR
+RAED67053 ^ Cubik adventure
+ELEVENMPV ^ Eleven Music Player
+FRUITY001 ^ FRUITY
+SOUL45638 ^ FALLEN KNIGHTS
+BAKU88888 ^ MyBakkuPakku
+CHROMONO2 ^ chro.mono 2
+SWOR57517 ^ SwordJurney
+91900001 ^ Switch to PSTV
+GRZB00002 ^ vitaSnake
+QUAK00001 ^ vitaQuake
+REGEDIT01 ^ RegistryEditor
+DOOM12345 ^ DooM
+SKGB4TF1X ^ batteryFixer
+MEIR00001 ^ ZXVita
+FLAPPY001 ^ FlappyBird Classic
+NABO12345 ^ Naruto Boruto
+DVDS42069 ^ DVD Screensaver
+LAPY00010 ^ PS Scene Quiz
+HERMES001 ^ HERMES
+HXEN00001 ^ vitaHexenII
+JELY00001 ^ Jelly Car
+FROV00001 ^ GM:S
+ABYD12945 ^ Rubik's Cube Solver
+BBFF12345 ^ Kill'em All
+TPPG00001 ^ Tricky Towers Endless Race
+CONSOLEID ^ ConsoleID
+LAPY00008 ^ Duck Hunt Remake
+SKGCBSMGR ^ Custom Boot Splash Manager
+BASILISK0 ^ BasiliskII
+DRON57468 ^ Drone_racer
+SKGYAMT01 ^ YAMT -basic-
+LAPY00009 ^ Wild Gunman Remake
+MARK00095 ^ Resident Evil CODE: Vita
+GMSV00001_01 ^ Freeway Mutant
+VITALIERO ^ Wiiero
+SPED85632 ^ Speedrun Vita
+OSDB00001 ^ GM:S
+FIGH12345 ^ UFE Demo
+NMDG54882 ^ No More Dungeons!
+AGWN00000 ^ A game without a name!
+ABCD13370 ^ DarkWlak
+POSTAL001 ^ Postal
+PLMN00001 ^ Plugins Manager
+NXEV00001 ^ NXENGINE-EVO
+NUMPTY001 ^ NumptyPhysics
+CUID18745 ^ Cup Critters
+LAPY00001 ^ Save The Scene
+PAUL00001 ^ Jam
+OOPP54321 ^ Home
+BEBE12908 ^ MKMayhem
+ROCKS0000 ^ rocksndiamonds
+TOSF87312 ^ SunflowerChair
+JUMPNBUMP ^ jumpnbump
+ZERO00001 ^ ZeldaROTH
+SKGPKG2CH ^ ★Package Installer Launcher
+LUAMANGAS ^ Manga Downloader
+PTVT45668 ^ The Hallway
+RTFD12345 ^ Red Runner
+ABCD12345_05 ^ The Enchanted Forest
+ZMBR94732 ^ Zombiebound Reloaded
+FRYM12345 ^ FryingMaster
+SMWAR0000 ^ SuperMarioWar
+DEFD20485 ^ 2048
+PSVGC0001 ^ Virtual GC
+VGEE00001 ^ RPPHS
+SKGIMCULK ^ IMCUnlockLite
+ABCD00999 ^ Waves
+LAPY00004 ^ Overcome
+CUBCCONUN ^ Cubic Conundrum
+BADA00001 ^ Bad Apple Vita!!!
+F2BGLVITA ^ FadeToBlack
+RTRLVAREA ^ RetroLivearea
+ADBT00001 ^ App DB Tool
+WOLF00001 ^ vitaWolfen
+PICRESTGM ^ PiCrest
+RBSD00001 ^ Reboot or Shutdown
+ABCD12345_04 ^ TLC
+CANNONBAL ^ Cannonball
+ABCD12346 ^ El Pollo de Lapy
+VSOI00001 ^ VSOI
+WSTLNDKNG ^ Wasteland Kings
+TEAR00001 ^ Shiromino
+VSCU00001 ^ scummvm
+WIZAWIZRD ^ Wizard Wizard
+XASH00001 ^ vitaXash3D
+SWITCHSDV ^ Switch SD2Vita
+ZELDATTT1 ^ Zelda3T
+ABCD12347 ^ El Pollo 2.0
+THTR00001 ^ Tetromino - Touhou Edition
+VITABUP00 ^ Vita Backup
+PAUL00004 ^ Echo Moth
+SPPX12345 ^ SuperPixelRun
+THMX00001 ^ Theme Manager Ex
+UNTITLEDS ^ An Untitled Story
+VITAFBA01 ^ pfba
+DSTROYVIT ^ DstroyVita
+ZELDAOLB1 ^ Zelda: Oni Link Begins
+ZELDANSQ1 ^ ZeldaNSQ
+CHOC66666 ^ Chocolate Doom
+ADRBBLINS ^ AdrBubbleBooter Installer
+HBINJECT0 ^ HBInjector
+THHM00001 ^ Vita Hangman - Touhou Edition
+ABCD12345_03 ^ Flappy Bird Vita
+QUAKE0002 ^ vitaQuakeII
+BTMR12345 ^ Beat Master
+ACTIVAMLT ^ MLTactivator
+VITAPONG0 ^ Pong
+DOOM00666 ^ Vita Doom
+CHIP00001 ^ MicroCHIP
+VID000016 ^ VITAident
+ABBAYEDMO ^ Abbaye Des Morts
+ARKSPCLNK ^ PC Link [0.8b]
+CHAI00001 ^ chain
+ZBND00001 ^ Zombiebound
+LBRN00001 ^ Labyrinth 3D
+VTGO00001 ^ Vitamon GO
+VID000162 ^ VITAident GUI
+A3A400001 ^ Cookie Clicker
+SVEW00001 ^ SwitchView
+OPENTITUS ^ OpenTitus
+OPENTITUS_01 ^ OpenTitus
+CTJ300001 ^ Crazy Traffic Jam 3D
+PCM300001 ^ Pro Camera Vita
+DBMA00001 ^ Database Manager
+VHWT00001 ^ Vita Hardware Test
+BIRD00000 ^ flappybird
+DRSS00001 ^ DeathRun Test
+FLDT00001 ^ Flood It!
+ZXGQ00003 ^ GoHAN
+XYZZ00003 ^ idu-mode
+SDLLOPAN0 ^ SDLLopan
+CXZV00001 ^ Vita Font Installer
+MLCL00002 ^ offlineInstaller
+NOTE00001 ^ Notepad Vita
+DAKR00001 ^ Game Shrinker
+HANG00001 ^ VitaHangman
+AMTR01693 ^ Another Metroid 2 Remake
+MFFT00016 ^ Vita Microphone FFT
+VOID00001 ^ projectvoid_v0.1.0
+VREC00001 ^ Voice Recorder
+PKGI00000 ^ PKGi
+CFFVNPGAW ^ GirlsAreWeird
+VITADL999 ^ VitaDL
+MAIM00001_01 ^ MaiDumpTool
+PICKRV016 ^ Pickr VITA
+VITABOOKS ^ VitaBooks
+ARKSPSPHB ^ PSP Homebrew Browser
+EUCLIOD01 ^ EUCLIOD
+CARDUNLOK ^ CardUnlock
+ABLK00001 ^ AntiBlacklist
+MIMP00001 ^ Media Importer
+VID000163 ^ VITA Net Check
+HACKINFOR ^ HackInformer
+STEM00001 ^ StemLoader
+RPG100001 ^ Galactic Federation
+ARKSNPAD0 ^ Notepad++
+VTCD00001 ^ VitaCord
+EPSPINSTA ^ ePSP Bubble Installer by CelesteBlue
+STFD00001 ^ Starfield Vita
+PICOLOOP1 ^ PicoloopPSVita
+SWKK00001 ^ SwitchKaku
+PCSF00092 ^ History Deleter
+ADRINSTAL ^ Adrenaline EasyInstaller
+SKOG10043 ^ CATSFC-libretro-vita
+VITACAST0 ^ VITA Forecast
+OBJL00001 ^ Vita Object Loader
+CLEM00001 ^ luaVitaSeccy
+ARKSFLASH ^ Flash Light
+VPKSOURCE ^ Better Browser Dowloader
+ACTPSVITA ^ System Check Enabled
+BOUT00002 ^ blockout2
+ROBB00001 ^ gnurobbo
+CLON00001 ^ Clonage Bulle ePSP
+PSVIDENT0 ^ PSVident
+PS4LINKM1 ^ ReLink
+VRST00001 ^ Restart
+GAUT16912 ^ qrdecoder
+STARKILL0 ^ StarKiller2D
+432100001 ^ lua-gameoflife
+KANA99999 ^ Database Updater
+SWKK00001_01 ^ SwitchKaKu
+SYOBONCAT ^ OpenSyobon
+XYZZ00001 ^ button-swapper
+EDUKE0032 ^ EDuke32
+CRASHDUMP ^ Crash Dump Delete
+VITAMIN00 ^ Vitamin
+TXTE00001 ^ Simple Text Editor
+ARIEL0005 ^ Battery Indicator
+ARIEL0004 ^ VitaShell Theme Manager
+MEMCRDSWP ^ memcardswap
+VITATLBOX ^ VitaToolbox
+VITAPONG0_01 ^ vitapong
+FTP200001 ^ FTPlaystation
+LIRC00001 ^ luaIrc
+KSVN00001 ^ Katawa Shoujo Demo
+KETM00001 ^ K.E.T.M.
+SHTD00001 ^ Shutdown
+RBTR00001 ^ Reboot
+WONR00001 ^ tactic_miner
+APPSRGMGR ^ Application Storage Manager
+VITATETRI ^ TetrisAttack
+VAIH00001 ^ vitaAirHockey
+VITATESTR ^ VitaTester
+LPPV00001 ^ Lua Player Plus Vita
+GRZB00003 ^ Pingo
+OCTO00000 ^ G&Woctopus
+ACTM00003 ^ Vita Account Manager
+WIDE87195 ^ BrickRace
+DGSO12345 ^ Dungeon Survivor
+JUMP55345 ^ Jumping Guy
+HIGURASHI ^ Higurashi When They Cry Hou
+RFLM32541 ^ RunFromReality
+PSMFIXER2 ^ PSM Manager
+SOMO00002 ^ Another_world
+PRINCEPER ^ Prince Of Persia
+VOPTIRYAN ^ vOpenTiryan
+SOMO00001 ^ REminiscence
+VPAD00001 ^ VitaPad
+BTLSHPARN ^ BattleShipArena
+DOGGYTEST ^ doggytwicevt
+FRAN00002 ^ HandyVITA
+FRAN00001 ^ SMSPlusVITA
+SKOG00001 ^ Snes9xVITA
+XXXX35570 ^ Whitelist
+REGEDIT01_01 ^ RegistryEditor
+SUDO00001 ^ VitaSudoku
+URI000001 ^ uriCaller
+HOTA00001 ^ HOTA
+CHICKENS2 ^ Chicken Launcher
+TQUE00001 ^ TextQuest
+MINESWEEP ^ Minesweeper
+SPIDERCAR ^ SpiderVita
+SHC100001 ^ Super Hero Chronicles
+FLPP00001 ^ flppy bird
+KUNI00002 ^ sudokucpp
+FRAN00003 ^ GenesisPlusGXVITA
+BREW00001 ^ ReversMe
+DSEMU0000 ^ DeSmuME
+FRAN00004 ^ NeopopVITA
+RTST00010 ^ Homebrew Downloader
+NLTK00001 ^ VITAPluginsManager
+TEMA00001 ^ TEMA
+PSP2PUP00 ^ PUP-Extractor
+VITACALCI ^ Calculator
+MAIM00001 ^ MaiDumpTool
+PSVIBE001 ^ PSVibe
+CRFT00001 ^ Minicraft
+WNTD00001 ^ vitaWanted
+ARIEL0001 ^ RejuveSnake
+GBOT00001 ^ milieTetris
+ROWS00001 ^ 4Rows
+XERP00003 ^ realboy
+PRIMER001 ^ Procedural Planets
+SCRENFLSH ^ VitaScreenFlasher
+ARIEL0002 ^ Game of life
+GS0100001 ^ Moon Whitelister
+ERPG00001 ^ EasyRPG Player
+AF1A00001 ^ VitaGraphs
+BULLY0000 ^ bully_vita
+BC2000000 ^ bc2_vita
+BUBRECALL ^ Bubble Recall
+
+PCSG00312 ^ J-STARS Victory VS AR Appli
+PCSA00001 ^ ModNation Racers: Road Trip
+PCSA00002 ^ MLB 12 The Show
+PCSA00003 ^ Sound Shapes
+PCSA00004 ^ Escape Plan
+PCSA00006 ^ Super Stardust Delta
+PCSA00007 ^ Hustle Kings
+PCSA00008 ^ Resistance: Burning Skies (ENG-SPA)
+PCSA00009 ^ Hot Shots Golf: World Invitational
+PCSA00010 ^ Little Deviants
+PCSA00011 ^ Gravity Rush
+PCSA00012 ^ Reality Fighters™
+PCSA00014 ^ Unit 13
+PCSA00015 ^ WipEout 2048
+PCSA00017 ^ LittleBigPlanet PlayStation Vita
+PCSA00027 ^ MotorStorm RC
+PCSA00029 ^ Uncharted: Golden Abyss
+PCSA00034 ^ MotorStorm RC
+PCSA00035 ^ Table Soccer
+PCSA00036 ^ PulzAR
+PCSA00037 ^ Fireworks
+PCSA00038 ^ Cliff Diving
+PCSA00042 ^ Facebook
+PCSA00044 ^ Skype
+PCSA00045 ^ LiveTweet for PlayStation Vita
+PCSA00046 ^ Flickr
+PCSA00047 ^ foursquare
+PCSA00048 ^ Table Top Tanks
+PCSA00050 ^ Frobisher Says!
+PCSA00052 ^ Resistance: Burning Skies Augmented Reality Monument Viewer
+PCSA00059 ^ Paint Park
+PCSA00060 ^ Treasure Park
+PCSA00062 ^ YouTube
+PCSA00063 ^ Resistance: Burning Skies (POR)
+PCSA00064 ^ Table Ice Hockey
+PCSA00067 ^ Wake-up Club
+PCSA00068 ^ Sly Cooper: Thieves in Time
+PCSA00069 ^ PlayStation All-Stars Battle Royale
+PCSA00074 ^ Table Mini Golf
+PCSA00075 ^ When Vikings Attack!
+PCSA00079 ^ Smart as
+PCSA00080 ^ Jak and Daxter Collection
+PCSA00083 ^ PlayStation Home Arcade
+PCSA00086 ^ Ratchet & Clank: Full Frontal Assault
+PCSA00087 ^ Ecolibrium
+PCSA00088 ^ Uncharted: Fight for Fortune
+PCSA00089 ^ Bentley's Hackpack
+PCSA00092 ^ Soul Sacrifice
+PCSA00096 ^ Sly Cooper and the Thievius Raccoonus
+PCSA00097 ^ Sly 2: Band of Thieves (Sly Cooper 2)
+PCSA00098 ^ Sly 3: Honor Among Thieves (Sly Cooper 3)
+PCSA00099 ^ Tearaway
+PCSA00103 ^ RESOGUN
+PCSA00106 ^ Destiny of Spirits
+PCSA00107 ^ Killzone: Mercenary
+PCSA00108 ^ Jacob Jones and the Bigfoot Mystery
+PCSA00109 ^ Pinball Heroes: Complete
+PCSA00110 ^ Disney Epic Mickey 2: The Power of Two
+PCSA00111 ^ Paint Park Plus
+PCSA00112 ^ Toro's Friend Network
+PCSA00113 ^ Imaginstruments
+PCSA00114 ^ Flower
+PCSA00116 ^ CounterSpy
+PCSA00117 ^ Doki-Doki Universe
+PCSA00118 ^ Open Me!
+PCSA00122 ^ Invizimals: Hidden Challenges
+PCSA00123 ^ Hohokum
+PCSA00126 ^ God of War Collection
+PCSA00127 ^ Malicious Rebirth
+PCSA00133 ^ Ratchet & Clank Collection
+PCSA00134 ^ Helldivers
+PCSA00135 ^ flOw
+PCSA00136 ^ NBA Game Time
+PCSA00137 ^ Invizimals: The Alliance
+PCSA00138 ^ Lemmings Touch
+PCSA00139 ^ PlayStation Vita Pets
+PCSA00140 ^ Entwined™
+PCSA00142 ^ Tearaway Soundtrack (with bonus tracks)
+PCSA00144 ^ Tearaway (Digital) (Trial & Unlock)
+PCSA00147 ^ Freedom Wars
+PCSA00148 ^ BigFest
+PCSA00149 ^ MonsterBag
+PCSA00150 ^ No Heroes Allowed: No Puzzles Either!
+PCSA00151 ^ Dead Nation
+PCSA00152 ^ Soul Sacrifice Delta
+PCSA00153 ^ Murasaki Baby
+PCSA00155 ^ Oreshika: Tainted Bloodlines
+PCSA00156 ^ Fat Princess: Piece of Cake
+PCSA00158 ^ The Unfinished Swan
+PCSA00490 ^ Run Sackboy! Run!
+PCSA00511 ^ MLB 15 The Show
+PCSA00531 ^ Live from PlayStation
+PCSA00549 ^ LittleBigPlanet PlayStation Vita Marvel Super Hero Edition
+PCSA00552 ^ Invizimals: The Resistance
+PCSA00563 ^ The Hungry Horde
+PCSA00685 ^ The Muppets Movie Adventures
+PCSA00798 ^ Phineas and Ferb: Day of Doofenshmirtz
+PCSE00001 ^ Ridge Racer
+PCSE00002 ^ F1 2011
+PCSE00003 ^ Virtua Tennis 4: World Tour Edition
+PCSE00004 ^ Ultimate Marvel vs. Capcom 3
+PCSE00005 ^ Street Fighter X Tekken
+PCSE00006 ^ Army Corps of Hell
+PCSE00007 ^ Asphalt: Injection
+PCSE00008 ^ Dungeon Hunter: Alliance
+PCSE00009 ^ Lumines Electronic Symphony
+PCSE00010 ^ Michael Jackson The Experience HD
+PCSE00011 ^ Silent Hill: Book of Memories
+PCSE00012 ^ Supremacy MMA Unrestricted
+PCSE00014 ^ Dynasty Warriors Next
+PCSE00015 ^ Shinobido 2: Revenge of Zen
+PCSE00016 ^ Touch my Katamari
+PCSE00017 ^ Super Monkey Ball Banana Splitz
+PCSE00018 ^ BlazBlue: Continuum Shift Extend
+PCSE00019 ^ Dragon's Crown
+PCSE00020 ^ Metal Gear Solid HD Collection
+PCSE00021 ^ Ninja Gaiden Sigma Plus
+PCSE00022 ^ Disgaea 3: Absence of Detention
+PCSE00023 ^ Mortal Kombat
+PCSE00024 ^ Ben 10: Galactic Racing
+PCSE00027 ^ The Treasures of Montezuma Blitz
+PCSE00029 ^ StarDrone Extreme
+PCSE00033 ^ Guacamelee!
+PCSE00034 ^ Tales from Space: Mutant Blobs Attack!!!
+PCSE00036 ^ Wanted Corp. (3.61+!) [3.61]
+PCSE00038 ^ Velocity Ultra
+PCSE00039 ^ Foosball 2012
+PCSE00041 ^ Indoor Sports World
+PCSE00042 ^ Puddle
+PCSE00043 ^ Oddworld: Stranger's Wrath HD
+PCSE00044 ^ Chronovolt
+PCSE00047 ^ SunFlowers
+PCSE00049 ^ CastleStorm
+PCSE00050 ^ Zen Pinball 2
+PCSE00051 ^ Urban Trial Freestyle
+PCSE00052 ^ Rayman Origins
+PCSE00053 ^ Assassin's Creed III: Liberation
+PCSE00056 ^ Sonic & All-Stars Racing Transformed
+PCSE00057 ^ Lego Harry Potter: Years 5-7
+PCSE00061 ^ Lego Batman 2: DC Super Heroes
+PCSE00062 ^ Sumioni: Demon Arts
+PCSE00064 ^ Plants vs Zombies
+PCSE00065 ^ Pinball Arcade
+PCSE00066 ^ New Little King's Story
+PCSE00067 ^ Lego The Lord of The Rings
+PCSE00068 ^ Spy Hunter
+PCSE00070 ^ Netflix
+PCSE00074 ^ NicoNico
+PCSE00075 ^ Retro City Rampage
+PCSE00078 ^ Metal Gear Solid 2: Sons of Liberty - HD Edition
+PCSE00079 ^ Metal Gear Solid 3: Snake Eater - HD Edition
+PCSE00084 ^ Madden NFL 13
+PCSE00085 ^ Zero Escape: Virtue's Last Reward
+PCSE00086 ^ Pure Chess
+PCSE00088 ^ Jet Set Radio
+PCSE00089 ^ Need for Speed: Most Wanted
+PCSE00090 ^ Sine Mora
+PCSE00091 ^ Big Sky Infinity
+PCSE00092 ^ Knytt Underground
+PCSE00095 ^ escapeVektor
+PCSE00097 ^ Call of Duty Black Ops: Declassified
+PCSE00101 ^ Puzzle by Nikoli V Sudoku
+PCSE00102 ^ Zombie Tycoon 2: Brainhov's Revenge
+PCSE00103 ^ Doctor Who: The Eternity Clock
+PCSE00108 ^ Puzzle by Nikoli V Slitherlink
+PCSE00111 ^ Furmins
+PCSE00112 ^ Rocketbirds: Hardboiled Chicken
+PCSE00113 ^ KickBeat
+PCSE00116 ^ Orgarhythm
+PCSE00117 ^ Burn the Rope
+PCSE00119 ^ Ragnarok Odyssey
+PCSE00120 ^ Persona 4 Golden
+PCSE00123 ^ Colors!
+PCSE00124 ^ Dokuro
+PCSE00133 ^ Doodle God
+PCSE00137 ^ Guilty Gear XX Accent Core Plus R
+PCSE00143 ^ Quell Memento
+PCSE00208 ^ DJMax Technika Tune
+PCSE00209 ^ Earth Defense Force 2017 Portable
+PCSE00210 ^ Alien Breed
+PCSE00212 ^ Machinarium
+PCSE00213 ^ Jetpack Joyride
+PCSE00216 ^ Let's Fish! Hooked On
+PCSE00217 ^ Dragon Fantasy Book I
+PCSE00219 ^ MUD - FIM Motocross World Championship
+PCSE00220 ^ Nun Attack
+PCSE00221 ^ Star Wars Pinball (DEMO - needs DLC to unlock full)
+PCSE00222 ^ CRACKLE
+PCSE00224 ^ Draw Slasher
+PCSE00225 ^ BreakQuest: Extra Evolution
+PCSE00228 ^ Germinator
+PCSE00229 ^ Fruit Ninja
+PCSE00231 ^ Atelier Totori Plus: The Adventurer of Arland
+PCSE00232 ^ A-men
+PCSE00233 ^ Ninja Gaiden Sigma 2 Plus
+PCSE00235 ^ Dead or Alive 5 Plus
+PCSE00237 ^ Lego Legends of Chima: Laval's Journey
+PCSE00238 ^ Superfrog HD
+PCSE00240 ^ Muramasa Rebirth
+PCSE00242 ^ WRC 3 - FIA World Rally Championship
+PCSE00244 ^ Valhalla Knights 3
+PCSE00245 ^ Ys: Memories of Celceta
+PCSE00247 ^ Luftrausers
+PCSE00248 ^ Deathmatch Village
+PCSE00249 ^ Hotline Miami
+PCSE00250 ^ Lego Marvel Super Heroes: Universe in Peril
+PCSE00252 ^ Men's Room Mayhem
+PCSE00254 ^ HISTORY: Legends of War: Patton
+PCSE00256 ^ Kung Fu Rabbit
+PCSE00257 ^ Flying Hamster HD
+PCSE00258 ^ Thomas Was Alone
+PCSE00259 ^ The HD Adventures of Rotating Octopus Character
+PCSE00260 ^ Floating Cloud God Saves the Pilgrims in HD!
+PCSE00261 ^ Danganronpa: Trigger Happy Havoc
+PCSE00263 ^ FIFA 14
+PCSE00266 ^ Fieldrunners 2
+PCSE00267 ^ Coconut Dodge Revitalised
+PCSE00268 ^ LIMBO
+PCSE00269 ^ Batman: Arkham Origins Blackgate
+PCSE00271 ^ Injustice: Gods Among Us Ultimate Edition
+PCSE00272 ^ Shake Spears!
+PCSE00273 ^ Rainbow Moon
+PCSE00274 ^ Atomic Ninjas
+PCSE00275 ^ OMG HD Zombies!
+PCSE00277 ^ Rayman Legends
+PCSE00278 ^ Aabs Animals
+PCSE00279 ^ BlazBlue: Chronophantasma
+PCSE00280 ^ Stealth Inc: A Clone in the Dark
+PCSE00281 ^ Divekick PS Vita
+PCSE00282 ^ Ms. Germinator
+PCSE00283 ^ Final Fantasy X-2 HD Remaster
+PCSE00284 ^ Total Recoil
+PCSE00286 ^ Worms Revolution Extreme
+PCSE00287 ^ Mahjong Royal Towers
+PCSE00288 ^ Spelunky
+PCSE00290 ^ Stick it to the Man
+PCSE00291 ^ Crazy Market
+PCSE00293 ^ FINAL FANTASY X HD Remaster
+PCSE00294 ^ Angry Birds Star Wars
+PCSE00295 ^ Sparkle
+PCSE00296 ^ Atelier Meruru Plus: The Apprentice of Arland
+PCSE00297 ^ Flyhunter Origins
+PCSE00299 ^ Dragon Fantasy Book II
+PCSE00300 ^ Ragnarok Odyssey ACE
+PCSE00301 ^ Lone Survivor: The Director's Cut
+PCSE00302 ^ BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien
+PCSE00303 ^ Crunchyroll
+PCSE00304 ^ TuneIn
+PCSE00305 ^ Dragon Ball Z: Battle of Z
+PCSE00307 ^ PixelJunk Monsters: Ultimate HD
+PCSE00310 ^ Z-Run
+PCSE00311 ^ Proteus
+PCSE00312 ^ Tennis in the Face
+PCSE00313 ^ Die!Die!Die!
+PCSE00314 ^ Sorcery Saga: Curse of the Great Curry God
+PCSE00315 ^ King Oddball
+PCSE00316 ^ The Walking Dead: The Complete First Season
+PCSE00317 ^ Terraria
+PCSE00318 ^ Rainbow Skies (3.61+!) [3.67]
+PCSE00321 ^ Fort Defense
+PCSE00322 ^ Angry Birds Trilogy
+PCSE00323 ^ Table Top Racing
+PCSE00324 ^ A-men 2
+PCSE00325 ^ Real Boxing
+PCSE00326 ^ Hatsune Miku: Project DIVA F
+PCSE00327 ^ Doodle Devil
+PCSE00328 ^ Blast 'Em Bunnies
+PCSE00329 ^ Gaiam TV: The Transformation Network
+PCSE00331 ^ Treasures of Montezuma: Arena
+PCSE00332 ^ Dustforce
+PCSE00333 ^ The Amazing Spider-Man
+PCSE00339 ^ Duke Nukem 3D: Megaton Edition
+PCSE00340 ^ Gunslugs
+PCSE00341 ^ OlliOlli
+PCSE00346 ^ XBlaze Code: Embryo
+PCSE00348 ^ Grand Theft Auto: iFruit
+PCSE00349 ^ 1001 Spikes
+PCSE00352 ^ The Wolf Among Us
+PCSE00353 ^ The Lego Movie - Videogame
+PCSE00354 ^ Starlight Inception
+PCSE00358 ^ Demon Gaze
+PCSE00359 ^ Mind Zero
+PCSE00360 ^ Disgaea 4: A Promise Revisited
+PCSE00362 ^ Age of Zombies
+PCSE00364 ^ WeatherNation (3.61+!) [3.63]
+PCSE00366 ^ Eufloria HD
+PCSE00369 ^ Oddworld: Munch's Oddysee HD
+PCSE00370 ^ Surge Deluxe
+PCSE00372 ^ The Walking Dead: Season 2 Ep. 1 All That Remains
+PCSE00373 ^ Monster Monpiece
+PCSE00374 ^ Velocity 2X
+PCSE00376 ^ Conception II: Children of the Seven Stars
+PCSE00377 ^ Best of Arcade Games (DEMO - needs DLC to unlock full)
+PCSE00378 ^ Best of Board Games (DEMO - needs DLC to unlock full)
+PCSE00379 ^ Fort Defense North Menace
+PCSE00380 ^ Mutant Mudds Deluxe
+PCSE00381 ^ Toukiden: The Age of Demons
+PCSE00383 ^ Borderlands 2
+PCSE00384 ^ Lego Ninjago: Nindroids
+PCSE00386 ^ Backgammon Blitz
+PCSE00387 ^ The Swapper
+PCSE00388 ^ Titan Attacks!
+PCSE00389 ^ Putty Squad
+PCSE00390 ^ Lego The Hobbit
+PCSE00391 ^ Redbox Instant
+PCSE00393 ^ Jet Car Stunts
+PCSE00394 ^ Oddworld: New 'n' Tasty
+PCSE00395 ^ Ethan: Meteor Hunter
+PCSE00396 ^ Mahjong World Contest
+PCSE00397 ^ TxK
+PCSE00398 ^ Senran Kagura: Shinovi Versus
+PCSE00399 ^ Danganronpa 2: Goodbye Despair
+PCSE00400 ^ Hyperdimension Neptunia: Producing Perfection
+PCSE00401 ^ Deception IV: Blood Ties
+PCSE00402 ^ Hotline Miami 2: Wrong Number
+PCSE00404 ^ FEZ
+PCSE00405 ^ Dynasty Warriors 8: Xtreme Legends Complete Edition
+PCSE00406 ^ Metrico
+PCSE00409 ^ MotoGP 13
+PCSE00411 ^ WRC 4 - FIA World Rally Championship
+PCSE00413 ^ Broken Sword 5 - the Serpent's Curse: Episode 1
+PCSE00414 ^ Ultratron
+PCSE00416 ^ Putty Squad
+PCSE00418 ^ NHL GameCenter
+PCSE00419 ^ Farming Simulator 14
+PCSE00420 ^ MouseCraft
+PCSE00421 ^ Get Off My Lawn!
+PCSE00422 ^ Cel Damage HD
+PCSE00423 ^ One Piece: Unlimited World Red
+PCSE00424 ^ Day D Tower Rush
+PCSE00426 ^ Hulu Plus
+PCSE00427 ^ Arcana Heart 3: Love Max!!!!!
+PCSE00428 ^ AKIBA'S TRIP: Undead ＆ Undressed
+PCSE00429 ^ Tales of Hearts R
+PCSE00430 ^ SteamWorld Dig
+PCSE00431 ^ Doodle Kingdom
+PCSE00432 ^ Tiny Troopers Joint Ops
+PCSE00434 ^ Hatsune Miku: Project DIVA F 2nd
+PCSE00436 ^ The Treasures of Montezuma 4
+PCSE00439 ^ Gravity Crash Ultra
+PCSE00441 ^ The Keeper of 4 Elements (3.61+!) [3.61]
+PCSE00442 ^ Lego Batman 3: Beyond Gotham
+PCSE00443 ^ Hyperdimension Neptunia: Re;Birth1
+PCSE00444 ^ Battalion Commander (3.61+!) [3.61]
+PCSE00445 ^ Alien Shooter
+PCSE00446 ^ Run Like Hell!
+PCSE00447 ^ Dragon Fin Soup
+PCSE00448 ^ Warriors Orochi 3 Ultimate
+PCSE00449 ^ Rogue Legacy
+PCSE00450 ^ Don't Starve: Giant Edition
+PCSE00451 ^ PixelJunk Shooter Ultimate
+PCSE00453 ^ Crimsonland
+PCSE00454 ^ Sparkle 2
+PCSE00455 ^ Mahjong Gold
+PCSE00457 ^ Magical Beat
+PCSE00458 ^ Phantom Breaker: Battlegrounds
+PCSE00459 ^ My Singing Monsters
+PCSE00460 ^ NAtURAL DOCtRINE
+PCSE00461 ^ RACE THE SUN ®
+PCSE00463 ^ Soldner-X 2: Final Prototype
+PCSE00465 ^ Sword Art Online -Hollow Fragment-
+PCSE00466 ^ Atelier Rorona Plus: The Alchemist of Arland
+PCSE00467 ^ Toukiden: Kiwami
+PCSE00468 ^ Citizens of Earth
+PCSE00471 ^ Senran Kagura Bon Appetit! (Hanzo x Crimson Squad)
+PCSE00472 ^ Another World: 20th Anniversary Edition
+PCSE00473 ^ Kilka Card Gods
+PCSE00477 ^ Joe Danger 2: The Movie
+PCSE00478 ^ Joe Danger
+PCSE00479 ^ OlliOlli2: Welcome to Olliwood
+PCSE00480 ^ Child of Light
+PCSE00481 ^ FIFA 15 (ENG)
+PCSE00482 ^ FIFA 15 (FRA)
+PCSE00484 ^ Foul Play
+PCSE00485 ^ Kick & Fennick
+PCSE00486 ^ Project Root
+PCSE00487 ^ Gravity Badgers
+PCSE00488 ^ Senran Kagura: Bon Appetit! Stacked Soundtrack
+PCSE00489 ^ Panda Run
+PCSE00491 ^ Minecraft: PlayStation Vita Edition
+PCSE00492 ^ VVVVVV
+PCSE00493 ^ Switch Galaxy Ultra
+PCSE00495 ^ Futuridium EP Deluxe
+PCSE00501 ^ A Virus Named TOM
+PCSE00503 ^ Samurai Warriors 4
+PCSE00504 ^ Final Horizon
+PCSE00505 ^ Rugby 15
+PCSE00506 ^ Vitamin Z
+PCSE00507 ^ The Binding of Isaac: Rebirth
+PCSE00508 ^ Hyperdimension Neptunia: Re;Birth2 Sisters Generation
+PCSE00509 ^ Tokyo Twilight Ghost Hunters
+PCSE00513 ^ Rollers of the Realm
+PCSE00514 ^ Nidhogg
+PCSE00516 ^ Criminal Girls: Invite Only
+PCSE00518 ^ Damascus Gear: Operation Tokyo
+PCSE00519 ^ Woah Dave!
+PCSE00520 ^ Disney Infinity 2.0
+PCSE00521 ^ Tetris Ultimate
+PCSE00525 ^ The Bridge
+PCSE00526 ^ Reel Fishing: Master's Challenge
+PCSE00527 ^ htoL#NiQ: The Firefly Diary
+PCSE00528 ^ Frozen Synapse Prime
+PCSE00529 ^ MotoGP 14
+PCSE00530 ^ MXGP - The Official Motocross Videogame
+PCSE00533 ^ Home - A Unique Horror Adventure
+PCSE00534 ^ Lego Ninjago: Shadow of Ronin
+PCSE00536 ^ Fantasy Hero: Unsigned Legacy
+PCSE00537 ^ Jetpack Joyride Deluxe
+PCSE00540 ^ AQUA KITTY - Milk Mine Defender DX
+PCSE00541 ^ Rock Boshers DX: Director's Cut
+PCSE00542 ^ Desert Ashes
+PCSE00546 ^ Retro City Rampage DX
+PCSE00547 ^ Grim Fandango Remastered
+PCSE00548 ^ Ring Run Circus
+PCSE00551 ^ HTR+ Slot Car Simulation
+PCSE00553 ^ Pix the Cat
+PCSE00556 ^ The Walking Dead: Season Two
+PCSE00558 ^ Pocket RPG
+PCSE00559 ^ Don't Die, Mr. Robot!
+PCSE00561 ^ Q*bert: Rebooted
+PCSE00564 ^ Poltergeist: A Pixelated Horror
+PCSE00566 ^ Flame Over
+PCSE00567 ^ La-Mulana EX
+PCSE00568 ^ Hyperdevotion Noire: Goddess Black Heart
+PCSE00573 ^ BADLAND: Game of the Year Edition
+PCSE00575 ^ Stealth Inc 2: A Game of Clones
+PCSE00576 ^ Minutes
+PCSE00577 ^ SpongeBob HeroPants
+PCSE00578 ^ Deadman's Cross
+PCSE00579 ^ Operation Abyss: New Tokyo Legacy
+PCSE00582 ^ Adventure Time: The Secret of the Nameless Kingdom
+PCSE00583 ^ SteamWorld Heist
+PCSE00584 ^ Atelier Ayesha Plus ~The Alchemist of Dusk~
+PCSE00585 ^ Krinkle Krusher
+PCSE00586 ^ Broken Sword 5 - the Serpent's Curse: Episode 2
+PCSE00587 ^ Lego Jurassic World
+PCSE00588 ^ Hyperdimension Neptunia U: Action Unleashed
+PCSE00589 ^ Severed
+PCSE00591 ^ Sketchcross
+PCSE00594 ^ Jungle Rumble: Freedom, Happiness, and Bananas
+PCSE00595 ^ J-STARS Victory VS+
+PCSE00597 ^ Titan Souls
+PCSE00598 ^ AQUA KITTY - Milk Mine Defender DX (Soundtrack)
+PCSE00604 ^ Boss!
+PCSE00606 ^ Skullgirls 2nd Encore
+PCSE00608 ^ Resident Evil: Revelations 2
+PCSE00610 ^ Element4l
+PCSE00611 ^ SnagFilms
+PCSE00612 ^ Color Guardians
+PCSE00620 ^ Nihilumbra
+PCSE00621 ^ Vertical Drop Heroes HD (3.61+!) [3.61]
+PCSE00623 ^ Octodad: Dadliest Catch
+PCSE00627 ^ XBlaze Lost: Memories
+PCSE00628 ^ AeternoBlade
+PCSE00630 ^ Retro City Rampage DX
+PCSE00631 ^ The Sun and Moon
+PCSE00633 ^ Whispering Willows
+PCSE00634 ^ 2013: Infected Wars
+PCSE00637 ^ Invokers Tournament
+PCSE00638 ^ One Piece: Pirate Warriors 3
+PCSE00639 ^ Dengeki Bunko: Fighting Climax
+PCSE00640 ^ Shovel Knight
+PCSE00641 ^ Breach & Clear
+PCSE00642 ^ Scram Kitty DX
+PCSE00643 ^ Cosmophony
+PCSE00644 ^ Steins;Gate
+PCSE00647 ^ Amnesia: Memories
+PCSE00651 ^ Axiom Verge
+PCSE00653 ^ Hatoful Boyfriend
+PCSE00654 ^ MLB.TV Premium
+PCSE00655 ^ Geometry Wars 3: Dimensions Evolved
+PCSE00656 ^ XCOM: Enemy Unknown Plus
+PCSE00657 ^ Broken Age
+PCSE00658 ^ Day of the Tentacle Remastered
+PCSE00661 ^ Hyperdimension Neptunia: Re;Birth3 V Generation
+PCSE00663 ^ Bloxiq
+PCSE00665 ^ Metal Slug 3
+PCSE00666 ^ Heroes of Loot
+PCSE00667 ^ WRC 5 - FIA World Rally Championship
+PCSE00669 ^ Spider: Rite of the Shrouded Moon (3.61+!) [3.61]
+PCSE00670 ^ Lego Marvel's Avengers
+PCSE00671 ^ TorqueL
+PCSE00672 ^ Sid Meier's Civilization Revolution 2 Plus
+PCSE00673 ^ Lost Dimension
+PCSE00674 ^ Rugby World Cup 2015
+PCSE00676 ^ Squares
+PCSE00677 ^ BlazBlue: Chronophantasma Extend
+PCSE00678 ^ NekoBuro: Cats Block
+PCSE00680 ^ Sparkle Unleashed
+PCSE00681 ^ Handball 16
+PCSE00682 ^ Pocket God vs Desert Ashes
+PCSE00683 ^ Sayonara UmiharaKawase +
+PCSE00684 ^ The Swindle
+PCSE00686 ^ Nova-111
+PCSE00687 ^ Medieval Defenders
+PCSE00688 ^ Strike Solitaire
+PCSE00689 ^ Croixleur Sigma
+PCSE00692 ^ Danganronpa Another Episode: Ultra Despair Girls
+PCSE00693 ^ Dungeon Travelers 2: The Royal Library & The Monster Seal
+PCSE00694 ^ Xeodrifter
+PCSE00695 ^ Actual Sunlight
+PCSE00698 ^ Super Time Force Ultra
+PCSE00699 ^ Roundabout
+PCSE00700 ^ Assassin's Creed Chronicles
+PCSE00702 ^ Pumped BMX +
+PCSE00705 ^ Shütshimi
+PCSE00706 ^ Back to Bed
+PCSE00707 ^ Ar nosurge Plus: Ode to an Unborn Star
+PCSE00708 ^ Corpse Party: Blood Drive
+PCSE00709 ^ Space Hulk
+PCSE00710 ^ Earth Defense Force 2: Invaders from Planet Space
+PCSE00712 ^ Velocibox
+PCSE00714 ^ Samurai Warriors: Chronicles 3
+PCSE00716 ^ Curses 'N Chaos
+PCSE00717 ^ Superbeat Xonic
+PCSE00724 ^ Saturday Morning RPG
+PCSE00726 ^ A Boy and His Blob
+PCSE00732 ^ Rally Copters
+PCSE00734 ^ Super Exploding Zoo!
+PCSE00735 ^ THE BIT.TRIP
+PCSE00736 ^ Maliya
+PCSE00737 ^ Samurai Warriors 4-II
+PCSE00738 ^ Organ Trail Complete Edition
+PCSE00740 ^ Sword Art Online: Lost Song
+PCSE00741 ^ Fat City
+PCSE00743 ^ Deception IV: The Nightmare Princess
+PCSE00747 ^ TowerFall Ascension
+PCSE00748 ^ Strike Solitaire 2
+PCSE00749 ^ Mahjong Carnival
+PCSE00750 ^ Royal Defense
+PCSE00751 ^ Pirate Solitaire
+PCSE00752 ^ Knight Solitaire
+PCSE00753 ^ Royal Defense Invisible Threat
+PCSE00755 ^ Digimon Story Cyber Sleuth
+PCSE00756 ^ VA-11 HALL-A (3.61+!) [3.65]
+PCSE00760 ^ Volume
+PCSE00761 ^ Rocketbirds 2: Evolution
+PCSE00762 ^ Norn9: Var Commons
+PCSE00763 ^ Code: Realize ~Guardian of Rebirth~
+PCSE00764 ^ Persona 4: Dancing All Night
+PCSE00765 ^ Gem Legends
+PCSE00766 ^ Level 22
+PCSE00768 ^ Farming Simulator 16
+PCSE00769 ^ Super Meat Boy!
+PCSE00771 ^ Taco Master
+PCSE00773 ^ Siralim
+PCSE00774 ^ Three Fourths Home: Extended Edition
+PCSE00775 ^ The Quiet Collection
+PCSE00776 ^ Hatoful Boyfriend: Holiday Star
+PCSE00780 ^ Attractio
+PCSE00781 ^ Zero Escape: Zero Time Dilemma
+PCSE00783 ^ Bombing Busters
+PCSE00784 ^ Super Blackout
+PCSE00786 ^ The Legend of Heroes: Trails of Cold Steel
+PCSE00787 ^ Senran Kagura: Estival Versus
+PCSE00788 ^ Twitch
+PCSE00789 ^ God Eater 2: Rage Burst
+PCSE00790 ^ Bastion
+PCSE00791 ^ Lego Star Wars: The Force Awakens
+PCSE00792 ^ DARIUSBURST Chronicle Saviours
+PCSE00793 ^ WE ARE DOOMED
+PCSE00795 ^ DramaFever
+PCSE00797 ^ forma.8 (3.61+!) [3.63]
+PCSE00800 ^ Dynasty Warriors 8 Empires
+PCSE00801 ^ God Eater Resurrection
+PCSE00802 ^ Super Star Wars
+PCSE00803 ^ Dynasty Warriors 8 Empires (Free Alliances Version)
+PCSE00805 ^ Super Blast Deluxe
+PCSE00806 ^ Crypt of the NecroDancer
+PCSE00807 ^ Red Game Without a Great Name
+PCSE00808 ^ One Piece: Burning Blood
+PCSE00812 ^ Attack on Titan: Wings of Freedom
+PCSE00813 ^ Trillion: God of Destruction
+PCSE00814 ^ Teslagrad
+PCSE00815 ^ Claire: Extended Cut
+PCSE00817 ^ Ninja Senki DX
+PCSE00818 ^ Stranger of Sword City
+PCSE00820 ^ Dino Dini's Kick Off Revival (3.61+!) [3.63]
+PCSE00821 ^ Paranautical Activity
+PCSE00822 ^ Uncanny Valley (3.61+!) [3.61]
+PCSE00825 ^ Letter Quest Remastered
+PCSE00826 ^ Atelier Escha & Logy Plus ~Alchemists of the Dusk Sky~
+PCSE00827 ^ Samurai Warriors 4 Empires
+PCSE00828 ^ Nuclear Throne
+PCSE00830 ^ Mystery Chronicle: One Way Heroics
+PCSE00832 ^ MegaTagmension Blanc + Neptune VS Zombies
+PCSE00834 ^ Baseball Riot
+PCSE00835 ^ Neon Chrome (3.61+!) [3.61]
+PCSE00836 ^ Tachyon Project
+PCSE00837 ^ Type:Rider
+PCSE00838 ^ MOP: Operation Cleanup
+PCSE00839 ^ Funk of Titans
+PCSE00840 ^ Unepic
+PCSE00841 ^ Dreii
+PCSE00843 ^ Ray Gigant
+PCSE00844 ^ Aegis of Earth: Protonovus Assault
+PCSE00845 ^ Shiren the Wanderer: The Tower of Fortune and the Dice of Fate
+PCSE00846 ^ Hitman GO: Definitive Edition
+PCSE00847 ^ Neverending Nightmares
+PCSE00848 ^ The Last Blade 2
+PCSE00849 ^ Knock-Knock
+PCSE00850 ^ Risk of Rain
+PCSE00853 ^ Xeodrifter
+PCSE00854 ^ Corridor Z
+PCSE00856 ^ Last Wings
+PCSE00857 ^ Lumo
+PCSE00859 ^ Emerald Shores (3.61+!) [3.69]
+PCSE00860 ^ SwapQuest
+PCSE00861 ^ Azkend 2: The World Beneath
+PCSE00862 ^ Skylight Freerange 2: Gachduine (3.61+!) [3.61]
+PCSE00864 ^ Blue-Collar Astronaut (3.61+!) [3.63]
+PCSE00865 ^ Sky Force Anniversary
+PCSE00867 ^ Hatsune Miku: Project DIVA X
+PCSE00869 ^ Bridge Constructor (3.61+!) [3.61]
+PCSE00870 ^ Spheroids (3.61+!) [3.63]
+PCSE00871 ^ A.W.: Phoenix Festa
+PCSE00872 ^ Murasaki Mist: Akara's Journey
+PCSE00873 ^ Downwell
+PCSE00874 ^ Pixel Hunter
+PCSE00875 ^ Green Game: TimeSwapper
+PCSE00876 ^ iO (3.61+!) [3.63]
+PCSE00879 ^ Grand Kingdom
+PCSE00880 ^ World of Final Fantasy
+PCSE00881 ^ Gal*Gun: Double Peace
+PCSE00883 ^ Exist Archive: The Other Side of the Sky
+PCSE00887 ^ Alone With You
+PCSE00889 ^ Delta Strike: First Assault
+PCSE00890 ^ 10 Second Ninja X
+PCSE00892 ^ Atelier Sophie ~The Alchemist of the Mysterious Book~
+PCSE00893 ^ Tokyo Xanadu (3.61+!) [3.63]
+PCSE00894 ^ Zombies: The Last Survivor
+PCSE00895 ^ NightCry (3.61+!) [3.69]
+PCSE00896 ^ The Legend of Heroes: Trails of Cold Steel II
+PCSE00897 ^ Xenoraid (3.61+!) [3.61]
+PCSE00898 ^ Superdimension Neptune VS Sega Hard Girls
+PCSE00899 ^ Odin Sphere Leifthrasir
+PCSE00901 ^ Dex (3.61+!) [3.63]
+PCSE00902 ^ Laser Disco Defenders
+PCSE00903 ^ Sword Art Online: Hollow Realization (3.61+!) [3.61]
+PCSE00904 ^ Psycho-Pass: Mandatory Happiness
+PCSE00905 ^ Adventures of Mana
+PCSE00906 ^ Mutant Mudds: Super Challenge
+PCSE00908 ^ Rainbow Moon
+PCSE00909 ^ Yomawari: Night Alone
+PCSE00910 ^ Volume
+PCSE00911 ^ Space Overlords (3.61+!) [3.61]
+PCSE00912 ^ Dragon Quest Builders
+PCSE00913 ^ Volgarr the Viking (3.61+!) [3.61]
+PCSE00914 ^ 99Vidas (3.61+!) [3.65]
+PCSE00915 ^ Mobile Suit Gundam: Extreme VS-Force
+PCSE00916 ^ Criminal Girls 2: Party Favors
+PCSE00917 ^ Octodad The Deadliest Catch
+PCSE00918 ^ MeiQ: Labyrinth of Death
+PCSE00919 ^ Darkest Dungeon (3.61+!) [3.61]
+PCSE00923 ^ Shu (3.61+!) [3.63]
+PCSE00924 ^ Tokyo Twilight Ghost Hunters: Daybreak Special Gigs
+PCSE00927 ^ Akiba's Beat (3.61+!) [3.63]
+PCSE00928 ^ Fate/Extella: The Umbral Star (3.61+!) [3.61]
+PCSE00929 ^ Stranded: A Mars Adventure (3.61+!) [3.61]
+PCSE00930 ^ Bard's Gold
+PCSE00933 ^ Spy Chameleon
+PCSE00938 ^ Wanderjahr TryAgainOrWalkAway
+PCSE00940 ^ Toukiden 2 (3.61+!) [3.63]
+PCSE00941 ^ Exile's End
+PCSE00942 ^ SuperMagical (3.61+!) [3.63]
+PCSE00944 ^ Dungeon Punks
+PCSE00946 ^ Castle Invasion: Throne Out
+PCSE00948 ^ VALKYRIE DRIVE -BHIKKHUNI-
+PCSE00949 ^ Steins;Gate 0 (3.61+!) [3.61]
+PCSE00950 ^ Shantae: Half-Genie Hero (3.61+!) [3.63]
+PCSE00951 ^ Summon Night 6: Lost Borders (3.61+!) [3.65]
+PCSE00952 ^ Dragon Fantasy: Black Tome of Ice
+PCSE00953 ^ BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien (Limited Edition)
+PCSE00955 ^ Fallen Legion: Flames of Rebellion (3.61+!) [3.63]
+PCSE00956 ^ Mercenary Kings Reloaded (3.61+!) [3.67]
+PCSE00957 ^ Knobswitch (3.61+!) [3.61]
+PCSE00958 ^ Garou: Mark of the Wolves (3.61+!) [3.61]
+PCSE00959 ^ Utawarerumono: Mask of Deception (3.61+!) [3.63]
+PCSE00961 ^ Pox Nora (3.61+!) [3.65]
+PCSE00963 ^ Root Letter (3.61+!) [3.61]
+PCSE00964 ^ Talisman: Digital Edition (3.61+!) [3.63]
+PCSE00965 ^ KILLALLZOMBIES (3.61+!) [3.63]
+PCSE00966 ^ Iron Sea Defenders (3.61+!) [3.61]
+PCSE00968 ^ Asdivine Hearts (3.61+!) [3.63]
+PCSE00971 ^ Deadbolt (3.61+!) [3.65]
+PCSE00972 ^ 2064: Read Only Memories
+PCSE00973 ^ Hakuoki: Kyoto Winds (3.61+!) [3.63]
+PCSE00974 ^ Slain: Back from Hell (3.61+!) [3.61]
+PCSE00980 ^ Air Race Speed (3.61+!) [3.61]
+PCSE00981 ^ Geki Yaba Runner (3.61+!) [3.63]
+PCSE00982 ^ My Name is Mayo (3.61+!) [3.61]
+PCSE00984 ^ DYING: Reborn (3.61+!) [3.63]
+PCSE00985 ^ Lara Croft GO
+PCSE00989 ^ Yomawari: Night Alone / htol#NiQ: The Firefly Diary
+PCSE00990 ^ Touhou Genso Wanderer (3.61+!) [3.63]
+PCSE00992 ^ The Bard's Tale: Remastered and Resnarkled (3.61+!) [3.65]
+PCSE00993 ^ The Longest Five Minutes (3.61+!) [3.63]
+PCSE00995 ^ Dynasty Warriors: Godseekers (3.61+!) [3.61]
+PCSE00996 ^ Hue (3.61+!) [3.63]
+PCSE00998 ^ Atelier Shallie Plus: Alchemists of the Dusk Sea (3.61+!) [3.63]
+PCSE00999 ^ Cladun Returns: This is Sengoku! (3.61+!) [3.61]
+PCSE01000 ^ Full Throttle Remastered (3.61+!) [3.63]
+PCSE01001 ^ Hakuoki - Edo Blossoms (3.61+!) [3.67]
+PCSE01002 ^ Mr. Pumpkin's Adventure (3.61+!) [3.63]
+PCSE01003 ^ Valkyria Revolution (3.61+!) [3.63]
+PCSE01004 ^ Nurse Love Addiction (3.61+!) [3.65]
+PCSE01005 ^ Demetrios - The BIG Cynical Adventure (3.61+!) [3.61]
+PCSE01006 ^ Zero Escape: The Nonary Games (3.61+!) [3.63]
+PCSE01010 ^ Lichtspeer (3.61+!) [3.63]
+PCSE01011 ^ Collar X Malice (3.61+!) [3.65]
+PCSE01012 ^ Period Cube ~Shackles of Amadeus~ (3.61+!) [3.63]
+PCSE01013 ^ Mutant Mudds Deluxe (3.61+!) [3.61]
+PCSE01014 ^ Mary Skelter: Nightmares (3.61+!) [3.65]
+PCSE01015 ^ Touhou Double Focus (3.61+!) [3.63]
+PCSE01016 ^ Siralim 2 (3.61+!) [3.63]
+PCSE01019 ^ Bodycheck (3.61+!) [3.65]
+PCSE01021 ^ The Deer God (3.61+!) [3.63]
+PCSE01022 ^ Chaos;Child (3.61+!) [3.65]
+PCSE01023 ^ Salt and Sanctuary (3.61+!) [3.63]
+PCSE01026 ^ GOD WARS Future Past (3.61+!) [3.63]
+PCSE01031 ^ Chasm (3.61+!) [3.68]
+PCSE01032 ^ Windjammers (3.61+!) [3.65]
+PCSE01033 ^ Ys Origin (3.61+!) [3.63]
+PCSE01034 ^ Berserk and the Band of the Hawk (3.61+!) [3.63]
+PCSE01035 ^ Farming Simulator 18 
+PCSE01036 ^ Kung Fury: Street Rage (3.61+!) [3.63]
+PCSE01037 ^ The Caligula Effect (3.61+!) [3.63]
+PCSE01038 ^ Vostok Inc. (3.61+!) [3.65]
+PCSE01040 ^ KOI (3.61+!) [3.65]
+PCSE01041 ^ Deemo: The Last Recital
+PCSE01042 ^ Bad Apple Wars (3.61+!) [3.65]
+PCSE01044 ^ Atelier Firis ~The Alchemist and the Mysterious Journey~ (3.61+!) [3.63]
+PCSE01046 ^ A Rose in the Twilight (3.61+!) [3.63]
+PCSE01047 ^ Operation Babel: New Tokyo Legacy (3.61+!) [3.63]
+PCSE01048 ^ Fairune (3.61+!) [3.63]
+PCSE01049 ^ The Legend of Dark Witch (3.61+!) [3.63]
+PCSE01050 ^ Polara (3.61+!) [3.65]
+PCSE01051 ^ Factotum90 (3.61+!) [3.65]
+PCSE01052 ^ STRANGER OF SWORD CITY REVISITED (3.61+!) [3.63]
+PCSE01054 ^ Skylight Freerange (3.61+!) [3.63]
+PCSE01055 ^ Root Double -Before Crime * After Days- Xtend Edition (3.61+!) [3.67]
+PCSE01056 ^ Papers, Please (3.61+!) [3.65]
+PCSE01057 ^ Code: Realize - Future Blessings (3.61+!) [3.65]
+PCSE01058 ^ Broken Age (3.61+!) [3.63]
+PCSE01063 ^ Gem Smashers (3.61+!) [3.63]
+PCSE01065 ^ Revenant Saga (3.61+!) [3.63]
+PCSE01066 ^ Toukiden 2 Free Alliances Version (3.61+!) [3.63]
+PCSE01067 ^ Ninja Usagimaru: Two Tails of Adventure (3.61+!) [3.65]
+PCSE01068 ^ Bunny Must Die! Chelsea and the 7 Devils (3.61+!) [3.67]
+PCSE01071 ^ Accel World vs Sword Art Online (3.61+!) [3.65]
+PCSE01072 ^ Super Mutant Alien Assault (3.61+!) [3.68]
+PCSE01074 ^ Plague Road (3.61+!) [3.63]
+PCSE01077 ^ Super Life of Pixel (3.61+!) [3.69]
+PCSE01080 ^ METAGAL (3.61+!) [3.69]
+PCSE01081 ^ Twin Robots (3.61+!) [3.65]
+PCSE01082 ^ Peasant Knight (3.61+!) [3.69]
+PCSE01083 ^ Blasting Agent: Ultimate Edition (3.61+!) [3.63]
+PCSE01085 ^ League of Evil (3.61+!) [3.67]
+PCSE01089 ^ Spellspire (3.61+!) [3.63]
+PCSE01092 ^ Plantera (3.61+!) [3.63]
+PCSE01093 ^ Active Soccer 2 DX (3.61+!) [3.65]
+PCSE01094 ^ Romancing SaGa 2 (3.61+!) [3.65]
+PCSE01096 ^ Bit Dungeon Plus (3.61+!) [3.67]
+PCSE01097 ^ Oceanhorn: Monster of Uncharted Seas (3.61+!) [3.63]
+PCSE01098 ^ Still Time (3.61+!) [3.65]
+PCSE01099 ^ Drive Girls (3.61+!) [3.63]
+PCSE01100 ^ Danganronpa V3: Killing Harmony (3.61+!) [3.65]
+PCSE01101 ^ SteamWorld Dig 2 (3.61+!) [3.65]
+PCSE01102 ^ Utawarerumono: Mask of Truth (3.61+!) [3.65]
+PCSE01103 ^ Ys VIII: Lacrimosa of DANA (3.61+!) [3.65]
+PCSE01104 ^ Touhou Kobuto V: Burst Battle (3.61+!) [3.65]
+PCSE01111 ^ Rabi-Ribi (3.61+!) [3.65]
+PCSE01112 ^ The Count Lucanor (3.61+!) [3.65]
+PCSE01113 ^ Samurai Shodown V Special (3.61+!) [3.65]
+PCSE01114 ^ Vegas Party (3.61+!) [3.65]
+PCSE01116 ^ Undertale (3.61+!) [3.65]
+PCSE01119 ^ It's Spring Again (3.61+!) [3.65]
+PCSE01123 ^ Energy Balance
+PCSE01124 ^ Energy Cycle
+PCSE01128 ^ Save the Ninja Clan (3.61+!) [3.65]
+PCSE01135 ^ Burly Men at Sea
+PCSE01136 ^ Defender's Quest: Valley of the Forgotten DX (3.61+!) [3.68]
+PCSE01137 ^ NeverEnd (3.61+!) [3.65]
+PCSE01139 ^ Yomawari: Midnight Shadows (3.61+!) [3.65]
+PCSE01141 ^ Demon Gaze II (3.61+!) [3.65]
+PCSE01142 ^ Semispheres (3.61+!) [3.65]
+PCSE01143 ^ Penny-Punching Princess (3.61+!) [3.67]
+PCSE01144 ^ Under Night In-Birth Exe:Late[st] (3.61+!) [3.65]
+PCSE01145 ^ Spacejacked (3.61+!) [3.68]
+PCSE01146 ^ Super Hydorah (3.61+!) [3.65]
+PCSE01147 ^ Antiquia Lost (3.61+!) [3.65]
+PCSE01148 ^ Licky The Lucky Lizard Lives Again (3.61+!) [3.65]
+PCSE01149 ^ Night Trap - 25th Anniversary Edition (3.61+!) [3.68]
+PCSE01150 ^ Tokyo Tattoo Girls (3.61+!) [3.65]
+PCSE01151 ^ Squareboy vs Bullies: Arena Edition (3.61+!) [3.65]
+PCSE01152 ^ Cursed Castilla (Maldita Castilla EX) (3.61+!) [3.65]
+PCSE01153 ^ Secret of Mana (3.61+!) [3.67]
+PCSE01154 ^ Son of Scoregasm (3.61+!) [3.65]
+PCSE01157 ^ Gunhouse
+PCSE01158 ^ Mecho Tales (3.61+!) [3.65]
+PCSE01162 ^ The Long Reach (3.61+!) [3.68]
+PCSE01164 ^ Psychedelica of the Black Butterfly (3.61+!) [3.67]
+PCSE01166 ^ Psychedelica of the Ashen Hawk (3.61+!) [3.67]
+PCSE01168 ^ 7'scarlet (3.61+!) [3.67]
+PCSE01169 ^ 36 Fragments of Midnight (3.61+!) [3.65]
+PCSE01171 ^ Digimon Story Cyber Sleuth: Hacker's Memory (3.61+!) [3.65]
+PCSE01172 ^ Alteric (3.61+!) [3.65]
+PCSE01173 ^ North (3.61+!) [3.65]
+PCSE01175 ^ Spiral Splatter (3.61+!) [3.65]
+PCSE01176 ^ One More Dungeon (3.61+!) [3.65]
+PCSE01177 ^ Iconoclasts (3.61+!) [3.65]
+PCSE01179 ^ The Lost Child (3.61+!) [3.67]
+PCSE01180 ^ Damascus Gear: Operation Osaka (3.61+!) [3.67]
+PCSE01181 ^ DEAD AHEAD: ZOMBIE WARFARE (3.61+!) [3.67]
+PCSE01183 ^ Sokoban Next (3.61+!) [3.65]
+PCSE01184 ^ MUSYNX (3.61+!) [3.68]
+PCSE01186 ^ Time Recoil (3.61+!) [3.65]
+PCSE01187 ^ London Detective Mysteria (3.61+!) [3.69]
+PCSE01188 ^ I Am The Hero (3.61+!) [3.68]
+PCSE01190 ^ Dragon Sinker (3.61+!) [3.67]
+PCSE01191 ^ Xenon Valkyrie+ (3.61+!) [3.65]
+PCSE01192 ^ Energy Invasion (3.61+!) [3.65]
+PCSE01193 ^ Dragooned (3.61+!) [3.67]
+PCSE01194 ^ Midnight Deluxe (3.61+!) [3.67]
+PCSE01198 ^ Rogue Aces
+PCSE01218 ^ Little Red Lie (3.61+!) [3.65]
+PCSE01219 ^ Deep Ones (3.61+!) [3.67]
+PCSE01220 ^ One Eyed Kutkh (3.61+!) [3.65]
+PCSE01221 ^ Metropolis: Lux Obscura (3.61+!) [3.67]
+PCSE01224 ^ THE KING OF FIGHTERS '97 GLOBAL MATCH (3.61+!) [3.67]
+PCSE01225 ^ Super Skull Smash Go! 2 Turbo (3.61+!) [3.67]
+PCSE01229 ^ Reverie (3.61+!) [3.67]
+PCSE01231 ^ Little Adventure on the Prairie (3.61+!) [3.67]
+PCSE01232 ^ Cosmic Star Heroine (3.61+!) [3.67]
+PCSE01235 ^ Stardew Valley (3.61+!) [3.67]
+PCSE01236 ^ NeuroVoider (3.61+!) [3.67]
+PCSE01237 ^ InkSplosion (3.61+!) [3.67]
+PCSE01238 ^ TETRA's Escape (3.61+!) [3.68]
+PCSE01240 ^ Sir Eatsalot (3.61+!) [3.67]
+PCSE01241 ^ The Dreamlands: Aisling's Quest (3.61+!) [3.68]
+PCSE01244 ^ Senran Kagura: Bon Appetit! Full Course (3.61+!) [3.67]
+PCSE01245 ^ Ice Cream Surfer (3.61+!) [3.68]
+PCSE01246 ^ Timespinner (3.61+!) [3.68]
+PCSE01247 ^ Chicken Range (3.61+!) [3.68]
+PCSE01248 ^ War Theatre (3.61+!) [3.69]
+PCSE01249 ^ Devious Dungeon (3.61+!) [3.67]
+PCSE01251 ^ Riddled Corpses EX (3.61+!) [3.67]
+PCSE01253 ^ Pic-a-Pix Color (3.61+!) [3.67]
+PCSE01254 ^ Fate/EXTELLA LINK (3.61+!) [3.68]
+PCSE01255 ^ Fill-a-Pix: Phil's Epic Adventure (3.61+!) [3.68]
+PCSE01256 ^ Heroes Trials (3.61+!) [3.69]
+PCSE01258 ^ Halloween Forever (3.61+!) [3.68]
+PCSE01259 ^ Muv-Luv (3.61+!) [3.67]
+PCSE01260 ^ Muv-Luv Alternative (3.61+!) [3.67]
+PCSE01261 ^ FullBlast (3.61+!) [3.68]
+PCSE01262 ^ Bloodstained: Curse of the Moon (3.61+!) [3.67]
+PCSE01263 ^ Super Destronaut DX (3.61+!) [3.68]
+PCSE01264 ^ Mecho Wars: Desert Ashes (3.61+!) [3.69]
+PCSE01266 ^ Waking Violet (3.61+!) [3.68]
+PCSE01268 ^ Pato Box (3.61+!) [3.68]
+PCSE01274 ^ Persona 3: Dancing in Moonlight (3.61+!) [3.68]
+PCSE01275 ^ Persona 5: Dancing in Starlight (3.61+!) [3.68]
+PCSE01277 ^ STAY (3.61+!) [3.68]
+PCSE01278 ^ Code: Realize ~Wintertide Miracles~ (3.61+!) [3.69]
+PCSE01279 ^ Death Mark (3.61+!) [3.68]
+PCSE01280 ^ Sigi - A Fart for Melusina (3.61+!) [3.68]
+PCSE01281 ^ Chronus Arc (3.61+!) [3.69]
+PCSE01282 ^ Fernz Gate (3.61+!) [3.68]
+PCSE01283 ^ Gundemoniums (3.61+!) [3.68]
+PCSE01284 ^ Block-a-Pix Deluxe (3.61+!) [3.69]
+PCSE01286 ^ Word Search by POWGI (3.61+!) [3.68]
+PCSE01287 ^ Jack N' Jill DX (3.61+!) [3.68]
+PCSE01288 ^ Punch Line (3.61+!) [3.68]
+PCSE01302 ^ Revenge of the Bird King (3.61+!) [3.68]
+PCSE01310 ^ Slayaway Camp: Butcher's Cut (3.61+!) [3.68]
+PCSE01318 ^ Nurse Love Syndrome
+PCSE01322 ^ Revenant Dogma (3.61+!) [3.68]
+PCSE01330 ^ Energy Cycle Edge (3.61+!) [3.68]
+PCSE01333 ^ Atari Flashback Classics (3.61+!) [3.68]
+PCSE01334 ^ Fast Striker (3.61+!) [3.68]
+PCSE01335 ^ Asdivine Hearts II (3.61+!) [3.69]
+PCSE01336 ^ Planet RIX-13 (3.61+!) [3.68]
+PCSE01338 ^ One Word by POWGI (3.61+!) [3.69]
+PCSE01339 ^ Word Sudoku by POWGI (3.61+!) [3.68]
+PCSE01340 ^ Ghoulboy: Dark Sword of Goblin (3.61+!) [3.69]
+PCSE01341 ^ Alvastia Chronicles (3.61+!) [3.69]
+PCSE01342 ^ Perils of Baking - Refrosted (3.61+!) [3.68]
+PCSE01348 ^ Daggerhood (3.61+!) [3.69]
+PCSE01355 ^ Scintillatron 4096 (3.61+!) [3.69]
+PCSE01356 ^ Access Denied (3.61+!) [3.69]
+PCSE01357 ^ Pic-a-Pix Pieces (3.61+!) [3.69]
+PCSE01358 ^ I and Me (3.61+!) [3.69]
+PCSE01359 ^ Fate/EXTELLA LINK Digital Soundtrack (3.61+!) [3.69]
+PCSE01360 ^ Dragonfly Chronicles (3.61+!) [3.69]
+PCSE01361 ^ Necrosphere Deluxe (3.61+!) [3.69]
+PCSE01363 ^ Drowning (3.61+!) [3.69]
+PCSE01365 ^ Dreamwalker (3.61+!) [3.69]
+PCSE01367 ^ Awesome Pea (3.61+!) [3.69]
+PCSE01368 ^ Bonds of the Skies (3.61+!) [3.69]
+PCSE01369 ^ Iron Snout
+PCSE01374 ^ Super Weekend Mode (3.61+!) [3.69]
+PCSE01376 ^ Pic-a-Pix Classic (3.61+!) [3.69]
+PCSE01377 ^ Crossovers by POWGI (3.61+!) [3.69]
+PCSE01378 ^ Mixups by POWGI (3.61+!) [3.69]
+PCSC00001 ^ Everybody's Golf 6
+PCSC00002 ^ Gravity Daze
+PCSC00003 ^ Record of Hero / Yuusha no Kiroku
+PCSC00004 ^ みんなといっしょ
+PCSC00005 ^ Uncharted -Chizu naki Bouken no Hajimari-
+PCSC00006 ^ WipEout 2048
+PCSC00007 ^ Sawari Makuru!
+PCSC00008 ^ Star Strike Delta
+PCSC00010 ^ Unit 13
+PCSC00011 ^ Reality Fighters
+PCSC00012 ^ Escape Plan
+PCSC00013 ^ LittleBigPlanet PlayStation Vita
+PCSC00014 ^ MotorStorm RC
+PCSC00017 ^ Resistance: Burning Skies
+PCSC00018 ^ Fireworks
+PCSC00019 ^ Cliff Diving
+PCSC00020 ^ Table Play Soccer
+PCSC00021 ^ Puls-AR
+PCSC00022 ^ Table Top Tanks
+PCSC00023 ^ Table Play Ice Hockey
+PCSC00024 ^ Sound Shapes
+PCSC00025 ^ torne PlayStation Vita
+PCSC00028 ^ Table Mini Golf
+PCSC00029 ^ AR Play Free Download Set
+PCSC00030 ^ Destiny of Spirits
+PCSC00032 ^ PlayStation All-Stars Battle Royale
+PCSC00034 ^ When Vikings Attack!
+PCSC00036 ^ Open Me! (Hako! Open Me) - Digest Version
+PCSC00037 ^ Open Me! (Hako! Open Me)
+PCSC00039 ^ Soul Sacrifice
+PCSC00040 ^ Smart as
+PCSC00041 ^ Ratchet & Clank: Full Frontal Assault
+PCSC00044 ^ Flowery
+PCSC00045 ^ Killzone: Mercenary
+PCSC00048 ^ Tearaway: Hagareta Sekai no Daibouken
+PCSC00049 ^ Soul Sacrifice Delta
+PCSC00052 ^ Miku Miku Hockey
+PCSC00054 ^ Freedom Wars
+PCSC00055 ^ Minna to Issho (Updated Ver)
+PCSC00056 ^ CounterSpy
+PCSC00058 ^ Doki-Doki Universe
+PCSC00059 ^ God of War Collection
+PCSC00060 ^ Oreshika: Tainted Bloodlines / Ore no Shikabane o Koete Yuke 2
+PCSC00061 ^ flOw
+PCSC00064 ^ Tearaway (Trial & Unlock)
+PCSC00077 ^ Hohokum
+PCSC00078 ^ Helldivers
+PCSC00079 ^ Dead Nation
+PCSC00080 ^ U-NEXT
+PCSC00081 ^ Miku Miku Hockey 2.0
+PCSC00083 ^ Entwined
+PCSC00084 ^ Murasaki Baby
+PCSC00085 ^ The Unfinished Swan
+PCSC00086 ^ Live from PlayStation
+PCSC00088 ^ Resogun
+PCSC00097 ^ MonsterBag
+PCSC80001 ^ Flickr
+PCSC80002 ^ LiveTweet for PlayStation Vita
+PCSC80003 ^ uke-torne
+PCSC80004 ^ Wake-up Club
+PCSC80005 ^ Foursquare
+PCSC80006 ^ Treasure Park
+PCSC80007 ^ Paint Park
+PCSC80008 ^ Facebook
+PCSC80009 ^ Skype
+PCSC80010 ^ YouTube
+PCSC80012 ^ E-book Reader for PlayStationVita
+PCSC80016 ^ radiko.jp
+PCSC80017 ^ naspocket
+PCSC80018 ^ PocketStation for PlayStation Vita
+PCSC80019 ^ TBS World Heritage Selection
+PCSC80020 ^ TSUTAYA TV
+PCSC80021 ^ DMM.com
+PCSC80022 ^ NHK On Demand
+PCSC80023 ^ TV Dogatch
+PCSC80024 ^ SKY PerfecTV! On demand
+PCSC80028 ^ iKnow!
+PCSC80029 ^ AMNESIA World AR
+PCSC90022 ^ AKB1/149 Renai Sousenkyo Chou Gouka Daretoku BOX powered by HAKO ! -Open Me-
+PCSC90032 ^ HATSUNE MIKU AR STAGE
+PCSG00001 ^ Ridge Racer
+PCSG00002 ^ Shin Sangoku Musou Next
+PCSG00003 ^ BlazBlue: Continuum Shift Extend
+PCSG00004 ^ Persona 4 Golden
+PCSG00005 ^ Makai Senki Disgaea 3 Return
+PCSG00006 ^ Power Smash 4
+PCSG00007 ^ Little Busters! Converted Edition
+PCSG00008 ^ Lord of Apocalypse
+PCSG00009 ^ Tales of Innocence R
+PCSG00010 ^ Shin Kamaitachi no Yoru: 11 Ninme no Suspect
+PCSG00011 ^ Ultimate Marvel vs. Capcom 3
+PCSG00012 ^ Asphalt: Injection
+PCSG00013 ^ AR Combat DigiQ: Tomodachi Senshatai
+PCSG00014 ^ Lumines: Electronic Symphony
+PCSG00015 ^ Rayman Origins
+PCSG00016 ^ MICHAEL JACKSON THE EXPERIENCE HD
+PCSG00017 ^ Dark Quest: Alliance
+PCSG00018 ^ Touch My Katamari
+PCSG00019 ^ Shinobido 2: Revenge of Zen
+PCSG00020 ^ Zero Escape: Virtue's Last Reward
+PCSG00021 ^ F1 2011
+PCSG00023 ^ Army Corps of Hell
+PCSG00024 ^ Monster Radar
+PCSG00025 ^ Ragnarok Odyssey
+PCSG00026 ^ Dream C Club Zero Portable
+PCSG00028 ^ Let's try Bass Fishing FISH ON NEXT
+PCSG00029 ^ Mahjong Fight Club: Shinsei Zenkoku Taisen Han
+PCSG00031 ^ Pro Yakyuu Spirits 2012
+PCSG00032 ^ Super Monkey Ball: Banana Splitz
+PCSG00033 ^ Ninja Gaiden Sigma Plus
+PCSG00034 ^ Ou to Maou to Shichinin no Himegimitachi: Shin Ousama Monogatari
+PCSG00035 ^ Metal Gear Solid HD Edition
+PCSG00036 ^ Assault Armies
+PCSG00037 ^ Dokuro
+PCSG00038 ^ Sumioni: Demon Arts
+PCSG00039 ^ FIFA World Class Soccer
+PCSG00040 ^ Kidou Senshi Gundam Seed Battle Destiny
+PCSG00041 ^ Samurai & Dragons
+PCSG00042 ^ Eiyuu Densetsu: Zero no Kiseki Evolution
+PCSG00043 ^ Demon Gaze
+PCSG00044 ^ Nikoli no Sudoku V: Shugyoku no 12 Puzzle
+PCSG00045 ^ Puzzle by Nikoli V: Sudoku
+PCSG00046 ^ Ciel Nosurge: Ushinawareta Hoshi e Sasagu Uta (Online version)
+PCSG00047 ^ TOEIC Test: Jissen Tokkun
+PCSG00049 ^ Silent Hill: Book of Memories
+PCSG00052 ^ NextRev: Eibunpou Tettei Tokkun
+PCSG00056 ^ NextRev: Gyouseishoshi Shiken
+PCSG00057 ^ orgarhythm
+PCSG00060 ^ Nikoli no Puzzle V: Kakuro
+PCSG00061 ^ Puzzle by Nikoli V: Slitherlink
+PCSG00062 ^ Time Travelers
+PCSG00063 ^ Street Fighter X Tekken
+PCSG00064 ^ Jikkyou Powerful Pro Yakyuu 2012
+PCSG00065 ^ Moe Moe Daisensou * Gendaiban++
+PCSG00066 ^ Guardian Hearts Online
+PCSG00067 ^ Nikoli no Puzzle V: Heyawake
+PCSG00068 ^ Nikoli no Puzzle V: Nurikabe
+PCSG00069 ^ Super Hero Generation
+PCSG00070 ^ DJMax Technika Tune
+PCSG00071 ^ NextRev: Ouyou Jouhougijutsusha Shiken
+PCSG00072 ^ NextRev: Kihonjouhou Gijutsusha Shiken
+PCSG00073 ^ NextRev: IT Passport Shiken
+PCSG00074 ^ Hatsune Miku -Project DIVA- f
+PCSG00076 ^ Valhalla Knights 3
+PCSG00077 ^ Danball Senki W Release
+PCSG00078 ^ Picotto Knights
+PCSG00079 ^ Assault Gunners
+PCSG00080 ^ Metal Gear Solid 2: Sons of Liberty - HD Edition
+PCSG00081 ^ Metal Gear Solid 3: Snake Eater - HD Edition
+PCSG00082 ^ Nikoli no Puzzle V: Akari
+PCSG00083 ^ Nikoli no Puzzle V: Masyu
+PCSG00084 ^ Ginsei Shogi: Kyoutendo Toufuu Raijin
+PCSG00085 ^ NextRev: FP Ginoukentei Shiken 2-Kyuu
+PCSG00086 ^ NextRev: FP Ginoukentei Shiken 3-Kyuu
+PCSG00087 ^ Tokushu Houdoubu
+PCSG00088 ^ ELEDiVE
+PCSG00089 ^ Octalide
+PCSG00090 ^ Uni Uni Unio
+PCSG00091 ^ Mou Sou Suru Shika Nai
+PCSG00093 ^ VOLT
+PCSG00094 ^ Nikoli no Puzzle V: Yajilin
+PCSG00095 ^ Nikoli no Puzzle V: Hashi o Kakero
+PCSG00096 ^ Nikoli no Puzzle V: Shikaku ni Kire
+PCSG00097 ^ Nikoli no Puzzle V: Number Link
+PCSG00098 ^ Nikoli no Puzzle V: Hitori ni Shitekure
+PCSG00099 ^ NextRev: Takken Shiken
+PCSG00100 ^ NextRev: Jouhou Security Specialist Shiken
+PCSG00102 ^ AKB1/149 Renai Sousenkyo
+PCSG00103 ^ Earth Defense Force 2017 Portable
+PCSG00104 ^ Jet Set Radio
+PCSG00105 ^ Ys: Memories of Celceta
+PCSG00106 ^ Need for Speed: Most Wanted
+PCSG00107 ^ FIFA 13: World Class Soccer
+PCSG00109 ^ NextRev: Shakai Fukushishi Shiken
+PCSG00111 ^ NAtURAL DOCtRINE
+PCSG00113 ^ Tottemo E Mahjong
+PCSG00116 ^ Assassin's Creed III: Liberation
+PCSG00118 ^ Suugaku Rikiou: Shokyuu Naka-1-Level
+PCSG00119 ^ Suugaku Rikiou: Chuukyuu Naka-2-Level
+PCSG00120 ^ Suugaku Rikiou: Joukyuu Naka-3-Level
+PCSG00121 ^ NextRev: Kaigo Fukushishi Shiken
+PCSG00122 ^ Fate/stay night [Realta Nua]
+PCSG00123 ^ Present for you
+PCSG00124 ^ Monster Radar Plus
+PCSG00125 ^ Tales of Hearts R
+PCSG00126 ^ Gundam Breaker
+PCSG00127 ^ Totori no Atelier Plus: Arland no Renkinjutsushi 2
+PCSG00128 ^ Spy Hunter
+PCSG00129 ^ Sakura-Sou no Pet na Kanojo
+PCSG00130 ^ Malicious Rebirth
+PCSG00131 ^ Guilty Gear XX Accent Core Plus R
+PCSG00132 ^ Sengoku Hime 3: Tenka o Kirisaku Hikari to Kage
+PCSG00133 ^ Senran Kagura: Shinovi Versus
+PCSG00134 ^ Jikkyou Powerful Pro Yakyuu 2012 Ketteiban
+PCSG00136 ^ XBlaze Code: Embryo
+PCSG00137 ^ Tenshi Tsuki no Shoujo
+PCSG00138 ^ Aabs Animals
+PCSG00139 ^ PhotoKano Kiss
+PCSG00140 ^ Ragnarok Odyssey ACE
+PCSG00141 ^ Phantasy Star Online 2
+PCSG00142 ^ One Piece: Kaizoku Musou 2
+PCSG00143 ^ NextRev: Chuushoukigyou Shindanshi Shiken 1
+PCSG00144 ^ NextRev: Chuushoukigyou Shindanshi Shiken 2
+PCSG00145 ^ Spelunker Collection
+PCSG00146 ^ Steins;Gate: Hiyoku Renri no Darling
+PCSG00147 ^ Steins;Gate
+PCSG00148 ^ Monster Monpiece
+PCSG00149 ^ WRC 3 - FIA World Rally Championship
+PCSG00150 ^ Oboro Muramasa
+PCSG00151 ^ Pro Yakyuu Spirits 2013
+PCSG00152 ^ 月英学園 -kou-
+PCSG00153 ^ Hatsune Miku Project DIVA F Sync Tool
+PCSG00154 ^ San Goku Shi 12
+PCSG00155 ^ Naitei! Shuukatsu Kanzen Taisaku - ES - SPI - Mensetsu
+PCSG00157 ^ Ninja Gaiden Sigma 2 Plus
+PCSG00158 ^ NextRev: Sharoushi Shiken
+PCSG00159 ^ AKIBA'S TRIP: Undead ＆ Undressed
+PCSG00160 ^ Photo Kano Kiss AR
+PCSG00162 ^ Haiyore! Nyaruko-San: Meijoushigatai Game no You na Mono
+PCSG00163 ^ Tales of Hearts R: Infinite Evolve
+PCSG00164 ^ Power Pro Stadium
+PCSG00167 ^ Dead or Alive 5 Plus
+PCSG00168 ^ Sorcery Saga: The Curse of the Great Curry God
+PCSG00169 ^ Cure Mate Club
+PCSG00171 ^ Meruru no Atelier Plus: Arland no Renkinjutsushi 3
+PCSG00174 ^ NextRev: Eiken
+PCSG00175 ^ TOEIC Test: Jissen Tokkun 2
+PCSG00176 ^ Memories Off 6 Complete
+PCSG00177 ^ Memories Off: Yubikiri no Kioku
+PCSG00178 ^ Slotter Mania V: Zettai Shogeki II
+PCSG00179 ^ Meikyuu Cross Blood: Infinity
+PCSG00180 ^ BlazBlue: Chronophantasma
+PCSG00181 ^ Hyperdimension Neptunia: Producing Perfection
+PCSG00182 ^ Kaku-San-Sei Million Arthur
+PCSG00184 ^ Mind Zero
+PCSG00185 ^ Rocketbirds: Hardboiled Chicken
+PCSG00186 ^ NextRev: Hisho Kentei Shiken
+PCSG00187 ^ Dragon's Crown
+PCSG00190 ^ Super Robot Taisen OG Saga - Pride of Justice
+PCSG00191 ^ Kidou Senshi Gundam: Battle Operation Support Application
+PCSG00192 ^ NextRev: Care Manager Shiken
+PCSG00193 ^ Toukiden
+PCSG00194 ^ Winning Post 7 2013
+PCSG00195 ^ Eiyuu Densetsu: Sen no Kiseki
+PCSG00196 ^ Exstetra
+PCSG00197 ^ Conception II: Children of the Seven Stars
+PCSG00198 ^ Soccer Tsuku: Pro Soccer Club wo Tsukurou!
+PCSG00199 ^ Uta Kumi 575
+PCSG00200 ^ Hotchkiss
+PCSG00201 ^ FIFA 14
+PCSG00202 ^ Danganronpa 1-2 Reload
+PCSG00203 ^ AMNESIA V Edition
+PCSG00205 ^ Hatsune Miku -Project DIVA- F 2nd
+PCSG00206 ^ Grisaia no Kajitsu: Le Fruit de la Grisaia
+PCSG00208 ^ Limbo
+PCSG00209 ^ Warriors Orochi 2 Ultimate
+PCSG00212 ^ Dragon's Dogma Quest
+PCSG00213 ^ Dragon Ball Z: Battle of Z
+PCSG00214 ^ Puella Magi Madoka Magica - The Battle Pentagram
+PCSG00215 ^ Yahari Game demo Ore no Seishun Love Come wa Machigatteiru.
+PCSG00216 ^ Rui wa Tomo o Yobu
+PCSG00219 ^ Final Fantasy X HD Remaster
+PCSG00220 ^ Final Fantasy X-2 HD Remaster
+PCSG00221 ^ Magical Beat
+PCSG00222 ^ Nihon Pro Mahjong Renmei Kounin: Motto 20-Bai! Mahjong ga Tsuyoku Naru Houhou - Shochuukyuusha Hen
+PCSG00223 ^ Nihon Pro Mahjong Renmei Suisen: Tokoton Mahjong! Joryuu Pro ni Chousen! Tetsuman Megami Special
+PCSG00224 ^ Puyo Puyo Tetris
+PCSG00225 ^ Makai Senki Disgaea 4 Return
+PCSG00226 ^ Hyperdimension Neptunia: Re;Birth1
+PCSG00227 ^ Furuiro Meikyuu Rondo: La Roue de fortune
+PCSG00228 ^ Super Heroine Chronicle: Chou Heroine Senki
+PCSG00231 ^ Urban Trial Freestyle
+PCSG00232 ^ Sengoku Hime 4: Souha Hyakkei Hana Mamoru Chikai
+PCSG00233 ^ Sengoku Musou 2 with Moushouden HD Version
+PCSG00234 ^ Hyperdevotion Noire Goddess Black Heart
+PCSG00237 ^ Slotter Mania V: Gakuen Mokushiroku - Highschool of the Dead
+PCSG00238 ^ Winning Post 8
+PCSG00239 ^ Sora no Mukou de Saki Masuyou ni
+PCSG00240 ^ God Eater 2
+PCSG00241 ^ Criminal Girls: Invite Only
+PCSG00242 ^ bitter smile.
+PCSG00244 ^ Moujuutsukai to Oujisama / Beast Master and Prince
+PCSG00245 ^ Atelier Rorona Plus: The Alchemist of Arland
+PCSG00246 ^ Eiyuu Densetsu: Ao no Kiseki Evolution
+PCSG00247 ^ Motto Nee, Chan to Shiyouyo! +Plus
+PCSG00249 ^ WHITE ALBUM2: Shiawase no Mukougawa
+PCSG00250 ^ Steins;Gate: Senkei Kousoku no Phenogram
+PCSG00254 ^ Oukaranman
+PCSG00255 ^ ShinobiAshi
+PCSG00256 ^ GENIMUS
+PCSG00257 ^ RisingStar
+PCSG00258 ^ MeiQ
+PCSG00259 ^ BOOLINK
+PCSG00260 ^ Super Robot Wars 1 HD Remake
+PCSG00261 ^ Batman: Arkham Origins Blackgate
+PCSG00262 ^ Pawapuro Stadium
+PCSG00264 ^ Super Robot Wars Z Jigoku Hen
+PCSG00266 ^ Rainbow Moon
+PCSG00268 ^ Total Recoil
+PCSG00269 ^ PixelJunk Monsters: Ultimate HD
+PCSG00270 ^ Infinite Stratos 2 - Ignition Hearts
+PCSG00271 ^ Princess Arthur
+PCSG00272 ^ DIABOLIK LOVERS LIMITED V EDITION
+PCSG00275 ^ Ryu ga Gotoku: Ishin! Free app / YAKUZA ISHIN! Companion app
+PCSG00276 ^ AMNESIA World
+PCSG00277 ^ Phantom Breaker: Battlegrounds
+PCSG00278 ^ Shin Gundam Musou
+PCSG00279 ^ Samurai Warriors 4
+PCSG00280 ^ Fantasy Hero: Unsigned Legacy
+PCSG00284 ^ Demon Gaze Global Edition (ENG/JPN)
+PCSG00286 ^ Terraria
+PCSG00288 ^ Pro Yakyuu Spirits 2014
+PCSG00289 ^ Ore ni Hatarakette Iwaretemo Otsu HD
+PCSG00290 ^ Dairansou Dash or Dasshu!!
+PCSG00291 ^ Ebikore+ Amagami
+PCSG00292 ^ Damascus Gear: Tokyo Shisen
+PCSG00293 ^ Tokyo Twilight Ghost Hunters
+PCSG00294 ^ Sword Art Online Hollow Fragment
+PCSG00296 ^ Soukai Buccaneers!
+PCSG00297 ^ Hakuouki SSL: Sweet School Life
+PCSG00298 ^ Corpse Party: Blood Drive
+PCSG00299 ^ Oretachi ni Tsubasa wa Nai
+PCSG00301 ^ J-Stars Victory Vs (Anison Sound Edition)
+PCSG00302 ^ Minecraft: PlayStation Vita Edition
+PCSG00303 ^ Escape Vector
+PCSG00304 ^ Kagero: Darkside Princess
+PCSG00305 ^ Draw Slasher
+PCSG00307 ^ Valhalla Knights 3 Gold
+PCSG00309 ^ Machinarium
+PCSG00310 ^ Dekamori Senran Kagura (Hontai Pack A)
+PCSG00311 ^ Dekamori Senran Kagura (Hontai Pack B)
+PCSG00314 ^ Kung Fu Rabbit
+PCSG00316 ^ Eiyuu * Senki
+PCSG00328 ^ Arcana Heart 3: Love Max!!!!!
+PCSG00329 ^ Simple V Series: The Tousou Highway Full Boost
+PCSG00330 ^ To Love-Ru Trouble Darkness: Battle Ecstasy
+PCSG00331 ^ Lost Dimension
+PCSG00332 ^ @Simple V Series Vol. 1: The Dokodemo Gal Mahjong
+PCSG00335 ^ Hyperdimension Neptunia: Re;Birth2 Sisters Generation
+PCSG00336 ^ LOVELY QUEST Unlimited
+PCSG00338 ^ Aiyoku no Eustia: Angel's Blessing
+PCSG00339 ^ Girls und Panzer Senshado Kiwamemasu!
+PCSG00340 ^ Manga Kakeru (3.61+!) [3.67]
+PCSG00341 ^ Dengeki Bunko: Fighting Climax
+PCSG00342 ^ Anoko wa Ore Kara Hanarenai
+PCSG00343 ^ Sekai Seifuku ~ COSTUME FES. ~ (F2P)
+PCSG00346 ^ Genkai Tokki: Moe Chronicle
+PCSG00347 ^ Atelier Ayesha Plus ~The Alchemist of Dusk~
+PCSG00348 ^ htoL#NiQ: The Firefly Diary
+PCSG00350 ^ Monster Hunter Frontier G
+PCSG00351 ^ Phantasy Star Nova
+PCSG00352 ^ ROBOTICS;NOTES ELITE
+PCSG00353 ^ Injustice: Gods Among Us - Ultimate Edition
+PCSG00354 ^ Eiyuu Densetsu: Sen no Kiseki II
+PCSG00355 ^ IA/VT -COLORFUL-
+PCSG00356 ^ Root Double: Before Crime * After Days - Xtend Edition
+PCSG00357 ^ Kono Oozora ni Tsubasa o Hirogete: Cruise Sign
+PCSG00361 ^ Bullet Girls
+PCSG00362 ^ Aegis of Earth: Protonovus Assault
+PCSG00363 ^ Rayman Legends
+PCSG00364 ^ Persona 4: Dancing All Night
+PCSG00365 ^ CROSS†CHANNEL ～For all people～
+PCSG00366 ^ Hanasaku Manimani
+PCSG00368 ^ Mahou Shoujo Taisen Zanbatsu
+PCSG00369 ^ Guacamelee!
+PCSG00372 ^ Daisenryaku Exceed II
+PCSG00374 ^ Nobunaga no Yabou: Souzou
+PCSG00375 ^ The Walking Dead: The Complete First Season
+PCSG00376 ^ WRC 4 - FIA World Rally Championship
+PCSG00377 ^ Ooedo Blacksmith
+PCSG00378 ^ Monobeno: Pure Smile
+PCSG00379 ^ Toukiden: Kiwami
+PCSG00380 ^ Shin Hayarigami
+PCSG00381 ^ Kadenz fermata//Akkord:fortissimo
+PCSG00384 ^ PixelJunk Shooter Ultimate
+PCSG00386 ^ Fate/hollow ataraxia
+PCSG00387 ^ Tokyo Shinseiroku: Operation Abyss
+PCSG00388 ^ Hideboh: Tap Dance Hero
+PCSG00389 ^ BinaryStar
+PCSG00390 ^ Judas Code
+PCSG00391 ^ NextRev: Takken Shiken 2015
+PCSG00392 ^ Mahou Shoujo Taisen Zanbatsu
+PCSG00394 ^ Hyperdimension Neptunia U: Action Unleashed
+PCSG00395 ^ Dairansou Dash or Dasshu!!
+PCSG00397 ^ Nisekoi: Yomeiri!?
+PCSG00398 ^ Meikyuu Cross Blood: Infinity Ultimate
+PCSG00400 ^ Borderlands 2
+PCSG00401 ^ Sorayume
+PCSG00402 ^ Code: Realize - Guardian of Rebirth
+PCSG00403 ^ AMNESIA LATER×CROWD V Edition
+PCSG00404 ^ FIFA 15
+PCSG00405 ^ Reine des Fleurs
+PCSG00406 ^ High school D × D NEW FIGHT
+PCSG00407 ^ Dungeon Travelers 2: The Royal Library & The Monster Seal
+PCSG00408 ^ Child of Light
+PCSG00409 ^ Chain Chronicle V
+PCSG00411 ^ CHAOS;HEAD DUAL
+PCSG00413 ^ KissBell
+PCSG00414 ^ Rewrite
+PCSG00415 ^ CLANNAD
+PCSG00416 ^ Jikkyou Powerful Pro Yakyuu 2014
+PCSG00417 ^ Kurogane Kaikitan: Senya Ichiya
+PCSG00418 ^ Senran Kagura: Estival Versus - Shoujotachi no Sentaku
+PCSG00419 ^ Ginsei Igo: Next Generation
+PCSG00421 ^ Grisaia no Meikyuu: Le Labyrinthe de la Grisaia
+PCSG00425 ^ Bakumatsu Rock: Ultra Soul
+PCSG00426 ^ Renai 0 Kilometer V
+PCSG00427 ^ Othello
+PCSG00428 ^ Senjou no Waltz
+PCSG00431 ^ Norn9: Var Commons
+PCSG00432 ^ Chikyuu Boueigun 2 PORTABLE V2
+PCSG00433 ^ Zettai Zetsubou Shoujo: Danganronpa - Another Episode
+PCSG00434 ^ CHAOS;HEAD Noah
+PCSG00435 ^ CHAOS;HEAD Love Chu*Chu!
+PCSG00436 ^ Divekick: Addition Edition
+PCSG00437 ^ Stealth Inc: A Clone in the Dark - Ultimate Edition
+PCSG00438 ^ Teslagrad
+PCSG00442 ^ Farming Simulator 14
+PCSG00443 ^ Soldner-X 2: Final Prototype
+PCSG00444 ^ Luminous Arc Infinity
+PCSG00445 ^ Stranger of Sword City / Tsurugi no Machi no Ihoujin: Kuro no Kyuuden
+PCSG00447 ^ Dekamori Senran Kagura
+PCSG00449 ^ Kamisama to Koi Gokoro
+PCSG00450 ^ Captain Earth Mind Labyrinth
+PCSG00451 ^ Hanayamata: Yosakoi Live!
+PCSG00452 ^ Shin Sangoku Musou 7: Empires
+PCSG00454 ^ Ciel Nosurge: Ushinawareta Hoshi e Sasagu Uta (Offline version)
+PCSG00455 ^ Ar nosurge Plus: Ode to an Unborn Star
+PCSG00456 ^ Mahouka Koukou no Rettousei: Out of Order
+PCSG00457 ^ Chaos Rings III Prequel Trilogy
+PCSG00458 ^ ROOT∞REXX
+PCSG00459 ^ Flowers
+PCSG00460 ^ Seiken Densetsu: Rise of Mana
+PCSG00461 ^ Airship Q
+PCSG00462 ^ Irotoridori no Sekai: World's End Re-Birth
+PCSG00465 ^ Deadman's Cross
+PCSG00466 ^ Sengoku Hime 5: Senkatatsu Haoh no Keifu
+PCSG00467 ^ Vamwolf Cross† (Limited Edition)
+PCSG00471 ^ Sengoku Musou Chronicle 3
+PCSG00472 ^ DIABOLIK LOVERS VANDEAD CARNIVAL
+PCSG00473 ^ Frozen Synapse Prime
+PCSG00474 ^ Grand Kingdom
+PCSG00475 ^ M3: Sono Kuroki Hagane /// Mission Memento Mori
+PCSG00476 ^ Diabolik Lovers: more.Blood - Limited V Edition
+PCSG00477 ^ Hyakka Yakou
+PCSG00479 ^ Shiren The Wanderer: The Tower of Fortune and Dice
+PCSG00480 ^ Ukiyo no Roushi
+PCSG00482 ^ Durarara!! Relay
+PCSG00483 ^ AeternoBlade
+PCSG00484 ^ La-Mulana EX
+PCSG00486 ^ Hyperdimension Neptunia: Re;Birth3 V Century
+PCSG00487 ^ Otoko Yuukaku
+PCSG00488 ^ Eiyuu Densetsu: Sora no Kiseki FC Evolution
+PCSG00489 ^ Eiyuu Densetsu: Sora no Kiseki SC Evolution
+PCSG00490 ^ Eiyuu Densetsu: Sora no Kiseki the 3rd Evolution
+PCSG00491 ^ Prince of Stride
+PCSG00493 ^ Fuuraiki 3
+PCSG00494 ^ Dai-3-Ji Super Robot Taisen Z Tengoku-hen
+PCSG00495 ^ Dai-3-Ji Super Robot Taisen Z Rengoku-hen
+PCSG00496 ^ OZMAFIA!!-vivace-
+PCSG00497 ^ Chaos Rings I
+PCSG00498 ^ Chaos Rings II
+PCSG00499 ^ Chaos Rings Omega
+PCSG00500 ^ Chaos Rings III
+PCSG00503 ^ YAKUZA 0 Companion app
+PCSG00504 ^ Daisenryaku: Dai Toua Kouboushi - Dainijisekaitaisen Boppatsu - Suujiku Sentai Rengougun Zensekaisen
+PCSG00506 ^ Hitotsu Tobashi Renai V
+PCSG00508 ^ Grisaia no Rakuen: Le Eden de la Grisaia
+PCSG00510 ^ Starry Sky: Spring Stories
+PCSG00511 ^ Wizardry: Torawareshi Bourei no Machi
+PCSG00512 ^ Wizardry: Torawareshi Tomashii no Meikyuu
+PCSG00513 ^ SteamWorld Dig
+PCSG00514 ^ Tokyo Shinseiroku: Operation Babel
+PCSG00515 ^ Trillion: God of Destruction
+PCSG00516 ^ Digimon Story Cyber Sleuth
+PCSG00517 ^ Higurashi no Naku Koro ni Sui
+PCSG00519 ^ Friend to Lover
+PCSG00520 ^ Kaleidoeve
+PCSG00522 ^ Atelier Escha & Logy Plus ~Alchemists of the Dusk Sky~
+PCSG00524 ^ Odin Sphere Leifthrasir
+PCSG00526 ^ Shinsouban Okashi na Shima no Peter Pan: Sweet Never Land
+PCSG00527 ^ Samurai Warriors 4-II
+PCSG00528 ^ Sweet Clown: Gozen Sanji no Okashi na Doukeshi
+PCSG00530 ^ DIABOLIK LOVERS DARK FATE
+PCSG00531 ^ Venus Project
+PCSG00532 ^ God Eater 2 Rage Burst
+PCSG00533 ^ NekoBuro: Cats Block
+PCSG00534 ^ Kaeru Batake de Tsukamaete: Natsu Chigira Sansen!
+PCSG00535 ^ Gakuen Heaven: Boy's Love Scramble!
+PCSG00536 ^ Sword Art Online: Lost Song
+PCSG00537 ^ Croixleur Sigma
+PCSG00538 ^ TorqueL
+PCSG00539 ^ Believer!
+PCSG00540 ^ ChuSingura 46+1 V
+PCSG00541 ^ Pro Yakyuu Spirits 2015
+PCSG00543 ^ Saenai Heroine no Sodatekata: Blessing Flowers
+PCSG00545 ^ Winning Post 8 2015
+PCSG00547 ^ Teikoku Kaigun Koi Bojou: Meiji Yokosuka Koushinkyoku
+PCSG00549 ^ Parfait
+PCSG00550 ^ Omega Labyrinth
+PCSG00551 ^ Taiko no Tatsujin V Version
+PCSG00552 ^ Ray Gigant
+PCSG00553 ^ Ken ga Kimi for V
+PCSG00554 ^ Sayonara UmiharaKawase
+PCSG00555 ^ Chaos;Child
+PCSG00557 ^ Nights of Azure / Yoru no Nai Kuni
+PCSG00558 ^ CastleStorm
+PCSG00559 ^ Harvest OverRay
+PCSG00561 ^ 12-Ji no Kane to Cinderella Series Triple Zenkan Pack
+PCSG00563 ^ Persona 4: The Golden
+PCSG00564 ^ Tiny Troopers Joint Ops
+PCSG00565 ^ Kagero: Mou Hitori no Princess
+PCSG00567 ^ YU-NO: Konoyo no Hate de Koi o Utau Shoujo (3.61+!) [3.63]
+PCSG00568 ^ Bullet Girls 2
+PCSG00569 ^ Fushigi no Chronicle: Furikaerimasen Katsu Madewa
+PCSG00572 ^ Project Discovery: Daidai Daisuki!
+PCSG00573 ^ The Lost Child (3.61+!) [3.65]
+PCSG00577 ^ Hakuisei Aijou Izonshou
+PCSG00579 ^ Mobile Suit Gundam Battle Fortress
+PCSG00580 ^ Shinsouban Mahou Tsukai no Goshujinsama
+PCSG00581 ^ Minna de Spelunker Z
+PCSG00582 ^ BlazBlue: Chronophantasma Extend
+PCSG00583 ^ Skullgirls 2nd Encore
+PCSG00584 ^ Infinite Stratos 2: Love and Purge
+PCSG00585 ^ Gakuen Heaven 2: Double Scramble
+PCSG00586 ^ Nihilumbra: Seimei to Shikisai no Tabiji
+PCSG00587 ^ Element4l
+PCSG00588 ^ Sid Meier's Civilization Revolution 2 Plus
+PCSG00589 ^ XCOM: Enemy Unknown Plus
+PCSG00590 ^ 5-nin no Koi Prince: Himitsu no Keiyaku Kekkon
+PCSG00591 ^ Abunai Koi no Sousashitsu: Eternal Happiness
+PCSG00592 ^ I DOLL U
+PCSG00593 ^ Touch Battle Tanks SP
+PCSG00594 ^ Resident Evil: Revelations 2
+PCSG00597 ^ Cross Ange: Tenshi to Ryuu no Rondo tr.
+PCSG00600 ^ Fate/Extella (3.61+!) [3.61]
+PCSG00601 ^ Hotline Miami
+PCSG00604 ^ Moujuutsukai to Oujisama: Flower & Snow
+PCSG00606 ^ MeiQ: Labyrinth of Death
+PCSG00608 ^ Tokyo Xanadu
+PCSG00610 ^ Miracle Girls Festival
+PCSG00613 ^ Metal Slug 3
+PCSG00614 ^ Shinsouban Heart no Kuni no Alice
+PCSG00615 ^ Tokyo Ghoul: Jail
+PCSG00616 ^ Rollers of the Realm
+PCSG00617 ^ Utawarerumono: Itsuwari no Kamen
+PCSG00618 ^ Romeo VS Juliet: Zenkan Pack
+PCSG00619 ^ Genji Koi Emaki
+PCSG00620 ^ Grisaia no Kajitsu Spinout!? Idol Mahou Shoujo ChiruChiru*Michiru
+PCSG00622 ^ Rogue Legacy
+PCSG00628 ^ Alia's Carnival! Sacrament
+PCSG00631 ^ Tokyo Onmyouji: Tengenjibashi Rei no Baai - V Edition
+PCSG00632 ^ VALKYRIE DRIVE -BHIKKHUNI-
+PCSG00633 ^ UPPERS
+PCSG00639 ^ Himawari: Pebble in the Sky
+PCSG00640 ^ SA7 - Silent Ability Seven -
+PCSG00642 ^ Fushigi no Gensokyo - The Tower of Desire
+PCSG00644 ^ Superdimension Neptune VS Sega Hard Girls
+PCSG00645 ^ SUPERBEAT: XONiC
+PCSG00646 ^ Saki: Zenkoku-hen
+PCSG00647 ^ World Trigger: Borderless Mission
+PCSG00648 ^ Tsuki ni Yori Sou Otome no Sahou: Hidamari no Hibi
+PCSG00652 ^ The Legend of Dark Witch
+PCSG00654 ^ Gakuen K: Wonderful School Days V Edition
+PCSG00655 ^ Assassin's Creed Chronicles
+PCSG00656 ^ Net High
+PCSG00657 ^ Gundam Conquest V
+PCSG00659 ^ Hotline Miami 2: Wrong Number
+PCSG00663 ^ Rear Pheles: Red of Another
+PCSG00666 ^ Ayakashi Gohan: Oomori!
+PCSG00667 ^ LOVE:QUIZ - Koisuru Shoujo no Final Answer
+PCSG00669 ^ Yomawari: Night Alone
+PCSG00672 ^ Polara
+PCSG00673 ^ Steins;Gate 0
+PCSG00675 ^ Kamen Rider: Battride War Sousei
+PCSG00677 ^ The Idol Master: Must Songs - Red Album
+PCSG00678 ^ The Idol Master: Must Songs - Blue Album
+PCSG00679 ^ Exist Archive: The Other Side of the Sky
+PCSG00681 ^ Criminal Girls 2
+PCSG00683 ^ Hatsune Miku: Project Diva X
+PCSG00684 ^ KanColle Kai
+PCSG00685 ^ Deemo ~The Last Recital~
+PCSG00686 ^ Raishi
+PCSG00687 ^ The Caligula Effect
+PCSG00688 ^ Himoutou! Umaru-Chan: Himoutou Ikusei Keikaku
+PCSG00689 ^ To Love-Ru Trouble Darkness: True Princess
+PCSG00692 ^ Samurai Warriors 4 Empires
+PCSG00693 ^ Yuusha Shisu.
+PCSG00694 ^ Sophie no Atelier: Fushigi na Hon no Renkinjutsushi
+PCSG00695 ^ Genkai Tokki: Moero Crystal
+PCSG00697 ^ Dragon Quest Builders
+PCSG00699 ^ Gal*Gun: Double Peace
+PCSG00700 ^ Ao no Kanata no Four Rhythm
+PCSG00701 ^ Touhou Sky Arena: Gensoukyou Kuusen Hime Matsuri Climax (3.61+!) [3.65]
+PCSG00704 ^ Gal Gunvolt
+PCSG00707 ^ Octodad: The Dadliest Catch (All Languages)
+PCSG00708 ^ Bara ni Kakusareshi Verite
+PCSG00709 ^ World of Final Fantasy
+PCSG00711 ^ Baboon!
+PCSG00712 ^ Punch Line
+PCSG00713 ^ Hyakka Hyakurou: Sengoku Ninpoujou
+PCSG00714 ^ Star Ocean Second Evolution
+PCSG00716 ^ Clover Day's: Making for Happiness (3.61+!) [3.63]
+PCSG00717 ^ Animax Plus
+PCSG00718 ^ Renai Revenge
+PCSG00719 ^ God Eater Resurrection
+PCSG00720 ^ God Eater Off Shot Lindow Version - vol. 2
+PCSG00721 ^ God Eater Off Shot Alisa Version - vol. 3
+PCSG00722 ^ God Eater Off Shot Soma Schicksal Version - vol. 4
+PCSG00723 ^ God Eater Off Shot Shio Version - vol. 5
+PCSG00724 ^ God Eater Off Shot Kota Fujiki Version - vol. 6
+PCSG00725 ^ God Eater Off Shot Sakuya Tachibana Version - vol. 7
+PCSG00726 ^ Taishou Mebiusline: Vitable
+PCSG00728 ^ Owari no Seraph: Unmei no Hajimari
+PCSG00729 ^ ClaDun Returns: This is Sengoku!
+PCSG00732 ^ Ryuuyoku no Melodia: Diva with the Blessed Dragonol
+PCSG00735 ^ STORM LOVER V
+PCSG00736 ^ STORM LOVER 2nd V
+PCSG00739 ^ Flowers: Natsu-Hen
+PCSG00740 ^ The Binding of Isaac: Rebirth
+PCSG00742 ^ Kiss Ato
+PCSG00744 ^ One Piece: Burning Blood - Gold Edition (DELISTED)
+PCSG00747 ^ Zero Escape: Zero Time Dilemma
+PCSG00750 ^ Kai-ri-Sei Million Arthur
+PCSG00751 ^ Arcana Famiglia -La Storia Della Arcana Famiglia- Ancora
+PCSG00752 ^ Touhou Soujinengi V
+PCSG00756 ^ I am Setsuna
+PCSG00758 ^ Dengeki Bunko Fighting Climax IGNITION
+PCSG00759 ^ Adventures of Mana
+PCSG00760 ^ Gundam Breaker 3
+PCSG00761 ^ Kono Aozora ni Yakusoku o
+PCSG00762 ^ Attack on Titan: Wings of Freedom
+PCSG00764 ^ Shin Sangoku Musou Online Z
+PCSG00766 ^ Nil Admirari no Tenbin: Teito Genwaku Kitan
+PCSG00769 ^ Ouma ga Toki: Kakuriyo no Enishi
+PCSG00772 ^ Zettai Zetsubou Shoujo: Danganronpa - Another Episode
+PCSG00774 ^ Kin'iro no Corda 4
+PCSG00775 ^ Dogimegi Inryoku-Chan: Love & Peace
+PCSG00776 ^ Muv-Luv
+PCSG00777 ^ Muv-Luv Alternative
+PCSG00778 ^ Aban Hawkings & the 1001 spikes: The temple of the Dead mourns
+PCSG00780 ^ Akai Suna Ochiru Tsuki
+PCSG00781 ^ RecoLove: Blue Ocean (3.61+!) [3.61]
+PCSG00782 ^ RecoLove: Gold Beach (3.61+!) [3.61]
+PCSG00783 ^ Project Root
+PCSG00784 ^ Squares
+PCSG00786 ^ Gochuumon wa Usagi Desu ka??
+PCSG00788 ^ Crypt of the NecroDancer
+PCSG00789 ^ Omerta Code: Tycoon Kai
+PCSG00792 ^ Digimon World: Next Order
+PCSG00793 ^ SD Gundam G Generation Genesis (Require External Data DLC) (3.61+!) [3.61]
+PCSG00794 ^ Getsuei no Kusari: Sakuran Paranoia
+PCSG00795 ^ Coven and Labyrinth of Refrain
+PCSG00797 ^ Boku wa Mori Sekai no Kami Tonaru (3.61+!) [3.61]
+PCSG00798 ^ Fairune
+PCSG00799 ^ Mr. Pumpkin Adventure
+PCSG00800 ^ Yaken no Reodem (3.61+!) [3.61]
+PCSG00801 ^ Psycho-Pass: Mandatory Happiness
+PCSG00802 ^ SaGa SCARLET GRACE (3.61+!) [3.61]
+PCSG00804 ^ Winning Post 8 2016
+PCSG00805 ^ Code: Realize - Shukufuku no Mirai (3.61+!) [3.61]
+PCSG00806 ^ Raishi: Konpeki no Shou
+PCSG00807 ^ Dance with Devils
+PCSG00813 ^ Touhou Double Focus
+PCSG00814 ^ Bentou no Subarashisa o Ano 2-Tabi 3-Tabi (3.61+!) [3.63]
+PCSG00815 ^ PsychicEmotion6
+PCSG00816 ^ DEEMO Original Soundtrack Vol.1 Digital Version
+PCSG00817 ^ EVE Burst Error R
+PCSG00818 ^ Rocketbirds 2: Evolution
+PCSG00820 ^ Dragon Quest Heroes II
+PCSG00821 ^ Atelier Shallie Plus: Alchemists of the Dusk Sea
+PCSG00827 ^ Summon Night 6: Lost Borders
+PCSG00829 ^ Kenka Bancho Otome
+PCSG00830 ^ Toukiden 2
+PCSG00831 ^ God Wars: Future Past
+PCSG00832 ^ World Trigger: Smash Borders
+PCSG00833 ^ Norn + Nonette Act Tune
+PCSG00836 ^ Lego Marvel's Avengers
+PCSG00837 ^ Bunny Must Die: Chelsea and the 7Devils
+PCSG00838 ^ Utawarerumono: Futari no Hakuoro
+PCSG00841 ^ Dungeon Travelers 2-2: Yamiochi no Otome to Hajimari no Sho (3.61+!) [3.63]
+PCSG00842 ^ Damascus Gear: Saikyou Exodus (3.61+!) [3.63]
+PCSG00844 ^ The Last Blade 2
+PCSG00845 ^ Silverio Vendetta: Verse of Orpheus
+PCSG00848 ^ AQUA KITTY DX
+PCSG00849 ^ Demon Gaze II
+PCSG00850 ^ Koezaru wa Akai Hana: Koi wa Tsuki ni Michibikareru
+PCSG00851 ^ A Rose in the Twilight
+PCSG00856 ^ Maison de Maou
+PCSG00860 ^ Dynamic Chord feat.[reve parfait] V edition
+PCSG00861 ^ DYNAMIC CHORD feat.Liar-S V edition (3.61+!) [3.61]
+PCSG00862 ^ DYNAMIC CHORD feat.KYOHSO V edition (3.61+!) [3.63]
+PCSG00864 ^ Farming Simulator 16: Pocket Nouen 3
+PCSG00865 ^ Idol Death Game TV (3.61+!) [3.61]
+PCSG00866 ^ Collar x Malice
+PCSG00867 ^ Sengoku Otome: Legend Battle
+PCSG00868 ^ Sword Art Online: Hollow Realization (3.61+!) [3.61]
+PCSG00869 ^ Taishou x Alice: All in One
+PCSG00870 ^ Romancing SaGa 2
+PCSG00872 ^ The Walking Dead: Season Two
+PCSG00874 ^ Neverending Nightmares
+PCSG00875 ^ Lego Star Wars: The Force Awakens
+PCSG00877 ^ Neo ATLAS 1469 (3.61+!) [3.61]
+PCSG00878 ^ Shinshaku Tsurugi no Machi no Ihoujin: Kuro no Kyuuden
+PCSG00879 ^ Super Time Force Ultra
+PCSG00881 ^ Ys VIII: Lacrimosa of DANA
+PCSG00882 ^ Genkai Tokki: Seven Pirates
+PCSG00883 ^ Zero Escape: 9 Jikan 9 nin 9 no Tobira Zennin Shibo Dos Double Pack (3.61+!) [3.63]
+PCSG00884 ^ NightCry (3.61+!) [3.69]
+PCSG00887 ^ Slain: Back from Hell
+PCSG00890 ^ Paranautical Activity
+PCSG00891 ^ Root Letter
+PCSG00892 ^ The Longest Five Minutes
+PCSG00893 ^ Dynasty Warriors: Godseekers
+PCSG00895 ^ Yahari Game Demo Ore no Seishun Love-Kome wa Machigatteiru. Zoku (3.61+!) [3.61]
+PCSG00896 ^ Meiji Toukyou Renka: Full Moon
+PCSG00897 ^ Shin Hayarigami 2
+PCSG00898 ^ Mary Skelter Nightmare (3.61+!) [3.61]
+PCSG00899 ^ Tokyo Tattoo Girls (3.61+!) [3.61]
+PCSG00901 ^ AstralAir no Shiroki Eien: White Eternity
+PCSG00902 ^ Torikago no Marriage: Hatsukoi no Tsubasa (3.61+!) [3.61]
+PCSG00903 ^ NEW GAME! -THE CHALLENGE STAGE!- (3.61+!) [3.63]
+PCSG00905 ^ PriministAr
+PCSG00907 ^ Strawberry Nauts
+PCSG00908 ^ Saki: Zenkoku-hen Plus (3.61+!) [3.63]
+PCSG00910 ^ DIABOLIK LOVERS LOST EDEN (3.61+!) [3.63]
+PCSG00911 ^ Re:BIRTHDAY SONG: Koi o Utau Shinigami (3.61+!) [3.61]
+PCSG00912 ^ Un:BIRTHDAY SONG: Koi wo Utau Shinigami - Another Record (3.61+!) [3.65]
+PCSG00913 ^ Kimi o Aogi Otome wa Hime ni
+PCSG00915 ^ DYNAMIC CHORD feat.apple-polisher V edition (3.61+!) [3.67]
+PCSG00916 ^ Starry Sky: Summer Stories (3.61+!) [3.63]
+PCSG00917 ^ Starry Sky: Autumn Stories (3.61+!) [3.65]
+PCSG00918 ^ Starry Sky: Winter Stories (3.61+!) [3.65]
+PCSG00919 ^ Orfleurs: Koufuku no Hanataba (3.61+!) [3.61]
+PCSG00920 ^ Super Robot Taisen V (3.61+!) [3.63]
+PCSG00921 ^ Geten no Hana with Yume Akari - Aizouban
+PCSG00922 ^ Furuki Yoki Jidai no Boukentan (3.61+!) [3.61]
+PCSG00928 ^ Lego Ninjago: Nindroids
+PCSG00929 ^ Atelier Firis ~The Alchemist and the Mysterious Journey~ (3.61+!) [3.61]
+PCSG00931 ^ Plastic Memories
+PCSG00932 ^ Itadaki Street: Dragon Quest & Final Fantasy 30th Anniversary (3.61+!) [3.63]
+PCSG00933 ^ Re:Zero - kara Hajimeru Isekai Seikatsu - Death or Kiss (3.61+!) [3.63]
+PCSG00934 ^ Shinsei Batteki Drive Girls
+PCSG00936 ^ Danganronpa V3: Killing Harmony (3.61+!) [3.63]
+PCSG00938 ^ Wand of Fortune R2: Jikuu ni Shizumu Mokushiroku (3.61+!) [3.63]
+PCSG00939 ^ Omega Labyrinth Z (3.61+!) [3.63]
+PCSG00940 ^ AIR
+PCSG00942 ^ Otome Riron to Sono Shuuhen: Bon Voyage (3.61+!) [3.61]
+PCSG00946 ^ Penny-Punching Princess (3.61+!) [3.61]
+PCSG00947 ^ Macross Delta Scramble (3.61+!) [3.61]
+PCSG00948 ^ Suran digit (3.61+!) [3.61]
+PCSG00950 ^ Osomatsu-san: The Game
+PCSG00951 ^ Nep-Nep Connect: Chaos Chanpuru (3.61+!) [3.65]
+PCSG00952 ^ Akiba's Beat (3.61+!) [3.63]
+PCSG00955 ^ Color Guardians
+PCSG00957 ^ Garou: Mark of the Wolves (3.61+!) [3.63]
+PCSG00958 ^ Rei-Jin-G-Lu-P (3.61+!) [3.63]
+PCSG00959 ^ Desire: Remaster Ver. (3.61+!) [3.63]
+PCSG00960 ^ Ken ga Kimi: Momoyo Tsuzuri (3.61+!) [3.63]
+PCSG00961 ^ Fata Morgana no Yakata (3.61+!) [3.63]
+PCSG00962 ^ Valkyria Revolution (3.61+!) [3.63]
+PCSG00964 ^ UNDER NIGHT IN-BIRTH Exe:Late[st] (3.61+!) [3.63]
+PCSG00967 ^ Owaru Sekai to Birthday (3.61+!) [3.63]
+PCSG00968 ^ Taishou Mebiusline: Teito Bibouroku Hare (3.61+!) [3.65]
+PCSG00971 ^ Asdivine Hearts (3.61+!) [3.63]
+PCSG00972 ^ METAL MAX Xeno (3.61+!) [3.67]
+PCSG00974 ^ Super Robot Taisen V (Premium Anime Song & Sound Edition)
+PCSG00975 ^ Harukanaru Toki no Naka de 6: Gentou Rondo (3.61+!) [3.63]
+PCSG00977 ^ Touhou Genso Maroku W: The Devil of Decline (3.61+!) [3.65]
+PCSG00979 ^ Adventure Time: The Secret of the Nameless Kingdom
+PCSG00981 ^ Flowers: Aki-Hen (3.61+!) [3.61]
+PCSG00983 ^ Sengoku Shura SOUL (3.61+!) [3.61]
+PCSG00985 ^ Touhou Genso Wanderer (3.61+!) [3.61]
+PCSG00986 ^ Nights of Azure 2: Bride of the New Moon (3.61+!) [3.65]
+PCSG00987 ^ Blue Reflection: Maboroshi ni Mau - Shoujo no Ken (3.61+!) [3.63]
+PCSG00988 ^ Hatsuru Kotonaki Mirai Yori (3.61+!) [3.63]
+PCSG00989 ^ Moe Moe 2-Ji Daisenryaku 3 (3.61+!) [3.63]
+PCSG00990 ^ RepKiss (3.61+!) [3.63]
+PCSG00991 ^ Getsuei no Kusari: Kouran Moratorium (3.61+!) [3.63]
+PCSG00992 ^ Harukanaru Toki no Naka de 3 Ultimate (3.61+!) [3.63]
+PCSG00993 ^ Sousei no Onmyouji (3.61+!) [3.63]
+PCSG00995 ^ Chaos;Child: Love chu chu!! (3.61+!) [3.63]
+PCSG00996 ^ Kono Yo no Hate de Koi wo Utau Shoujo YU-NO Original NEC PC-9800 Series Version (3.61+!) [3.63]
+PCSG00997 ^ Hatsuyuki Sakura (3.61+!) [3.63]
+PCSG00998 ^ Winning Post 8 2017
+PCSG00999 ^ Touhou Koubutou V (3.61+!) [3.61]
+PCSG01000 ^ ISLAND (3.61+!) [3.63]
+PCSG01001 ^ Side Kicks! (3.61+!) [3.63]
+PCSG01005 ^ Shiin (3.61+!) [3.63]
+PCSG01006 ^ Bard's Gold (3.61+!) [3.61]
+PCSG01007 ^ Kamaitachi no Yoru: Rinne Saisei (3.61+!) [3.63]
+PCSG01010 ^ Nidhogg (3.61+!) [3.63]
+PCSG01013 ^ Gun Gun Pixies (3.61+!) [3.63]
+PCSG01014 ^ Nil Admirari no Tenbin: Kuroyuri En'youtan (3.61+!) [3.65]
+PCSG01015 ^ Tokeijikake no Ley Line: Kagerou ni Samayou Majo (3.61+!) [3.63]
+PCSG01016 ^ Accel World vs Sword Art Online: Millennium Twilight (3.61+!) [3.63]
+PCSG01017 ^ Daredemo Shodan ni Nareru Igo Kyoushitsu (3.61+!) [3.63]
+PCSG01019 ^ Tsumikui: Sen no Noroi Sen no Inori for V (3.61+!) [3.63]
+PCSG01020 ^ Ikemen Bakumatsu: Unmei no Koi (3.61+!) [3.63]
+PCSG01021 ^ OCCULTIC;NINE (3.61+!) [3.65]
+PCSG01022 ^ Back to Bed
+PCSG01023 ^ Tsuihou Senkyo (3.61+!) [3.63]
+PCSG01024 ^ Hanasaki Work Spring (3.61+!) [3.63]
+PCSG01025 ^ Tsukitomo. Tsukiuta 12 Memories
+PCSG01027 ^ Gundemoniums (3.61+!) [3.65]
+PCSG01028 ^ Kono Subarashii Sekai ni Shukufuku wo! Kono Yokubukai Game ni Shinpan wo! (3.61+!) [3.65]
+PCSG01029 ^ Gal*Gun: Double Peace Bilingual (3.61+!) [3.63]
+PCSG01030 ^ Persona 5: Dancing Star Night (3.61+!) [3.67]
+PCSG01031 ^ Persona 3: Dancing Moon Night (3.61+!) [3.67]
+PCSG01033 ^ Blast 'Em Bunnies (3.61+!) [3.65]
+PCSG01034 ^ Sengoku Hime 7: Sen'un Tsuranuku Guren no Ishi (3.61+!) [3.68]
+PCSG01036 ^ Hiiro no Kakera - Scarlet fragments - Memories of a Certain Color
+PCSG01037 ^ Rabi Laby: Puzzle Out Stories (3.61+!) [3.63]
+PCSG01039 ^ Hello Lady! Superior Dynamis (3.61+!) [3.65]
+PCSG01040 ^ Tachyon Project
+PCSG01041 ^ Spheroids (3.61+!) [3.67]
+PCSG01042 ^ Kenka Bancho Otome ~Absolutely Invincible My Honey~ (3.61+!) [3.65]
+PCSG01043 ^ Rewrite Harvest festa! (3.61+!) [3.63]
+PCSG01044 ^ Karumaruka * Circle (3.61+!) [3.63]
+PCSG01045 ^ Jikkyou Powerful Pro Yakyuu Championship 2017 (3.61+!) [3.65]
+PCSG01049 ^ Tokyo Yamanote Boys for V: Fan Disc (3.61+!) [3.65]
+PCSG01050 ^ Farming Simulator 18 (3.61+!) [3.63]
+PCSG01060 ^ Hulu (3.61+!) [3.63]
+PCSG01061 ^ Revenant Saga (3.61+!) [3.63]
+PCSG01062 ^ Steam Prison: Nanatsu no Bitoku (3.61+!) [3.65]
+PCSG01063 ^ Ikemen Sengoku: Toki wo Kakeru Koi - Aratanaru Deai (3.61+!) [3.67]
+PCSG01066 ^ Chouchou Jiken Rhapsodic (3.61+!) [3.65]
+PCSG01070 ^ Song of Heiligenstadt (3.61+!) [3.65]
+PCSG01071 ^ Photon 3 (3.61+!) [3.65]
+PCSG01072 ^ VA-11 HALL-A
+PCSG01073 ^ Gintama Rumble (3.61+!) [3.65]
+PCSG01074 ^ Gintama Rumble (AV Edition - Anime Sound & Voice Edition)
+PCSG01076 ^ Oretachi no Sekai wa Owatteiru (3.61+!) [3.65]
+PCSG01079 ^ Utawarerumono: Chiriyuku Mono e no Komoriuta (3.61+!) [3.67]
+PCSG01080 ^ Yomawari: Midnight Shadows (3.61+!) [3.65]
+PCSG01081 ^ Uta no * Prince-Sama: Amazing Aria & Sweet Serenade Love
+PCSG01082 ^ DYING: Reborn (3.61+!) [3.63]
+PCSG01083 ^ Iwaihime -Matsuri- (3.61+!) [3.65]
+PCSG01084 ^ Wagamama High Spec (3.61+!) [3.65]
+PCSG01086 ^ Amaekata wa Kanojo Nari ni. (3.61+!) [3.65]
+PCSG01087 ^ Kimi no Hitomi ni Hit Me (3.61+!) [3.65]
+PCSG01089 ^ A Certain Magical Virtual-On (3.61+!) [3.65]
+PCSG01091 ^ Fate/EXTELLA LINK
+PCSG01092 ^ Princess Days First Semester -Princess Days-
+PCSG01093 ^ Kono Subarashii Sekai ni Shukufuku wo! Attack of the Destroyer (3.61+!) [3.65]
+PCSG01094 ^ IDOLiSH7 Twelve Fantasia! (3.61+!) [3.65]
+PCSG01095 ^ Grisaia no Kajitsu: Side Episode (3.61+!) [3.65]
+PCSG01096 ^ Moujuu-Tachi to Ohimesama ~ in blossom ~
+PCSG01098 ^ Bit Dungeon+
+PCSG01099 ^ Ninja Usagimaru: Two Tails of Adventure (3.61+!) [3.65]
+PCSG01100 ^ Doukoku Soshite... (3.61+!) [3.67]
+PCSG01101 ^ Samurai Shodown V Special (3.61+!) [3.65]
+PCSG01102 ^ Attack on Titan 2 (3.61+!) [3.67]
+PCSG01103 ^ Tokyo Clanpool (3.61+!) [3.65]
+PCSG01105 ^ Ouka Sabaki Zan (3.61+!) [3.65]
+PCSG01106 ^ Kamidanomi Shisugite Ore no Mirai ga Yabai (3.61+!) [3.65]
+PCSG01107 ^ Nora To Oujo To Noraneko Heart (3.61+!) [3.65]
+PCSG01108 ^ Antiquia Lost (3.61+!) [3.65]
+PCSG01109 ^ Onigiri (3.61+!) [3.65]
+PCSG01110 ^ Code: Realize ~Shirogane no Kiseki~ (3.61+!) [3.65]
+PCSG01111 ^ Ninki Seiyuu no Tsukurikata (3.61+!) [3.65]
+PCSG01112 ^ Undertale (3.61+!) [3.65]
+PCSG01113 ^ Zanki Zero (3.61+!) [3.68]
+PCSG01114 ^ WorldEnd Syndrome (3.61+!) [3.68]
+PCSG01115 ^ VitaminX Destination (3.61+!) [3.65]
+PCSG01116 ^ Atelier Lydie & Suelle: Fushigi na Kaiga no Renkinjutsushi (3.61+!) [3.65]
+PCSG01117 ^ Goetia: The Infinite Tower (3.61+!) [3.65]
+PCSG01119 ^ Digimon Story Cyber Sleuth: Hacker's Memory (3.61+!) [3.65]
+PCSG01121 ^ Seiken Densetsu 2: Secret of Mana (3.61+!) [3.65]
+PCSG01123 ^ Banbutsu otome danjonzu (3.61+!) [3.65]
+PCSG01124 ^ Kin'iro no Corda 2 ff (3.61+!) [3.65]
+PCSG01126 ^ Digimon Story Cyber Sleuth: Hacker's Memory - TV Anime Sound Edition
+PCSG01129 ^ Super Robot Taisen X (Premium Anime Song & Sound Edition)
+PCSG01134 ^ Ephemeral: Fantasy on Dark (3.61+!) [3.65]
+PCSG01135 ^ Tonari ni Kanojo no Iru Shiawase: Two Farce (3.61+!) [3.65]
+PCSG01137 ^ 2064: Read Only Memories (3.61+!) [3.67]
+PCSG01138 ^ Amenity's Life (3.61+!) [3.65]
+PCSG01142 ^ Bullet Girls Phantasia (3.61+!) [3.67]
+PCSG01143 ^ Browser San Goku Shi (3.61+!) [3.67]
+PCSG01144 ^ Himehibi: New Princess Days!! Zoku! Ni-Gakki
+PCSG01147 ^ Reverie (3.61+!) [3.67]
+PCSG01149 ^ Grisaia Phantom Trigger 01 & 02 (3.61+!) [3.65]
+PCSG01150 ^ CharadeManiacs (3.61+!) [3.68]
+PCSG01153 ^ Katahane -An' call Belle- (3.61+!) [3.65]
+PCSG01157 ^ Harukanaru Toki no Naka de Ultimate (3.61+!) [3.67]
+PCSG01159 ^ VARIABLE BARRICADE (3.61+!) [3.69]
+PCSG01161 ^ OCCULTIC;NINE Soundtrack (3.61+!) [3.65]
+PCSG01162 ^ Collar×Malice －Unlimited－ (3.61+!) [3.68]
+PCSG01163 ^ Anata no Shikihime Kyoudoutan (3.61+!) [3.67]
+PCSG01164 ^ Jikkyou Powerful Pro Yakyuu 2018 (3.61+!) [3.67]
+PCSG01166 ^ Steins;Gate Elite (3.61+!) [3.68]
+PCSG01170 ^ Sir Eatsalot (3.61+!) [3.67]
+PCSG01171 ^ Tokimeki Restaurant: Project Tristars
+PCSG01175 ^ Azayaka na Irodori no Naka de, Kimi Rashiku (3.61+!) [3.67]
+PCSG01177 ^ Shiki hime no niwa (3.61+!) [3.67]
+PCSG01178 ^ NadeRevo! Nadeshiko Revolution (3.61+!) [3.67]
+PCSG01179 ^ Catherine: Full Body (3.61+!) [3.69]
+PCSG01182 ^ Kanojo * Step (3.61+!) [3.67]
+PCSG01183 ^ Memories Off -Innocent Fille- (3.61+!) [3.67]
+PCSG01184 ^ Iconoclasts (3.61+!) [3.65]
+PCSG01187 ^ Flowers: Fuyu-hen (3.61+!) [3.67]
+PCSG01188 ^ THE KING OF FIGHTERS '97 GLOBAL MATCH (3.61+!) [3.67]
+PCSG01190 ^ METAL MAX 25th Anniversary Soundtrack
+PCSG01191 ^ Liar Princess and the Blind Prince (3.61+!) [3.67]
+PCSG01192 ^ Shiro to Kuro no Alice -Twilight Line- (3.61+!) [3.68]
+PCSG01193 ^ Mikagami Sumika no Seifuku Katsudou (3.61+!) [3.67]
+PCSG01195 ^ God Wars: Nihon Shinwa Taisen (3.61+!) [3.67]
+PCSG01196 ^ sweet pool (3.61+!) [3.67]
+PCSG01198 ^ Amatsutsumi (3.61+!) [3.67]
+PCSG01200 ^ Dungeon Hunter 5 (3.61+!) [3.68]
+PCSG01201 ^ Tonari ni Kanojo no Iru Shiawase ~Winter Guest~ (3.61+!) [3.68]
+PCSG01204 ^ NG (3.61+!) [3.68]
+PCSG01205 ^ Boku to Nurse no Kenshuu Nisshi (3.61+!) [3.68]
+PCSG01208 ^ Wand of Fortune R2 FD: Kimi ni Sasageru Epilogue
+PCSG01209 ^ Radio Hammer Station (3.61+!) [3.67]
+PCSG01210 ^ Seven Days: Anata to Sugosu Nanokakan (3.61+!) [3.68]
+PCSG01211 ^ Kin'iro no Corda 3: Full Voice Special (3.61+!) [3.68]
+PCSG01212 ^ Kin'iro no Corda 3: AnotherSky feat. Jinnan / Shiseikan / Amane Gakuen (3.61+!) [3.68]
+PCSG01215 ^ P3D & P5D Full Soundtrack
+PCSG01216 ^ Bloodstained: Curse of the Moon (3.61+!) [3.67]
+PCSG01217 ^ Radio Hammer Station Original Soundtrack
+PCSG01218 ^ Grisaia Phantom Trigger EP3 & EP4 (3.61+!) [3.68]
+PCSG01219 ^ Jikkyou Powerful Pro Yakyuu Championship 2018 (3.61+!) [3.68]
+PCSG01220 ^ METALMAX DIGITAL SOUNDTRACK BONUS TRACK (3.61+!) [3.68]
+PCSG01222 ^ Rainbow Skies (3.61+!) [3.68]
+PCSG01223 ^ Nelke & the Legendary Alchemists: Ateliers of the New World (3.61+!) [3.69]
+PCSG01227 ^ Chronus Arc (3.61+!) [3.68]
+PCSG01228 ^ ZANKI ZERO DIGITAL SOUNDTRACK BONUS TRACK (3.61+!) [3.68]
+PCSG01230 ^ Revenant Dogma (3.61+!) [3.68]
+PCSG01231 ^ Sakura Sakura (3.61+!) [3.68]
+PCSG01235 ^ Nora To Oujo To Noraneko Heart 2 (3.61+!) [3.69]
+PCSG01237 ^ Stay (3.61+!) [3.68]
+PCSG01238 ^ Root Letter Last Answer (3.61+!) [3.69]
+PCSG01239 ^ Hinemosu Shikihime (3.61+!) [3.68]
+PCSG01241 ^ Kenka Banchou Otome 2nd Rumble!! (3.61+!) [3.69]
+PCSG01242 ^ Asdivine Hearts II (3.61+!) [3.69]
+PCSG01243 ^ Alvastia Chronicles (3.61+!) [3.69]
+PCSG01245 ^ Kin'iro no Corda: Octave (3.61+!) [3.69]
+PCSG01247 ^ Panic Palette (3.61+!) [3.69]
+PCSG01252 ^ Haruoto Alice ＊ Gram (3.61+!) [3.69]
+PCSG01255 ^ Catherine: Full Body Soundtrack (3.61+!) [3.69]
+PCSG01256 ^ Necrosphere Deluxe (3.61+!) [3.69]
+PCSG01259 ^ Silverio Trinity: BEYOND THE HORIZON (3.61+!) [3.69]
+PCSG01260 ^ FuruKiss (3.61+!) [3.69]
+PCSG01262 ^ Bonds of the Skies (3.61+!) [3.69]
+PCSG01264 ^ MEMORIES OFF -INNOCENT FILLE- FOR DEAREST (CHI/JPN) (3.61+!) [3.69]
+PCSG01269 ^ RPG Dragons Odyssey Frane (3.61+!) [3.69]
+PCSG80001 ^ NicoNico
+PCSG80005 ^ Malicious Rebirth Original Soundtrack Saitan-hen
+PCSG80006 ^ Malicious Rebirth Original Soundtrack Toubatsu-hen
+PCSG80007 ^ Hulu
+PCSG80008 ^ Senran Kagura: Shinovi Versus Soundtrack
+PCSG80009 ^ Dekamori Senran Kagura Digital Soundtrack
+PCSG80010 ^ ROBOTICS;NOTES ELITE AR
+PCSG90088 ^ Saka-Ban
+PCSG90206 ^ The Idol Master: Music Clips
+PCSG90253 ^ Sword Art Online: Hollow Realization Beater's Player Edition (3.61+!) [3.61]
+PCSI00001 ^ Music Unlimited
+PCSI00007 ^ PlayStation®Mobile Development Assistant
+PCSI00009 ^ PlayStation®Mobile Development Assistant for Unity
+PCSI00010 ^ Unity Runtime for PlayStation Mobile
+PCSI00011 ^ PlayStation Mobile Runtime Package
+PCSI00013 ^ PlayStation Now
+PCSB00025 ^ Puddle
+PCSB00027 ^ F1 2011
+PCSB00031 ^ Virtua Tennis 4: World Tour Edition
+PCSB00032 ^ Virtua Tennis 4: World Tour Edition (RUS)
+PCSB00037 ^ StarDrone Extreme
+PCSB00038 ^ Urban Trial Freestyle
+PCSB00040 ^ Asphalt: Injection
+PCSB00041 ^ Dungeon Hunter: Alliance
+PCSB00042 ^ BlazBlue: Continuum Shift EXTEND
+PCSB00045 ^ Doctor Who: The Eternity Clock
+PCSB00047 ^ Touch my Katamari
+PCSB00048 ^ Ridge Racer
+PCSB00049 ^ Shinobido 2: Revenge of Zen
+PCSB00050 ^ Army Corps of Hell
+PCSB00051 ^ FIFA Football
+PCSB00053 ^ FIFA Football (DEU)
+PCSB00054 ^ FIFA Football (ITA and other languages)
+PCSB00056 ^ A-men
+PCSB00058 ^ Rugby Challenge
+PCSB00060 ^ The Treasures of Montezuma Blitz
+PCSB00061 ^ Lumines: Electronic Symphony
+PCSB00065 ^ Super Monkey Ball Banana Splitz
+PCSB00070 ^ Ultimate Marvel vs. Capcom 3
+PCSB00071 ^ Michael Jackson The Experience HD
+PCSB00074 ^ Assassin's Creed III: Liberation
+PCSB00079 ^ Rayman Origins
+PCSB00080 ^ Pure Chess
+PCSB00089 ^ Dynasty Warriors Next
+PCSB00094 ^ Zen Pinball 2
+PCSB00096 ^ Tales from Space: Mutant Blobs Attack!!!
+PCSB00097 ^ Ninja Gaiden Sigma Plus
+PCSB00098 ^ Disgaea 3: Absence of Detention
+PCSB00101 ^ Putty Squad
+PCSB00102 ^ Chronovolt
+PCSB00103 ^ Lego Harry Potter: Years 5-7
+PCSB00106 ^ Mortal Kombat
+PCSB00107 ^ SunFlowers
+PCSB00109 ^ New Little King's Story
+PCSB00111 ^ CastleStorm
+PCSB00114 ^ Ben 10 Galactic Racing
+PCSB00115 ^ Silent Hill: Book of Memories
+PCSB00116 ^ Pinball Arcade
+PCSB00118 ^ Metal Gear Solid HD Collection
+PCSB00125 ^ Lego The Lord of the Rings
+PCSB00126 ^ Kickbeat
+PCSB00133 ^ Lego Batman 2: DC Super Heroes (ENG-DAN-DEU-FRA-ITA-DUT-POL-RUS-SPA)
+PCSB00135 ^ Lego Batman 2: DC Super Heroes (DEU)
+PCSB00136 ^ Jet Set Radio
+PCSB00144 ^ Street Fighter X Tekken
+PCSB00157 ^ International Snooker 2012
+PCSB00160 ^ Foosball 2012
+PCSB00161 ^ Sine Mora
+PCSB00166 ^ SpyHunter
+PCSB00168 ^ Big Sky Infinity
+PCSB00169 ^ Knytt Underground
+PCSB00170 ^ FIFA 13
+PCSB00176 ^ Metal Gear Solid 3: Snake Eater - HD Edition
+PCSB00177 ^ Metal Gear Solid 2 HD Edition
+PCSB00180 ^ Oddworld: Stranger's Wrath HD
+PCSB00182 ^ MUD - FIM Motocross World Championship
+PCSB00183 ^ Need for Speed: Most Wanted
+PCSB00184 ^ Burn the Rope
+PCSB00185 ^ Doodle God
+PCSB00186 ^ escapeVektor
+PCSB00189 ^ Guacamelee!
+PCSB00190 ^ Sonic & All-Stars Racing Transformed
+PCSB00194 ^ Zombie Tycoon 2: Brainhov's Revenge
+PCSB00198 ^ History: Legends of War
+PCSB00203 ^ Retro City Rampage
+PCSB00204 ^ WRC 3 - FIA World Rally Championship
+PCSB00205 ^ Zero Escape: Virtue's Last Reward
+PCSB00213 ^ Call of Duty Black Ops: Declassified
+PCSB00215 ^ Dokuro
+PCSB00222 ^ A-men 2
+PCSB00226 ^ Ragnarok Odyssey
+PCSB00229 ^ Draw Slasher
+PCSB00230 ^ Let's Fish! Hooked On
+PCSB00231 ^ Alien Breed
+PCSB00232 ^ Call of Duty Black Ops: Declassified
+PCSB00237 ^ Machinarium
+PCSB00239 ^ Earth Defense Force 2017 Portable
+PCSB00240 ^ Flying Hamster HD
+PCSB00241 ^ Orgarhythm
+PCSB00242 ^ Sumioni: Demon Arts
+PCSB00244 ^ Jetpack Joyride
+PCSB00245 ^ Persona 4 Golden
+PCSB00246 ^ Hungry Giraffe
+PCSB00254 ^ Star Wars Pinball
+PCSB00255 ^ Rocketbirds: Hardboiled Chicken
+PCSB00258 ^ Quell Memento
+PCSB00264 ^ Nun Attack
+PCSB00265 ^ BreakQuest: Extra Evolution
+PCSB00272 ^ Thomas Was Alone
+PCSB00273 ^ Fruit Ninja
+PCSB00274 ^ Atomic Ninjas
+PCSB00275 ^ Oddworld: Munch's Oddysee HD
+PCSB00291 ^ Atelier Totori Plus: The Adventurer of Arland
+PCSB00294 ^ Ninja Gaiden Sigma 2 Plus
+PCSB00295 ^ Germinator
+PCSB00296 ^ Dead or Alive 5 Plus
+PCSB00302 ^ Velocity Ultra
+PCSB00303 ^ Coconut Dodge Revitalised
+PCSB00304 ^ Lego Legends of Chima: Laval's Journey
+PCSB00305 ^ Superfrog HD
+PCSB00306 ^ Deathmatch Village
+PCSB00313 ^ Men's Room Mayhem
+PCSB00315 ^ Lego Marvel Super Heroes: Universe in Peril
+PCSB00316 ^ MotoGP 13
+PCSB00317 ^ Stealth Inc: A Clone in the Dark
+PCSB00318 ^ Hotline Miami
+PCSB00320 ^ Mahjong Royal Towers
+PCSB00321 ^ Luftrausers
+PCSB00323 ^ Frozen Synapse Prime
+PCSB00324 ^ AeternoBlade
+PCSB00326 ^ OMG HD Zombies!
+PCSB00328 ^ Floating Cloud God Saves the Pilgrims in HD!
+PCSB00329 ^ The HD Adventures of Rotating Octopus Character
+PCSB00331 ^ Kung Fu Rabbit
+PCSB00332 ^ Worms Revolution Extreme
+PCSB00333 ^ Farming Simulator
+PCSB00336 ^ Limbo
+PCSB00339 ^ FIFA 14
+PCSB00345 ^ WRC 4 - FIA World Rally Championship
+PCSB00346 ^ Danganronpa: Trigger Happy Havoc
+PCSB00350 ^ Sparkle
+PCSB00353 ^ Batman: Arkham Origins Blackgate
+PCSB00355 ^ Total Recoil
+PCSB00356 ^ Injustice: Gods Among Us Ultimate Edition
+PCSB00357 ^ Football Manager Classic 2014
+PCSB00358 ^ Proteus
+PCSB00359 ^ Spelunky
+PCSB00360 ^ Rayman Legends
+PCSB00361 ^ Lone Survivor: The Director's Cut
+PCSB00362 ^ Super Exploding Zoo!
+PCSB00364 ^ Shake Spears!
+PCSB00365 ^ Real Boxing
+PCSB00367 ^ Ms. Germinator
+PCSB00370 ^ Rainbow Moon
+PCSB00373 ^ Divekick
+PCSB00374 ^ Crazy Market
+PCSB00375 ^ Stick it to the Man
+PCSB00377 ^ Atelier Meruru Plus: The Apprentice of Arland
+PCSB00381 ^ Doodle Devil
+PCSB00382 ^ Flyhunter Origins
+PCSB00384 ^ Aabs Animals
+PCSB00388 ^ Fort Defense
+PCSB00389 ^ Die!Die!Die!
+PCSB00390 ^ Z-Run
+PCSB00393 ^ PixelJunk Monsters: Ultimate HD
+PCSB00394 ^ Final Fantasy X-2 HD Remaster
+PCSB00395 ^ Final Fantasy X HD Remaster
+PCSB00396 ^ Dragon Ball Z: Battle of Z
+PCSB00397 ^ Angry Birds Star Wars
+PCSB00398 ^ Tennis in the Face
+PCSB00399 ^ Azkend 2: The World Beneath
+PCSB00400 ^ King Oddball
+PCSB00402 ^ Angry Birds Trilogy
+PCSB00404 ^ Muramasa Rebirth
+PCSB00405 ^ Terraria
+PCSB00407 ^ TuneIn
+PCSB00408 ^ Dragon's Crown
+PCSB00409 ^ Gunslugs
+PCSB00410 ^ Velocity 2X
+PCSB00411 ^ The Walking Dead: The Complete First Season
+PCSB00412 ^ Age of Zombies
+PCSB00413 ^ Dragon Fantasy Book I
+PCSB00414 ^ Rainbow Skies (3.61+!) [3.67]
+PCSB00416 ^ Table Top Racing
+PCSB00419 ^ Hatsune Miku: Project DIVA f
+PCSB00420 ^ Blast 'Em Bunnies
+PCSB00421 ^ Furmins
+PCSB00422 ^ Treasures of Montezuma Arena
+PCSB00428 ^ The Amazing Spider-Man
+PCSB00429 ^ Sorcery Saga: Curse of the Great Curry God
+PCSB00431 ^ BreakQuest: Extra Evolution Pro Edition
+PCSB00432 ^ Valhalla Knights 3
+PCSB00433 ^ Dustforce
+PCSB00436 ^ Indoor Sports World
+PCSB00437 ^ Duke Nukem 3D: Megaton Edition
+PCSB00439 ^ Surge Deluxe
+PCSB00442 ^ Mahjong World Contest
+PCSB00444 ^ Grand Theft Auto: iFruit
+PCSB00449 ^ OlliOlli
+PCSB00450 ^ The Wolf Among Us: The Complete First Season
+PCSB00452 ^ Best of Board Games (DEMO - needs DLC to unlock full)
+PCSB00453 ^ Best of Arcade Games (DEMO - needs DLC to unlock full)
+PCSB00455 ^ Disgaea 4: A Promise Revisited
+PCSB00456 ^ FEZ
+PCSB00458 ^ Tadeo Jones
+PCSB00460 ^ Demon Gaze
+PCSB00468 ^ Backgammon Blitz
+PCSB00469 ^ The Walking Dead: Season 2 Ep. 1 All That Remains
+PCSB00470 ^ MXGP - The Official Motocross Videogame
+PCSB00471 ^ Ragnarok Odyssey ACE
+PCSB00472 ^ Fort Defense North Menace
+PCSB00473 ^ Monster Monpiece
+PCSB00474 ^ Joe Danger 2: The Movie
+PCSB00475 ^ Joe Danger
+PCSB00478 ^ Toukiden: The Age of Demons
+PCSB00481 ^ Fieldrunners 2
+PCSB00483 ^ Broken Sword 5 - the Serpent's Curse: Episode 1
+PCSB00487 ^ MotoGP 13 Compact
+PCSB00488 ^ Starlight Inception
+PCSB00489 ^ The Swapper
+PCSB00491 ^ BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien
+PCSB00494 ^ TxK
+PCSB00496 ^ Jet Car Stunts
+PCSB00497 ^ Ys: Memories of Celceta
+PCSB00498 ^ MotoGP 14
+PCSB00499 ^ Deception IV: Blood Ties
+PCSB00500 ^ Lego Ninjago: Nindroids
+PCSB00502 ^ Oddworld: New 'n' Tasty
+PCSB00503 ^ Lego The Hobbit
+PCSB00504 ^ Titan Attacks!
+PCSB00505 ^ Ultratron
+PCSB00507 ^ Switch Galaxy Ultra
+PCSB00508 ^ Ethan: Meteor Hunter
+PCSB00509 ^ Dynasty Warriors 8: Xtreme Legends Complete Edition
+PCSB00511 ^ Hotline Miami 2: Wrong Number
+PCSB00513 ^ SuperMagical (3.61+!) [3.63]
+PCSB00514 ^ Danganronpa 2: Goodbye Despair
+PCSB00515 ^ Hyperdimension Neptunia: Producing Perfection
+PCSB00520 ^ Broken Sword 5 - the Serpent's Curse: Episode 2
+PCSB00522 ^ Foul Play
+PCSB00523 ^ Final Horizon
+PCSB00525 ^ Gravity Crash Ultra
+PCSB00527 ^ forma.8 (3.61+!) [3.63]
+PCSB00528 ^ Futuridium EP Deluxe
+PCSB00529 ^ The Treasures of Montezuma 4
+PCSB00530 ^ MouseCraft
+PCSB00539 ^ Conception II: Children of the Seven Stars
+PCSB00540 ^ Day D Tower Rush
+PCSB00541 ^ Mind Zero
+PCSB00542 ^ SteamWorld Dig
+PCSB00544 ^ Minutes
+PCSB00548 ^ PixelJunk Shooter Ultimate
+PCSB00550 ^ Tales of Hearts R
+PCSB00551 ^ Don't Starve: Giant Edition
+PCSB00552 ^ Tiny Troopers Joint Ops
+PCSB00553 ^ The Lego Movie: Videogame
+PCSB00554 ^ Hatsune Miku: Project DIVA F 2nd
+PCSB00556 ^ Doodle Kingdom
+PCSB00557 ^ One Piece: Unlimited World Red
+PCSB00560 ^ Minecraft: PlayStation Vita Edition
+PCSB00561 ^ Alien Shooter
+PCSB00563 ^ Lego Batman 3: Beyond Gotham
+PCSB00564 ^ Battalion Commander
+PCSB00565 ^ Run Like Hell!
+PCSB00566 ^ The Keeper of 4 Elements
+PCSB00568 ^ Another World: 20th Anniversary Edition
+PCSB00569 ^ Baboon!
+PCSB00571 ^ Rogue Legacy
+PCSB00573 ^ Cel Damage HD
+PCSB00574 ^ Toukiden: Kiwami
+PCSB00575 ^ Warriors Orochi 3 Ultimate
+PCSB00579 ^ Hyperdimension Neptunia: Re;Birth1
+PCSB00580 ^ Sparkle 2
+PCSB00581 ^ Crimsonland
+PCSB00582 ^ Atelier Rorona Plus: The Alchemist of Arland
+PCSB00583 ^ Phantom Breaker : Battlegrounds
+PCSB00584 ^ Mahjong Gold
+PCSB00588 ^ Skeleton Rider
+PCSB00590 ^ OlliOlli2: Welcome to Olliwood
+PCSB00591 ^ MAGICAL BEAT
+PCSB00592 ^ Samurai Warriors 4
+PCSB00594 ^ Natural Doctrine
+PCSB00595 ^ Invokers Tournament
+PCSB00596 ^ Soldner-X 2: Final Prototype
+PCSB00598 ^ Child of Light
+PCSB00599 ^ Citizens of Earth
+PCSB00601 ^ Senran Kagura: Shinovi Versus
+PCSB00602 ^ Senran Kagura: Bon Appetit! (Hanzo x Crimson Squad)
+PCSB00603 ^ FIFA 15 (ENG)
+PCSB00604 ^ FIFA 15 (FRA)
+PCSB00606 ^ FIFA 15 (SPA)
+PCSB00607 ^ FIFA 15 (DEU)
+PCSB00608 ^ FIFA 15 (DUT)
+PCSB00609 ^ Gravity Badgers
+PCSB00610 ^ Get Off My Lawn!
+PCSB00611 ^ Kick & Fennick
+PCSB00616 ^ Metrico
+PCSB00618 ^ Sword Art Online -Hollow Fragment-
+PCSB00619 ^ Pocket RPG
+PCSB00620 ^ Element4l
+PCSB00621 ^ Dragon Fin Soup
+PCSB00626 ^ Hyperdimension Neptunia: Re;Birth2 Sisters Generation
+PCSB00628 ^ Rugby 15
+PCSB00630 ^ Arcana Heart 3: Love Max!!!!!
+PCSB00636 ^ Criminal Girls: Invite Only
+PCSB00638 ^ Scram Kitty DX
+PCSB00639 ^ Don't Die, Mr. Robot!
+PCSB00640 ^ AKIBA'S TRIP: Undead ＆ Undressed
+PCSB00641 ^ htoL#NiQ: The Firefly Diary
+PCSB00642 ^ Tetris Ultimate
+PCSB00643 ^ Race The Sun
+PCSB00645 ^ Pix the Cat
+PCSB00646 ^ Heroes of Loot
+PCSB00648 ^ Best of Arcade Games (DEMO - needs DLC to unlock full)
+PCSB00650 ^ Project Root
+PCSB00652 ^ Rock Boshers DX: Director's Cut
+PCSB00655 ^ Tokyo Twilight Ghost Hunters
+PCSB00656 ^ Flame Over
+PCSB00660 ^ Rollers of the Realm
+PCSB00661 ^ AQUA KITTY - Milk Mine Defender DX
+PCSB00662 ^ Woah Dave!
+PCSB00663 ^ Fantasy Hero: Unsigned Legacy
+PCSB00664 ^ Jetpack Joyride Deluxe
+PCSB00669 ^ BADLAND: Game of the Year Edition
+PCSB00670 ^ Tadeo Jones and the Lost Manuscript
+PCSB00671 ^ Knight Solitaire
+PCSB00672 ^ Medieval Defenders
+PCSB00673 ^ Pirate Solitaire
+PCSB00674 ^ Strike Solitaire 2
+PCSB00675 ^ Strike Solitaire
+PCSB00676 ^ The Binding of Isaac: Rebirth
+PCSB00679 ^ Nidhogg
+PCSB00680 ^ Q*bert: Rebooted
+PCSB00681 ^ Mahjong Carnival
+PCSB00682 ^ Retro City Rampage DX
+PCSB00683 ^ Operation Abyss: New Tokyo Legacy
+PCSB00684 ^ 1001 Spikes
+PCSB00685 ^ Multiplayer.it
+PCSB00687 ^ Home - A Unique Horror Adventure
+PCSB00690 ^ Stealth Inc 2: A Game of Clones
+PCSB00693 ^ SteamWorld Heist
+PCSB00694 ^ La-Mulana EX
+PCSB00696 ^ MXGP - The Official Motocross Videogame Compact
+PCSB00697 ^ MotoGP 14 Compact
+PCSB00698 ^ Disney Infinity 2.0 Play Without Limits
+PCSB00699 ^ Disney Infinity 2.0 Play Without Limits
+PCSB00700 ^ Atelier Ayesha Plus ~The Alchemist of Dusk~
+PCSB00701 ^ Hyperdevotion Noire: Goddess Black Heart
+PCSB00702 ^ Severed
+PCSB00703 ^ Lego Jurassic World
+PCSB00704 ^ Damascus Gear: Operation Tokyo
+PCSB00705 ^ Nihilumbra
+PCSB00706 ^ Lego Ninjago: Shadow of Ronin
+PCSB00710 ^ Hyperdimension Neptunia U: Action Unleashed
+PCSB00713 ^ J-STARS Victory VS+
+PCSB00714 ^ ROCK BOSHERS DX: Director's Cut SOUNDTRACK
+PCSB00715 ^ AQUA KITTY - Milk Mine Defender DX (Soundtrack)
+PCSB00716 ^ SpongeBob HeroPants
+PCSB00717 ^ One Piece: Pirate Warriors 3
+PCSB00720 ^ Titan Souls
+PCSB00722 ^ Teslagrad
+PCSB00724 ^ Steins;Gate
+PCSB00726 ^ Rayman Origins + Legends
+PCSB00727 ^ Whispering Willows
+PCSB00731 ^ Grim Fandango Remastered
+PCSB00733 ^ Space Hulk
+PCSB00734 ^ Cosmophony
+PCSB00735 ^ Hatoful Boyfriend
+PCSB00736 ^ Poltergeist: A Pixelated Horror
+PCSB00738 ^ Bodycheck (3.61+!) [3.63]
+PCSB00740 ^ Amnesia: Memories
+PCSB00741 ^ Bombing Busters
+PCSB00742 ^ XCOM: Enemy Unknown Plus
+PCSB00743 ^ Shovel Knight
+PCSB00744 ^ Reel Fishing: Master’s Challenge
+PCSB00745 ^ XBlaze Code: Embryo
+PCSB00746 ^ Sid Meier's Civilization Revolution 2 Plus
+PCSB00747 ^ Day of the Tentacle Remastered
+PCSB00748 ^ Broken Age
+PCSB00751 ^ Hyperdimension Neptunia: Re;Birth3 V Generation
+PCSB00760 ^ TorqueL
+PCSB00762 ^ WRC 5 - FIA World Rally Championship
+PCSB00763 ^ Dengeki Bunko: Fighting Climax
+PCSB00764 ^ Lego Marvel's Avengers
+PCSB00765 ^ Royal Defense Invisible Threat
+PCSB00766 ^ Royal Defense
+PCSB00767 ^ Croixleur Sigma
+PCSB00768 ^ Color Guardians
+PCSB00769 ^ Geometry Wars 3: Dimensions Evolved
+PCSB00770 ^ Rugby World Cup 2015
+PCSB00771 ^ NekoBuro - Cats Block
+PCSB00772 ^ Metal Slug 3
+PCSB00774 ^ Sparkle Unleashed
+PCSB00775 ^ Type:Rider
+PCSB00776 ^ Handball 16
+PCSB00778 ^ The Swindle
+PCSB00779 ^ Axiom Verge
+PCSB00782 ^ Sayonara UmiharaKawase +
+PCSB00783 ^ Nova-111
+PCSB00786 ^ Super Time Force Ultra
+PCSB00788 ^ Danganronpa Another Episode: Ultra Despair Girls
+PCSB00789 ^ Spider: Rite of the Shrouded Moon (3.61+!) [3.61]
+PCSB00791 ^ Top Trumps Turbo (3.61+!) [3.63]
+PCSB00792 ^ Assassin's Creed Chronicles
+PCSB00797 ^ Xeodrifter
+PCSB00798 ^ Ar nosurge Plus: Ode to an Unborn Star
+PCSB00799 ^ Gem Legends
+PCSB00803 ^ Pumped BMX +
+PCSB00805 ^ Back to Bed
+PCSB00806 ^ Samurai Warriors: Chronicles 3
+PCSB00807 ^ Shutshimi
+PCSB00809 ^ Crunchyroll
+PCSB00810 ^ VVVVVV
+PCSB00811 ^ A Boy and His Blob
+PCSB00813 ^ Dungeon Travelers 2: The Royal Library & The Monster Seal
+PCSB00814 ^ Lost Dimension
+PCSB00818 ^ Velocibox (Game and Theme)
+PCSB00820 ^ The BIT.TRIP
+PCSB00822 ^ Corpse Party: Blood Drive
+PCSB00823 ^ Rogue Aces (3.61+!) [3.65]
+PCSB00825 ^ Octodad: Dadliest Catch
+PCSB00826 ^ Sky Force Anniversary
+PCSB00827 ^ Volume
+PCSB00828 ^ Samurai Warriors 4-II
+PCSB00829 ^ Deception IV: The Nightmare Princess
+PCSB00830 ^ Sword Art Online: Lost Song
+PCSB00835 ^ Funk of Titans
+PCSB00836 ^ Rocketbirds 2: Evolution
+PCSB00837 ^ Mediaset Infinity
+PCSB00839 ^ Roundabout (3.61+!) [3.68]
+PCSB00840 ^ Corridor Z
+PCSB00841 ^ Unepic
+PCSB00842 ^ 2013: Infected Wars
+PCSB00843 ^ Farming Simulator 16
+PCSB00845 ^ Level 22
+PCSB00847 ^ Norn9: Var Commons
+PCSB00848 ^ Code: Realize ~Guardian of Rebirth~
+PCSB00850 ^ Squares
+PCSB00851 ^ Hatoful Boyfriend: Holiday Star
+PCSB00853 ^ Curses 'N Chaos
+PCSB00858 ^ Actual Sunlight
+PCSB00859 ^ Skullgirls 2nd Encore
+PCSB00861 ^ Digimon Story Cyber Sleuth
+PCSB00862 ^ The Bridge
+PCSB00863 ^ BlazBlue: Chronophantasma Extend
+PCSB00866 ^ The Legend of Heroes: Trails of Cold Steel
+PCSB00867 ^ Persona 4: Dancing All Night
+PCSB00868 ^ Uncanny Valley (3.61+!) [3.61]
+PCSB00869 ^ The Sun and Moon
+PCSB00870 ^ Paranautical Activity
+PCSB00871 ^ Dynasty Warriors 8 Empires
+PCSB00872 ^ Vertical Drop Heroes HD
+PCSB00873 ^ WE ARE DOOMED
+PCSB00874 ^ God Eater Resurrection
+PCSB00875 ^ God Eater 2 Rage Burst
+PCSB00876 ^ Bastion
+PCSB00877 ^ Lego Star Wars: The Force Awakens
+PCSB00878 ^ Twitch
+PCSB00879 ^ Letter Quest Remastered
+PCSB00880 ^ DARIUSBURST Chronicle Saviours
+PCSB00881 ^ Super Meat Boy!
+PCSB00882 ^ Senran Kagura: Estival Versus
+PCSB00884 ^ Earth Defense Force 2: Invaders from Planet Space
+PCSB00885 ^ Pixel Hunter
+PCSB00887 ^ Red Game Without a Great Name
+PCSB00888 ^ The Quiet Collection
+PCSB00889 ^ Dreii
+PCSB00891 ^ Superbeat Xonic
+PCSB00892 ^ Dynasty Warriors 8 Empires (Free Alliances Version)
+PCSB00893 ^ One Piece: Burning Blood
+PCSB00894 ^ Fat City
+PCSB00895 ^ Dino Dini's Kick Off Revival (3.61+!) [3.63]
+PCSB00896 ^ Rally Copters
+PCSB00898 ^ Attack on Titan: Wings of Freedom
+PCSB00899 ^ Super Star Wars
+PCSB00900 ^ Panda Run
+PCSB00901 ^ Three Fourths Home
+PCSB00903 ^ Ninja Senki DX
+PCSB00904 ^ Trillion: God of Destruction
+PCSB00906 ^ Atelier Escha & Logy Plus ~Alchemists of the Dusk Sky~
+PCSB00907 ^ Samurai Warriors 4 Empires
+PCSB00908 ^ Stranger of Sword City
+PCSB00910 ^ Neon Chrome (3.61+!) [3.61]
+PCSB00911 ^ Baseball Riot
+PCSB00912 ^ Tachyon Project
+PCSB00914 ^ Nuclear Throne
+PCSB00918 ^ Towerfall Ascension
+PCSB00919 ^ Crypt of the NecroDancer
+PCSB00920 ^ Bridge Constructor (3.61+!) [3.61]
+PCSB00921 ^ MegaTagmension Blanc + Neptune VS Zombies
+PCSB00922 ^ Hitman GO: Definitive Edition
+PCSB00923 ^ SwapQuest
+PCSB00924 ^ Organ Trail Complete Edition
+PCSB00927 ^ The Last Blade 2
+PCSB00928 ^ Ray Gigant
+PCSB00929 ^ Knock-Knock
+PCSB00931 ^ Dragon Fantasy: The Black Tome of Ice
+PCSB00933 ^ Stranded: A Mars Adventure
+PCSB00934 ^ Space Overlords (3.61+!) [3.61]
+PCSB00935 ^ Risk of Rain
+PCSB00936 ^ Attractio
+PCSB00937 ^ Aegis of Earth: Protonovus Assault
+PCSB00938 ^ HTR+ Slot Car Simulation
+PCSB00939 ^ Lumo
+PCSB00940 ^ Neverending Nightmares
+PCSB00942 ^ Zero Escape: Zero Time Dilemma
+PCSB00944 ^ Energy Cycle (3.61+!) [3.65]
+PCSB00945 ^ Energy Balance (3.61+!) [3.65]
+PCSB00946 ^ Spheroids (3.61+!) [3.63]
+PCSB00948 ^ iO (3.61+!) [3.63]
+PCSB00949 ^ Green Game: TimeSwapper
+PCSB00950 ^ Siralim
+PCSB00951 ^ World of Final Fantasy
+PCSB00952 ^ Downwell
+PCSB00953 ^ Dex (3.61+!) [3.63]
+PCSB00954 ^ Shu (3.61+!) [3.63]
+PCSB00955 ^ A Virus Named TOM
+PCSB00956 ^ Gal*Gun: Double Peace
+PCSB00958 ^ Mystery Chronicle: One Way Heroics
+PCSB00959 ^ Grand Kingdom
+PCSB00960 ^ A.W.: Phoenix Festa
+PCSB00961 ^ Krinkle Krusher
+PCSB00963 ^ 10 Second Ninja X
+PCSB00964 ^ Alone With You
+PCSB00965 ^ Gem Smashers (3.61+!) [3.63]
+PCSB00967 ^ Super Blast Deluxe
+PCSB00968 ^ Still Time (3.61+!) [3.65]
+PCSB00969 ^ Xenoraid (3.61+!) [3.61]
+PCSB00972 ^ Sword Art Online: Hollow Realization (3.61+!) [3.61]
+PCSB00973 ^ Atelier Sophie ~The Alchemist of the Mysterious Book~
+PCSB00974 ^ LASER DISCO DEFENDERS
+PCSB00975 ^ Adventures of Mana
+PCSB00976 ^ XBlaze Lost: Memories
+PCSB00977 ^ Superdimension Neptune vs. Sega Hard Girls
+PCSB00978 ^ Spy Chameleon
+PCSB00979 ^ MUTANT MUDDS: SUPER CHALLENGE
+PCSB00981 ^ Dragon Quest Builders
+PCSB00983 ^ Mobile Suit Gundam: Extreme VS-Force
+PCSB00984 ^ Criminal Girls 2: Party Favors
+PCSB00985 ^ Psycho-Pass: Mandatory Happiness
+PCSB00986 ^ Odin Sphere Leifthrasir
+PCSB00987 ^ Yomawari: Night Alone
+PCSB00989 ^ Shiren The Wanderer: The Tower of Fortune and the Dice of Fate
+PCSB00990 ^ MeiQ: Labyrinth of Death
+PCSB00992 ^ Castle Invasion: Throne Out
+PCSB00993 ^ Claire: Extended Cut
+PCSB00995 ^ Exist Archive: The Other Side of the Sky
+PCSB00997 ^ Delta Strike: First Assault
+PCSB00998 ^ Bard's Gold
+PCSB01003 ^ Toukiden 2 (3.61+!) [3.63]
+PCSB01006 ^ Wanderjahr TryAgainOrWalkAway
+PCSB01007 ^ Hatsune Miku: Project DIVA X
+PCSB01008 ^ Active Soccer 2 DX
+PCSB01010 ^ Dungeon Punks
+PCSB01011 ^ Valkyrie Drive: Bhikkhuni
+PCSB01012 ^ Steins;Gate 0 (3.61+!) [3.61]
+PCSB01013 ^ Summon Night 6: Lost Borders (3.61+!) [3.65]
+PCSB01015 ^ Talisman: Digital Edition (3.61+!) [3.63]
+PCSB01016 ^ The Legend of Heroes: Trails of Cold Steel II
+PCSB01017 ^ Darkest Dungeon (3.61+!) [3.61]
+PCSB01018 ^ Last Wings (3.61+!) [3.61]
+PCSB01019 ^ Root Letter (3.61+!) [3.61]
+PCSB01020 ^ Garou: Mark of the Wolves (3.61+!) [3.61]
+PCSB01021 ^ Exile's End
+PCSB01023 ^ DEADBOLT (3.61+!) [3.65]
+PCSB01024 ^ Tokyo Twilight Ghost Hunters: Daybreak Special Gigs (3.61+!) [3.61]
+PCSB01027 ^ Pox Nora (3.61+!) [3.65]
+PCSB01028 ^ Shantae: Half-Genie Hero (3.61+!) [3.63]
+PCSB01029 ^ Iron Sea Defenders (3.61+!) [3.61]
+PCSB01030 ^ Fate/Extella: The Umbral Star (3.61+!) [3.61]
+PCSB01032 ^ Hakuoki: Kyoto Winds (3.61+!) [3.63]
+PCSB01034 ^ 2064: Read Only Memories (3.61+!) [3.65]
+PCSB01036 ^ Demetrios - The BIG Cynical Adventure (3.61+!) [3.61]
+PCSB01037 ^ Slain: Back from Hell (3.61+!) [3.61]
+PCSB01038 ^ Yomawari: Night Alone / htol#NiQ: The Firefly Diary (3.61+!) [3.61]
+PCSB01039 ^ Touhou Genso Wanderer (3.61+!) [3.63]
+PCSB01040 ^ Lara Croft GO (3.61+!) [3.63]
+PCSB01041 ^ The Bard's Tale: Remastered and Resnarkled
+PCSB01043 ^ Atelier Shallie Plus: Alchemists of the Dusk Sea (3.61+!) [3.63]
+PCSB01044 ^ Dynasty Warriors: Godseekers (3.61+!) [3.61]
+PCSB01047 ^ Lichtspeer
+PCSB01048 ^ Hue (3.61+!) [3.61]
+PCSB01049 ^ KILLALLZOMBIES (3.61+!) [3.61]
+PCSB01050 ^ Sword Art Online: Hollow Realization - Original Soundtrack (3.61+!) [3.61]
+PCSB01051 ^ DYING: Reborn (3.61+!) [3.63]
+PCSB01052 ^ Cladun Returns: This Is Sengoku! (3.61+!) [3.63]
+PCSB01053 ^ Full Throttle Remastered (3.61+!) [3.63]
+PCSB01054 ^ Nurse Love Addiction (3.61+!) [3.65]
+PCSB01055 ^ Wanted Corp. (3.61+!) [3.61]
+PCSB01056 ^ Hakuoki: Edo Blossoms (3.61+!) [3.65]
+PCSB01059 ^ Mary Skelter: Nightmares (3.61+!) [3.65]
+PCSB01060 ^ Period Cube ~Shackles of Amadeus~ (3.61+!) [3.63]
+PCSB01061 ^ Collar x Malice (3.61+!) [3.65]
+PCSB01062 ^ Tokyo Xanadu (3.61+!) [3.63]
+PCSB01063 ^ Zero Escape: The Nonary Games (3.61+!) [3.63]
+PCSB01064 ^ Mutant Mudds Deluxe (3.61+!) [3.61]
+PCSB01065 ^ Touhou Double Focus (3.61+!) [3.63]
+PCSB01066 ^ Akiba's Beat (3.61+!) [3.63]
+PCSB01068 ^ Oceanhorn: Monster of Uncharted Seas (3.61+!) [3.63]
+PCSB01070 ^ The Deer God (3.61+!) [3.63]
+PCSB01072 ^ Salt and Sanctuary (3.61+!) [3.63]
+PCSB01073 ^ GOD WARS Future Past (3.61+!) [3.63]
+PCSB01074 ^ Sokoban Next (3.61+!) [3.65]
+PCSB01075 ^ Chaos;Child (3.61+!) [3.65]
+PCSB01079 ^ Velocity 2X: Critical Mass Edition (3.61+!) [3.65]
+PCSB01080 ^ Farming Simulator 18 (3.61+!) [3.63]
+PCSB01081 ^ Ys Origin (3.61+!) [3.63]
+PCSB01082 ^ Kung Fury: Street Rage (3.61+!) [3.63]
+PCSB01083 ^ Windjammers (3.61+!) [3.65]
+PCSB01084 ^ Papers, Please (3.61+!) [3.65]
+PCSB01085 ^ Berserk and the Band of the Hawk (3.61+!) [3.63]
+PCSB01087 ^ Atelier Firis ~The Alchemist and the Mysterious Journey~ (3.61+!) [3.63]
+PCSB01090 ^ Valkyria Revolution (3.61+!) [3.63]
+PCSB01092 ^ Bad Apple Wars (3.61+!) [3.65]
+PCSB01093 ^ Utawarerumono: Mask of Deception (3.61+!) [3.63]
+PCSB01094 ^ Operation Babel: New Tokyo Legacy (3.61+!) [3.63]
+PCSB01095 ^ A Rose in the Twilight (3.61+!) [3.63]
+PCSB01096 ^ Siralim 2 (3.61+!) [3.63]
+PCSB01097 ^ Drive Girls (3.61+!) [3.63]
+PCSB01099 ^ Code: Realize ~Future Blessings~ (3.61+!) [3.65]
+PCSB01100 ^ Super Mutant Alien Assault (3.61+!) [3.68]
+PCSB01101 ^ Accel World vs Sword Art Online (3.61+!) [3.65]
+PCSB01102 ^ Toukiden 2 Free Alliances Version (3.61+!) [3.63]
+PCSB01103 ^ The Caligula Effect (3.61+!) [3.63]
+PCSB01105 ^ Bit Dungeon Plus
+PCSB01106 ^ Twin Robots (3.61+!) [3.65]
+PCSB01107 ^ Peasant Knight (3.61+!) [3.69]
+PCSB01108 ^ Blasting Agent: Ultimate Edition (3.61+!) [3.63]
+PCSB01109 ^ Metagal (3.61+!) [3.69]
+PCSB01113 ^ League of Evil (3.61+!) [3.67]
+PCSB01114 ^ SteamWorld Dig 2 (3.61+!) [3.65]
+PCSB01117 ^ Ninja Usagimaru: Two Tails of Adventure (3.61+!) [3.65]
+PCSB01119 ^ Plantera (3.61+!) [3.63]
+PCSB01120 ^ Romancing SaGa 2 (3.61+!) [3.65]
+PCSB01121 ^ Chasm (3.61+!) [3.68]
+PCSB01122 ^ Rabi-Ribi (3.61+!) [3.65]
+PCSB01124 ^ Dragons Online (3.61+!) [3.63]
+PCSB01125 ^ Spellspire (3.61+!) [3.63]
+PCSB01127 ^ Danganronpa V3: Killing Harmony (3.61+!) [3.65]
+PCSB01128 ^ Ys VIII: Lacrimosa of DANA (3.61+!) [3.65]
+PCSB01129 ^ Touhou Kobuto V: Burst Battle (3.61+!) [3.65]
+PCSB01131 ^ The Count Lucanor (3.61+!) [3.65]
+PCSB01132 ^ It's Spring Again (3.61+!) [3.65]
+PCSB01133 ^ Vegas Party (3.61+!) [3.65]
+PCSB01135 ^ Mercenary Kings Reloaded (3.61+!) [3.67]
+PCSB01136 ^ Fallen Legion: Flames of Rebellion (3.61+!) [3.65]
+PCSB01140 ^ Save the Ninja Clan (3.61+!) [3.65]
+PCSB01141 ^ NeverEnd
+PCSB01142 ^ Plague Road (3.61+!) [3.65]
+PCSB01144 ^ Yomawari: Midnight Shadows (3.61+!) [3.65]
+PCSB01145 ^ Utawarerumono: Mask of Truth (3.61+!) [3.65]
+PCSB01146 ^ Son of Scoregasm (3.61+!) [3.65]
+PCSB01150 ^ Demon Gaze II (3.61+!) [3.65]
+PCSB01151 ^ Vostok Inc. (3.61+!) [3.65]
+PCSB01152 ^ Super Life of Pixel (3.61+!) [3.69]
+PCSB01153 ^ SAMURAI SHODOWN V SPECIAL (3.61+!) [3.65]
+PCSB01154 ^ Licky The Lucky Lizard Lives Again (3.61+!) [3.65]
+PCSB01155 ^ My Name is Mayo (3.61+!) [3.65]
+PCSB01157 ^ Undertale (3.61+!) [3.65]
+PCSB01158 ^ Squareboy vs Bullies: Arena Edition (3.61+!) [3.65]
+PCSB01160 ^ Cursed Castilla (Maldita Castilla EX) (3.61+!) [3.65]
+PCSB01161 ^ TOKYO TATTOO GIRLS (3.61+!) [3.65]
+PCSB01163 ^ Secret of Mana (3.61+!) [3.67]
+PCSB01164 ^ Factotum90 (3.61+!) [3.65]
+PCSB01166 ^ VA-11 HALL-A (3.61+!) [3.67]
+PCSB01167 ^ Asdivine Hearts (3.61+!) [3.65]
+PCSB01168 ^ Revenant Saga (3.61+!) [3.65]
+PCSB01169 ^ Burly Men at Sea (3.61+!) [3.65]
+PCSB01173 ^ 99Vidas (3.61+!) [3.65]
+PCSB01174 ^ DEAD AHEAD: ZOMBIE WARFARE (3.61+!) [3.67]
+PCSB01179 ^ Volgarr the Viking (3.61+!) [3.65]
+PCSB01180 ^ The Long Reach (3.61+!) [3.68]
+PCSB01182 ^ Semispheres (3.61+!) [3.65]
+PCSB01183 ^ Digimon Story: Cyber Sleuth - Hacker's Memory
+PCSB01184 ^ 36 Fragments of Midnight (3.61+!) [3.65]
+PCSB01185 ^ Pic-a-Pix Color (3.61+!) [3.67]
+PCSB01187 ^ Alteric (3.61+!) [3.65]
+PCSB01188 ^ Spiral Splatter (3.61+!) [3.65]
+PCSB01189 ^ North (3.61+!) [3.65]
+PCSB01190 ^ Reverie (3.61+!) [3.67]
+PCSB01191 ^ One More Dungeon (3.61+!) [3.65]
+PCSB01192 ^ Iconoclasts (3.61+!) [3.65]
+PCSB01193 ^ Super Hydorah (3.61+!) [3.65]
+PCSB01194 ^ The Lost Child (3.61+!) [3.67]
+PCSB01201 ^ I Am The Hero (3.61+!) [3.68]
+PCSB01202 ^ Xenon Valkyrie+ (3.61+!) [3.65]
+PCSB01203 ^ Energy Invasion (3.61+!) [3.65]
+PCSB01204 ^ Midnight Deluxe (3.61+!) [3.67]
+PCSB01207 ^ Time Recoil (3.61+!) [3.65]
+PCSB01210 ^ Little Adventure on the Prairie (3.61+!) [3.65]
+PCSB01212 ^ Deep Ones (3.61+!) [3.67]
+PCSB01213 ^ One Eyed Kutkh (3.61+!) [3.65]
+PCSB01214 ^ Metropolis: Lux Obscura (3.61+!) [3.67]
+PCSB01215 ^ Little Red Lie (3.61+!) [3.65]
+PCSB01218 ^ THE KING OF FIGHTERS '97 GLOBAL MATCH (3.61+!) [3.67]
+PCSB01224 ^ Cosmic Star Heroine (3.61+!) [3.67]
+PCSB01226 ^ Stardew Valley (3.61+!) [3.67]
+PCSB01228 ^ TETRA's Escape (3.61+!) [3.68]
+PCSB01230 ^ InkSplosion (3.61+!) [3.67]
+PCSB01232 ^ Ice Cream Surfer (3.61+!) [3.68]
+PCSB01240 ^ Devious Dungeon (3.61+!) [3.67]
+PCSB01242 ^ Riddled Corpses EX (3.61+!) [3.67]
+PCSB01245 ^ Heroes Trials (3.61+!) [3.69]
+PCSB01246 ^ Fill-a-Pix: Phil's Epic Adventure (3.61+!) [3.68]
+PCSB01247 ^ FullBlast (3.61+!) [3.68]
+PCSB01249 ^ Waking Violet (3.61+!) [3.68]
+PCSB01251 ^ Super Destronaut DX (3.61+!) [3.68]
+PCSB01254 ^ STAY (3.61+!) [3.68]
+PCSB01259 ^ Punch Line (3.61+!) [3.68]
+PCSB01264 ^ Block-a-Pix Deluxe (3.61+!) [3.69]
+PCSB01266 ^ Sigi - A Fart for Melusina (3.61+!) [3.68]
+PCSB01267 ^ Word Search by POWGI (3.61+!) [3.68]
+PCSB01268 ^ Jack N' Jill DX (3.61+!) [3.68]
+PCSB01271 ^ Super Skull Smash Go! 2 Turbo (3.61+!) [3.68]
+PCSB01288 ^ Gunhouse (3.61+!) [3.68]
+PCSB01291 ^ Energy Cycle Edge (3.61+!) [3.68]
+PCSB01301 ^ Timespinner (3.61+!) [3.68]
+PCSB01304 ^ Planet RIX-13 (3.61+!) [3.68]
+PCSB01306 ^ One Word by POWGI (3.61+!) [3.69]
+PCSB01307 ^ Word Sudoku by POWGI (3.61+!) [3.68]
+PCSB01309 ^ Daggerhood (3.61+!) [3.69]
+PCSB01315 ^ Access Denied (3.61+!) [3.69]
+PCSB01318 ^ Pic-a-Pix Pieces (3.61+!) [3.69]
+PCSB01322 ^ Drowning (3.61+!) [3.69]
+PCSB01324 ^ Awesome Pea (3.61+!) [3.69]
+PCSB01330 ^ Pic-a-Pix Classic (3.61+!) [3.69]
+PCSB01332 ^ Mixups by POWGI (3.61+!) [3.69]
+PCSB01334 ^ Super Weekend Mode
+PCSF00001 ^ Uncharted: Golden Abyss
+PCSF00002 ^ ModNation Racers: Road Trip
+PCSF00003 ^ Resistance: Burning Skies (ENG-POL-RUS)
+PCSF00006 ^ Everybody's Golf
+PCSF00007 ^ WipEout 2048
+PCSF00010 ^ Hustle Kings
+PCSF00011 ^ Top Darts
+PCSF00012 ^ Uncharted: Golden Abyss (ENG-DEU-FRA-ITA-DUT)
+PCSF00017 ^ Little Deviants
+PCSF00019 ^ Super Stardust Delta
+PCSF00020 ^ Smart as
+PCSF00021 ^ LittleBigPlanet PlayStation Vita
+PCSF00022 ^ Reality Fighters
+PCSF00023 ^ Escape Plan
+PCSF00024 ^ Gravity Rush
+PCSF00030 ^ Table Top Tanks
+PCSF00033 ^ Cliff Diving
+PCSF00034 ^ Unit 13
+PCSF00035 ^ Fireworks
+PCSF00036 ^ PulzAR
+PCSF00043 ^ Frobisher Says!
+PCSF00044 ^ Facebook
+PCSF00046 ^ MotorStorm RC
+PCSF00062 ^ Table Football
+PCSF00064 ^ tag
+PCSF00068 ^ Unit 13 (DEU-FRA-ITA and ENG)
+PCSF00069 ^ Unit 13 (POR-POL-RUS-SPA and ENG)
+PCSF00076 ^ Sound Shapes
+PCSF00088 ^ PlayStation Vita Pets (ENG-FRE-GER-ITA)
+PCSF00090 ^ foursquare
+PCSF00092 ^ Ecolibrium
+PCSF00093 ^ When Vikings Attack!
+PCSF00105 ^ Plants vs. Zombies
+PCSF00113 ^ Travel Bug
+PCSF00122 ^ Flickr
+PCSF00123 ^ LiveTweet for PlayStation Vita
+PCSF00124 ^ Skype
+PCSF00137 ^ Paint Park
+PCSF00139 ^ Treasure Park
+PCSF00140 ^ Resistance: Burning Skies (DEU-ITA-FRA)
+PCSF00141 ^ Resistance: Burning Skies (ENG-SPA-POR)
+PCSF00142 ^ Resistance: Burning Skies (ENG-FRA-DUT)
+PCSF00145 ^ Table Ice Hockey
+PCSF00147 ^ Table Mini Golf
+PCSF00149 ^ Jacob Jones and the Bigfoot Mystery
+PCSF00150 ^ YouTube
+PCSF00153 ^ PlayStation All-Stars Battle Royale (DEU-POL-RUS - Another?)
+PCSF00156 ^ Sly Cooper: Thieves In Time (ENG-GRE-POR-SPA)
+PCSF00164 ^ Invizimals: The Alliance
+PCSF00167 ^ Pinball Heroes: Complete
+PCSF00178 ^ Soul Sacrifice
+PCSF00181 ^ Wake-up Club
+PCSF00191 ^ Ratchet & Clank: QForce
+PCSF00206 ^ Sly Cooper: Thieves in Time (DAN-FIN-NOR-SWE)
+PCSF00207 ^ Sly Cooper: Thieves in Time (CZE-POL-RUS-TUR)
+PCSF00208 ^ Sly Cooper: Thieves in Time (ENG-FRA-DUT)
+PCSF00209 ^ Sly Cooper: Thieves in Time (DEU-FRA-ITA)
+PCSF00210 ^ Imaginstruments
+PCSF00214 ^ Tearaway (DAN-DEU-DUT-ENG-FIN-FRA-ITA-NOR-POL-POR-RUS-SPA-SWE)
+PCSF00216 ^ Smart as
+PCSF00217 ^ Smart as (POL-RUS)
+PCSF00220 ^ Uncharted: Fight for Fortune
+PCSF00228 ^ PlayStation Home Arcade
+PCSF00235 ^ Invizimals: Hidden Challenges (SPA)
+PCSF00243 ^ Killzone: Mercenary (EFIGS-DUT-POR)
+PCSF00247 ^ The Jak and Daxter Trilogy
+PCSF00248 ^ Jak and Daxter Trilogy: The Precursor Legacy
+PCSF00249 ^ Jak and Daxter Trilogy: Jak 2: Renegade
+PCSF00250 ^ Jak and Daxter Trilogy: Jak 3
+PCSF00251 ^ Bentley's Hackpack
+PCSF00262 ^ RESOGUN
+PCSF00269 ^ Sly Raccoon
+PCSF00270 ^ Sly 2: Band of Thieves
+PCSF00271 ^ Sly 3: Honour Among Thieves
+PCSF00308 ^ Disney Epic Mickey 2: The Power of Two (ENG-ARA-CZE-HUN-POL-RUS-TUR)
+PCSF00309 ^ Disney Epic Mickey 2: The Power of Two (languages?)
+PCSF00312 ^ Open Me!
+PCSF00314 ^ Paint Park Plus
+PCSF00338 ^ The Sly Trilogy
+PCSF00349 ^ Flower
+PCSF00352 ^ Destiny of Spirits
+PCSF00354 ^ Malicious Rebirth
+PCSF00376 ^ Lemmings Touch
+PCSF00378 ^ CounterSpy
+PCSF00379 ^ Doki-Doki Universe
+PCSF00403 ^ Killzone: Mercenary (POL-RUS-SCA-TUR)
+PCSF00415 ^ Invizimals: Hidden Challenges
+PCSF00427 ^ Dead Nation
+PCSF00430 ^ Hohokum
+PCSF00434 ^ Killzone: Mercenary - Digital Art Book
+PCSF00435 ^ Murasaki Baby
+PCSF00438 ^ God of War Collection
+PCSF00440 ^ flOw
+PCSF00441 ^ Looney Tunes: Galactic Sports
+PCSF00446 ^ Freedom Wars
+PCSF00448 ^ Invizimals: The Alliance (GRE)
+PCSF00465 ^ Helldivers
+PCSF00476 ^ Tearaway (Trial & Unlock)
+PCSF00482 ^ The Ratchet & Clank Trilogy
+PCSF00484 ^ Ratchet & Clank
+PCSF00485 ^ Ratchet & Clank 2
+PCSF00486 ^ Ratchet & Clank 3
+PCSF00501 ^ The Hungry Horde
+PCSF00510 ^ Invizimals: The Resistance
+PCSF00519 ^ PlayStation Vita Pets (ENG-RUS-POL)
+PCSF00531 ^ No Heroes Allowed: No Puzzles Either!
+PCSF00532 ^ Soul Sacrifice Delta
+PCSF00536 ^ Oreshika: Tainted Bloodlines
+PCSF00543 ^ Destiny of Spirits
+PCSF00558 ^ The Muppets Movie Adventures
+PCSF00562 ^ Run Sackboy! Run!
+PCSF00570 ^ Borderlands 2 (DEU-ENG-FRA)
+PCSF00578 ^ Entwined
+PCSF00612 ^ Fat Princess: Piece of Cake
+PCSF00613 ^ The Unfinished Swan
+PCSF00635 ^ Network Media Player
+PCSF00651 ^ MonsterBag
+PCSF00658 ^ Live from PlayStation
+PCSF00718 ^ Phineas and Ferb: Day of Doofenshmirtz
+PCSF00728 ^ Resident Evil: Revelations 2
+PCSD00001 ^ Uncharted: Golden Abyss
+PCSD00003 ^ Gravity Rush
+PCSD00004 ^ ModNation Racers: Road Trip
+PCSD00005 ^ WipEout 2048
+PCSD00006 ^ LittleBigPlanet PlayStation Vita
+PCSD00008 ^ Everybody's Golf 6
+PCSD00009 ^ Little Deviants (ENG)
+PCSD00010 ^ MotorStorm RC
+PCSD00011 ^ Hustle Kings
+PCSD00012 ^ Star Strike Delta
+PCSD00013 ^ LiveTweet for PlayStation Vita
+PCSD00014 ^ Flickr
+PCSD00015 ^ Wake-up Club
+PCSD00016 ^ Escape Plan
+PCSD00017 ^ Reality Fighters
+PCSD00019 ^ Paint Park
+PCSD00020 ^ Treasure Park
+PCSD00021 ^ Unit 13
+PCSD00025 ^ Skype
+PCSD00026 ^ Facebook
+PCSD00027 ^ Sound Shapes
+PCSD00031 ^ YouTube
+PCSD00033 ^ Resistance: Burning Skies (ENG-CHI-KOR)
+PCSD00035 ^ Gravity Rush
+PCSD00037 ^ TORO's Friendly Network
+PCSD00040 ^ PlayStation All-Stars Battle Royale
+PCSD00043 ^ Uncharted: Fight for Fortune
+PCSD00044 ^ PulzAR
+PCSD00045 ^ PlayStation Home Arcade
+PCSD00046 ^ Table Top Tanks
+PCSD00047 ^ Table Ice Hockey
+PCSD00049 ^ Open Me!
+PCSD00051 ^ When Vikings Attack!
+PCSD00052 ^ Open Me! Digest Version
+PCSD00053 ^ Open Me! (KOR)
+PCSD00061 ^ Destiny of Spirits
+PCSD00062 ^ Table Mini Golf
+PCSD00064 ^ Paint Park Plus
+PCSD00065 ^ Soul Sacrifice
+PCSD00067 ^ Sly Cooper and the Thievius Raccoonus (KOR)
+PCSD00068 ^ Sly 2: Band of Thieves (KOR)
+PCSD00069 ^ Sly 3: Honor Among Thieves (KOR)
+PCSD00071 ^ Killzone: Mercenary
+PCSD00072 ^ Tearaway
+PCSD00076 ^ NBA Game Time (also has ENG)
+PCSD00077 ^ Tearaway (Trial & Unlock)
+PCSD00079 ^ Soul Sacrifice Delta
+PCSD00080 ^ Flower
+PCSD00082 ^ Dead Nation
+PCSD00084 ^ Oreshika: Tainted Bloodlines / Ore no Shikabane o Koete Yuke 2
+PCSD00085 ^ No Heroes Allowed: No Puzzles Either!
+PCSD00086 ^ Helldivers (ENG/KOR/CHI)
+PCSD00087 ^ Freedom Wars
+PCSD00089 ^ Network Media Player
+PCSD00090 ^ Run Sackboy! Run!
+PCSD00091 ^ Sly Cooper Collection
+PCSD00092 ^ Fat Princess: Piece of Cake
+PCSD00093 ^ Live from PlayStation (ENG/CHI/KOR/JPN)
+PCSD00094 ^ Entwined (CHI)
+PCSD00095 ^ Hohokum (CHI)
+PCSD00097 ^ Helldivers (CHI)
+PCSH00001 ^ Shinobido 2: Revenge of Zen
+PCSH00003 ^ Dynasty Warriors Next
+PCSH00006 ^ Sudoku by Nikoli V
+PCSH00007 ^ Puzzle by Nikoli V Sudoku
+PCSH00008 ^ Puzzle by Nikoli V Kakuro
+PCSH00009 ^ Puzzle by Nikoli V Slitherlink
+PCSH00010 ^ Puzzle by Nikoli V Nurikabe
+PCSH00019 ^ DJMAX TECHNIKA TUNE (ENG/KOR)
+PCSH00020 ^ Ragnarok Odyssey (Asian Localized Ver.)
+PCSH00021 ^ Persona 4: The GOLDEN (KOR)
+PCSH00022 ^ Jet Set Radio
+PCSH00024 ^ Rocketbirds: Hardboiled Chicken
+PCSH00032 ^ Malicious Rebirth
+PCSH00034 ^ One Piece: Kaizoku Musou 2
+PCSH00035 ^ Sengokuhime 3rd
+PCSH00037 ^ Atelier Meruru Plus: The Apprentice of Arland
+PCSH00038 ^ GUILTY GEAR XX ΛCORE PLUS R
+PCSH00039 ^ Holy Sorcery Story
+PCSH00042 ^ Final Fantasy X HD Remaster (CHI/KOR)
+PCSH00043 ^ Final Fantasy X-2 HD Remaster (CHI/KOR)
+PCSH00044 ^ Ragnarok Odyssey ACE
+PCSH00045 ^ Toukiden
+PCSH00050 ^ Dragon's Crown
+PCSH00052 ^ Shin Sangoku Musou 7 with Moushouden / Dynasty Warriors 8 with Xtreme Legends
+PCSH00053 ^ Sorcery Saga: The Curse of the Great Curry God (KOR)
+PCSH00054 ^ Warriors Orochi 2 Ultimate
+PCSH00055 ^ Danganronpa
+PCSH00057 ^ AKIBA'S TRIP: Undead ＆ Undressed
+PCSH00058 ^ Shin Gundam Musou
+PCSH00059 ^ NicoNico
+PCSH00064 ^ NicoNico
+PCSH00067 ^ Final Fantasy X HD Remaster
+PCSH00068 ^ Final Fantasy X-2 HD Remaster
+PCSH00069 ^ Hyperdimension Neptunia: Producing Perfection (KOR)
+PCSH00070 ^ Sword Art Online: Hollow Fragment
+PCSH00071 ^ One Piece: Unlimited World Red
+PCSH00072 ^ Super Danganronpa2
+PCSH00074 ^ The Legend of Heroes: Trails of Cold Steel
+PCSH00075 ^ The Legend of Heroes: Sen No Kiseki II (CHI)
+PCSH00077 ^ Dekamori Senran Kagura Pack A (hanzo・guren)
+PCSH00078 ^ Hyperdimension Neptunia: Re;Birth1 (KOR)
+PCSH00079 ^ The Legend of Heroes: Trails of Cold Steel (KOR)
+PCSH00080 ^ The Legend of Heroes: Trails of Cold Steel II (KOR)
+PCSH00083 ^ Dekamori Senran Kagura Pack B (Gessen · Hebijo)
+PCSH00084 ^ BlazBlue: Chronophantasma
+PCSH00085 ^ Dekamori Senran Kagura: Digital Soundtrack
+PCSH00087 ^ Nobunaga's Ambition: Souzou
+PCSH00088 ^ Hatsune Miku: Project DIVA F 2nd
+PCSH00089 ^ TOKYO TWILIGHT GHOSTHUNTERS
+PCSH00090 ^ Sword Art Online: Hollow Fragment
+PCSH00091 ^ Phantom Breaker: Battle Grounds (KOR)
+PCSH00092 ^ Curve Studios Mega Bundle
+PCSH00093 ^ Arcana Heart 3: LOVEMAX!!!!!
+PCSH00096 ^ htoL#NiQ -HOTARU NO NIKKI-
+PCSH00097 ^ Hyperdimension Neptunia: Re;Birth2 Sisters Generation
+PCSH00098 ^ Hyperdevotion Noire Goddess Black Heart (KOR)
+PCSH00099 ^ CatsBlock Vestival
+PCSH00100 ^ Final Fantasy X HD Remaster (CHI)
+PCSH00101 ^ Final Fantasy X-2 HD Remaster (CHI)
+PCSH00103 ^ Toukiden: Kiwami
+PCSH00105 ^ Toukiden: Kiwami (KOR)
+PCSH00107 ^ Hyperdimension Neptunia U: Action Unleashed (KOR)
+PCSH00108 ^ Moe Chonicle (KOR)
+PCSH00109 ^ Monster Hunter Frontier G / Monster Hunter Frontier Z
+PCSH00110 ^ Toukiden: Kiwami (CHI)
+PCSH00117 ^ Farming Simulator 14 (CHI)
+PCSH00118 ^ Rayman Legends (CHI)
+PCSH00119 ^ SteamWorld Dig (CHI)
+PCSH00122 ^ Velocity 2X (CHI)
+PCSH00126 ^ CatsBlock Vestival (CHI)
+PCSH00127 ^ Rocketbirds 2: Evolution
+PCSH00128 ^ Dekamori Senran Kagura (CHI/KOR)
+PCSH00131 ^ One Tap Hero (Chinese Edition)
+PCSH00132 ^ GUNDAM BREAKER 2
+PCSH00133 ^ GOD EATER 2 RAGE BURST
+PCSH00134 ^ Sword Art Online ―Lost Song―
+PCSH00135 ^ Sword Art Online: Lost Song (ENG)
+PCSH00136 ^ J-STARS Victory VS+
+PCSH00139 ^ Operation Abyss: New Tokyo Legacy (KOR)
+PCSH00140 ^ Hyperdimension Neptunia: Re;Birth3 V Century (KOR)
+PCSH00142 ^ Dengeki Bunko: Fighting Climax
+PCSH00143 ^ Phantasy Star Nova
+PCSH00145 ^ One Piece: Pirate Warriors 3
+PCSH00146 ^ Zettai Zetsubou Shoujo: Danganronpa - Another Episode
+PCSH00147 ^ Ryu ga Gotoku 0 Free app for PlayStation Vita (CHI)
+PCSH00148 ^ Moe Chronicle (ENG/CHI)
+PCSH00149 ^ Ooedo Blacksmith (KOR)
+PCSH00150 ^ Shin Hayarigami (KOR)
+PCSH00152 ^ Samurai Warriors: Chronicles 3
+PCSH00154 ^ Atelier Escha and Logy Plus (KOR)
+PCSH00156 ^ CastleStorm: Complete Edition (ENG/CHI/KOR)
+PCSH00157 ^ Fantasy Hero ~unsigned legacy~
+PCSH00158 ^ Air Race Speed (CHI/ENG)
+PCSH00159 ^ Urban Trial FREESTYLE (CHI)
+PCSH00160 ^ The Legend of Dark Witch (CHI) (3.61+!) [3.61]
+PCSH00161 ^ BlazBlue: Chronophantasma Extend
+PCSH00162 ^ Senran Kagura: Estival Versus
+PCSH00163 ^ Senran Kagura Estival Versus
+PCSH00164 ^ Samurai Warriors 4-II
+PCSH00165 ^ ROBOTICS;NOTES ELITE (KOR)
+PCSH00167 ^ SUPERBEAT XONiC
+PCSH00169 ^ CastleStorm (CHI) (3.61+!) [3.61]
+PCSH00171 ^ NOBUNAGA'S AMBITION: Sphere of Influence
+PCSH00173 ^ Digimon Story Cyber Sleuth
+PCSH00175 ^ Quell Memento (CHI)
+PCSH00176 ^ Hatsune Miku: Project DIVA X
+PCSH00177 ^ Krinkle Krusher (CHI)
+PCSH00178 ^ The Legend of Heroes: Sora No Kiseki FC Evolution
+PCSH00179 ^ The Legend of Heroes: Sora no Kiseki FC Evolution (CHI)
+PCSH00180 ^ The Legend of Heroes: Sora no Kiseki FC Evolution (KOR)
+PCSH00181 ^ Ys: Memories of Celceta
+PCSH00183 ^ Ys: Memories of Celceta (KOR)
+PCSH00186 ^ Aegis of Earth (KOR)
+PCSH00187 ^ Resident Evil: Revelations 2 (ENG/CHI/KOR/JPN)
+PCSH00192 ^ Dynasty Warriors 7 Empires (Retail Version)
+PCSH00193 ^ Dynasty Warriors 7 Empires (Free version)
+PCSH00194 ^ Mr. Pumpkin's Adventure (Chinese)
+PCSH00195 ^ MOBILE SUIT GUNDAM EXTREME VS-FORCE (ENG)
+PCSH00196 ^ Mobile Suit Gundam: Extreme VS-Force
+PCSH00197 ^ Shin Sangoku Musou 7 Empires (KOR)
+PCSH00198 ^ Shin Sangoku Musou 7 Empires (Free Alliances Version)
+PCSH00199 ^ God Eater Resurrection
+PCSH00201 ^ Baboon (CHI)
+PCSH00202 ^ One Piece Burning Blood
+PCSH00203 ^ Trillion God Of Destruction (KOR)
+PCSH00204 ^ Danganronpa Another Episode: Ultra Despair Girls (KOR)
+PCSH00205 ^ One Tap Hero
+PCSH00206 ^ Polara (CHI)
+PCSH00207 ^ Gundam Breaker 3 (CHI)
+PCSH00208 ^ Gundam Breaker 3 (ENG)
+PCSH00210 ^ Teslagrad (KOR)
+PCSH00211 ^ Persona 4: Dancing All Night
+PCSH00213 ^ MegaTagmension Blanc + Neptune VS Zombies
+PCSH00214 ^ DEEMO The Last Recital (CHI) (3.61+!) [3.63]
+PCSH00215 ^ DEEMO: Last Recital - Original Soundtrack Vol.1
+PCSH00216 ^ Deemo: Last Recital
+PCSH00217 ^ Farming Simulator 16 (KOR)
+PCSH00218 ^ Odin Sphere Leifthrasir
+PCSH00219 ^ Yomawari: Night Alone (KOR)
+PCSH00220 ^ Atelier Sophie ~The Alchemist of the Mysterious Book~
+PCSH00221 ^ Dragon Quest Builders
+PCSH00222 ^ Dragon Quest Builders (KOR)
+PCSH00223 ^ World of Final Fantasy (3.61+!) [3.61]
+PCSH00224 ^ Criminal Girls 2 
+PCSH00225 ^ Summon Night 6: Lost Borders (CHI)
+PCSH00227 ^ Quell Memento
+PCSH00229 ^ Krinkle Krusher
+PCSH00230 ^ One Piece Pirate Warriors 3 (CHI)
+PCSH00231 ^ Atelier Sophie ~The Alchemist of the Mysterious Book~ (KOR)
+PCSH00233 ^ Space Hulk (KOR)
+PCSH00235 ^ Sword Art Online: Lost Song (CHI)
+PCSH00236 ^ MegaTagmension Blanc + Neptune VS Zombies
+PCSH00240 ^ DYING: Reborn (CHI) (3.61+!) [3.61]
+PCSH00241 ^ SD GUNDAM G GENERATION GENESIS (3.61+!) [3.61]
+PCSH00242 ^ SD GUNDAM G GENERATION GENESIS (ENG) (3.61+!) [3.61]
+PCSH00243 ^ SD Gundam G Generation Genesis (KOR)
+PCSH00244 ^ Mr. Pumpkin Adventure
+PCSH00246 ^ Four Elements Adventure (ENG/CHI)
+PCSH00247 ^ Nihilumbra
+PCSH00249 ^ The Asterisk War: THE ACADEMY CITY ON THE WATER HOUKAKENRAN
+PCSH00250 ^ Dead or Alive Xtreme 3: Venus
+PCSH00252 ^ Superdimension Neptune VS Sega Hard Girls
+PCSH00253 ^ Attack on Titan: Wings of Freedom
+PCSH00254 ^ YORUNONAIKUNI
+PCSH00256 ^ Nights Of Azure (KOR)
+PCSH00257 ^ Attack On Titan (KOR)
+PCSH00258 ^ MeiQ Labyrinth of Death (KOR)
+PCSH00260 ^ Yuusha Sisu.
+PCSH00261 ^ Digimon World: Next Order (CHI)
+PCSH00262 ^ A.W. Pheonix Festa
+PCSH00263 ^ MUSYNC (CHI) (3.61+!) [3.65]
+PCSH00264 ^ SUPERBEAT XONiC (CHI)
+PCSH00266 ^ Sword Art Online: Hollow Realization (3.61+!) [3.61]
+PCSH00267 ^ A Rose in the Twilight (KOR)
+PCSH00268 ^ Rose to Tasogare no Kojo
+PCSH00272 ^ Air Race Speed (CHI/CNT/ENG)
+PCSH00273 ^ MAKAISHIN TRILLION
+PCSH00276 ^ Genkai Tokki: Moero Crystal (KOR)
+PCSH00277 ^ Blast 'Em Bunnies
+PCSH00278 ^ Infinita Strada Hana (ENG/CHI/JPN)
+PCSH00279 ^ UPPERS
+PCSH00281 ^ Dead or Alive Xtreme 3: Venus (Free to Play) (ENG/CHI/KOR)
+PCSH00282 ^ Blast 'Em Bunnies (CHI) (3.61+!) [3.61]
+PCSH00284 ^ Psycho-Pass: Mandatory Happiness (3.61+!) [3.61]
+PCSH00285 ^ Volume (3.61+!) [3.61]
+PCSH00287 ^ Crypt of the NecroDancer (3.61+!) [3.63]
+PCSH00288 ^ Chaos;Child (KOR)
+PCSH00289 ^ Root Letter
+PCSH00291 ^ NOBUNAGA'S AMBITION: Souzou Sengoku Risshiden
+PCSH00292 ^ Toukiden 2 (3.61+!) [3.61]
+PCSH00293 ^ Ninja Usagimaru: Two Tails of Adventure (3.61+!) [3.65]
+PCSH00294 ^ MEIQ NO CHIKANISHISU
+PCSH00295 ^ Toukiden 2 (KOR)
+PCSH00296 ^ Ys VIII: Lacrimosa of DANA (KOR)
+PCSH00297 ^ Ys VIII: Lacrimosa of DANA
+PCSH00298 ^ Dragon Quest Heroes II
+PCSH00299 ^ Fate/Extella (3.61+!) [3.61]
+PCSH00300 ^ Coven and Labyrinth of Refrain (KOR) (3.61+!) [3.61]
+PCSH00301 ^ GENKAITOKKI MOERO CRYSTAL (3.61+!) [3.61]
+PCSH00302 ^ Baboon!
+PCSH00304 ^ Root Letter
+PCSH00306 ^ Hakuoki Kyoto Winds (KOR)
+PCSH00308 ^ ROMANCE OF THE THREE KINGDOMS XIII: Fame and Strategy (3.61+!) [3.63]
+PCSH10001 ^ Super Robot Wars V (ENG) (3.61+!) [3.63]
+PCSH10003 ^ Super Robot Taisen V (KOR)
+PCSH10004 ^ Super Robot Wars V (CHI) (3.61+!) [3.63]
+PCSH10005 ^ Hakuouki Shinkai Kazeno-Sho (3.61+!) [3.61]
+PCSH10006 ^ Dynasty Warriors: Godseekers (3.61+!) [3.61]
+PCSH10008 ^ VALKYRIA: AZURE REVOLUTION (3.61+!) [3.63]
+PCSH10009 ^ Tokyo Xanadu (3.61+!) [3.63]
+PCSH10010 ^ Tokyo Xanadu(KOR)
+PCSH10011 ^ Shin Hayarigami 2 (KOR)
+PCSH10012 ^ Dynasty Warriors: Godseekers (KOR)
+PCSH10013 ^ Atelier Firis: The Alchemist and the Mysterious Journey (KOR)
+PCSH10016 ^ Operation Babel: New Tokyo Legacy (KOR)
+PCSH10017 ^ Akiba's Beat (3.61+!) [3.63]
+PCSH10018 ^ Superdimension Neptune VS Sega Hard Girls (3.61+!) [3.63]
+PCSH10019 ^ Radio Hammer Station (3.61+!) [3.65]
+PCSH10021 ^ God Wars Future Past
+PCSH10022 ^ Toukiden 2 (CHI) (3.61+!) [3.65]
+PCSH10024 ^ GOD WARS Future Past (CHI) (3.61+!) [3.63]
+PCSH10025 ^ Berserk and the Band of the Hawk (3.61+!) [3.63]
+PCSH10026 ^ Atelier Firis ~The Alchemist and the Mysterious Journey~ (3.61+!) [3.63]
+PCSH10030 ^ Unholy Heights (KOR)
+PCSH10031 ^ Berserk and Band of The Hawk (KOR)
+PCSH10032 ^ Tokyo Twilight Ghost Hunters Daybreak: Special Gigs (for PS Vita)
+PCSH10035 ^ Valkyria Revolution
+PCSH10036 ^ AKIBA'S BEAT (KOR)
+PCSH10037 ^ MUSOU Stars (3.61+!) [3.63]
+PCSH10038 ^ Accel World vs Sword Art Online: Millennium Twilight (3.61+!) [3.63]
+PCSH10039 ^ Chaos;Child (3.61+!) [3.63]
+PCSH10042 ^ Gundam Breaker 3 BREAK EDITION (ENG) (3.61+!) [3.63]
+PCSH10043 ^ Mary Skelter Nightmares (KOR)
+PCSH10044 ^ Omega Labyrinth Z (3.61+!) [3.65]
+PCSH10046 ^ Hakuoki: Edo Blossoms (KOR)
+PCSH10049 ^ Ys Origin (3.61+!) [3.65]
+PCSH10051 ^ Danganronpa V3: Killing Harmony (3.61+!) [3.65]
+PCSH10055 ^ Cursed Castilla
+PCSH10056 ^ Rainbow Skies (ENG)
+PCSH10057 ^ Hakuouki Shinkai Hanano-Sho (3.61+!) [3.65]
+PCSH10058 ^ MUSYNC (3.61+!) [3.65]
+PCSH10059 ^ Digimon Story Cyber Sleuth: Hacker's Memory (CHI) (3.61+!) [3.65]
+PCSH10060 ^ The Legend of Heroes Sora No Kiseki SC Evolution (3.61+!) [3.65]
+PCSH10061 ^ The Legend of Heroes: Sora no Kiseki SC Evolution (KOR)
+PCSH10064 ^ Semispheres (ENG/CHI/KOR/JPN) (3.61+!) [3.65]
+PCSH10065 ^ Fortune Street: Dragon Quest & Final Fantasy 30th Anniversary (3.61+!) [3.65]
+PCSH10067 ^ Secret of Mana (3.61+!) [3.67]
+PCSH10068 ^ The Lost Child (3.61+!) [3.65]
+PCSH10069 ^ Fortune Street: Dragon Quest & Final Fantasy 30th Anniversary (KOR)
+PCSH10074 ^ A Certain Magical Virtual-On (KOR)
+PCSH10075 ^ A Certain Magical Virtual-On (3.61+!) [3.67]
+PCSH10076 ^ The Lost Child (KOR)
+PCSH10077 ^ Psychedelica of Black Butterfly (3.61+!) [3.65]
+PCSH10078 ^ Unepic (CHI-ENG-FRA-DEU-ITA-KOR-RUS-TW) (3.61+!) [3.65]
+PCSH10082 ^ The Legend of Heroes Sora No Kiseki the 3rd Evolution (3.61+!) [3.67]
+PCSH10083 ^ The Legend of Heroes: Sora no Kiseki the 3rd Evolution (KOR)
+PCSH10088 ^ SUPER ROBOT WARS X (ENG) (3.61+!) [3.67]
+PCSH10089 ^ SUPER ROBOT WARS X (CHI/KOR) (3.61+!) [3.67]
+PCSH10090 ^ 7'scarlet (CHI/KOR) (3.61+!) [3.67]
+PCSH10091 ^ Psychedelica of Gray Hawk (CHI/KOR) (3.61+!) [3.67]
+PCSH10094 ^ One More Dungeon (ENG-SPA-DEU-FRA-RUS-JPN-TC-SC) (3.61+!) [3.65]
+PCSH10096 ^ League of Evil (ENG/CHI/KOR) (3.61+!) [3.68]
+PCSH10098 ^ Midnight Deluxe (ENG/CHI) (3.61+!) [3.67]
+PCSH10099 ^ Bullet Girls Phantasia (ENG/CHI/JPN/KOR) (3.61+!) [3.68]
+PCSH10100 ^ Metal Max Xeno (CHI/KOR) (3.61+!) [3.67]
+PCSH10101 ^ NEW GAME! -THE CHALLENGE STAGE!- (3.61+!) [3.68]
+PCSH10108 ^ Persona 3 Dancing Moon Night (3.61+!) [3.68]
+PCSH10109 ^ Persona 5 Dancing Star Night (3.61+!) [3.68]
+PCSH10116 ^ InkSplosion (ENG/CHI/KOR/JPN) (3.61+!) [3.67]
+PCSH10119 ^ 36 Fragments of Midnight (ENG/CHI/KOR) (3.61+!) [3.67]
+PCSH10121 ^ Fate/Extella LINK (3.61+!) [3.68]
+PCSH10122 ^ Devious Dungeon (3.61+!) [3.68]
+PCSH10123 ^ FullBlast (ENG/CHI/KOR/JPN) (3.61+!) [3.68]
+PCSH10124 ^ Super Destronaut DX (3.61+!) [3.68]
+PCSH10126 ^ GOD WARS THE COMPLETE LEGEND (3.61+!) [3.68]
+PCSH10127 ^ Jack N' Jill DX (ENG/CHI/JPN) (3.61+!) [3.68]
+PCSH10128 ^ TETRA'S Escape (ENG/CHI/KOR/JPN) (3.61+!) [3.68]
+PCSH10130 ^ P3D ＆ P5D FULL SOUNDTRACK
+PCSH10131 ^ P3D ＆ P5D FULL SOUNDTRACK
+PCSH10133 ^ Memories Off -Innocent Fille- (3.61+!) [3.68]
+PCSH10135 ^ Fate/EXTELLA LINK Original Soundtrack
+PCSH10136 ^ Fate/EXTELLA LINK Original Soundtrack
+PCSH10142 ^ Daggerhood (3.61+!) [3.69]
+PCSH10147 ^ Access Denied (3.61+!) [3.69]
+PCSG01253 ^ Karigurashi Renai
+PCSB01327 ^ Iron Snout
+PCSH10120 ^ Peasant Knight
+PCSH10138 ^ Heroes Trials
+PCSB01238 ^ Dragon Sinker
+PCSE01371 ^ Zeroptian Invasion (3.61+) [3.69]
+PCSG00575 ^ ToHeart 2: Dungeon Travelers
+PCSG01249 ^ EVE rebirth terror
+PCSE00554 ^ MyNBA2K15
+PCSG01275 ^ Hakuisei Renai Shoukougun RE:Therapy
+PCSG00634 ^ Mato Kurenai Yuugekitai: Daybreak Special Gigs
+PCSB01321 ^ Necrosphere
+PCSB01317 ^ Perils of Baking - Refrosted
+PCSE01386 ^ My Big Sister
+PCSE01125 ^ Shakedown: Hawaii
+PCSE01380 ^ Frane: Dragons' Odyssey
+PCSF00518 ^ PlayStation Vita Pets (ENG;ITA;SPA;POR)
+PCSF00517 ^ PlayStation Vita Pets (ENG;FRE;GER;DUT)
+PCSG00337 ^ Imasugu Oniichan ni Imouto Datte Iitai!
+PCSG00664 ^ Nanairo Reincarnation
+PCSG00556 ^ LOVELY×CATION1&2
+PCSG00787 ^ Kyoukai no Shirayuki
+PCSG00599 ^ Date-A-Live Twin Edition: Rio Reincarnation
+PCSG00230 ^ Sengoku Musou 2 Empires HD Version
+PCSB01341 ^ My Big Sister
+PCSF00351 ^ BigFest
+PCSG01018 ^ Musou Stars
+PCSG00954 ^ Sengoku Musou: Sanada Maru
+PCSA00065 ^ MLB 13 The Show
+PCSG00463 ^ XBlaze Lost: Memories
+PCSG01236 ^ Fast Striker
+PCSB00856 ^ KILLALLZOMBIES Companion App
+PCSF00218 ^ PlayStation All-Stars Battle Royale (PUBLIC BETA)
+PCSB00263 ^ Tuenti
+PCSF00533 ^ Invizimals New Alliance
+PCSE01385 ^ Devious Dungeon 2 (3.61+!) [3.69]
+PCSG00680 ^ DARIUSBURST Chronicle Saviours
+PCSG00188 ^ プリンセス ストライク！
+PCSB01342 ^ Devious Dungeon 2 (3.61+!) [3.69]
+PCSH10151 ^ Zeroptian Invasion (3.61+) [3.69]
+PCSB01328 ^ Zeroptian Invasion (3.61+) [3.69]
+PCSH10152 ^ Iron Snout
+PCSE01343 ^ Back in 1995 (3.61+!) [3.69]
+PCSG00770 ^ Majo Koi Nikki: Dragon x Caravan
+PCSG01250 ^ Suki to Suki to de Sankaku Ren'ai
+PCSG01141 ^ Taishou x Alice: Heads & Tails
+PCSG01146 ^ Dragon Sinker
+PCSG00705 ^ Citizens of Earth: Tatakae! Fukudaitouryou to 40-nin no Shimintachi!
+PCSG01064 ^ Teikoku Kaleido: Kakumei no Rondo
+PCSG01254 ^ Soi Kano ~Gyutto Dakishimete~
+PCSG01128 ^ Super Robot Taisen X
+PCSH10155 ^ Energy Cycle
+PCSH10097 ^ METAGAL
+PCSE01045 ^ Warlock's Tower
+PCSE01305 ^ The House in Fata Morgana
+PCSE00338 ^ QELLO HD CONCERTS
+PCSF00576 ^ Borderlands 2 (SPA-ITA)
+PCSG01240 ^ Super Destronaut DX: Intruders Edition
+PCSH00226 ^ Teslagrad Soundtrack
+PCSB00605 ^ FIFA 15 (ITA)
+PCSE01394 ^ Word Wheel by POWGI
+PCSE01398 ^ Neon Junctions
+PCSA00115 ^ MLB 14 The Show
+PCSH10150 ^ Super Weekend Mode
+PCSH10050 ^ Radio Hammer Station Original Soundtrack
+PCSG01263 ^ Asdivine Dios (3.61+!) [3.69]
+PCSH10158 ^ Energy Cycle Edge
+PCSH10143 ^ Bouncy Bullets
+PCSH10149 ^ Pato Box
+PCSH10137 ^ Warlock's Tower
+PCSG01251 ^ GhoulBoy
+PCSH10140 ^ Bit Dungeon Plus
+PCSG01266 ^ Yumeutsutsu Re:Master
+PCSB00173 ^ FIFA 13 (DEU)
+PCSB00341 ^ FIFA 14 (DEU)
+PCSE01382 ^ Furwind (3.61+!) [3.69]
+PCSE01420 ^ Kid Tripp
+PCSE01397 ^ Attack of the Toy Tanks (3.61+!) [3.69]
+PCSB01358 ^ Attack of the Toy Tanks (3.61+!) [3.69]
+PCSB01319 ^ I and Me
+PCSB01361 ^ Cybarian: The Time Traveling Warrior
+PCSE01400 ^ Cybarian: The Time Traveling Warrior
+PCSE01379 ^ Asdivine Dios (3.61+!) [3.69]
+PCSE01401 ^ Paradox Soul
+PCSA00085 ^ PlayStation All-Stars Battle Royale (PUBLIC BETA)
+PCSB01350 ^ Bonds of the Skies
+PCSG01277 ^ Gnosia
+PCSG01288 ^ Refalsia no Genei
+PCSG01265 ^ Kono Damegami ni Kyouiku wo
+PCSG01258 ^ Kono Subarashii Sekai ni Syukufuku wo! Kibou no Meikyuu to Tsudoishi Boukenshatachi
+PCSG01185 ^ Natsuiro Kokoro Log
+PCSG01267 ^ your diary +
+PCSB01360 ^ Paradox Soul
+PCSB01333 ^ Furwind (3.61+!) [3.69]
+PCSD00070 ^ Sly Cooper and the Thievius Raccoonus + Sly 2: Band of Thieves  (KOR)
+PCSH00111 ^ Shin Sangoku Musou 7 with Moushouden Complete Edition
+PCSG00481 ^ Shinsouban Crimson Empire
+PCSE00907 ^ Soldner-X 2: Final Prototype
+PCSG00994 ^ Daisenryaku WEB
+PCSE01349 ^ Bouncy Bullets
+PCSE01422 ^ Pic-a-Pix Color 2
+PCSE01408 ^ Grass Cutter
+PCSG01272 ^ Furwind (3.61+!) [3.69]
+PCSG01290 ^ Chevalier of Sapphire Blade Digital Soundtrack
+PCSG01281 ^ Chevalier of Sapphire Blade
+PCSG01174 ^ Winning Post 8 2018
+PCSG00943 ^ Berserk Musou
+PCSG00470 ^ Hanayaka Nari Waga Ichizoku Modern Nostalgie
+PCSB01388 ^ Pic-a-Pix Color 2
+PCSB01372 ^ Grass Cutter
+PCSB01310 ^ Bouncy Bullets
+PCSB01378 ^ Ghoulboy
+PCSF00463 ^ Tearaway Soundtrack
+PCSB01349 ^ Halloween Forever
+PCSB01308 ^ Back in 1995
+PCSB01354 ^ Kid Tripp
+PCSB01375 ^ Shakedown Hawaii
+PCSB01351 ^ Chronus Arc
+PCSB01367 ^ Word Wheel by POWGI
+PCSB01236 ^ The Dreamlands: Aisling's Quest
+PCSB01270 ^ Code: Realize ~Wintertide Miracles~
+PCSB01357 ^ Neon Junctions
+PCSB01283 ^ Nurse Love Syndrome
+PCSB01300 ^ Fast Striker
+PCSB01223 ^ Defender's Quest: Valley of the Forgotten DX
+PCSB01256 ^ Persona 3: Dancing in Moonlight
+PCSB01110 ^ Bunny Must Die! Chelsea and the 7devils
+PCSB01197 ^ Penny-Punching Princess
+PCSB01257 ^ Persona 5: Dancing in Starlight
+PCSB01302 ^ Scintillatron4096
+PCSB01276 ^ Slayaway Camp: Butcher's Cut
+PCSB01326 ^ Dreamwalker
+PCSB01331 ^ Crossovers by POWGI
+PCSB01325 ^ Emerald Shores
+PCSB01278 ^ GUNDEMONIUMS
+PCSB01250 ^ Bloodstained: Curse of the Moon
+PCSB01243 ^ EXTELLA LINK
+PCSB01303 ^ Atari Flashback Classics
+PCSB01269 ^ Death Mark
+PCSB01314 ^ EXTELLA LINK Digital Soundtrack
+PCSB01235 ^ Muv-Luv Alternative
+PCSB01225 ^ Sir Eatsalot
+PCSB01234 ^ Muv-Luv
+PCSB01233 ^ Chicken Range
+PCSB01229 ^ Antiquia Lost
+PCSB01176 ^ 7'scarlet
+PCSB01177 ^ Psychedelica of the Black Butterfly
+PCSB01195 ^ Damascus Gear: Operation Osaka
+PCSB01222 ^ NeuroVoider
+PCSB01200 ^ London Detective Mysteria
+PCSB01159 ^ UNDER NIGHT IN-BIRTH Exe:Late[st]
+PCSB01045 ^ The Longest Five Minutes
+PCSB01175 ^ Psychedelica of the Ashen Hawk
+PCSB01156 ^ Spacejacked
+PCSB00629 ^ Velocity 2X Soundtrack
+PCSH00094 ^ MLB.TV
+PCSE01414 ^ Mochi Mochi Boy
+PCSG01248 ^ Pro Yakyuu Spirits 2019
+PCSG01257 ^ I Am The Hero
+PCSG00542 ^ Harukanaru Toki no Naka De 6
+PCSG00637 ^ Taiheiyou no Arashi: Shijousaidai no Gekisen Normandy Koubousen
+PCSG01035 ^ GUNDAM BREAKER 3 BREAK EDITION
+PCSG01232 ^ Back in 1995 (3.61+!) [3.69]
+PCSG00367 ^ Goes!
+PCSG00941 ^ Crank In
+PCSG00217 ^ Hakuouki: Kyouka Roku
+PCSH10156 ^ Energy Balance
+PCSH10157 ^ Energy Invasion
+PCSB01340 ^ Hoggy2
+PCSE01383 ^ Hoggy2
+PCSE01406 ^ Conga Master Go
+PCSG01284 ^ Making*Lovers
+PCSE01388 ^ The Tower of Beatrice
+PCSE01415 ^ Super Wiloo Demake
+PCSG01287 ^ Asdivine Menace (3.61+!) [3.69]
+PCSG00963 ^ end sleep
+PCSG01282 ^ Shinigami to Shoujo
+PCSG00970 ^ KLAP!! ～Kind Love And Punish～ Fun Party
+PCSG01221 ^ Beniiro Tenjou Ayakashi Kitan Futaai
+PCSG00478 ^ KLAP!! ～Kind Love And Punish～
+PCSG01213 ^ Koshotengai no Hashihime Noma
+PCSG01167 ^ Enkan no Memoria: Kakera Tomoshi
+PCSG00544 ^ One Piece: Pirate Warriors 3
+PCSG00743 ^ ONE PIECE BURNING BLOOD
+PCSG00358 ^ One Piece: Unlimited World Red
+PCSG01065 ^ Gakuen Club: Himitsu no Nightclub
+PCSG01151 ^ GALTIA V Edition
+PCSG01194 ^ Sanzen Sekai Yuugi: Re Multi Universe Myself
+PCSE01418 ^ Illusion of L'Phalcia
+PCSE01395 ^ Wordsweeper by POWGI
+PCSG00135 ^ Call of Duty Black Ops: Declassified
+PCSB01366 ^ Wordsweeper by POWGI
+PCSB01347 ^ The Tower of Beatrice
+PCSB01381 ^ Mochi Mochi Boy
+PCSB01368 ^ Conga Master Go!
+PCSB01382 ^ Super Wiloo Demake
+PCSC00038 ^ Paint Park
+PCSE01384 ^ Gravity Duck
+PCSE01314 ^ VASARA Collection
+PCSG01136 ^ Demon Gaze II Global Edition (ENG/JPN) (3.61+!) [3.65]
+PCSH10161 ^ Neon Junctions
+PCSH10181 ^ Kid Tripp
+PCSG00509 ^ POSSESSION MAGENTA
+PCSG00966 ^ Timepiece Ensemble
+PCSE01428 ^ Mekabolt
+PCSE01426 ^ Legend of the Skyfish
+PCSE01417 ^ Pantsu Hunter
+PCSE01427 ^ Himno (3.61+!) [3.69]
+PCSE01431 ^ Fifty Words by POWGI
+PCSE01419 ^ Asdivine Menace (3.61+!) [3.69]
+PCSB01391 ^ Himno (3.61+!) [3.69]
+PCSE01159 ^ DISTRAINT: Deluxe Edition (3.61+!) [3.69]
+PCSG00273 ^ Kud Wafter: Converted Edition
+PCSG01278 ^ Devious Dungeon 2 (3.61+!) [3.69]
+PCSG01226 ^ Fernz Gate
+PCSG01289 ^ Gunka wo Haita Neko
+PCSG00696 ^ Angelique Retour
+PCSG01270 ^ Pic-a-Pix Pieces
+PCSG00218 ^ Golden Time: Vivid Memories
+PCSG00112 ^ Nobunaga no Yabou: Tendou with Power-Up Kit
+PCSG01154 ^ Darkest Dungeon (3.61+!) [3.68]
+PCSG01181 ^ Darkest Dungeon Original Soundtrack (3.61+!) [3.68]
+PCSG00420 ^ DRAMAtical Murder re:code
+PCSG01088 ^ World Election
+PCSG00949 ^ San Goku Shi 13 with Power-Up Kit
+PCSG00607 ^ Nobunaga no Yabou: Souzou with Power-Up Kit
+PCSG01132 ^ Koroshiya to Strawberry
+PCSG01268 ^ Kannagi no Mori Satsukiame Tsuzuri
+PCSG00755 ^ BROTHERS CONFLICT Precious Baby
+PCSG00738 ^ Mobile Suit Gundam: Extreme VS-Force
+PCSG00412 ^ Gundam Breaker 2
+PCSG00741 ^ Nobunaga no Yabou: Tenshouki with Power-Up Kit HD Version
+PCSB01397 ^ Fifty Words by POWGI
+PCSB01338 ^ Gravity Duck
+PCSH10182 ^ Mochi Mochi Boy
+PCSH10160 ^ Attack of the Toy Tanks (3.61+!) [3.69]
+PCSH10162 ^ Paradox Soul
+PCSH10146 ^ Hoggy2
+PCSB01394 ^ Mekabolt
+PCSH10186 ^ Himno
+PCSG01285 ^ MELLKISS
+PCSB01365 ^ Habroxia
+PCSE01423 ^ Color Slayer
+PCSE01396 ^ Habroxia
+PCSG01127 ^ Sen no Hatou, Tsukisome no Kouki
+PCSB01396 ^ Tic-Tac-Letters by POWGI
+PCSH10203 ^ Gravity Duck
+PCSH10175 ^ Crossovers by POWGI
+PCSH10169 ^ Mixups by POWGI (3.61+!) [3.69]
+PCSH10167 ^ One Word by POWGI
+PCSH10166 ^ Word Search by POWGI
+PCSH10179 ^ Word Wheel by POWGI
+PCSH10180 ^ Wordsweeper by POWGI
+PCSH10168 ^ Word Sudoku by POWGI
+PCSB00625 ^ SENRAN KAGURA: Bon Appétit! Stacked Soundtrack
+PCSE01430 ^ Tic-Tac-Letters by POWGI
+PCSE00013 ^ FIFA Soccer
+PCSE01095 ^ A Hole New World (3.61+!) [3.69]
+PCSE01433 ^ Super Box Land Demake
+PCSE01389 ^ A Winter's Daydream (3.61+!) [3.69]
+PCSE01407 ^ Spirit Hunter: NG
+PCSG01295 ^ Habroxia
+PCSG01292 ^ A Hole New World (3.61+!) [3.69]
+PCSG01279 ^ Conga Master Go
+PCSG00602 ^ Shinobi Koi Utsutsu Yukitsuki Hanakoi Emaki
+PCSG00183 ^ Sangoku Koisenki: Otome no Heihou
+PCSG01038 ^ Shinobi Koi Utsutsu Kanmitsu Hanakoi Emaki
+PCSG00826 ^ DIABOLIK LOVERS LUNATIC PARADE
+PCSG00785 ^ Sangoku Koi Senki: Omoide Gaeshi CS Edition
+PCSG00863 ^ Sangoku Hime 4: Tenka Ryouran - Tenmei no Koi Emaki
+PCSG00210 ^ San Goku Shi 12 with Power-Up Kit
+PCSG00852 ^ Magic Kyun! Renaissance
+PCSG00410 ^ Nekketsu Inou Bukatsu: Trigger Kiss
+PCSG00422 ^ Love Live! School idol paradise Vol.1 Printemps
+PCSG00424 ^ Love Live! School idol paradise Vol.3 lily white
+PCSG00846 ^ Shirogane x Spirits!
+PCSG00287 ^ Ro-Kyu-Bu! Naisho no Shutter Chance
+PCSG00822 ^ Shitsuji ga Aruji o Erabu Toki
+PCSG00505 ^ Daitoshokan no Hitsujikai: Library Party
+PCSG00423 ^ Love Live! School idol paradise Vol.2 BiBi
+PCSG00906 ^ SAKA AGARI HURRICANE PORTABLE
+PCSB01346 ^ A Winter's Daydream (3.61+!) [3.69]
+PCSH10183 ^ Super Wiloo Demake
+PCSH10163 ^ Cybarian: The Time Traveling Warrior
+PCSB01208 ^ Warlock's Tower
+PCSE01405 ^ Just Ignore Them
+PCSE01403 ^ Deep Space Rush
+PCSG01296 ^ Aerial Life (3.61+!) [3.69]
+PCSH10113 ^ The Legend of Heroes AO NO KISEKI Evolution (3.61+!) [3.69]
+PCSH10111 ^ The Legend of Heroes ZERO NO KISEKI Evolution (3.61+!) [3.69]
+PCSE01425 ^ Miles & Kilo
+PCSB01359 ^ Deep Space Rush
+PCSB00996 ^ Air Race Speed
+PCSG90202 ^ Schwarzesmarken: Kouketsu no Monshou (Prologue)
+PCSG90203 ^ Muv-Luv Alternative Total Eclipse: Teito Moyu
+PCSE01443 ^ Football Game
+PCSG01234 ^ Romancing SaGa 3
+PCSE01337 ^ Romancing SaGa 3
+PCSB01385 ^ Pantsu Hunter
+PCSG01048 ^ Tokyo Yamanote Boys for V: Main Disc (3.61+!) [3.63]
+PCSG00904 ^ PuraMai Wars V
+PCSG00578 ^ MegaTagmension Blanc + Neptune VS Zombies
+PCSG00229 ^ Rozen Maiden -Wechseln sie welt ab-
+PCSG01004 ^ Love of Ren'ai Koutei of LOVE!
+PCSG01203 ^ Tayutama 2: You're the only one
+PCSG00373 ^ Gendai Daisenryaku 2016 ~Chitsujo no Houkai·Haken Kokka Shittsui~
+PCSG00396 ^ Soushuu Senshinkan Gakuen: Hachimyoujin Ten no Toki
+PCSG01229 ^ Hatsujou Sprinkle
+PCSG01165 ^ Lucky Dog 1
+PCSG01301 ^ DISTRAINT: Deluxe Edition (3.61+!) [3.69]
+PCSG01298 ^ Wizards of Brandel
+PCSG00469 ^ Clock Zero: Shuuen no Ichibyou ExTime
+PCSG00745 ^ Scared Rider Xechs Rev.
+PCSB01408 ^ Football Game
+PCSG00274 ^ Chou no Doku Hana no Kusari: Taishou Tsuyakoi Ibun
+PCSG01186 ^ IS IT WRONG TO TRY TO PICK UP GIRLS IN A DUNGEON? SHOOTING
+PCSG01002 ^ Is It Wrong to Try to Pick Up Girls in a Dungeon? Infinite Combate
+PCSG01293 ^ Amamane (3.61+!) [3.69]
+PCSE01437 ^ FoxyLand (3.61+!) [3.69]
+PCSE01435 ^ Pic-a-Pix Classic 2
+PCSH00275 ^ La Corda d'Oro 4 (CHI)
+PCSE01432 ^ Wizards of Brandel
+PCSG00944 ^ Shiro to Kuro no Alice
+PCSG00914 ^ Uta no * Prince-Sama: Repeat LOVE
+PCSG00668 ^ BAD APPLE WARS
+PCSG00935 ^ BLACK WOLVES SAGA -Weiβ und Schwarz-
+PCSG00172 ^ Kajiri Kamui Kagura: Akebono no Hikari
+PCSG00501 ^ Kaeru Batake de Tsukamaete
+PCSG00382 ^ RE:VICE[D]
+PCSB01402 ^ FoxyLand (3.61+!) [3.69]
+PCSC00046 ^ torne PlayStation Vita TV
+PCSH10204 ^ DISTRAINT: Deluxe Edition (3.61+!) [3.69]
+PCSH10165 ^ Deep Space Rush
+PCSH10195 ^ Mekabolt
+PCSH10211 ^ Fifty Words by POWGI
+PCSH10200 ^ Super Box Land Demake
+PCSH10210 ^ Perils of Baking
+PCSH10141 ^ Back in 1995 (3.61+!) [3.69]
+PCSH10177 ^ Mecho Wars: Desert Ashes
+PCSE01453 ^ Word Maze by POWGI
+PCSH10079 ^ Digimon Story Cyber Sleuth: Hacker's Memory - Digimon 20th Anniversary Edition
+PCSG00574 ^ School Wars: Zenkan Pack Honpen & Sotsugyou Sensen
+PCSG00059 ^ Hello Kitty to Issho: Block Crash V
+PCSB01265 ^ Link-a-Pix Deluxe
+PCSE01285 ^ Link-a-Pix Deluxe
+PCSE01445 ^ Without Escape
+PCSE01434 ^ Red Bow (3.61+!) [3.69]
+PCSB01399 ^ Red Bow (3.61+!) [3.69]
+PCSF00192 ^ PlayStation All-Stars Battle Royale (BETA)
+PCSE00512 ^ Velocity 2X Soundtrack
+PCSB01403 ^ FoxyLand 2 (3.61+!) [3.69]
+PCSH10223 ^ FoxyLand (3.61+!) [3.69]
+PCSH10218 ^ Football Game
+PCSE01438 ^ FoxyLand 2 (3.61+!) [3.69]
+PCSE01086 ^ Dragon Fantasy: Volumes of Westeria
+PCSG01297 ^ IxSHE Tell
+PCSB01362 ^ Just Ignore Them
+PCSG00649 ^ Reel Fishing: Master's Challenge
+PCSD00081 ^ SOUL SACRIFICE DELTA OFFICIAL SOUNDTRACK
+PCSG01122 ^ D.S.-Dal Segno-
+PCSG01316 ^ Miles & Kilo
+PCSG01311 ^ FoxyLand 2 (3.61+!) [3.69]
+PCSG01169 ^ Plague Road
+PCSG01310 ^ FoxyLand (3.61+!) [3.69]
+PCSG01308 ^ Red Bow (3.61+!) [3.69]
+PCSG00854 ^ 猛獣たちとお姫様
+PCSG00876 ^ 7'scarlet
+PCSG00651 ^ Uta no * Prince-Sama: Music 3
+PCSG00611 ^ 絶対迷宮　秘密のおやゆび姫
+PCSG00429 ^ ノルン＋ノネット ラスト イーラ
+PCSG01152 ^ Dance with Devils My Carol (3.61+!) [3.67]
+PCSG00880 ^ Zettai Kaikyuu Gakuen
+PCSG00969 ^ トラベリングスターズ -Traveling Stars-
+PCSG00909 ^ Yunohana SpRING! Cherishing Time
+PCSG01299 ^ 恋する乙女と守護の楯～薔薇の聖母～
+PCSG00022 ^ @field
+PCSG00768 ^ ヴァルプルガの詩
+PCSG01139 ^ ピオフィオーレの晩鐘
+PCSG01120 ^ 吉原彼岸花 久遠の契り
+PCSE01456 ^ Reed Remastered (3.61+!) [3.69]
+PCSE01088 ^ Zero Zero Zero Zero (3.61+!) [3.69]
+PCSE01436 ^ Just a Phrase by POWGI (3.61+!) [3.69]
+PCSE01449 ^ Milo's Quest (3.61+!) [3.69]
+PCSD00023 ^ foursquare
+PCSE01444 ^ Knightin'+
+PCSE01441 ^ Balthazar's Dream
+PCSB01409 ^ Knightin'+
+PCSB01414 ^ Milo's Quest (3.61+!) [3.69]
+PCSB01116 ^ Zero Zero Zero Zero
+PCSB01422 ^ Reed Remastered (3.61+!) [3.69]
+PCSH10212 ^ Tic-Tac-Letters by POWGI
+PCSH10225 ^ Milo's Quest (3.61+!) [3.69]
+PCSH10219 ^ Without Escape
+PCSH10189 ^ Red Bow (3.61+!) [3.69]
+PCSB01415 ^ Syrup and The Ultimate Sweet
+PCSA00084 ^ PlayStation All-Stars Battle Royale (BETA)
+PCSG00650 ^ Natsumegu
+PCSE01455 ^ Bucket Knight
+PCSE01451 ^ Syrup and the Ultimate Sweet
+PCSE01412 ^ Vasilis
+PCSE01429 ^ Breeder Homegrown
+PCSB01426 ^ Super Destronaut: Land Wars (3.61+!) [3.69]
+PCSE01460 ^ Super Destronaut: Land Wars (3.61+!) [3.69]
+PCSB01429 ^ Thunder Paw
+PCSB01418 ^ Word Maze by POWGI
+PCSB01410 ^ Without Escape
+PCSH10202 ^ Syrup and the Ultimate Sweet
+PCSH10215 ^ Pantsu Hunter: Back to the 90s
+PCSH10228 ^ Word Maze by POWGI
+PCSE01439 ^ Duck Souls+
+PCSE01463 ^ Thunder Paw
+PCSB01348 ^ MEKORAMA
+PCSE01465 ^ Epic Word Search Collection
+PCSE01454 ^ Explosive Jake
+PCSE01390 ^ MEKORAMA
+PCSE01452 ^ Twin Breaker: A Sacred Symbols Adventure
+PCSE01440 ^ Ganbare! Super Strikers
+PCSG01202 ^ フローラル・フローラブ
+PCSB00132 ^ Ridge Racer (2011 E3 Interactive Demo)
+PCSE01351 ^ Random Heroes: Gold Edition
+PCSE01478 ^ Battle Rockets
+PCSE01477 ^ Wurroom
+PCSG00953 ^ Macross Delta Scramble (RunPika Sound Edition)
+PCSB01393 ^ Miles & Kilo
+PCSB01400 ^ Just a Phrase by POWGI
+PCSB01401 ^ Pic-a-Pix Classic 2
+PCSB01431 ^ Epic Word Search Collection
+PCSB01398 ^ Super Box Land Demake
+PCSB01392 ^ Legend of the Skyfish
+PCSG00440 ^ Super Hero Generation (Special Sound Edition)
+PCSE01387 ^ Rush Rover
+PCSG00706 ^ もし、この世界に神様がいるとするならば。
+PCSG00965 ^ id [イド] - Rebirth Session -
+PCSG01318 ^ 金色ラブリッチェ
+PCSG01314 ^ LOVE CLEAR
+PCSG01046 ^ 嘘月シャングリラ
+PCSG01085 ^ 双子座のパラドクス
+PCSG00518 ^ 百花繚乱エリクシル～Record of Torenia Revival～
+PCSE01457 ^ Blind Men
+PCSH10222 ^ FoxyLand 2 (3.61+!) [3.69]
+PCSG01225 ^ Fate/EXTELLA LINK Original Soundtrack
+PCSH10221 ^ Zero Zero Zero Zero
+PCSG00609 ^ クロガネ回姫雀
+PCSG00641 ^ クロガネ回姫譚 －一期一会－
+PCSH10229 ^ Knightin'+
+PCSH10233 ^ Reed Remastered (3.61+!) [3.69]
+PCSB01420 ^ Bucket Knight
+PCSB01412 ^ Active Neurons (3.61+!) [3.69]
+PCSB01395 ^ Breeder Homegrown
+PCSB01419 ^ Explosive Jake
+PCSB01446 ^ Wurroom
+PCSB01165 ^ DISTRAINT: Deluxe Edition (3.61+!) [3.69]
+PCSB01404 ^ Duck Souls+
+PCSB01439 ^ Reed 2
+PCSB01389 ^ Color Slayer
+PCSE01450 ^ Guard Duty (3.61+!) [3.69]
+PCSH00166 ^ Corpse Party BLOOD DRIVE
+PCSE01475 ^ EMMA: Lost In Memories
+PCSE01448 ^ Active Neurons (3.61+!) [3.69]
+PCSE01471 ^ Reed 2
+PCSE01416 ^ Thy Sword (3.61+!) [3.69]
+PCSG01317 ^ 夢現Re:After
+PCSG01283 ^ アオナツライン
+PCSG00638 ^ あまつみそらに！ 雲のはたてに
+PCSG00894 ^ 鯨神のティアスティラ
+PCSG00189 ^ 三極姫２～天下覇統・獅志の継承者～
+PCSG00926 ^ 星織ユメミライ Converted Edition
+PCSG00840 ^ 信長の野望･創造 戦国立志伝
+PCSG01180 ^ 天涯ニ舞ウ、粋ナ花
+PCSG00393 ^ 家族計画 Re:紡ぐ糸
+PCSG00623 ^ 俺に働けって言われても 酉
+PCSG00748 ^ Jikkyou Powerful Pro Yakyuu 2016
+PCSG00300 ^ Jスターズ ビクトリーバーサス
+PCSG00207 ^ 実況パワフルプロ野球２０１３
+PCSA00061 ^ LittleBigPlanet PS Vita Beta Trial
+PCSE01409 ^ Utawarerumono: Prelude to the Fallen (3.61+!) [3.69]
+PCSB01421 ^ Blind Men
+PCSB00418 ^ PSV LEGO Movie: Videogame
+PCSH10235 ^ Blind Men
+PCSG00012 ^ Asphalt: Injection
+PCSG00024 ^ Monster Radar
+PCSG00031 ^ Pro Yakyuu Spirits 2012
+PCSG00047 ^ TOEIC Test: Jissen Tokkun
+PCSG00064 ^ Jikkyou Powerful Pro Yakyuu 2012
+PCSG00071 ^ NextRev: Ouyou Jouhougijutsusha Shiken
+PCSG00072 ^ NextRev: Kihonjouhou Gijutsusha Shiken
+PCSG00073 ^ NextRev: IT Passport Shiken
+PCSG00086 ^ NextRev: FP Ginoukentei Shiken 3-Kyuu
+PCSG00100 ^ NextRev: Jouhou Security Specialist Shiken
+PCSG00109 ^ NextRev: Shakai Fukushishi Shiken
+PCSG00107 ^ FIFA 13: World Class Soccer
+PCSG00128 ^ Spy Hunter
+PCSG00134 ^ Jikkyou Powerful Pro Yakyuu 2012 Ketteiban
+PCSG00143 ^ NextRev: Chuushoukigyou Shindanshi Shiken 1
+PCSG00155 ^ Naitei! Shuukatsu Kanzen Taisaku - ES - SPI - Mensetsu
+PCSG00178 ^ Slotter Mania V: Zettai Shogeki II
+PCSG00186 ^ NextRev: Hisho Kentei Shiken
+PCSG00194 ^ Winning Post 7 2013
+PCSG00201 ^ FIFA 14
+PCSG00207 ^ Jikkyou Powerful Pro Yakyuu 2013
+PCSG00222 ^ Nihon Pro Mahjong Renmei Kounin: Motto 20-Bai! Mahjong ga Tsuyoku Naru Houhou - Shochuukyuusha Hen
+PCSG00238 ^ Winning Post 8
+PCSG00223 ^ Nihon Pro Mahjong Renmei Suisen: Tokoton Mahjong! Joryuu Pro ni Chousen! Tetsuman Megami Special
+PCSG00288 ^ Pro Yakyuu Spirits 2014
+PCSG00301 ^ J-Stars Victory Vs (Anison Sound Edition)
+PCSG00331 ^ Lost Dimension
+PCSG00791 ^ A.W.: Phoenix Festa
+PCSG00417 ^ Kurogane Kaikitan: Senya Ichiya
+PCSG00836 ^ Lego Marvel's Avengers
+PCSE01467 ^ Demon's Tier+
+PCSF00516 ^ LittleBigPlanet PlayStation Vita Marvel Super Hero Edition
+PCSG00930 ^ 薄桜鬼 遊戯録 隊士達の大宴会
+PCSG01197 ^ Cafe Cuillere ～カフェ キュイエール～
+PCSG00360 ^ 解放少女SIN
+PCSG00605 ^ 薄桜鬼 黎明録 思馳せ空
+PCSG00468 ^ 黒蝶のサイケデリカ
+PCSG00733 ^ Melty Moment
+PCSG00485 ^ 薄桜鬼 随想録 面影げ花
+PCSG00529 ^ Justy×Nasty ～魔王はじめました～
+PCSG00653 ^ ゆのはなSpRING！
+PCSG00853 ^ ピリオドキューブ～鳥籠のアマデウス～
+PCSH10198 ^ Guard Duty (3.61+!) [3.69]
+PCSH10250 ^ Twin Breaker: A Sacred Symbols Adventure
+PCSE00087 ^ Lego Batman 2: DC Super Heroes (FRA)
+PCSB01405 ^ Ganbare! Super Strikers
+PCSH00062 ^ STEINS;GATE
+PCSH00259 ^ STEINS;GATE 0
+PCSH00063 ^ Steins;Gate: Hiyoku Renri no Darling
+PCSH00061 ^ Steins;Gate: Senkei Kousoku no Phenogram
+PCSH10041 ^ GUNDAM BREAKER 3 BREAK EDITION
+PCSE01344 ^ The Demon Rush: Legends Corrupt
+PCSE01466 ^ Pic-a-Pix Pieces 2
+PCSG00404 ^ FIFA 15
+PCSH10242 ^ Metropolis: Lux Obscura
+PCSH10243 ^ Deep Ones
+PCSH10208 ^ Link-a-Pix Deluxe
+PCSH10224 ^ Miles & Kilo
+PCSH10214 ^ Pic-a-Pix Classic 2
+PCSH10174 ^ Block-a-Pix Deluxe
+PCSH10172 ^ Pic-a-Pix Classic
+PCSH10171 ^ Pic-a-Pix Pieces
+PCSH10173 ^ Fill-a-Pix: Phil's Epic Adventure
+PCSG00300 ^ J-Stars Victory Vs
+PCSE01487 ^ Ultracore
+PCSE01464 ^ Crypto by POWGI
+PCSE01474 ^ Awesome Pea 2
+PCSE01492 ^ Epic Word Search Collection 2
+PCSG00811 ^ 薄桜鬼 真改 華ノ章
+PCSG00635 ^ 十三支演義 偃月三国伝1・2
+PCSG00448 ^ MARGINAL#4 IDOL OF SUPERNOVA
+PCSG01008 ^ MARGINAL#4 ROAD TO GALAXY
+PCSG01131 ^ フォルティッシモ
+PCSG00576 ^ 華ヤカ哉、我ガ一族 幻燈ノスタルジィ
+PCSG00771 ^ DEAD OR ALIVE Xtreme 3 Venus
+PCSG01068 ^ ネオ アンジェリーク 天使の涙
+PCSB01441 ^ Awesome Pea 2
+PCSB01444 ^ Mushroom Heroes
+PCSE01462 ^ Yumeutsutsu Re:After
+PCSE01461 ^ Yumeutsutsu Re:Master
+PCSG00404 ^ FIFA 15
+PCSG00596 ^ Jinro Game
+PCSG01313 ^ METAGAL
+PCSH10238 ^ Epic Word Search Collection
+PCSH10236 ^ Thunder Paw
+PCSH10245 ^ Bucket Knight
+PCSH10256 ^ Random Heroes: Gold Edition
+PCSH10201 ^ Super Destronaut: Land Wars
+PCSH10240 ^ Crypto by POWGI
+PCSE01413 ^ Need a packet?
+PCSE01495 ^ Big Dipper
+PCSE01479 ^ Mushroom Heroes
+PCSB00236 ^ JAZZ: Trump's Journey
+PCSG00502 ^ Yuuki Yuuna wa Yuusha de Aru: Jukai no Kioku
+PCSB01432 ^ Crypto by POWGI
+PCSE01491 ^ Kawaii Deathu Desu
+PCSE01391 ^ Steam Tactics
+PCSH10251 ^ Duck Souls+
+PCSE01496 ^ Norman's Great Illusion
+PCSE01493 ^ Alphaset by POWGI
+PCSE01468 ^ Task Force Kampas
+PCSG01326 ^ Xeno Crisis
+PCSG01325 ^ アイキス
+PCSH10248 ^ Task Force Kampas
+PCSG01323 ^ Task Force Kampas
+PCSE01484 ^ Swordbreaker The Game
+PCSE01481 ^ Xeno Crisis
+PCSH10053 ^ BURIED STARS
+PCSG00370 ^ デュラララ!! 3way standoff -alley- V
+PCSG00808 ^ 悠久のティアブレイド -Lost Chronicle-
+PCSG00753 ^ 英国探偵ミステリア The Crown
+PCSG00790 ^ Wand of Fortune R
+PCSG00855 ^ 花朧 ～戦国伝乱奇～
+PCSG01011 ^ 空蝉の廻
+PCSF00387 ^ Killzone Mercenary:BetaTrial
+PCSG01104 ^ 戦御村正DX-紅蓮の血統-
+PCSE01500 ^ Takotan
+PCSG00974 ^ スーパーロボット大戦V プレミアムアニメソング＆サウンドエディション
+PCSG01129 ^ スーパーロボット大戦X プレミアムアニメソング＆サウンドエディション
+PCSG90129 ^ クロガネ回姫譚 －閃夜一夜－ 体験版
+PCSE01476 ^ Contraptions
+PCSG00812 ^ 灰鷹のサイケデリカ
+PCSG00662 ^ マル合格! 宅建試験 平成27年度版
+PCSG00345 ^ この歌が終わったら - When this song is over -
+PCSG01158 ^ 真紅の焔 真田忍法帳
+PCSG00595 ^ 神々の悪戯 InFinite
+PCSG00670 ^ ガールフレンド（仮）きみと過ごす夏休み
+PCSB01316 ^ Root Double -Before Crime * After Days- Xtend Edition
+PCSG01246 ^ Labyrinth of Galleria: Coven of Dusk
+PCSB01458 ^ Epic Word Search Collection 2
+PCSE01499 ^ My Aunt is a Witch
+PCSG00198 ^ Soccer Tsuku: Pro Soccer Club wo Tsukurou!
+PCSG00629 ^ 薄桜鬼 真改 風ノ章
+PCSG00251 ^ 真・三國無双７ with 猛将伝
+PCSG01294 ^ 幻想牢獄のカレイドスコープ
+PCSG01331 ^ Takotan
+PCSG00945 ^ 太平洋の嵐 ～皇国の興廃ここにあり、1942戦艦大和反攻の號砲～
+PCSG00779 ^ 大戦略パーフェクト～戦場の覇者～
+PCSG01075 ^ 悠久のティアブレイド -Fragments of Memory-
+PCSH10296 ^ Planet RIX-13
+PCSH10297 ^ Breeder Homegrown
+PCSH10299 ^ Takotan
+PCSH10294 ^ Sigi - A Fart for Melusina
+PCSH10295 ^ Drowning
+PCSH10298 ^ A Winter's Daydream
+PCSB00055 ^ EA SPORTS FIFA Football (Spain)
+PCSB01466 ^ Habroxia 2
+PCSG00391 ^ NextRev: Takken Shiken 2015
+PCSF00448 ^ Invizimals: The Alliance (GRE)
+PCSE01498 ^ Pachi Pachi on a Roll
+PCSB00846 ^ Du View
+PCSE01503 ^ Gods of Almagest
+PCSH10287 ^ Sense - 不祥的预感: A Cyberpunk Ghost Story
+PCSG00451 ^ ハナヤマタ よさこいLIVE！
+PCSE01507 ^ Battle Rockets (v2)
+PCSG01332 ^ Kawaii Deathu Desu
+PCSG01330 ^ Habroxia 2
+PCSC00047 ^ 勇者のくせにこなまいきだ。Ｇ
+PCSG00030 ^ NAX Music Player
+PCSB01472 ^ Battle Rockets™
+PCSB01463 ^ My Aunt is a Witch
+PCSB01380 ^ Need a packet?
+PCSB01461 ^ Norman's Great Illusion
+PCSB01437 ^ Demon's Tier+
+PCSC00043 ^ Muryou-ban E-Channel ~NEW Paint Park~
+PCSG00211 ^ 三國志12対戦版
+PCSG00359 ^ インフィニタ・ストラーダ
+PCSG00453 ^ 真・三國無双７ Empires 共闘版
+PCSG00691 ^ 実況パワフルプロ野球サクセススペシャル
+PCSG00773 ^ DEAD OR ALIVE Xtreme 3 Venus Free-to-Play Version
+PCSG00803 ^ 信長の野望 201X
+PCSG00834 ^ 討鬼伝２ 共闘版
+PCSG00924 ^ 少女とドラゴン -幻獣契約クリプトラクト-
+PCSG01026 ^ 英雄伝説 暁の軌跡
+PCSG01189 ^ インフィニタ・ストラーダ 華
+PCSH00200 ^ Twitch
+PCSH10027 ^ 討鬼傳２ 共鬥版
+PCSG00243 ^ JOYSOUND.TV Plus
+PCSB01460 ^ Astro Aqua Kitty
+PCSH10252 ^ Demon's Tier+
+PCSH10260 ^ Demetrios - The BIG Cynical Adventure
+PCSH10247 ^ Grass Cutter
+PCSH10302 ^ My Aunt is a Witch
+PCSH10241 ^ Alteric
+PCSH10275 ^ Awesome Pea 2
+PCSH10244 ^ Awesome Pea
+PCSH10194 ^ Ganbare! Super Strikers
+PCSB01339 ^ Rush Rover
+PCSB01311 ^ Random Heroes: Gold Edition
+PCSB01379 ^ Vasilis
+PCSB01416 ^ Guard Duty
+PCSB01383 ^ Thy Sword
+PCSB01443 ^ EMMA: Lost in Memories
+PCSB01281 ^ Vasara Collection
+PCSB01353 ^ Steam Tactics
+PCSB01457 ^ Alphaset by POWGI
+PCSB01450 ^ Swordbreaker The Game
+PCSB01435 ^ Task Force Kampas
+PCSB01462 ^ Pachi Pachi On A Roll
+PCSH10213 ^ Just a Phrase by POWGI
+PCSH10246 ^ Explosive Jake
+PCSH10261 ^ Riddled Corpses EX
+PCSH10257 ^ Xenon Valkyrie+
+PCSH10216 ^ Balthazar's Dreams
+PCSH10239 ^ Pic-a-Pix Pieces 2
+PCSH10271 ^ Alphaset by POWGI
+PCSH10270 ^ Epic Word Search Collection 2
+PCSH10185 ^ Pic-a-Pix Color 2
+PCSH10304 ^ Habroxia 2
+PCSH10285 ^ Pachi Pachi On a Roll
+PCSG01273 ^ メコラマ
+PCSG01319 ^ リンク絵 Link-a-Pix DELUXE
+PCSG01328 ^ Mushroom Heroes
+PCSB01282 ^ The Deer God
+PCSB01275 ^ Riddled Corpses EX
+PCSB01284 ^ The Bard's Tale: Remastered and Resnarkled
+PCSB01181 ^ Axiom Verge: Multiverse Edition
+PCSE00975 ^ The Swindle
+PCSE01497 ^ Astro Aqua Kitty
+PCSH10092 ^ A Certain Magical Virtual-On (Chinese)
+PCSH00244 ^ Mr.Pumpkin Adventure
+PCSG00762 ^ Attack on Titan: Wings of Freedom
+PCSB01448 ^ Xeno Crisis
+PCSB01467 ^ ScourgeBringer
+PCSE01505 ^ ScourgeBringer
+PCSD00021 ^ Unit 13
+PCSE01332 ^ London Detective Mysteria - Demo
+PCSB01465 ^ Takotan
+PCSG90078 ^ 討鬼伝 体験版
+PCSB01445 ^ Contraptions
+PCSG00297 ^ Hakuouki SSL: Sweet School Life
+PCSB01474 ^ Dull Grey
+PCSB01118 ^ A Hole New World
+PCSB01406 ^ Balthazar's Dream
+PCSH10290 ^ Luckslinger
+PCSG01025 ^ Tsukitomo. Tsukiuta 12 Memories
+PCSE00263 ^ FIFA 14
+PCSE00093 ^ FIFA 13
+PCSB01476 ^ SturmFront - The Mutant War
+PCSH10315 ^ Horizon Chase Turbo
+PCSG01207 ^ SuperZangyura
+PCSB00174 ^ FIFA 13 (SPA)
+PCSE01508 ^ SYNERGIA
+PCSG00979 ^ Adventure Time: The Secret of the Nameless Kingdom
+PCSE01516 ^ Witchcrafty
+PCSE01513 ^ Ultra Mission
+PCSE01226 ^ Russian Subway Dogs
+PCSB01479 ^ Brotherhood United
+PCSE01515 ^ Killer Dolls United
+PCSE01514 ^ SturmFront - The Mutant War
+PCSE01501 ^ Mind Maze
+PCSH00267 ^ A Rose in the Twilight (Korean)
+PCSG00836 ^ LEGO: Marvel Avengers
+PCSE01510 ^ Dull Grey
+PCSB01478 ^ Witchcrafty
+PCSB00467 ^ Eufloria HD
+PCSB00134 ^ LEGO Batman 2: DC Super Heroes FR
+PCSB00171 ^ FIFA 13 (FR)
+PCSE01517 ^ Brotherhood United
+PCSB01464 ^ Russian Subway Dogs
+PCSB01468 ^ Mind Maze
+PCSB01477 ^ Killer Dolls United
+PCSG01291 ^ Luckslinger
+PCSE01504 ^ Habroxia 2
+PCSB00534 ^ Farming Simulator 14
+PCSB00941 ^ Zombies: The Last Survivor
+PCSB01089 ^ Fairune
+PCSB01417 ^ Twin Breaker: A Sacred Symbols Adventure
+PCSB00052 ^ EA SPORTS FIFA Football
+PCSB00606 ^ FIFA 15 (SPA)
+PCSB00340 ^ FIFA 14 (FR)
+PCSB01480 ^ Ultra Mission (3.61+) [3.69]
+PCSB00971 ^ NightCry
+PCSB01442 ^ Ultracore
+PCSB01430 ^ Pic-a-Pix Pieces 2
+PCSB01387 ^ Illusion of L'Phalcia
+PCSE01480 ^ Sense - A Cyberpunk Ghost Story
+PCSA00141 ^ Tearaway Soundtrack
+PCSB01377 ^ Utawarerumono: Prelude to the Fallen
+PCSE00285 ^ Farming Simulator
+PCSC80024 ^ SKY PerfecTV! On Demand

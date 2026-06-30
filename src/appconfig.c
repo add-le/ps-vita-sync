@@ -1,4 +1,5 @@
 #include "appconfig.h"
+#include "logger.h"
 #include <psp2/io/fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,7 +11,9 @@ AppConfig_t *loadConfig() {
 
   int fd = sceIoOpen(config_location, SCE_O_RDONLY, 0777);
   if (fd < 0) {
-    return NULL;
+    logger_printf("Failed to open file 'config.lst' (0x%x)\n", fd);
+    logger_panic(fd);
+    logger_exit(1);
   }
 
   int fd_size = sceIoLseek(fd, 0, SCE_SEEK_END);

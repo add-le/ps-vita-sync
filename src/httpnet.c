@@ -10,6 +10,7 @@
 
 #include "debugScreen.h"
 #include "httpnet.h"
+#include "logger.h"
 
 #define printf psvDebugScreenPrintf
 
@@ -26,25 +27,25 @@ void httpNetInit() {
   int res = sceNetInit(&net_init_param);
   if (res < 0) {
     printf("sceNetInit failed (0x%X)\n", res);
-    exit(1);
+    logger_exit(1);
   }
 
   res = sceNetCtlInit();
   if (res < 0) {
     printf("sceNetCtlInit failed (0x%X)\n", res);
-    exit(1);
+    logger_exit(1);
   }
 
   res = sceSslInit(512 * 1024);
   if (res < 0) {
     printf("sceSslInit failed (0x%X)\n", res);
-    exit(1);
+    logger_exit(1);
   }
 
   res = sceHttpInit(64 * 1024);
   if (res < 0) {
     printf("sceHttpInit failed (0x%X)\n", res);
-    exit(1);
+    logger_exit(1);
   }
 }
 
@@ -65,7 +66,7 @@ HttpResponse_t _httpSend(char *url, SceHttpMethods method,
   int tpl = sceHttpCreateTemplate("PS Vita Sync", SCE_HTTP_VERSION_1_1, 1);
   if (tpl < 0) {
     printf("sceHttpCreateTemplate failed (0x%X)\n", tpl);
-    exit(1);
+    logger_exit(1);
   }
 
   // Add headers to the request
@@ -79,13 +80,13 @@ HttpResponse_t _httpSend(char *url, SceHttpMethods method,
   int conn = sceHttpCreateConnectionWithURL(tpl, url, 0);
   if (conn < 0) {
     printf("sceHttpCreateConnectionWithURL failed (0x%X)\n", conn);
-    exit(1);
+    logger_exit(1);
   }
 
   int req = sceHttpCreateRequestWithURL(conn, method, url, 0);
   if (req < 0) {
     printf("sceHttpCreateRequestWithURL failed (0x%X)\n", req);
-    exit(1);
+    logger_exit(1);
   }
 
   if (body != NULL) {
@@ -95,14 +96,14 @@ HttpResponse_t _httpSend(char *url, SceHttpMethods method,
   }
   if (res < 0) {
     printf("sceHttpSendRequest failed (0x%X)\n", res);
-    exit(1);
+    logger_exit(1);
   }
 
   int statusCode;
   res = sceHttpGetStatusCode(req, &statusCode);
   if (res < 0) {
     printf("sceHttpGetStatusCode failed (0x%X)\n", res);
-    exit(1);
+    logger_exit(1);
   }
 
   char *recv_buffer = NULL;
@@ -128,11 +129,11 @@ HttpResponse_t _httpSend(char *url, SceHttpMethods method,
       }
     } else {
       printf("sceHttpGetStatusCode failed (0x%X)\n", res);
-      exit(1);
+      logger_exit(1);
     }
   } else {
     printf("request failed HTTP %d\n", statusCode);
-    exit(1);
+    logger_exit(1);
   }
 
   HttpResponse_t response = {.buffer = recv_buffer, .length = contentLength};

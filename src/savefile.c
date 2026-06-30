@@ -3,6 +3,8 @@
 #include <psp2/paf.h>
 #include <psp2kern/kernel/utils.h>
 
+#include <curl/curl.h>
+
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,10 +12,9 @@
 
 #include "driveapi.h"
 #include "httpnet.h"
+#include "logger.h"
 #include "savefile.h"
 #include "timehandler.h"
-
-#include <curl/curl.h>
 
 long long getLastModificationTime(char *path) {
   int fd = sceIoDopen(path);
@@ -44,6 +45,9 @@ long long getLastModificationTime(char *path) {
 int downloadSavefile(char *fileId, char *path, char *access_token) {
   HttpResponse_t drive_file = getFile(fileId, NULL, true, access_token);
 
+  /**
+   * FIXME: Why not used anymore?
+   */
   // Backup the local_file
   // Need to delete old backup if exists before
   // char *old_location = (char *)malloc(strlen(path) + 4 + 1);
@@ -81,7 +85,7 @@ void init_string(struct string *s) {
   s->ptr = malloc(s->len + 1);
   if (s->ptr == NULL) {
     fprintf(stderr, "malloc() failed\n");
-    exit(EXIT_FAILURE);
+    logger_exit(EXIT_FAILURE);
   }
   s->ptr[0] = '\0';
 }
@@ -91,7 +95,7 @@ size_t writefunc(void *ptr, size_t size, size_t nmemb, struct string *s) {
   s->ptr = realloc(s->ptr, new_len + 1);
   if (s->ptr == NULL) {
     fprintf(stderr, "realloc() failed\n");
-    exit(EXIT_FAILURE);
+    logger_exit(EXIT_FAILURE);
   }
   memcpy(s->ptr + s->len, ptr, size * nmemb);
   s->ptr[new_len] = '\0';
