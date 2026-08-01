@@ -16,8 +16,8 @@ function init() {
     var rightDimensions =
       (window.innerWidth === PSP2_Width &&
         window.innerHeight === PSP2_Height) ||
-      (window.screen.width === PSP2_Width &&
-        window.screen.height === PSP2_Height);
+      (screen.width === PSP2_Width &&
+        screen.height === PSP2_Height);
 
     if (!isPSP2 || !rightDimensions) {
       document.body.innerHTML =
