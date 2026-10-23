@@ -79,7 +79,7 @@ with a thin C++ layer (`foo.cpp` + `foo.hpp`) for things that need C++ (Sony's
 | `colors.h`, `symbols.h` | UI palette and Material Symbols code points | [ui.md](ui.md) |
 | `dialog.c/.h` | Native message dialog (incomplete) | [ui.md](ui.md) |
 | `browser.c/.h` | Opens a URL in the Vita web browser | [ui.md](ui.md) |
-| `cloud.hpp` | Abstract `ICloud` interface; unused and does not compile | [known-issues.md](known-issues.md) |
+| `cloud.hpp` | Abstract `ICloud` interface; unused, and would not compile if included | [known-issues.md](known-issues.md) |
 | `logger.c/.h` | Debug-screen logging, `logger_exit`, `logger_panic` | [logging-and-errors.md](logging-and-errors.md) |
 | `psp2error.h` | Large table of `SCE_ERROR_*` codes | [logging-and-errors.md](logging-and-errors.md) |
 

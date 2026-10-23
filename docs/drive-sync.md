@@ -39,8 +39,11 @@ Limitations:
   uses on the Vita, has not been verified. Treat cross-side comparisons as unreliable until
   it is (CODE_REVIEW #12).
 - **Upload resets the cloud mtime** to the upload moment, and **download sets the local
-  mtime** to the write moment. The next run therefore sees the side just written as newest.
-  Harmless with "newest wins", but it matters for any history-based design.
+  mtime** to the write moment. The next run therefore sees the side just written as newest
+  and syncs the file back the other way, so with no changes at all the direction flips on
+  every run. Every other run is a download, which goes through the no-truncate, no-backup
+  path below: the data-loss risk recurs rather than being occasional. Any history-based
+  design must not rely on mtimes alone for this reason.
 - Only one file's mtime is checked; the save folder's other files (`PARAM.SFO`, icons) are
   ignored for the decision.
 - `getLastModificationTime` returns garbage if the file is absent (CODE_REVIEW #9).

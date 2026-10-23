@@ -32,7 +32,7 @@ mkdir -p build && cd build && cmake .. && make    # -> build/ps_vita_sync.vpk
 npm run release
 ```
 
-There is no test suite (the root `test` file is empty). Node 18 (`.nvmrc`) is only for
+There is no test suite and no CI. Node 18 (`.nvmrc`) is only for
 the `tools/release.ts` ts-node script.
 
 Adding a `.c`/`.cpp` source file requires also adding it to the `add_executable(...)`

@@ -30,8 +30,6 @@ where docs disagree with the code, and lists open questions that block design de
 
 | Doc says | Code does |
 |---|---|
-| `CLAUDE.md`: `gui.cpp` is an "SDL2 file explorer" | Renders with vita2d; SDL is two no-op hints |
-| `CLAUDE.md`: three UI paths | Four: debug console, text menus (`display.c`, `savedata.c`), vita2d explorer, ImGui demo |
 | `README.md`: Step 3 "Change the fileId of google drive" | IDs are hardcoded in commented-out code in `main.cpp`; nothing reads them from config |
 | `README.md`: `kid` is "an API Key" | Used as the JWT header `kid` (service-account key ID) |
 | `ROADMAP.md`: "Use GAPI to simplify auth" | Implementation started as a hand-written OAuth device flow, not a Google client library (none exists for the Vita) |

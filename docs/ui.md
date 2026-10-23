@@ -30,8 +30,8 @@ verification page with a **placeholder** `user_code=XXXX-XXXX`. Infinite loop, n
 
 ## Touch file explorer (`gui.cpp`)
 
-Entry: `int guiFileExplorer()`. Despite `CLAUDE.md` calling it an "SDL2 file explorer", it
-renders with vita2d; SDL appears only in two `SDL_SetHint` calls that have no effect.
+Entry: `int guiFileExplorer()`. It renders with vita2d; SDL appears only in two
+`SDL_SetHint` calls that have no effect.
 
 - Loads `app0:/Kanit-Regular.ttf` (text) and `app0:/MaterialSymbols-Regular.ttf` (icons).
 - Starts at `ux0:/` (`root = new Path("ux0:/", folder("ux0:/"))`); folders are listed lazily

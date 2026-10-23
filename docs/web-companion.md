@@ -11,8 +11,10 @@ The page the Vita browser opens during the OAuth device flow. `displayUserCode()
 https://add-le.github.io/ps-vita-sync/?user_code=<code>&expires_in=<seconds>&verification_url=<url>
 ```
 
-So it is served by **GitHub Pages from this repository**. Changing these files changes the
-live page once Pages publishes them.
+So it is served by **GitHub Pages from this repository**. Only edits on the branch Pages
+publishes from reach the live page; which branch that is has not been checked (it is a
+repository setting). Editing these files on a feature branch does not change what users
+see.
 
 Behavior (`script.js`, `init()` on load):
 
