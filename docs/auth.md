@@ -1,7 +1,12 @@
 # Authentication
 
-Two approaches coexist. **Confirm with the user which one a task targets before editing
-auth code.**
+Two approaches coexist in the current code. This page describes them as they are.
+
+**Direction for new work:** the [vision](vision.md#sign-in) settles it: public-client
+OAuth flows (device code, or a code shown on the GitHub Pages site) with no server, plus
+username/password for WebDAV and Mega, credentials encrypted on the device. The
+service-account JWT path is not a user-facing option in the finished app. For changes to
+the existing code, still confirm which path a task targets.
 
 | | Service-account JWT | OAuth device flow |
 |---|---|---|

@@ -12,8 +12,10 @@ commented-out exploration, and the auth layer is mid-migration (see "Auth is in 
 ## Detailed docs
 
 `docs/` holds the full technical reference: architecture, build, auth, networking, Drive
-sync, saves, UI, web page, logging, conventions, and known issues / open questions. Start
-at `docs/README.md` and read the doc for the area you touch before editing. Update the
+sync, saves, UI, web page, logging, conventions, and known issues / open questions.
+`docs/vision.md` records what the finished app must be (multi-cloud, two-way sync,
+HTML/CSS UI, …) and `docs/plans/` the phased roadmap. Start at `docs/README.md` and read
+the doc for the area you touch before editing. Update the
 matching doc in the same commit when behavior changes.
 
 ## Build & run
@@ -89,7 +91,9 @@ is linked but only used for two no-op hints); and a Dear ImGui demo in `main.cpp
   (tab-separated `iss`/`kid`, service-account JWT — the documented path), while
   `oauth.cpp` reads `config.json` (`client_id`/`client_secret`, OAuth device flow — the
   ROADMAP "Simplify GDrive Auth" direction, currently incomplete: `loadOAuthCredentials`
-  has no return statement). Confirm which path applies before editing auth code.
+  has no return statement). Confirm which path applies before editing auth code. The
+  target design (public-client OAuth, no server, multiple providers) is decided in
+  `docs/vision.md`; the roadmap is in `docs/plans/`.
 - **Formatting** (`.editorconfig`): 2-space indent, LF line endings, UTF-8, and
   `insert_final_newline = false` (no trailing newline) with trailing whitespace
   preserved.

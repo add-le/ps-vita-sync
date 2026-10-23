@@ -80,7 +80,10 @@ yet (see [web-companion.md](web-companion.md)).
 
 ## Choosing a direction
 
-No decision is recorded. Facts relevant to choosing:
+**Superseded for new work:** the [vision](vision.md#ui) chooses an HTML/CSS-style UI,
+selected by benchmark ([plans/spike-ui-stack.md](plans/spike-ui-stack.md)). The UIs
+described on this page are retired; the HTML explorer prototype is the benchmark's
+reference screen. Facts about the existing code, kept for reference:
 
 - The vita2d explorer has the most work, a matching HTML prototype, and touch selection.
   It is the natural base for "choose what to sync".

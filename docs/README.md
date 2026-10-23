@@ -27,6 +27,8 @@ nobody builds on an assumption the code does not support.
 
 | Doc | Covers |
 |---|---|
+| [vision.md](vision.md) | **Target product:** decisions on providers, sync model, UI, security, testing, releases |
+| [plans/](plans/README.md) | **Roadmap** from today's code to the vision: phases, research spikes, provider matrix |
 | [architecture.md](architecture.md) | Repo layout, module map, dependency graph, live path vs prototype |
 | [build-and-release.md](build-and-release.md) | Toolchain, CMake, linked libraries, VPK contents, versioning, emulator |
 | [auth.md](auth.md) | Service-account JWT path, OAuth device flow, on-device secret files, scopes |
@@ -41,7 +43,8 @@ nobody builds on an assumption the code does not support.
 
 ## Reading order for a new task
 
-1. This page, then [architecture.md](architecture.md).
+1. This page, [vision.md](vision.md) (where the app is going), then
+   [architecture.md](architecture.md) (where the code is today).
 2. The doc for the area you are touching.
 3. [conventions.md](conventions.md) before writing code.
 4. [known-issues.md](known-issues.md) and `CODE_REVIEW.md` for the files you will edit.

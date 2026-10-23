@@ -36,22 +36,16 @@ where docs disagree with the code, and lists open questions that block design de
 
 ## Open questions
 
-These need an answer (from the maintainer or a hardware test) before planning the
-related work:
+Several questions raised when this page was first written are now settled by the
+[vision](vision.md) or assigned to a research spike in [plans/](plans/README.md):
 
-1. **Which auth path stays?** JWT service account (works, heavy setup) or OAuth device flow
-   (user-friendly, incomplete)? Removing one simplifies `config` handling and docs.
-2. **Which Drive scope?** If `drive.file`, the app must create/own its Drive files and
-   folder; hardcoded IDs of hand-uploaded files stop working. Confirm against Google's
-   docs, including which scopes the device flow allows.
-3. **Native Vita saves?** Are `ux0:/user/00/savedata/*` folders readable/writable as raw
-   files with this app's permissions, or encrypted? Decides whether v1 covers PSP saves only.
-4. **What is the clock reference?** Are SceIo mtimes UTC or local, and what does `mktime`
-   assume on the Vita? Needed for any timestamp comparison.
-5. **Sync state storage:** sqlite (ROADMAP) or a simpler manifest file (e.g. JSON per synced
-   folder with hash, size and last-synced Drive revision)?
-6. **Unit of sync:** single files (prototype) or whole save folders (what users think of
-   as "a save")?
-7. **One HTTP stack or two?** SceHttp with real PATCH, or curl for everything (which needs a
-   CA bundle to re-enable TLS verification)?
-8. **Which UI is the base?** The vita2d explorer is the most complete candidate.
+| Question | Status |
+|---|---|
+| Which auth path stays? | **Decided:** OAuth/public-client flows with no server; the service-account JWT path is retired for users ([vision](vision.md#sign-in)) |
+| Which Drive scope / cloud layout? | **Decided in principle:** app folder with mirrored paths, remappable; per-provider scope limits to verify ([vision](vision.md#cloud-layout), [providers](plans/providers.md)) |
+| Native Vita saves? | **Decided:** full support, after a hardware spike ([spike](plans/spike-native-saves.md)) |
+| Unit of sync? | **Decided:** any file or folder, sync on/off per item, game-aware saves ([vision](vision.md#what-syncs)) |
+| Which UI is the base? | **Decided direction:** HTML/CSS-style stack chosen by benchmark ([spike](plans/spike-ui-stack.md)); the four current UI experiments are retired |
+| One HTTP stack or two? | **Spike:** [spike-network-tls.md](plans/spike-network-tls.md) |
+| Sync state storage? | **Open**, decided in Phase 2 ([roadmap](plans/README.md#phase-2--core-goals-only)) |
+| Clock reference (SceIo mtimes UTC or local)? | **Open.** The two-way model relies on hashes and stored state rather than cross-clock comparison, but local mtimes are still used as a fast change hint; verify on hardware |
