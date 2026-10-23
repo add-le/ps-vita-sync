@@ -9,6 +9,13 @@ files between the Vita and Google Drive. Written in **C/C++**, built with **Vita
 CMake. The work is in-progress: `src/main.cpp`'s real flow is currently mostly
 commented-out exploration, and the auth layer is mid-migration (see "Auth is in flux").
 
+## Detailed docs
+
+`docs/` holds the full technical reference: architecture, build, auth, networking, Drive
+sync, saves, UI, web page, logging, conventions, and known issues / open questions. Start
+at `docs/README.md` and read the doc for the area you touch before editing. Update the
+matching doc in the same commit when behavior changes.
+
 ## Build & run
 
 Requires the `$VITASDK` environment variable (CMake errors out fatally otherwise).
@@ -54,11 +61,12 @@ coexist: `httpNetInit`/`httpNetClose` (SceHttp) is torn down before curl
 **JSON:** `json.cpp`/`json.hpp` wrap Sony's `sce::Json` (loaded via
 `SCE_SYSMODULE_JSON`); the `Allocator` class lives in `gdrive.hpp`.
 
-**UI:** three separate rendering paths exist. `common/debugScreen.c` text console
-(the active one — see logger note below); `gui.cpp` SDL2 file explorer
-(`guiFileExplorer`); and Dear ImGui + vita2d (`draw.cpp`, `icon.cpp`, `colors.h`,
-`symbols.h`, fonts `Kanit-Regular.ttf` + `MaterialSymbols-Regular.ttf`). `dialog.c`
-shows native Vita common dialogs; `browser.c` opens URLs.
+**UI:** four separate attempts exist. `common/debugScreen.c` text console (the active
+one — see logger note below); text menus on that console (`display.c`, `savedata.c`);
+`gui.cpp` vita2d touch file explorer (`guiFileExplorer`, with `draw.cpp`, `icon.cpp`,
+`colors.h`, `symbols.h`, fonts `Kanit-Regular.ttf` + `MaterialSymbols-Regular.ttf` — SDL
+is linked but only used for two no-op hints); and a Dear ImGui demo in `main.cpp`.
+`dialog.c` is meant to show native Vita common dialogs (incomplete); `browser.c` opens URLs.
 
 **Web companion** (`index.html`, `script.js`, `style.css`, `acces_token.min.html`,
 `error.html`): the OAuth device-code **verification page** that renders `user_code` +
