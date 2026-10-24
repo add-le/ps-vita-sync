@@ -1,0 +1,111 @@
+diff --git a/Backends/RmlUi_Renderer_GL3.cpp b/Backends/RmlUi_Renderer_GL3.cpp
+index 014f3d55..af2d2d11 100644
+--- a/Backends/RmlUi_Renderer_GL3.cpp
++++ b/Backends/RmlUi_Renderer_GL3.cpp
+@@ -33,6 +33,10 @@
+ #endif
+ 
+ // Determines the anti-aliasing quality when creating layers. Enables better-looking visuals, especially when transforms are applied.
++#if !defined(RMLUI_NUM_MSAA_SAMPLES) && defined(__vita__)
++	// vitaGL: no multisampled renderbuffers.
++	#define RMLUI_NUM_MSAA_SAMPLES 0
++#endif
+ #ifndef RMLUI_NUM_MSAA_SAMPLES
+ 	#define RMLUI_NUM_MSAA_SAMPLES 2
+ #endif
+@@ -528,8 +532,10 @@ static bool CreateProgram(GLuint& out_program, Uniforms& inout_uniform_map, Prog
+ 
+ 	glLinkProgram(id);
+ 
++#ifndef __vita__ // vitaGL has no glDetachShader
+ 	glDetachShader(id, vertex_shader);
+ 	glDetachShader(id, fragment_shader);
++#endif
+ 
+ 	GLint status = 0;
+ 	glGetProgramiv(id, GL_LINK_STATUS, &status);
+@@ -593,7 +599,7 @@ static bool CreateProgram(GLuint& out_program, Uniforms& inout_uniform_map, Prog
+ static bool CreateFramebuffer(FramebufferData& out_fb, int width, int height, int samples, FramebufferAttachment attachment,
+ 	GLuint shared_depth_stencil_buffer)
+ {
+-#if defined(RMLUI_PLATFORM_EMSCRIPTEN) || defined(__ANDROID__)
++#if defined(RMLUI_PLATFORM_EMSCRIPTEN) || defined(__ANDROID__) || defined(__vita__)
+ 	constexpr GLint wrap_mode = GL_CLAMP_TO_EDGE;
+ #else
+ 	constexpr GLint wrap_mode = GL_CLAMP_TO_BORDER; // GL_REPEAT GL_MIRRORED_REPEAT GL_CLAMP_TO_EDGE
+@@ -613,7 +619,11 @@ static bool CreateFramebuffer(FramebufferData& out_fb, int width, int height, in
+ 	{
+ 		glGenRenderbuffers(1, &color_render_buffer);
+ 		glBindRenderbuffer(GL_RENDERBUFFER, color_render_buffer);
++#ifdef __vita__
++		glRenderbufferStorage(GL_RENDERBUFFER, color_format, width, height);
++#else
+ 		glRenderbufferStorageMultisample(GL_RENDERBUFFER, samples, color_format, width, height);
++#endif
+ 		glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, color_render_buffer);
+ 	}
+ 	else
+@@ -626,7 +636,7 @@ static bool CreateFramebuffer(FramebufferData& out_fb, int width, int height, in
+ 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, min_mag_filter);
+ 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, wrap_mode);
+ 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrap_mode);
+-#if !defined(RMLUI_PLATFORM_EMSCRIPTEN) && !defined(__ANDROID__)
++#if !defined(RMLUI_PLATFORM_EMSCRIPTEN) && !defined(__ANDROID__) && !defined(__vita__)
+ 		glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, &border_color[0]);
+ #endif
+ 
+@@ -648,7 +658,11 @@ static bool CreateFramebuffer(FramebufferData& out_fb, int width, int height, in
+ 			glGenRenderbuffers(1, &depth_stencil_buffer);
+ 			glBindRenderbuffer(GL_RENDERBUFFER, depth_stencil_buffer);
+ 
++#ifdef __vita__
++			glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, width, height);
++#else
+ 			glRenderbufferStorageMultisample(GL_RENDERBUFFER, samples, GL_DEPTH24_STENCIL8, width, height);
++#endif
+ 		}
+ 
+ 		glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, depth_stencil_buffer);
+@@ -845,6 +859,7 @@ void RenderInterface_GL3::BeginFrame()
+ 	glGetIntegerv(GL_STENCIL_PASS_DEPTH_FAIL, &glstate_backup.stencil_front.pass_depth_fail);
+ 	glGetIntegerv(GL_STENCIL_PASS_DEPTH_PASS, &glstate_backup.stencil_front.pass_depth_pass);
+ 
++#ifndef __vita__ // vitaGL: no separate back-face stencil state
+ 	glGetIntegerv(GL_STENCIL_BACK_FUNC, &glstate_backup.stencil_back.func);
+ 	glGetIntegerv(GL_STENCIL_BACK_REF, &glstate_backup.stencil_back.ref);
+ 	glGetIntegerv(GL_STENCIL_BACK_VALUE_MASK, &glstate_backup.stencil_back.value_mask);
+@@ -852,6 +867,7 @@ void RenderInterface_GL3::BeginFrame()
+ 	glGetIntegerv(GL_STENCIL_BACK_FAIL, &glstate_backup.stencil_back.fail);
+ 	glGetIntegerv(GL_STENCIL_BACK_PASS_DEPTH_FAIL, &glstate_backup.stencil_back.pass_depth_fail);
+ 	glGetIntegerv(GL_STENCIL_BACK_PASS_DEPTH_PASS, &glstate_backup.stencil_back.pass_depth_pass);
++#endif
+ 
+ 	// Setup expected GL state.
+ 	glViewport(0, 0, viewport_width, viewport_height);
+@@ -963,10 +979,12 @@ void RenderInterface_GL3::EndFrame()
+ 	glStencilOpSeparate(GL_FRONT, glstate_backup.stencil_front.fail, glstate_backup.stencil_front.pass_depth_fail,
+ 		glstate_backup.stencil_front.pass_depth_pass);
+ 
++#ifndef __vita__
+ 	glStencilFuncSeparate(GL_BACK, glstate_backup.stencil_back.func, glstate_backup.stencil_back.ref, glstate_backup.stencil_back.value_mask);
+ 	glStencilMaskSeparate(GL_BACK, glstate_backup.stencil_back.writemask);
+ 	glStencilOpSeparate(GL_BACK, glstate_backup.stencil_back.fail, glstate_backup.stencil_back.pass_depth_fail,
+ 		glstate_backup.stencil_back.pass_depth_pass);
++#endif
+ 
+ 	Gfx::CheckGLError("EndFrame");
+ }
+@@ -1769,8 +1787,13 @@ void RenderInterface_GL3::RenderFilters(Rml::Span<const Rml::CompiledFilterHandl
+ 		case FilterType::Passthrough:
+ 		{
+ 			UseProgram(ProgramId::Passthrough);
++#ifdef __vita__
++			// vitaGL has no constant blend colour: the opacity filter's blend factor is ignored.
++			glBlendFunc(GL_ONE, GL_ZERO);
++#else
+ 			glBlendFunc(GL_CONSTANT_COLOR, GL_ZERO);
+ 			glBlendColor(filter.blend_factor, filter.blend_factor, filter.blend_factor, filter.blend_factor);
++#endif
+ 
+ 			const Gfx::FramebufferData& source = render_layers.GetPostprocessPrimary();
+ 			const Gfx::FramebufferData& destination = render_layers.GetPostprocessSecondary();

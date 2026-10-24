@@ -14,6 +14,8 @@ public:
   void toggle_select(int) override {}
   void update(double) override {}
   void render() override {}
+  int focused_index() override { return -2; }  // -2: no UI, input checks report n/a
+  int folder_depth() override { return -2; }
 };
 
 }  // namespace

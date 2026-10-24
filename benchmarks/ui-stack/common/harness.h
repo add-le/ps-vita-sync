@@ -31,6 +31,9 @@ public:
   virtual void toggle_select(int index) = 0;
   virtual void update(double now_seconds) = 0;
   virtual void render() = 0;
+  // State probes for the scripted input checks.
+  virtual int focused_index() = 0;
+  virtual int folder_depth() = 0;
 };
 
 Stack *create_stack();

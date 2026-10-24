@@ -1,7 +1,14 @@
-// Stack A: RmlUi 6.3 with its SDL_Renderer backend (Backends/RmlUi_Renderer_SDL.cpp).
+// Stack A: RmlUi 6.3. Default build: SDL_Renderer backend (Backends/RmlUi_Renderer_SDL.cpp,
+// patched for straight alpha). A_GL3 build: the GL3 backend with every effect enabled (A_EFFECTS).
 #include <RmlUi/Core.h>
 #include <RmlUi_Platform_SDL.h>
+#ifdef A_GL3
+#include <RmlUi_Renderer_GL3.h>
+using RenderInterface = RenderInterface_GL3;
+#else
 #include <RmlUi_Renderer_SDL.h>
+using RenderInterface = RenderInterface_SDL;
+#endif
 
 #include <cstdio>
 #include <memory>
@@ -20,10 +27,24 @@ struct ItemVM {
 
 class RmlStack : public bench::Stack {
 public:
+#ifdef A_GL3
+  const char *name() const override { return "A-rmlui-gl3"; }
+#else
   const char *name() const override { return "A-rmlui"; }
+#endif
 
   bool init(SDL_Renderer *r, int w, int h, const char *assets) override {
+    sdl_renderer = r;
+#ifdef A_GL3
+    // Runs inside SDL's OpenGL renderer context (SDL_RENDER_DRIVER=opengl).
+    Rml::String gl_message;
+    if (!RmlGL3::Initialize(&gl_message)) return false;
+    SDL_Log("%s", gl_message.c_str());
+    render_iface = std::make_unique<RenderInterface_GL3>();
+    render_iface->SetViewport(w, h);
+#else
     render_iface = std::make_unique<RenderInterface_SDL>(r);
+#endif
     system = std::make_unique<SystemInterface_SDL>(SDL_RenderGetWindow(r));
     files = std::make_unique<rmlbench::AssetFiles>(assets);
     Rml::SetRenderInterface(render_iface.get());
@@ -90,9 +111,9 @@ public:
       return;
     }
     if (!down) return;
-    if (b == bench::Button::Cross) apply(state.tap(focused_index()));
+    if (b == bench::Button::Cross) apply(state.tap(focused_tile()));
     else if (b == bench::Button::Circle) apply(state.back());
-    else if (b == bench::Button::Triangle) apply(state.toggle(focused_index()));
+    else if (b == bench::Button::Triangle) apply(state.toggle(focused_tile()));
   }
 
   void front_touch(const bench::Touch &t) override {
@@ -125,10 +146,21 @@ public:
   }
 
   void render() override {
+#ifdef A_GL3
+    SDL_RenderFlush(sdl_renderer);  // raw GL calls follow; the backend saves and restores GL state
+    // SDL's GL renderer leaves GL_UNPACK_ROW_LENGTH set after its own texture uploads (the overlay),
+    // which corrupts RmlUi's glyph atlas uploads. Host-only integration detail.
+    static auto pixel_store = (void (*)(unsigned, int))SDL_GL_GetProcAddress("glPixelStorei");
+    pixel_store(0x0CF2 /* GL_UNPACK_ROW_LENGTH */, 0);
+    pixel_store(0x0CF5 /* GL_UNPACK_ALIGNMENT */, 4);
+#endif
     render_iface->BeginFrame();
     context->Render();
     render_iface->EndFrame();
   }
+
+  int focused_index() override { return focused_tile(); }
+  int folder_depth() override { return state.depth; }
 
   ~RmlStack() override { Rml::Shutdown(); }
 
@@ -157,7 +189,7 @@ private:
     if (grid && grid->GetNumChildren() > 0) grid->GetChild(0)->Focus(true);
   }
 
-  int focused_index() {
+  int focused_tile() {
     Rml::Element *e = context->GetFocusElement();
     return e ? e->GetAttribute<int>("index", -1) : -1;
   }
@@ -168,7 +200,8 @@ private:
     return -1;
   }
 
-  std::unique_ptr<RenderInterface_SDL> render_iface;
+  SDL_Renderer *sdl_renderer = nullptr;
+  std::unique_ptr<RenderInterface> render_iface;
   std::unique_ptr<SystemInterface_SDL> system;
   std::unique_ptr<rmlbench::AssetFiles> files;
   Rml::Context *context = nullptr;

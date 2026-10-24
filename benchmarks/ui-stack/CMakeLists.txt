@@ -69,6 +69,8 @@ function(bench_app target titleid)
       get_filename_component(n ${a} NAME)
       list(APPEND VPK_FILES FILE ${a} ${n})
     endforeach()
+    # Linker map, for the per-library size breakdown (tools/size_by_archive.py).
+    target_link_options(${target} PRIVATE "-Wl,-Map=${CMAKE_CURRENT_BINARY_DIR}/${target}.map")
     vita_create_self(${target}.self ${target} UNSAFE)
     vita_create_vpk(${target}.vpk ${titleid} ${target}.self
       VERSION 00.01 NAME "UI bench ${target}" ${VPK_FILES})
@@ -98,6 +100,21 @@ if(EXISTS ${TP}/RmlUi)
   target_include_directories(bench_a_rmlui PRIVATE ${TP}/RmlUi/Backends)
   # Straight alpha on host too, so host and Vita run the same backend code.
   target_compile_definitions(bench_a_rmlui PRIVATE RMLUI_SDL_VERSION_MAJOR=2 RMLUI_SDL_STRAIGHT_ALPHA)
+
+  # A-gl3: same screen with the GL3 backend and explorer-effects.rcss (shadows, CSS gradients,
+  # transforms). On the Vita it runs on vitaGL through SDL's GLES2 renderer, which compiles GLSL
+  # at runtime: the console needs ur0:data/libshacccg.suprx (patches/rmlui-gl3-vitagl.patch).
+  bench_app(bench_a_rmlui_gl3 SYNCB000G
+    SOURCES a_rmlui/main.cpp ${TP}/RmlUi/Backends/RmlUi_Renderer_GL3.cpp ${TP}/RmlUi/Backends/RmlUi_Platform_SDL.cpp
+    LIBS RmlUi::RmlUi ${CMAKE_DL_LIBS}
+    ASSETS ${RMLUI_ASSETS}
+    FONTS ${SHARED_FONTS})
+  target_include_directories(bench_a_rmlui_gl3 PRIVATE ${TP}/RmlUi/Backends)
+  target_compile_definitions(bench_a_rmlui_gl3 PRIVATE RMLUI_SDL_VERSION_MAJOR=2 A_GL3 A_EFFECTS)
+  if(BENCH_VITA)
+    target_compile_definitions(bench_a_rmlui_gl3 PRIVATE RMLUI_GL3_CUSTOM_LOADER="vitagl_loader.h"
+      BENCH_RENDER_DRIVER="opengles2")
+  endif()
 endif()
 
 # B — litehtml

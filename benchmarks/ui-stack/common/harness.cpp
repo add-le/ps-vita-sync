@@ -42,6 +42,26 @@ constexpr double SCROLL_PERIOD = 2.0;       // s, triangle wave
 
 const char *PHASES[] = {"idle", "scroll", "transition", "interactive"};
 
+// Scripted input during the idle phase, identical for every stack. Tile 2 is the "data" folder
+// in the root listing; its centre is at (583, 83) with the shared 4-column layout.
+struct InputStep {
+  double t;
+  enum { Press, Tap, Check } kind;
+  bench::Button button;
+  float x, y;
+  const char *check;  // for Check: what is verified
+  int focus, depth;   // expected values, -1 = not checked
+};
+const InputStep INPUT_SCRIPT[] = {
+  {0.50, InputStep::Press, bench::Button::Down, 0, 0, nullptr, -1, -1},
+  {0.70, InputStep::Press, bench::Button::Right, 0, 0, nullptr, -1, -1},
+  {0.90, InputStep::Check, bench::Button::Up, 0, 0, "dpad_focus (Down, Right from tile 0)", 5, 0},
+  {1.00, InputStep::Tap, bench::Button::Up, 583, 83, nullptr, -1, -1},
+  {1.20, InputStep::Check, bench::Button::Up, 0, 0, "front_tap_opens_folder", -1, 1},
+  {1.40, InputStep::Press, bench::Button::Circle, 0, 0, nullptr, -1, -1},
+  {1.60, InputStep::Check, bench::Button::Up, 0, 0, "circle_goes_back", -1, 0},
+};
+
 #ifdef __vita__
 double process_seconds() { return sceKernelGetProcessTimeWide() / 1e6; }
 #else
@@ -202,7 +222,9 @@ int main(int, char **) {
   size_t heap_start = heap_used();
   std::string mem_start = free_memory();
 
-#ifdef __vita__
+#if defined(BENCH_RENDER_DRIVER)
+  SDL_SetHint(SDL_HINT_RENDER_DRIVER, BENCH_RENDER_DRIVER);
+#elif defined(__vita__)
   // Pin the GXM renderer (precompiled shaders). The GLES2 renderer would need libshacccg.suprx.
   SDL_SetHint(SDL_HINT_RENDER_DRIVER, "VITA gxm");
 #endif
@@ -242,6 +264,9 @@ int main(int, char **) {
 #endif
   std::string base = out_dir + stack->name();
 
+  std::vector<std::string> checks;
+  size_t next_input = 0;
+  double tap_release = -1;
   std::vector<Frame> frames;
   frames.reserve(4096);
   size_t heap_peak = heap_after_init;
@@ -249,8 +274,54 @@ int main(int, char **) {
   double run_start = -1, last_present = -1, last_overlay = 0;
   double scroll_pos = 0;
   int toggles_done = 0;
-  bool shot_idle = false, shot_header = false, running = true, script_done = false;
+  bool shot_focus = false, shot_nav = false, shot_idle = false, shot_header = false, running = true, script_done = false;
   RearScroll rear;
+
+  auto write_results = [&]() {
+    FILE *f = fopen((base + ".txt").c_str(), "w");
+    if (f) {
+      fprintf(f, "stack: %s\nplatform: %s\nrenderer: %s\n", stack->name(),
+#ifdef __vita__
+              "vita",
+#else
+              "host",
+#endif
+              rinfo.name);
+#ifdef __vita__
+      fprintf(f, "newlib_heap_bytes: %u\n", _newlib_heap_size_user);
+#endif
+      fprintf(f, "startup_ms (process start -> first frame presented): %.1f\n", startup_ms);
+      fprintf(f, "stack_init_ms: %.1f\n", init_ms);
+      fprintf(f, "heap_bytes: start=%zu before_stack=%zu after_init=%zu peak=%zu\n", heap_start,
+              heap_before_stack, heap_after_init, heap_peak);
+      fprintf(f, "free_memory: start[%s] after_init[%s] end[%s]\n", mem_start.c_str(),
+              mem_after_init.c_str(), free_memory().c_str());
+      fprintf(f, "script_completed: %s\n", script_done ? "yes" : "no");
+      for (auto &c : checks) fprintf(f, "input_check %s\n", c.c_str());
+      for (int p = 0; p < 4; p++) {
+        std::vector<double> iv, wk;
+        for (auto &fr : frames)
+          if (fr.phase == p) { iv.push_back(fr.interval_ms); wk.push_back(fr.work_ms); }
+        if (iv.empty()) continue;
+        double sum = 0;
+        for (double v : iv) sum += v;
+        fprintf(f,
+                "phase %-11s frames=%zu fps=%.1f interval_ms p50=%.2f p95=%.2f p99=%.2f max=%.2f"
+                " work_ms p50=%.2f p95=%.2f p99=%.2f max=%.2f\n",
+                PHASES[p], iv.size(), 1000.0 * iv.size() / sum, percentile(iv, .5), percentile(iv, .95),
+                percentile(iv, .99), percentile(iv, 1), percentile(wk, .5), percentile(wk, .95),
+                percentile(wk, .99), percentile(wk, 1));
+      }
+      fclose(f);
+    }
+    FILE *csv = fopen((base + ".csv").c_str(), "w");
+    if (csv) {
+      fprintf(csv, "phase,t,interval_ms,work_ms,heap\n");
+      for (auto &fr : frames)
+        fprintf(csv, "%s,%.4f,%.3f,%.3f,%zu\n", PHASES[fr.phase], fr.t, fr.interval_ms, fr.work_ms, fr.heap);
+      fclose(csv);
+    }
+  };
 
   while (running) {
     double frame_start = process_seconds();
@@ -311,6 +382,29 @@ int main(int, char **) {
       }
     }
 
+    // Scripted input checks.
+    if (tap_release >= 0 && t >= tap_release) {
+      stack->front_touch({bench::Touch::Up, 99, 583, 83});
+      tap_release = -1;
+    }
+    while (next_input < sizeof(INPUT_SCRIPT) / sizeof(INPUT_SCRIPT[0]) && t >= INPUT_SCRIPT[next_input].t) {
+      const InputStep &s = INPUT_SCRIPT[next_input++];
+      if (s.kind == InputStep::Press) {
+        stack->button(s.button, true);
+        stack->button(s.button, false);
+      } else if (s.kind == InputStep::Tap) {
+        stack->front_touch({bench::Touch::Down, 99, s.x, s.y});
+        tap_release = t + 0.05;
+      } else {
+        int focus = stack->focused_index(), depth = stack->folder_depth();
+        bool ok = (s.focus < 0 || focus == s.focus) && (s.depth < 0 || depth == s.depth);
+        const char *verdict = focus == -2 ? "n/a" : ok ? "PASS" : "FAIL";
+        char buf[200];
+        snprintf(buf, sizeof(buf), "%s: %s (focus=%d depth=%d)", s.check, verdict, focus, depth);
+        checks.push_back(buf);
+      }
+    }
+
     // Scripted workload.
     if (phase == 1) {
       double target = SCROLL_AMPLITUDE * triangle(t - IDLE_END);
@@ -330,6 +424,8 @@ int main(int, char **) {
     overlay.draw();
     double work_end = process_seconds();
 
+    if (!shot_focus && t > 0.85) { save_screenshot(renderer, base + "-focus.bmp"); shot_focus = true; }
+    if (!shot_nav && t > 1.15) { save_screenshot(renderer, base + "-nav.bmp"); shot_nav = true; }
     if (!shot_idle && t > IDLE_END - 0.1) { save_screenshot(renderer, base + "-idle.bmp"); shot_idle = true; }
     if (!shot_header && t > SCROLL_END + 0.9) { save_screenshot(renderer, base + "-header.bmp"); shot_header = true; }
 
@@ -356,53 +452,12 @@ int main(int, char **) {
 
     if (phase == 3 && !script_done) {
       script_done = true;
+      // Written now as well as at exit, so a crash in the interactive phase loses nothing.
+      write_results();
       if (auto_exit) running = false;
     }
   }
-
-  // Results.
-  FILE *f = fopen((base + ".txt").c_str(), "w");
-  if (f) {
-    fprintf(f, "stack: %s\nplatform: %s\nrenderer: %s\n", stack->name(),
-#ifdef __vita__
-            "vita",
-#else
-            "host",
-#endif
-            rinfo.name);
-#ifdef __vita__
-    fprintf(f, "newlib_heap_bytes: %u\n", _newlib_heap_size_user);
-#endif
-    fprintf(f, "startup_ms (process start -> first frame presented): %.1f\n", startup_ms);
-    fprintf(f, "stack_init_ms: %.1f\n", init_ms);
-    fprintf(f, "heap_bytes: start=%zu before_stack=%zu after_init=%zu peak=%zu\n", heap_start,
-            heap_before_stack, heap_after_init, heap_peak);
-    fprintf(f, "free_memory: start[%s] after_init[%s] end[%s]\n", mem_start.c_str(),
-            mem_after_init.c_str(), free_memory().c_str());
-    fprintf(f, "script_completed: %s\n", script_done ? "yes" : "no");
-    for (int p = 0; p < 4; p++) {
-      std::vector<double> iv, wk;
-      for (auto &fr : frames)
-        if (fr.phase == p) { iv.push_back(fr.interval_ms); wk.push_back(fr.work_ms); }
-      if (iv.empty()) continue;
-      double sum = 0;
-      for (double v : iv) sum += v;
-      fprintf(f,
-              "phase %-11s frames=%zu fps=%.1f interval_ms p50=%.2f p95=%.2f p99=%.2f max=%.2f"
-              " work_ms p50=%.2f p95=%.2f p99=%.2f max=%.2f\n",
-              PHASES[p], iv.size(), 1000.0 * iv.size() / sum, percentile(iv, .5), percentile(iv, .95),
-              percentile(iv, .99), percentile(iv, 1), percentile(wk, .5), percentile(wk, .95),
-              percentile(wk, .99), percentile(wk, 1));
-    }
-    fclose(f);
-  }
-  FILE *csv = fopen((base + ".csv").c_str(), "w");
-  if (csv) {
-    fprintf(csv, "phase,t,interval_ms,work_ms,heap\n");
-    for (auto &fr : frames)
-      fprintf(csv, "%s,%.4f,%.3f,%.3f,%zu\n", PHASES[fr.phase], fr.t, fr.interval_ms, fr.work_ms, fr.heap);
-    fclose(csv);
-  }
+  write_results();
 
   delete stack;
   SDL_DestroyRenderer(renderer);

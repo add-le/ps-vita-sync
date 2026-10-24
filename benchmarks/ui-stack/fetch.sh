@@ -20,6 +20,7 @@ apply() { # <dir> <patch>
 }
 apply quickjs quickjs-vita.patch
 apply RmlUi rmlui-sdl-straight-alpha.patch
+apply RmlUi rmlui-gl3-vitagl.patch
 
 # Noto Sans JP (SIL OFL 1.1) from google/fonts, reduced to a static Regular instance.
 if [ ! -f fonts/NotoSansJP-Regular.ttf ]; then

@@ -7,6 +7,8 @@
 #include <string>
 #include <vector>
 
+#include <litehtml/render_item.h>
+
 #include "container_sdl.h"
 #include "explorer_state.h"
 #include "harness.h"
@@ -27,17 +29,7 @@ std::string escape(const std::string &s) {
   return out;
 }
 
-struct Box {
-  float x, y, w, h;
-  bool contains(float px, float py, float margin = 0) const {
-    return px >= x - margin && px < x + w + margin && py >= y - margin && py < y + h + margin;
-  }
-};
-
-Box box(const litehtml::element::ptr &el) {
-  litehtml::position p = el->get_placement();
-  return {p.x, p.y, p.width, p.height};
-}
+constexpr float ROW_HEIGHT = 56;  // tile 46 px + 2 px border + 8 px margin (explorer.css)
 
 float back_out(float t) {  // easing close to the prototype's cubic-bezier(0.175, 0.885, 0.32, 1.275)
   const float s = 1.70158f;
@@ -146,6 +138,9 @@ public:
     }
   }
 
+  int focused_index() override { return focus; }
+  int folder_depth() override { return state.depth; }
+
 private:
   void build_grid() {
     std::string html = "<html><head><style>" + css + "</style></head><body><div id=\"grid\">";
@@ -194,29 +189,36 @@ private:
   void set_focus(int f) {
     focus = f;
     build_grid();
-    // Scroll the focused tile into view.
-    Box p = box(tiles[focus]);
-    float view = height - GRID_TOP;
-    if (p.y < scroll) scroll = p.y - 10;
-    else if (p.y + p.h > scroll + view) scroll = p.y + p.h - view + 10;
+    // Scroll the focused tile into view. Element placement is not available for flex items in
+    // this litehtml commit (element::get_placement() returns an empty box), so use the row height.
+    float top = (focus / COLUMNS) * ROW_HEIGHT, view = height - GRID_TOP;
+    if (top < scroll) scroll = top;
+    else if (top + ROW_HEIGHT > scroll + view) scroll = top + ROW_HEIGHT - view + 10;
     scroll_by(0);
+  }
+
+  // litehtml's own hit-test (the one its mouse handling uses), then up to the enclosing tile.
+  static litehtml::element::ptr hit(const litehtml::document::ptr &doc, float x, float y) {
+    return doc->root_render()->get_element_by_point(x, y, x, y, nullptr);
   }
 
   int tile_at(float x, float y) {
     if (y < GRID_TOP) return -1;
     float dy = y - GRID_TOP + scroll;
-    for (size_t i = 0; i < tiles.size(); i++)
-      if (box(tiles[i]).contains(x, dy)) return (int)i;
+    for (auto el = hit(grid, x, dy); el; el = el->parent()) {
+      auto it = std::find(tiles.begin(), tiles.end(), el);
+      if (it != tiles.end()) return (int)(it - tiles.begin());
+    }
     return -1;
   }
 
   void tap_header(float x, float y) {
-    auto hit = [&](const char *sel) {
-      auto el = header->root()->select_one(sel);
-      return el && box(el).contains(x, y, 8);
-    };
-    if (hit("#close")) apply(state.select_all(false));
-    else if (hit("#selall")) apply(state.select_all(true));
+    float y0 = -50 + 50 * back_out(header_t);
+    for (auto el = hit(header, x, y - y0); el; el = el->parent()) {
+      std::string id = el->get_attr("id", "");
+      if (id == "close") return (void)apply(state.select_all(false));
+      if (id == "selall") return (void)apply(state.select_all(true));
+    }
   }
 
   SDL_Renderer *renderer = nullptr;
