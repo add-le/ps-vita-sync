@@ -45,7 +45,7 @@ Several questions raised when this page was first written are now settled by the
 | Which Drive scope / cloud layout? | **Decided in principle:** app folder with mirrored paths, remappable; per-provider scope limits to verify ([vision](vision.md#cloud-layout), [providers](plans/providers.md)) |
 | Native Vita saves? | **Decided:** full support, after a hardware spike ([spike](plans/spike-native-saves.md)) |
 | Unit of sync? | **Decided:** any file or folder, sync on/off per item, game-aware saves ([vision](vision.md#what-syncs)) |
-| Which UI is the base? | **Decided direction:** HTML/CSS-style stack chosen by benchmark ([spike](plans/spike-ui-stack.md)); the four current UI experiments are retired |
+| Which UI is the base? | **Decided direction:** HTML/CSS-style stack chosen by benchmark ([spike](plans/spike-ui-stack.md)); the four current UI experiments are retired. RmlUi leads after the host run; hardware run pending |
 | One HTTP stack or two? | **Spike:** [spike-network-tls.md](plans/spike-network-tls.md) |
 | Sync state storage? | **Open**, decided in Phase 2 ([roadmap](plans/README.md#phase-2--core-goals-only)) |
 | Clock reference (SceIo mtimes UTC or local)? | **Open.** The two-way model relies on hashes and stored state rather than cross-clock comparison, but local mtimes are still used as a fast change hint; verify on hardware |

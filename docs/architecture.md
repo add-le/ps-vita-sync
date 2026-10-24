@@ -17,6 +17,7 @@
 ├── verification_page.jpg            Screenshot/mockup of the verification page
 ├── ps_vita_sync.vpk        A prebuilt VPK committed to the repo (may be stale)
 ├── tools/release.ts        Version-bump script (npm run release)
+├── benchmarks/ui-stack/     UI stack spike: same screen on RmlUi, litehtml, QuickJS+Preact (own CMake, not part of the app)
 ├── README.md ROADMAP.md FLOWCHART.mmd CODE_REVIEW.md CLAUDE.md
 └── docs/                   This documentation
 ```
