@@ -150,7 +150,7 @@ Host: Linux, Xeon 2.1 GHz ×4, Mesa llvmpipe through SDL's OpenGL renderer.
 | Input: how it was built | Engine: spatial navigation, touch to click, touch inertia scrolling. App: long-press, rear touch (shared harness code) | Same | App: focus model, hit-testing, drag scrolling and fling, long-press, header buttons, rear touch | Code |
 | Backend effort | Small patch to the stock backend | Small patch, plus the shader-compiler dependency (below) | 283-line container + 239-line app layer for one screen | `wc -l` |
 | License | MIT | MIT | BSD-3-Clause; bundled gumbo Apache-2.0 | `LICENSE` files |
-| Upstream (last 12 months) | 139 commits, 34 authors; releases 6.1 (2025-04), 6.2 (2026-01), 6.3 (2026-08) | | 65 commits, 14 authors; releases v0.9 (2024-01), v0.10 (2026-06) | git history (GitHub API not reachable from the benchmark machine; issue counts not collected) |
+| Upstream (last 12 months) | 139 commits, 34 authors; releases 6.1 (2025-04), 6.2 (2026-01), 6.3 (2026-08) | Same as A-sdl | 65 commits, 14 authors; releases v0.9 (2024-01), v0.10 (2026-06) | git history (GitHub API not reachable from the benchmark machine; issue counts not collected) |
 | Authoring | RML/RCSS + data bindings; close to HTML/CSS, not identical | Same | Real HTML/CSS subset, but no DOM updates: the app regenerates HTML strings | Code |
 
 Startup to first frame is measured from process start (`sceKernelGetProcessTimeWide`) on
@@ -176,8 +176,18 @@ As used by the reference screen and checked against each engine's property list.
 | `text-overflow: ellipsis` | Yes | Yes | No (clipped) |
 | Custom fonts, icon font by code point | Yes | Yes | Yes |
 
-Screenshots of each variant are produced by the host run in `results-host/` (not
-committed).
+Same moment in each: one item selected, header shown. Host renders (Mesa through SDL's OpenGL
+renderer), overlay hidden. The reference is the original `file_explorer.html` in Chromium
+(fewer items: it uses the prototype's own sample tree).
+
+| Reference: `file_explorer.html` in Chromium | A-sdl: RmlUi, SDL backend (Vita-equivalent features) |
+|---|---|
+| ![reference](images/ui-spike/reference-chromium.png) | ![A-sdl](images/ui-spike/a-rmlui-sdl.png) |
+| **A-gl3: RmlUi, GL3 backend + effects** | **B: litehtml + SDL container** |
+| ![A-gl3](images/ui-spike/a-rmlui-gl3.png) | ![B](images/ui-spike/b-litehtml.png) |
+
+A-sdl and B look alike at this size; the differences show in motion (B has no transitions)
+and in A-gl3's shadows and gradients.
 
 ### Findings
 

@@ -41,6 +41,40 @@ heap (start, before the stack, after init, peak), free memory (Vita), and per ph
 count, FPS, frame interval p50/p95/p99/max and frame work time (update + render, before
 present) p50/p95/p99/max.
 
+## Run on the Vita
+
+The hardware rows of the spike (frame rate, RAM, startup) come from this run.
+
+1. Install the four VPKs with VitaShell: `bench_empty.vpk`, `bench_a_rmlui.vpk`,
+   `bench_a_rmlui_gl3.vpk`, `bench_b_litehtml.vpk`. They install as separate bubbles
+   ("UI bench …", title IDs `SYNCB0000`, `SYNCB000A`, `SYNCB000G`, `SYNCB000B`) and do not
+   touch the main app.
+2. `bench_a_rmlui_gl3` only: it compiles shaders on the console and needs
+   `ur0:data/libshacccg.suprx` (extracted from your own firmware with the usual homebrew
+   tool for it). Without that file, or if RmlUi's shaders fail to compile through vitaGL,
+   expect a black screen or an immediate return to LiveArea. That outcome is a result too:
+   note it.
+3. Launch each app and do not touch anything for about 20 seconds: the scripted run (idle,
+   scroll, transition) plays by itself and the overlay at the bottom right shows the phase.
+   When it says `interactive`, try the D-pad, ✕ / ○ / △, tap, hold 500 ms, drag, and the
+   rear touch panel, and note how each feels. Press START to quit.
+4. Copy `ux0:data/SYNCBENCH/` to a computer. Commit the `.txt` and `.csv` files under
+   `benchmarks/ui-stack/results-vita/`, plus a short note per stack on input feel and any
+   visual problem.
+
+What each line fills in the spike's Results tables:
+
+| Results file line | Spike row |
+|---|---|
+| `phase scroll … fps=… interval_ms … work_ms …` | Frame rate while scrolling (gate: ≥ 30 FPS) |
+| `phase transition …` | Frame rate during the header transition; for B, the `max` is the document rebuild |
+| `heap_bytes … peak=…` minus the `0-empty` peak | Peak RAM (gate: within the 128 MB heap, with room for sync buffers) |
+| `free_memory … end[…]` vs. `start[…]` | GPU and other memory outside the heap |
+| `startup_ms` | Startup to first frame |
+| `input_check …` | Input (should be PASS, as on host) |
+
+## Host notes
+
 On host, run with `SDL_RENDER_DRIVER=opengl`: SDL's software renderer drops tiny glyphs (e.g.
 `.` at 14 px) and is not representative. Host numbers are only indicative; the Vita numbers
 are the ones the decision uses.

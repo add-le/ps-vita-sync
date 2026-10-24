@@ -244,6 +244,7 @@ int main(int, char **) {
 
   Overlay overlay;
   overlay.init(renderer, assets);
+  overlay.hidden = getenv("BENCH_NO_OVERLAY") != nullptr;  // clean screenshots
   size_t heap_before_stack = heap_used();
 
   bench::Stack *stack = bench::create_stack();
