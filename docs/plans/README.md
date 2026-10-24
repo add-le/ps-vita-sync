@@ -37,7 +37,7 @@ Answer the questions the architecture depends on. Most need a real Vita.
 
 | Spike | Question | Hardware? | Plan |
 |---|---|---|---|
-| UI stack | Which HTML/CSS stack can deliver the UI within Vita limits? | Yes | [spike-ui-stack.md](spike-ui-stack.md) |
+| UI stack | Which HTML/CSS stack can deliver the UI within Vita limits? | Yes | [spike-ui-stack.md](spike-ui-stack.md): host results in, RmlUi leading; hardware run pending |
 | Native saves | Can the app read and write native Vita saves, and how? | Yes | [spike-native-saves.md](spike-native-saves.md) |
 | Network & TLS | Do the system SSL stack and CA store work with today's provider endpoints? | Yes | [spike-network-tls.md](spike-network-tls.md) |
 | Game-close plugin | Can a plugin detect a game closing and trigger a sync? | Yes | [spike-game-close-plugin.md](spike-game-close-plugin.md) |
