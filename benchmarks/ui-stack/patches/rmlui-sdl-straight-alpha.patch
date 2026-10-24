@@ -1,0 +1,80 @@
+diff --git a/Backends/RmlUi_Renderer_SDL.cpp b/Backends/RmlUi_Renderer_SDL.cpp
+index 5f5665a9..34599c7b 100644
+--- a/Backends/RmlUi_Renderer_SDL.cpp
++++ b/Backends/RmlUi_Renderer_SDL.cpp
+@@ -9,10 +9,19 @@
+ 	#include <SDL_image.h>
+ #endif
+ 
+-#if SDL_MAJOR_VERSION == 2 && !(SDL_VIDEO_RENDER_OGL)
++// RMLUI_SDL_STRAIGHT_ALPHA: render with straight (non-premultiplied) alpha and the standard blend mode,
++// for SDL renderers without custom blend modes such as the PS Vita GXM renderer.
++#if SDL_MAJOR_VERSION == 2 && !(SDL_VIDEO_RENDER_OGL) && !defined(RMLUI_SDL_STRAIGHT_ALPHA)
+ 	#error "Only the OpenGL SDL backend is supported."
+ #endif
+ 
++#ifdef RMLUI_SDL_STRAIGHT_ALPHA
++static Rml::byte Unpremultiply(Rml::byte c, Rml::byte a)
++{
++	return a == 0 ? 0 : Rml::byte(Rml::Math::Min(255, int(c) * 255 / int(a)));
++}
++#endif
++
+ static void SetRenderClipRect(SDL_Renderer* renderer, const SDL_Rect* rect)
+ {
+ #if SDL_MAJOR_VERSION >= 3
+@@ -34,8 +43,12 @@ RenderInterface_SDL::RenderInterface_SDL(SDL_Renderer* renderer) : renderer(rend
+ {
+ 	// RmlUi serves vertex colors and textures with premultiplied alpha, set the blend mode accordingly.
+ 	// Equivalent to glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA).
++#ifdef RMLUI_SDL_STRAIGHT_ALPHA
++	blend_mode = SDL_BLENDMODE_BLEND;
++#else
+ 	blend_mode = SDL_ComposeCustomBlendMode(SDL_BLENDFACTOR_ONE, SDL_BLENDFACTOR_ONE_MINUS_SRC_ALPHA, SDL_BLENDOPERATION_ADD, SDL_BLENDFACTOR_ONE,
+ 		SDL_BLENDFACTOR_ONE_MINUS_SRC_ALPHA, SDL_BLENDOPERATION_ADD);
++#endif
+ }
+ 
+ void RenderInterface_SDL::BeginFrame()
+@@ -82,6 +95,9 @@ void RenderInterface_SDL::RenderGeometry(Rml::CompiledGeometryHandle handle, Rml
+ 		const auto& color = vertices[i].colour;
+ #if SDL_MAJOR_VERSION >= 3
+ 		sdl_vertex.color = {color.red / 255.f, color.green / 255.f, color.blue / 255.f, color.alpha / 255.f};
++#elif defined(RMLUI_SDL_STRAIGHT_ALPHA)
++		sdl_vertex.color = {Unpremultiply(color.red, color.alpha), Unpremultiply(color.green, color.alpha), Unpremultiply(color.blue, color.alpha),
++			color.alpha};
+ #else
+ 		sdl_vertex.color = {color.red, color.green, color.blue, color.alpha};
+ #endif
+@@ -160,6 +176,7 @@ Rml::TextureHandle RenderInterface_SDL::LoadTexture(Rml::Vector2i& texture_dimen
+ 		surface = converted_surface;
+ 	}
+ 
++#ifndef RMLUI_SDL_STRAIGHT_ALPHA
+ 	// Convert colors to premultiplied alpha, which is necessary for correct alpha compositing.
+ 	const size_t pixels_byte_size = surface->w * surface->h * 4;
+ 	byte* pixels = static_cast<byte*>(surface->pixels);
+@@ -169,6 +186,7 @@ Rml::TextureHandle RenderInterface_SDL::LoadTexture(Rml::Vector2i& texture_dimen
+ 		for (size_t j = 0; j < 3; ++j)
+ 			pixels[i + j] = byte(int(pixels[i + j]) * int(alpha) / 255);
+ 	}
++#endif
+ 
+ 	SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
+ 	texture_dimensions = Rml::Vector2i(surface->w, surface->h);
+@@ -184,6 +202,15 @@ Rml::TextureHandle RenderInterface_SDL::GenerateTexture(Rml::Span<const Rml::byt
+ {
+ 	RMLUI_ASSERT(source.data() && source.size() == size_t(source_dimensions.x * source_dimensions.y * 4));
+ 
++#ifdef RMLUI_SDL_STRAIGHT_ALPHA
++	// Generated textures (glyph atlases, gradients) arrive premultiplied.
++	Rml::Vector<Rml::byte> straight(source.begin(), source.end());
++	for (size_t i = 0; i < straight.size(); i += 4)
++		for (size_t j = 0; j < 3; ++j)
++			straight[i + j] = Unpremultiply(straight[i + j], straight[i + 3]);
++	source = Rml::Span<const Rml::byte>(straight.data(), straight.size());
++#endif
++
+ #if SDL_MAJOR_VERSION >= 3
+ 	auto CreateSurface = [&]() {
+ 		return SDL_CreateSurfaceFrom(source_dimensions.x, source_dimensions.y, SDL_PIXELFORMAT_RGBA32, (void*)source.data(), source_dimensions.x * 4);

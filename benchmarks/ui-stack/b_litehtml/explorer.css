@@ -1,0 +1,95 @@
+/* Port of file_explorer.css (repo root) for litehtml. litehtml has no grid, gap, opacity,
+   transitions, transforms, box-shadow or text-overflow: the grid is a wrapping flexbox with
+   margins, and the header animation is done by the app (b_litehtml/main.cpp). */
+body {
+  margin: 0;
+  font-family: kanit;
+  font-size: 14px;
+  color: #1f1f1f;
+}
+
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 10px 10px;
+}
+
+.tile {
+  width: 223px;
+  height: 46px;
+  margin: 0 8px 8px 0;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e3e8ef;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f5f8fc, #e9eef6);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tile.selected {
+  background: linear-gradient(180deg, #d3edff, #b6dcf7);
+  border-color: #9ccbf0;
+}
+
+.tile.focused {
+  border-color: #0b57d0;
+}
+
+.icon {
+  font-family: icons;
+  font-size: 24px;
+  color: #5f6368;
+  padding: 0 12px 0 14px;
+  position: relative;
+}
+
+.check { display: none; }
+.tile.selected .check { display: inline; }
+.tile.selected .glyph { display: none; }
+
+.sync {
+  position: absolute;
+  left: 28px;
+  top: 14px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  border-radius: 7px;
+  font-size: 10px;
+  text-align: center;
+  color: white;
+  background-color: #0d904f;
+}
+
+.label {
+  flex: 1;
+  overflow: hidden;
+  padding-right: 14px;
+}
+
+#header {
+  margin: 10px;
+  height: 40px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 24px;
+  background-color: #f0f4f9;
+  color: #5f6368;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+}
+
+.group span {
+  margin-right: 15px;
+}
+
+.button {
+  font-family: icons;
+  font-size: 24px;
+}

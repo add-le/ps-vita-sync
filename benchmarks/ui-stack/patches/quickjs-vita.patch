@@ -1,0 +1,22 @@
+diff --git a/quickjs.c b/quickjs.c
+index 84f35f5..2d46127 100644
+--- a/quickjs.c
++++ b/quickjs.c
+@@ -2167,7 +2167,7 @@ static size_t js_def_malloc_usable_size(const void *ptr)
+     return malloc_size(ptr);
+ #elif defined(_WIN32)
+     return _msize((void *)ptr);
+-#elif defined(__EMSCRIPTEN__)
++#elif defined(__EMSCRIPTEN__) || defined(__vita__)
+     return 0;
+ #elif defined(__linux__) || defined(__GLIBC__)
+     return malloc_usable_size((void *)ptr);
+@@ -49873,7 +49873,7 @@ static int getTimezoneOffset(int64_t time)
+         }
+     }
+     ti = time;
+-#if defined(_WIN32)
++#if defined(_WIN32) || defined(__vita__)
+     {
+         struct tm *tm;
+         time_t gm_ti, loc_ti;

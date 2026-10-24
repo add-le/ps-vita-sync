@@ -1,0 +1,122 @@
+/* Port of file_explorer.css (repo root) to RCSS. Required behaviors: see docs/plans/spike-ui-stack.md
+   This sheet only uses features that render with vertex colours and textures, so it works on any
+   RmlUi renderer, including the SDL_Renderer backend on the Vita GXM renderer.
+   Shader- and layer-based effects are in explorer-effects.rcss. */
+body {
+  width: 100%;
+  height: 100%;
+  font-family: kanit;
+  font-size: 14dp;
+  color: #1f1f1f;
+  background-color: #ffffff;
+}
+
+#grid {
+  position: absolute;
+  top: 60dp;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0dp 10dp 10dp 10dp;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8dp;
+  align-content: flex-start;
+}
+
+scrollbarvertical {
+  width: 6dp;
+  margin-right: 2dp;
+}
+scrollbarvertical slidertrack { background-color: transparent; }
+scrollbarvertical sliderbar {
+  background-color: #00000040;
+  border-radius: 3dp;
+  min-height: 24dp;
+}
+
+.tile {
+  width: 223dp;
+  height: 46dp;
+  display: flex;
+  align-items: center;
+  border: 1dp #e3e8ef;
+  border-radius: 12dp;
+  decorator: vertical-gradient(#f5f8fc #e9eef6);
+  tab-index: auto;
+  nav-up: auto;
+  nav-down: auto;
+  nav-left: auto;
+  nav-right: auto;
+  focus: auto;
+  }
+
+.tile.selected {
+  decorator: vertical-gradient(#d3edff #b6dcf7);
+  border-color: #9ccbf0;
+}
+
+.tile:focus {
+  border: 2dp #0b57d0;
+}
+
+.icon {
+  font-family: icons;
+  font-size: 24dp;
+  color: #5f6368;
+  padding: 0dp 12dp 0dp 14dp;
+  position: relative;
+}
+
+.sync {
+  font-size: 10dp;
+  color: white;
+  position: absolute;
+  left: 28dp;
+  top: 14dp;
+  width: 14dp;
+  height: 14dp;
+  text-align: center;
+  line-height: 14dp;
+  border-radius: 7dp;
+  background-color: #0d904f;
+}
+
+.label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 14dp;
+}
+
+#header {
+  position: absolute;
+  left: 10dp;
+  right: 10dp;
+  top: -60dp;
+  height: 40dp;
+  padding: 0dp 15dp;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 24dp;
+  background-color: #f0f4f9;
+  color: #5f6368;
+  opacity: 0;
+  transition: top opacity 0.5s back-out;
+}
+
+#header.visible {
+  top: 10dp;
+  opacity: 1;
+}
+
+#header .group {
+  display: flex;
+  align-items: center;
+  gap: 15dp;
+}
+
+#header .icon { padding: 0dp; }

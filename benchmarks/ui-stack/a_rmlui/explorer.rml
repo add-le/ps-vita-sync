@@ -1,0 +1,26 @@
+<rml>
+<head>
+  <title>Explorer</title>
+  <link type="text/rcss" href="explorer.rcss"/>
+  <!--EFFECTS-->
+</head>
+<body data-model="explorer">
+  <div id="grid">
+    <div class="tile" data-for="item, i : items" data-class-selected="item.selected"
+         data-class-folder="item.folder" data-attr-index="i" data-event-click="tap(i)">
+      <span class="icon">{{ item.icon }}<span class="sync" data-if="item.synced">&#xf091;</span></span>
+      <span class="label">{{ item.name }}</span>
+    </div>
+  </div>
+  <div id="header" data-class-visible="selected_count > 0">
+    <div class="group">
+      <span class="icon button" data-event-click="deselect_all">&#xe5cd;</span>
+      <span>{{ selected_count }} {{ selected_count > 1 ? 'items' : 'item' }}</span>
+    </div>
+    <div class="group">
+      <span class="icon button">&#xeb5a;</span>
+      <span class="icon button" data-event-click="select_all">&#xe162;</span>
+    </div>
+  </div>
+</body>
+</rml>

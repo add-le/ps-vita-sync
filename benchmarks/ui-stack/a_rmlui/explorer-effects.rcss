@@ -1,0 +1,18 @@
+/* Effects that need a shader- and layer-capable RmlUi renderer (GL3, Vulkan, DX):
+   CSS gradients, box shadows, transforms. Loaded only by the A-gl3 variant. */
+.tile {
+  decorator: linear-gradient(180deg, #f5f8fc, #e9eef6);
+  box-shadow: #00000026 0dp 2dp 4dp 0dp;
+}
+
+.tile.selected {
+  decorator: linear-gradient(180deg, #d3edff, #b6dcf7);
+}
+
+.tile:active {
+  transform: scale(0.97);
+}
+
+#header {
+  box-shadow: #00000040 0dp 4dp 12dp 0dp;
+}
