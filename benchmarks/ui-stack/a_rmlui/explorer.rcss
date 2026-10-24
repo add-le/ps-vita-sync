@@ -50,7 +50,7 @@ scrollbarvertical sliderbar {
   nav-left: auto;
   nav-right: auto;
   focus: auto;
-  }
+}
 
 .tile.selected {
   decorator: vertical-gradient(#d3edff #b6dcf7);

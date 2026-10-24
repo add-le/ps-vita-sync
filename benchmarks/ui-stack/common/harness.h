@@ -34,6 +34,8 @@ public:
   // State probes for the scripted input checks.
   virtual int focused_index() = 0;
   virtual int folder_depth() = 0;
+  // Extra "key: value" lines for the results file (stack-specific measurements).
+  virtual const char *extra_results() { return ""; }
 };
 
 Stack *create_stack();

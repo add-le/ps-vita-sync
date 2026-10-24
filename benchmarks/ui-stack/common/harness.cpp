@@ -20,6 +20,9 @@
 #define OUT_DIR "ux0:data/SYNCBENCH/"
 // Same explicit heap for every stack. 128 MB is also newlib's default (vitasdk/newlib sbrk.c).
 extern "C" unsigned int _newlib_heap_size_user = 128 * 1024 * 1024;
+// Explicit main-thread stack for every stack (the SDK sets no default; stack C's JS engine
+// recurses and is capped below this with JS_SetMaxStackSize).
+extern "C" const unsigned int sceUserMainThreadStackSize = 1024 * 1024;
 #else
 #include <sys/stat.h>
 #ifndef ASSETS
@@ -299,6 +302,7 @@ int main(int, char **) {
               mem_after_init.c_str(), free_memory().c_str());
       fprintf(f, "script_completed: %s\n", script_done ? "yes" : "no");
       for (auto &c : checks) fprintf(f, "input_check %s\n", c.c_str());
+      fputs(stack->extra_results(), f);
       for (int p = 0; p < 4; p++) {
         std::vector<double> iv, wk;
         for (auto &fr : frames)

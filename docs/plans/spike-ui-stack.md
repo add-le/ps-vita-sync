@@ -91,11 +91,20 @@ Filled from the results below. "(hw)" marks a point that still needs the hardwar
   tested commit; slower upstream.
 
 ### C — JS + React-style
-- Pending: see Results.
+- Pros: real component code (Preact 11 + htm templates, hooks), the most web-like authoring
+  of all; Preact, hooks and htm run unmodified; the DOM shim is small (147 lines of JS plus
+  a ~200-line native bridge) because Preact touches few DOM APIs; it inherits everything
+  RmlUi gives A (styling, navigation, touch).
+- Cons: everything A costs plus a JS engine: +0.54 MB eboot (QuickJS), +2.6 MB JS heap for
+  one screen, a GC with visible spikes (host transition max 41 ms vs 12 ms for A), removed
+  nodes freed only when the cycle collector runs; two layers to debug (JS and RmlUi); the
+  shim is our code to maintain; QuickJS needs a 2-line patch and has a small author base.
 
 ### D — compiled framework
-- Pros (expected): author with familiar web tooling.
-- Cons (expected): output limited by the renderer's CSS support; extra build step.
+- Pros: author with familiar web tooling.
+- Cons: RmlUi does not read HTML/CSS, so output would need translating to RML/RCSS; static
+  output has no state, so it replaces neither the C++ bindings nor C; an extra build step.
+  Not built (desk evaluation in the Decision).
 
 ## Deliverable
 
@@ -109,7 +118,7 @@ and the reasons. Then update [../vision.md](../vision.md#ui) and
 binary sizes, CSS coverage, input checks, licenses, upstream health, and host runs.
 Frame rate, RAM and startup on the Vita are **not measured yet**: the VPKs and run
 instructions are ready in [benchmarks/ui-stack/](../../benchmarks/ui-stack/README.md).
-Stack C is pending. The decision below is provisional until the hardware rows are filled.
+The decision below is provisional until the hardware rows are filled.
 
 ### What was built
 
@@ -124,7 +133,7 @@ same scripted workload and writes the same results file
 | `A-rmlui` (A-sdl) | RmlUi 6.3 | SDL2 GXM renderer | Stock SDL backend + `rmlui-sdl-straight-alpha.patch`; stylesheet limited to what renders without shaders |
 | `A-rmlui-gl3` | RmlUi 6.3 | vitaGL via SDL's GLES2 renderer | Stock GL3 backend + `rmlui-gl3-vitagl.patch`; full stylesheet incl. `explorer-effects.rcss`. Needs `ur0:data/libshacccg.suprx` on the console |
 | `B-litehtml` | litehtml (master, after v0.10) | SDL2 GXM renderer | Container (drawing, fonts) and app logic written for this benchmark |
-| C | QuickJS + Preact 11 on RmlUi | — | Pending |
+| `C-quickjs-preact` | QuickJS + Preact 11 + htm, rendering into RmlUi 6.3 | SDL2 GXM renderer | A-sdl's stylesheet and renderer unchanged; DOM shim (`dom.js`) + native bridge written for this benchmark; QuickJS + `quickjs-vita.patch` |
 
 Pinned sources (all in `fetch.sh`): RmlUi `ba95ffe` (tag 6.3), litehtml `735a7b3`, QuickJS
 `7d1c13c`, Preact 11.0.2, htm 3.1.1, Noto Sans JP from google/fonts `e7db6ca` (static Regular
@@ -185,9 +194,34 @@ renderer), overlay hidden. The reference is the original `file_explorer.html` in
 | ![reference](images/ui-spike/reference-chromium.png) | ![A-sdl](images/ui-spike/a-rmlui-sdl.png) |
 | **A-gl3: RmlUi, GL3 backend + effects** | **B: litehtml + SDL container** |
 | ![A-gl3](images/ui-spike/a-rmlui-gl3.png) | ![B](images/ui-spike/b-litehtml.png) |
+| **C: Preact in QuickJS, rendered by RmlUi (A-sdl's stylesheet)** | |
+| ![C](images/ui-spike/c-quickjs-preact.png) | |
 
-A-sdl and B look alike at this size; the differences show in motion (B has no transitions)
-and in A-gl3's shadows and gradients.
+A-sdl, B and C look alike at this size (C is A-sdl's stylesheet and renderer driven from
+JS); the differences show in motion (B has no transitions) and in A-gl3's shadows and
+gradients.
+
+### Stack C: what the JS layer adds over A
+
+C renders the same screen as A-sdl, with the same stylesheet and renderer, so its numbers
+minus A-sdl's are the cost of running the UI from JavaScript.
+
+| | C | vs A-sdl | Source |
+|---|---|---|---|
+| Eboot (`.self`) | 3.67 MB | +0.54 MB | Vita build |
+| Code + data, uncompressed | 5.27 MB | +0.76 MB (QuickJS 0.73 MB) | Linker maps |
+| JS shipped in the VPK | Preact 12 KB, hooks 4 KB, htm 1 KB, shim 4 KB, app 3 KB (unminified) | — | Files |
+| Evaluate Preact + app and first render (host) | 13–15 ms | — | `js_eval_ms` |
+| JS heap at the end of the run (host) | 2.6 MB | — | `js_memory_used_bytes` |
+| Heap peak (host, indicative) | +3.3 MB over A-sdl | — | `heap_bytes` |
+| Frame work, transition phase, p99 / max (host) | 10.0 / 40.7 ms | A-sdl: 6.9 / 12.1 ms | Host run |
+| Same, on the Vita | **needs hardware** | | |
+| Input checks | PASS ×3 | Same | Host run |
+| Code written | `dom.js` 147 lines, native bridge ~200 lines, app 63 lines | A: 218-line `main.cpp` + RML | `wc -l` |
+
+The JS stack is capped at 512 KB (`JS_SetMaxStackSize`) inside a 1 MB main thread that the
+harness now sets explicitly for every stack (`sceUserMainThreadStackSize`; the SDK sets no
+default of its own).
 
 ### Findings
 
@@ -218,7 +252,18 @@ and in A-gl3's shadows and gradients.
    uses the known row height.
 6. **RmlUi logs "Data array index out of bounds"** once per removed row when a bound array
    shrinks (leaving a folder). Harmless, but it floods the log.
-7. Host-only: SDL's software renderer drops glyphs smaller than about 2 px (the `.` in
+7. **Preact needs very little DOM.** Preact 11 touches `createElementNS`, `createTextNode`,
+   `insertBefore`, `removeChild`, `remove`, `nextSibling`, `firstChild`, `childNodes`,
+   `setAttribute`, `removeAttribute`, `style`/`cssText`, event listeners, `data` on text
+   nodes, and `queueMicrotask` (QuickJS has no `queueMicrotask`, `setTimeout` or
+   `requestAnimationFrame`; the shim provides them, driven once per frame). The shim must
+   declare `onclick` on elements or Preact registers the event as `Click`.
+8. **C's removed nodes wait for the cycle collector.** JS node wrappers reference their
+   parent and children, so QuickJS frees them in its cycle GC, not by reference counting;
+   the RmlUi elements are released from a `FinalizationRegistry` callback after that.
+   After one folder round-trip, 59 removed tiles were still held at the end of the run:
+   bounded, but memory returns late.
+9. Host-only: SDL's software renderer drops glyphs smaller than about 2 px (the `.` in
    file names), and mixing SDL's GL renderer with raw GL needs `GL_UNPACK_ROW_LENGTH`
    reset. Neither affects the Vita builds.
 
@@ -226,13 +271,13 @@ and in A-gl3's shadows and gradients.
 
 Hard gates:
 
-| Gate | A-sdl | A-gl3 | B |
-|---|---|---|---|
-| ≥ 30 FPS while scrolling | hw | hw | hw |
-| Peak RAM within budget | hw | hw | hw |
-| Renders CJK | Pass | Pass | Pass |
-| D-pad focus and both touch panels without rewriting the engine | Pass | Pass | Pass (all in app code, the engine untouched) |
-| License compatible with copyleft-next 0.3.1 | Pass | Pass | Pass |
+| Gate | A-sdl | A-gl3 | B | C |
+|---|---|---|---|---|
+| ≥ 30 FPS while scrolling | hw | hw | hw | hw |
+| Peak RAM within budget | hw | hw | hw | hw |
+| Renders CJK | Pass | Pass | Pass | Pass |
+| D-pad focus and both touch panels without rewriting the engine | Pass | Pass | Pass (all in app code, the engine untouched) | Pass (RmlUi's, as in A) |
+| License compatible with copyleft-next 0.3.1 | Pass | Pass | Pass | Pass (QuickJS MIT, Preact MIT, htm Apache-2.0) |
 
 License: copyleft-next 0.3.1 §4 allows incorporating material under licenses that are both
 OSI-approved and FSF-free (MIT, BSD-3-Clause, Apache-2.0 and the SIL OFL 1.1 for fonts all
@@ -241,24 +286,38 @@ are), and §5 requires a source URL with any object-code release.
 Scores on the criteria that do not need hardware (1–5; performance ×2 is left out until
 the hardware run):
 
-| Criterion (weight) | A-sdl | A-gl3 | B |
-|---|---|---|---|
-| Visual capability (×3) | 3 | 5 | 2 |
-| Authoring experience (×2) | 4 | 4 | 3 |
-| Backend / build effort (×1) | 4 | 3 | 2 |
-| Upstream health (×1) | 5 | 5 | 3 |
-| **Total without performance** | **26** | **31** | **17** |
+| Criterion (weight) | A-sdl | A-gl3 | B | C (on A-sdl) |
+|---|---|---|---|---|
+| Visual capability (×3) | 3 | 5 | 2 | 3 |
+| Authoring experience (×2) | 4 | 4 | 3 | 5 |
+| Backend / build effort (×1) | 4 | 3 | 2 | 3 |
+| Upstream health (×1) | 5 | 5 | 3 | 4 |
+| **Total without performance** | **26** | **31** | **17** | **26** |
+
+C's visual score follows its renderer: on A-gl3 it would be 5, like A-gl3. Upstream for C
+combines QuickJS (146 commits, 6 authors in 12 months, last release 2026-06) and Preact
+(413 commits, 27 authors, 11.0.2 on 2026-10-23).
 
 **Leading candidate: A, RmlUi.** B delivers real HTML/CSS syntax, but everything that makes a
 UI feel alive (state changes, focus, scrolling, animation, opacity) has to be written around
-it, and its restyle-by-rebuild model is a performance risk. Inside A, the renderer is the
-open question for the hardware run:
+it, and its restyle-by-rebuild model is a performance risk. C works and is the nicest to
+author, but it ties with A-sdl before performance is counted, and rule 3 prefers the
+simpler stack when C is within 10%; it only adds cost (binary, heap, GC spikes) on top of
+A. It stays a fallback if writing screens in RML + C++ data bindings proves too slow in
+practice. Inside A, the renderer is the open question for the hardware run:
 
-1. Run all four VPKs and fill the hardware rows.
+1. Run all five VPKs and fill the hardware rows.
 2. If A-gl3 holds 30 FPS and vitaGL's shader cache can ship in the VPK → A-gl3.
 3. Otherwise → A-sdl for v1, and a custom GXM render interface (precompiled shaders) as the
    path to shadows and CSS gradients.
-4. Evaluate C on top of A (pending), then D on top of the winner.
+4. Re-check C against A with the hardware numbers: if its transition spikes stay under the
+   frame budget, rule 3 still applies; if not, C is out.
+
+**D (desk evaluation, not built).** RmlUi reads RML/RCSS, not HTML/CSS, so a framework's
+static HTML/CSS output would need translating (no grid, `decorator`, `dp`, tween names), and
+static output has no state: interactivity would still be C++ data bindings or C. D adds a
+build step without removing either, so it is not worth it on top of A. C already covers
+"author with web tooling" at runtime.
 
 [../vision.md](../vision.md#ui) and [../ui.md](../ui.md) stay unchanged until the decision
 is final.

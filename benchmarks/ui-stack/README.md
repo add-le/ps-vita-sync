@@ -10,7 +10,7 @@ doc; this page is how to build and run.
 | `empty/` | Baseline: the harness with nothing drawn. Size and memory deltas are measured against it |
 | `a_rmlui/` | A: RmlUi 6.3, SDL_Renderer backend (patched for the Vita GXM renderer) |
 | `b_litehtml/` | B: litehtml (layout) + an SDL_Renderer/SDL_ttf container written here |
-| `c_quickjs/` | C: QuickJS + Preact rendering into RmlUi |
+| `c_quickjs/` | C: QuickJS + Preact 11 (+ htm) rendering into RmlUi through a small DOM shim (`dom.js`), on A's stylesheet and renderer |
 | `common/` | Harness, shared data, shared explorer behavior |
 | `patches/` | Local patches applied by `fetch.sh` |
 
@@ -45,10 +45,10 @@ present) p50/p95/p99/max.
 
 The hardware rows of the spike (frame rate, RAM, startup) come from this run.
 
-1. Install the four VPKs with VitaShell: `bench_empty.vpk`, `bench_a_rmlui.vpk`,
-   `bench_a_rmlui_gl3.vpk`, `bench_b_litehtml.vpk`. They install as separate bubbles
-   ("UI bench …", title IDs `SYNCB0000`, `SYNCB000A`, `SYNCB000G`, `SYNCB000B`) and do not
-   touch the main app.
+1. Install the five VPKs with VitaShell: `bench_empty.vpk`, `bench_a_rmlui.vpk`,
+   `bench_a_rmlui_gl3.vpk`, `bench_b_litehtml.vpk`, `bench_c_quickjs.vpk`. They install as
+   separate bubbles ("UI bench …", title IDs `SYNCB0000`, `SYNCB000A`, `SYNCB000G`,
+   `SYNCB000B`, `SYNCB000C`) and do not touch the main app.
 2. `bench_a_rmlui_gl3` only: it compiles shaders on the console and needs
    `ur0:data/libshacccg.suprx` (extracted from your own firmware with the usual homebrew
    tool for it). Without that file, or if RmlUi's shaders fail to compile through vitaGL,
@@ -72,6 +72,7 @@ What each line fills in the spike's Results tables:
 | `free_memory … end[…]` vs. `start[…]` | GPU and other memory outside the heap |
 | `startup_ms` | Startup to first frame |
 | `input_check …` | Input (should be PASS, as on host) |
+| `js_eval_ms`, `js_memory_used_bytes` (C only) | Cost of the JS layer: evaluating Preact and the first render, JS heap |
 
 ## Host notes
 

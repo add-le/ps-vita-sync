@@ -143,8 +143,8 @@ if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/c_quickjs/main.cpp AND EXISTS ${TP}/quickj
   bench_app(bench_c_quickjs SYNCB000C
     SOURCES c_quickjs/main.cpp ${RMLUI_BACKEND_SRC}
     LIBS RmlUi::RmlUi quickjs ${SDLIMG_LIBS}
-    ASSETS c_quickjs/explorer.rcss c_quickjs/app.js ${TP}/js/preact.mjs ${TP}/js/hooks.mjs ${TP}/js/htm.mjs
+    ASSETS a_rmlui/explorer.rcss c_quickjs/dom.js c_quickjs/app.js ${TP}/js/preact.mjs ${TP}/js/hooks.mjs ${TP}/js/htm.mjs
     FONTS ${SHARED_FONTS})
   target_include_directories(bench_c_quickjs PRIVATE ${TP}/RmlUi/Backends)
-  target_compile_definitions(bench_c_quickjs PRIVATE RMLUI_SDL_VERSION_MAJOR=2)
+  target_compile_definitions(bench_c_quickjs PRIVATE RMLUI_SDL_VERSION_MAJOR=2 RMLUI_SDL_STRAIGHT_ALPHA)
 endif()
